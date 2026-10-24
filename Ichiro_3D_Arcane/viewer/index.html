@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ETHERNIUM SOVEREIGN // ICHIRO KPR-2390 - 2.3D ARCANE VIEWER</title>
+  <link rel="stylesheet" href="./style.css">
+  <script type="importmap">
+  {
+    "imports": {
+      "three": "./vendor/three.module.js",
+      "three/addons/": "./vendor/addons/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <canvas id="arcane-canvas"></canvas>
+
+  <!-- Cyberpunk Glassmorphic HUD Header -->
+  <header class="hud-header glass-panel">
+    <div class="hud-brand">
+      <div class="hud-status-dot pulse-neon"></div>
+      <div class="hud-title-group">
+        <span class="hud-system-tag">ETHERNIUM SOVEREIGN WEB // HUD v2.3</span>
+        <h1 class="hud-title">ICHIRO <span class="accent-cyan">KPR-2390</span></h1>
+      </div>
+    </div>
+    <div class="hud-meta">
+      <span class="hud-badge badge-faction">FACTION: WANDERER</span>
+      <span class="hud-badge badge-district">SECTOR: SOLIS</span>
+      <span class="hud-badge badge-class">CLASS: BLADEWALKER</span>
+    </div>
+  </header>
+
+  <!-- Left Telemetry Glass Panel -->
+  <aside class="hud-telemetry glass-panel">
+    <h3 class="panel-section-title">TELEMETRÍA // EN VIVO</h3>
+    <div class="telemetry-grid">
+      <div class="stat-card">
+        <span class="stat-label">RENDER FPS</span>
+        <span class="stat-value text-cyan" id="stat-fps">60</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">VÉRTICES 3D</span>
+        <span class="stat-value" id="stat-verts">32,126</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">POLÍGONOS</span>
+        <span class="stat-value" id="stat-polys">46,650</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">SHADING</span>
+        <span class="stat-value text-magma" id="stat-shading">ARCANE 2.3D</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3 class="panel-section-title">COMPANION // LUMEN RECON DRONE</h3>
+    <div class="telemetry-grid">
+      <div class="stat-card">
+        <span class="stat-label">SATELLITE STATUS</span>
+        <span class="stat-value text-cyan" id="stat-lumen-status">ONLINE</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">FORENSIC AUDIT</span>
+        <span class="stat-value text-green" id="stat-lumen-audit">100% 2-MANIFOLD</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">QUAD TOPOLOGY</span>
+        <span class="stat-value" id="stat-lumen-quads">14,307 QUADS</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">REST DELTA</span>
+        <span class="stat-value text-cyan" id="stat-lumen-delta">0.12 µm PASS</span>
+      </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <h3 class="panel-section-title">HARDWARE // EQUIPAMIENTO</h3>
+    <ul class="loadout-list">
+      <li><span class="bullet cyan-bullet"></span> Dual Magma Energy Blades (1.02m)</li>
+      <li><span class="bullet magma-bullet"></span> Tactical Dorsal Magnetic Scabbard</li>
+      <li><span class="bullet gold-bullet"></span> Cybernetic Gold Auricular Hardware</li>
+      <li><span class="bullet white-bullet"></span> Reinforced Kinetic Cargo Striders</li>
+      <li><span class="bullet cyan-bullet"></span> Lumen Recon Companion (Dual Crimson Optics)</li>
+    </ul>
+
+    <div class="divider"></div>
+
+    <h3 class="panel-section-title">MODO DE COMBATE</h3>
+    <div class="mode-toggle-group">
+      <button class="mode-btn active" id="btn-mode-standard" data-mode="standard">
+        <span class="mode-code">STD</span> BLADEWALKER
+      </button>
+      <button class="mode-btn mode-aberrant" id="btn-mode-aberrant" data-mode="aberrant">
+        <span class="mode-code">KAI</span> ABERRANT OVERDRIVE
+      </button>
+    </div>
+  </aside>
+
+  <!-- Bottom Interactive HUD Controller -->
+  <footer class="hud-footer glass-panel">
+    <div class="control-cluster">
+      <span class="cluster-label">ÁNGULOS DE CÁMARA ARCANE:</span>
+      <div class="btn-group">
+        <button class="cam-btn active" data-cam="hero34">3/4 HERO BEAUTY</button>
+        <button class="cam-btn" data-cam="portrait">RETRATO CLOSE-UP</button>
+        <button class="cam-btn" data-cam="frontOrtho">FRONTAL ORTHO</button>
+        <button class="cam-btn" data-cam="sideOrtho">PERFIL LATERAL</button>
+        <button class="cam-btn" data-cam="backOrtho">POSTERIOR / SCABBARD</button>
+      </div>
+    </div>
+
+    <div class="control-actions">
+      <button class="action-btn active" id="btn-toggle-lumen">
+        <span class="icon">🛰</span> LUMEN DRONE
+      </button>
+      <button class="action-btn" id="btn-auto-rotate">
+        <span class="icon">↻</span> AUTO-ÓRBITA
+      </button>
+      <button class="action-btn action-shockwave" id="btn-shockwave">
+        <span class="icon">⚡</span> PULSO DE ENERGÍA
+      </button>
+    </div>
+  </footer>
+
+  <script type="module" src="./src/boot/main.js"></script>
+</body>
+</html>

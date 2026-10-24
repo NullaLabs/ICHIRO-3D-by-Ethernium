@@ -1,0 +1,68 @@
+# ==============================================================================
+# ETHERNIUM // ICHIRO 3D REPOSITORY GITIGNORE
+# ==============================================================================
+
+# Ignore large media videos (>50MB-200MB)
+*.mp4
+*.m4v
+*.mov
+*.avi
+*.mkv
+*.webm
+
+# Blender backup and lock files
+*.blend1
+*.blend2
+*.blend@
+*.blend@@
+@*
+
+# Python caches and bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+
+# Temporary scratch and debug folders
+scratch/
+tmp/
+temp/
+.pytest_cache/
+
+# OS metadata
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ancillary projects (maintained in separate repos)
+MYTHOS ETHERNIYM/
+PLANTILLAS COMIC/
+
+# Root level loose concept drafts & brainstorm files (to stay within GitHub packfile budget)
+/*.png
+/*.jpg
+/*.jpeg
+/*.webp
+/*.avif
+/*.gif
+/*.mp3
+
+# Canonical reference exceptions to keep in root
+!/la que vale.png
+!/KPR FULL BODY.png
+!/Retrato anime con cicatriz luminosa en la frente_Nero_AI_Image_Upscaler_Photo.png
+!/raw_images_KPR_2390_fullbleed.png
+!/Ichirofront.png
+!/ficha ichiro.png
