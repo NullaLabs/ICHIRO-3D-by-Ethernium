@@ -22,7 +22,7 @@
     <div class="hud-brand">
       <div class="hud-status-dot pulse-neon"></div>
       <div class="hud-title-group">
-        <span class="hud-system-tag">ETHERNIUM SOVEREIGN WEB // HUD v2.3</span>
+        <span class="hud-system-tag">ETHERNIUM SOVEREIGN WEB // HUD v3.0</span>
         <h1 class="hud-title">ICHIRO <span class="accent-cyan">KPR-2390</span></h1>
       </div>
     </div>
@@ -39,64 +39,128 @@
     <div class="telemetry-grid">
       <div class="stat-card">
         <span class="stat-label">RENDER FPS</span>
-        <span class="stat-value text-cyan" id="stat-fps">60</span>
+        <span class="stat-value text-cyan" id="stat-fps">60 FPS</span>
       </div>
       <div class="stat-card">
         <span class="stat-label">VÉRTICES 3D</span>
-        <span class="stat-value" id="stat-verts">32,126</span>
+        <span class="stat-value" id="stat-verts">36,547</span>
       </div>
       <div class="stat-card">
         <span class="stat-label">POLÍGONOS</span>
-        <span class="stat-value" id="stat-polys">46,650</span>
+        <span class="stat-value" id="stat-polys">48,220</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">SHADING</span>
-        <span class="stat-value text-magma" id="stat-shading">ARCANE 2.3D</span>
+        <span class="stat-label">SHAPE KEYS</span>
+        <span class="stat-value text-magma" id="stat-morphs">52 ARKit Keys</span>
       </div>
     </div>
 
     <div class="divider"></div>
 
-    <h3 class="panel-section-title">COMPANION // LUMEN RECON DRONE</h3>
+    <h3 class="panel-section-title">ESTRUCTURA BIOMECÁNICA</h3>
     <div class="telemetry-grid">
       <div class="stat-card">
-        <span class="stat-label">SATELLITE STATUS</span>
-        <span class="stat-value text-cyan" id="stat-lumen-status">ONLINE</span>
+        <span class="stat-label">ARMATURE</span>
+        <span class="stat-value text-cyan">29 BONES</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">FORENSIC AUDIT</span>
-        <span class="stat-value text-green" id="stat-lumen-audit">100% 2-MANIFOLD</span>
+        <span class="stat-label">TOPOLOGÍA</span>
+        <span class="stat-value text-green">100% 2-MANIFOLD</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">QUAD TOPOLOGY</span>
-        <span class="stat-value" id="stat-lumen-quads">14,307 QUADS</span>
+        <span class="stat-label">SANGRADO PERINEO</span>
+        <span class="stat-value text-green">0.000% ZERO</span>
       </div>
       <div class="stat-card">
-        <span class="stat-label">REST DELTA</span>
-        <span class="stat-value text-cyan" id="stat-lumen-delta">0.12 µm PASS</span>
+        <span class="stat-label">BACK HARNESS</span>
+        <span class="stat-value text-cyan">PURGED (0 VERTS)</span>
       </div>
     </div>
 
     <div class="divider"></div>
 
-    <h3 class="panel-section-title">HARDWARE // EQUIPAMIENTO</h3>
+    <h3 class="panel-section-title">HARDWARE // EQUIPAMIENTO CANÓNICO</h3>
     <ul class="loadout-list">
-      <li><span class="bullet cyan-bullet"></span> Dual Magma Energy Blades (1.02m)</li>
-      <li><span class="bullet magma-bullet"></span> Tactical Dorsal Magnetic Scabbard</li>
-      <li><span class="bullet gold-bullet"></span> Cybernetic Gold Auricular Hardware</li>
-      <li><span class="bullet white-bullet"></span> Reinforced Kinetic Cargo Striders</li>
-      <li><span class="bullet cyan-bullet"></span> Lumen Recon Companion (Dual Crimson Optics)</li>
+      <li><span class="bullet cyan-bullet"></span> Dual Hip Magma Blades (Wakizashi 0.83m)</li>
+      <li><span class="bullet gold-bullet"></span> Single Authentic Left Gold Hoop Earring</li>
+      <li><span class="bullet magenta-bullet"></span> Clean Dorsal Bolero (No Scabbard / No X-Harness)</li>
+      <li><span class="bullet white-bullet"></span> Ballistic Compression Suit & Titanium Buckles</li>
+      <li><span class="bullet cyan-bullet"></span> ARKit 52 Orbital & Oral Quad Topology Loops</li>
     </ul>
 
     <div class="divider"></div>
 
-    <h3 class="panel-section-title">MODO DE COMBATE</h3>
+    <h3 class="panel-section-title">MODOS DE SHADING</h3>
     <div class="mode-toggle-group">
       <button class="mode-btn active" id="btn-mode-standard" data-mode="standard">
-        <span class="mode-code">STD</span> BLADEWALKER
+        <span class="mode-code">PBR</span> ARCANE CANONICAL
       </button>
       <button class="mode-btn mode-aberrant" id="btn-mode-aberrant" data-mode="aberrant">
-        <span class="mode-code">KAI</span> ABERRANT OVERDRIVE
+        <span class="mode-code">KAI</span> MAGMA OVERDRIVE
+      </button>
+      <button class="mode-btn" id="btn-mode-wireframe" data-mode="wireframe">
+        <span class="mode-code">GEO</span> WIREFRAME QUADS
+      </button>
+    </div>
+  </aside>
+
+  <!-- Right Glass Panel: Interactive ARKit Facial Rig & Animation Controller -->
+  <aside class="hud-controls-right glass-panel">
+    <h3 class="panel-section-title">CONTROL FACIAL // ARKit 52 BLENDSHAPES</h3>
+    <div class="slider-group">
+      <div class="slider-header">
+        <span>BATTLE SMIRK (mouthSmileRight)</span>
+        <span class="slider-val text-cyan" id="slider-morph-smile-val">0.00</span>
+      </div>
+      <input type="range" min="0" max="1" step="0.01" value="0" id="slider-morph-smile" class="cyber-slider">
+    </div>
+
+    <div class="slider-group">
+      <div class="slider-header">
+        <span>PARPADEO (eyeBlink L/R)</span>
+        <span class="slider-val text-cyan" id="slider-morph-blink-val">0.00</span>
+      </div>
+      <input type="range" min="0" max="1" step="0.01" value="0" id="slider-morph-blink" class="cyber-slider">
+    </div>
+
+    <div class="slider-group">
+      <div class="slider-header">
+        <span>APERTURA MANDÍBULA (jawOpen)</span>
+        <span class="slider-val text-cyan" id="slider-morph-jaw-val">0.00</span>
+      </div>
+      <input type="range" min="0" max="1" step="0.01" value="0" id="slider-morph-jaw" class="cyber-slider">
+    </div>
+
+    <div class="slider-group">
+      <div class="slider-header">
+        <span>CEÑO FRUNCIDO (browDown L/R)</span>
+        <span class="slider-val text-cyan" id="slider-morph-brow-val">0.00</span>
+      </div>
+      <input type="range" min="0" max="1" step="0.01" value="0" id="slider-morph-brow" class="cyber-slider">
+    </div>
+
+    <div class="slider-group">
+      <div class="slider-header">
+        <span>PUCKER (mouthPucker)</span>
+        <span class="slider-val text-cyan" id="slider-morph-pucker-val">0.00</span>
+      </div>
+      <input type="range" min="0" max="1" step="0.01" value="0" id="slider-morph-pucker" class="cyber-slider">
+    </div>
+
+    <button class="reset-facial-btn" id="btn-reset-facial">RESET EXPRESIONES</button>
+
+    <div class="divider"></div>
+
+    <h3 class="panel-section-title">CINEMÁTICAS & POSES</h3>
+    <div class="anim-btn-group">
+      <button class="anim-btn active" data-anim="Anim_Idle_Breathing">
+        <span class="anim-dot"></span> IDLE BREATH
+      </button>
+      <button class="anim-btn" data-anim="Anim_Combat_Stance">
+        <span class="anim-dot"></span> COMBAT STANCE
+      </button>
+      <button class="anim-btn" data-anim="Rest_Pose">
+        <span class="anim-dot"></span> REST POSE (T/A)
       </button>
     </div>
   </aside>
@@ -107,17 +171,14 @@
       <span class="cluster-label">ÁNGULOS DE CÁMARA ARCANE:</span>
       <div class="btn-group">
         <button class="cam-btn active" data-cam="hero34">3/4 HERO BEAUTY</button>
-        <button class="cam-btn" data-cam="portrait">RETRATO CLOSE-UP</button>
+        <button class="cam-btn" data-cam="portrait">RETRATO FACIAL</button>
         <button class="cam-btn" data-cam="frontOrtho">FRONTAL ORTHO</button>
         <button class="cam-btn" data-cam="sideOrtho">PERFIL LATERAL</button>
-        <button class="cam-btn" data-cam="backOrtho">POSTERIOR / SCABBARD</button>
+        <button class="cam-btn" data-cam="backOrtho">POSTERIOR (CLEAN BACK)</button>
       </div>
     </div>
 
     <div class="control-actions">
-      <button class="action-btn active" id="btn-toggle-lumen">
-        <span class="icon">🛰</span> LUMEN DRONE
-      </button>
       <button class="action-btn" id="btn-auto-rotate">
         <span class="icon">↻</span> AUTO-ÓRBITA
       </button>

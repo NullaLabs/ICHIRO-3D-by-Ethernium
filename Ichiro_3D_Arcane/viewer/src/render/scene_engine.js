@@ -24,6 +24,11 @@ export class ArcaneSceneEngine {
     this.frameCount = 0;
     this.fpsAccum = 0;
     this.currentFps = 60;
+    this.mixer = null;
+    this.animations = {};
+    this.activeAction = null;
+    this.faceMesh = null;
+    this.allMeshes = [];
 
     this._initRenderer();
     this._initSceneAndLights();
@@ -41,7 +46,7 @@ export class ArcaneSceneEngine {
     this.renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     this.renderer.setSize(window.innerWidth, window.innerHeight);
     this.renderer.toneMapping = THREE.ACESFilmicToneMapping;
-    this.renderer.toneMappingExposure = 1.18;
+    this.renderer.toneMappingExposure = 1.22;
 
     this.camera = new THREE.PerspectiveCamera(38, window.innerWidth / window.innerHeight, 0.05, 50);
     const hero = ARCANE_CONFIG.cameras.hero34;
@@ -52,7 +57,7 @@ export class ArcaneSceneEngine {
     this.controls.enableDamping = true;
     this.controls.dampingFactor = 0.06;
     this.controls.maxDistance = 8.0;
-    this.controls.minDistance = 0.45;
+    this.controls.minDistance = 0.40;
 
     window.addEventListener("resize", () => {
       this.camera.aspect = window.innerWidth / window.innerHeight;
@@ -64,26 +69,26 @@ export class ArcaneSceneEngine {
   _initSceneAndLights() {
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color(0x07090e);
-    this.scene.fog = new THREE.FogExp2(0x07090e, 0.09);
+    this.scene.fog = new THREE.FogExp2(0x07090e, 0.08);
 
     const mode = ARCANE_CONFIG.modes.standard;
-    this.ambientLight = new THREE.AmbientLight(0x283044, 1.4);
+    this.ambientLight = new THREE.AmbientLight(0x283044, 1.5);
     this.scene.add(this.ambientLight);
 
-    this.keyLight = new THREE.DirectionalLight(mode.keyColor, 2.4);
+    this.keyLight = new THREE.DirectionalLight(mode.keyColor, 2.5);
     this.keyLight.position.set(1.5, 2.5, 2.8);
     this.scene.add(this.keyLight);
 
-    this.rimCyan = new THREE.PointLight(mode.rimCyan, 5.5, 6.0);
+    this.rimCyan = new THREE.PointLight(mode.rimCyan, 5.8, 7.0);
     this.rimCyan.position.set(-1.8, 1.6, -1.2);
     this.scene.add(this.rimCyan);
 
-    this.rimMagenta = new THREE.PointLight(mode.rimMagenta, 5.0, 6.0);
+    this.rimMagenta = new THREE.PointLight(mode.rimMagenta, 5.2, 7.0);
     this.rimMagenta.position.set(1.8, 1.5, -1.2);
     this.scene.add(this.rimMagenta);
 
-    this.magmaLight = new THREE.PointLight(mode.magmaGlow, 3.8, 4.0);
-    this.magmaLight.position.set(0.0, 0.65, 1.2);
+    this.magmaLight = new THREE.PointLight(mode.magmaGlow, 4.2, 5.0);
+    this.magmaLight.position.set(0.0, 0.70, 1.2);
     this.scene.add(this.magmaLight);
   }
 
@@ -98,22 +103,24 @@ export class ArcaneSceneEngine {
     const colors = new Float32Array(count * 3);
 
     const palette = [
-      new THREE.Color(0xff5500), // Magma Blade Orange
-      new THREE.Color(0x00f0ff), // Zaun Cyan Rim
-      new THREE.Color(0xff2a6d), // Arcane Neon Magenta
-      new THREE.Color(0xffaa00), // Gold Circuit Ember
+      new THREE.Color(0xff4500),
+      new THREE.Color(0xff9900),
+      new THREE.Color(0x00f0ff),
+      new THREE.Color(0xff2a6d),
     ];
 
     for (let i = 0; i < count; i++) {
-      positions[i * 3] = 0;
-      positions[i * 3 + 1] = 0;
-      positions[i * 3 + 2] = 0;
+      const theta = Math.random() * Math.PI * 2;
+      const r = 0.15 + Math.random() * ARCANE_CONFIG.particles.ringRadius;
+      radii[i] = r;
+      positions[i * 3 + 0] = Math.cos(theta) * r;
+      positions[i * 3 + 1] = Math.random() * ARCANE_CONFIG.particles.maxHeight;
+      positions[i * 3 + 2] = Math.sin(theta) * r;
       phases[i] = Math.random() * Math.PI * 2;
-      radii[i] = 0.42 + Math.random() * 0.85;
-      speeds[i] = 0.45 + Math.random() * 0.95;
+      speeds[i] = 0.4 + Math.random() * 0.8;
 
-      const c = palette[i % palette.length];
-      colors[i * 3] = c.r;
+      const c = palette[Math.floor(Math.random() * palette.length)];
+      colors[i * 3 + 0] = c.r;
       colors[i * 3 + 1] = c.g;
       colors[i * 3 + 2] = c.b;
     }
@@ -126,8 +133,9 @@ export class ArcaneSceneEngine {
 
     this.particleUniforms = {
       uTime: { value: 0 },
-      uSpeed: { value: ARCANE_CONFIG.modes.standard.shockwaveSpeed },
-      uShockwave: { value: 1.0 },
+      uSpeed: { value: 1.0 },
+      uPulse: { value: 1.0 },
+      uMaxHeight: { value: ARCANE_CONFIG.particles.maxHeight },
     };
 
     const mat = new THREE.ShaderMaterial({
@@ -139,13 +147,14 @@ export class ArcaneSceneEngine {
       blending: THREE.AdditiveBlending,
     });
 
-    this.particles = new THREE.Points(geom, mat);
-    this.scene.add(this.particles);
+    this.particleSystem = new THREE.Points(geom, mat);
+    this.scene.add(this.particleSystem);
   }
 
   _initPedestalHoloRing() {
-    const geom = new THREE.PlaneGeometry(1.75, 1.75);
+    const geom = new THREE.RingGeometry(0.55, 0.95, 64);
     geom.rotateX(-Math.PI / 2);
+
     this.ringUniforms = {
       uTime: { value: 0 },
       uColorPrimary: { value: new THREE.Color(0x00f0ff) },
@@ -171,26 +180,46 @@ export class ArcaneSceneEngine {
       ARCANE_CONFIG.character.modelUrl,
       (gltf) => {
         this.characterRoot = gltf.scene;
-        this.lumenParts = [];
+        this.allMeshes = [];
         let totalVerts = 0;
         let totalFaces = 0;
-        this.characterRoot.traverse((child) => {
-          if (child.name && child.name.startsWith("Lumen_")) {
-            this.lumenParts.push(child);
+
+        // Setup Animation Mixer
+        if (gltf.animations && gltf.animations.length > 0) {
+          this.mixer = new THREE.AnimationMixer(this.characterRoot);
+          gltf.animations.forEach((clip) => {
+            this.animations[clip.name] = this.mixer.clipAction(clip);
+          });
+          // Play Idle by default
+          if (this.animations["Anim_Idle_Breathing"]) {
+            this.playAnimation("Anim_Idle_Breathing");
           }
+        }
+
+        this.characterRoot.traverse((child) => {
           if (child.isMesh && child.geometry) {
+            this.allMeshes.push(child);
             const pos = child.geometry.attributes.position;
             if (pos) totalVerts += pos.count;
             if (child.geometry.index) totalFaces += child.geometry.index.count / 3;
+
+            // Detect Face Mesh with Morph Targets
+            if (child.morphTargetDictionary && child.morphTargetInfluences) {
+              this.faceMesh = child;
+              console.log("Found ARKit Face Mesh:", child.name, "with", Object.keys(child.morphTargetDictionary).length, "keys");
+            }
           }
         });
+
         this.scene.add(this.characterRoot);
+
         if (this.onTelemetryUpdate) {
           this.onTelemetryUpdate({
             loaded: true,
             vertices: totalVerts,
             polygons: Math.round(totalFaces),
-            lumenActive: this.lumenParts.length > 0,
+            morphCount: this.faceMesh ? Object.keys(this.faceMesh.morphTargetDictionary).length : 0,
+            hasRig: !!this.mixer,
           });
         }
       },
@@ -201,10 +230,39 @@ export class ArcaneSceneEngine {
     );
   }
 
-  toggleLumen(visible) {
-    if (!this.lumenParts) return;
-    this.lumenParts.forEach((part) => {
-      part.visible = visible;
+  playAnimation(name) {
+    if (!this.mixer) return;
+    if (name === "Rest_Pose") {
+      if (this.activeAction) this.activeAction.stop();
+      this.activeAction = null;
+      return;
+    }
+    const action = this.animations[name];
+    if (action) {
+      if (this.activeAction && this.activeAction !== action) {
+        this.activeAction.fadeOut(0.35);
+      }
+      action.reset().fadeIn(0.35).play();
+      this.activeAction = action;
+    }
+  }
+
+  setMorphWeight(keyName, weight) {
+    if (!this.faceMesh || !this.faceMesh.morphTargetDictionary) return;
+    const idx = this.faceMesh.morphTargetDictionary[keyName];
+    if (idx !== undefined) {
+      this.faceMesh.morphTargetInfluences[idx] = Math.max(0.0, Math.min(1.0, weight));
+    }
+  }
+
+  setShadingMode(mode) {
+    this.allMeshes.forEach((mesh) => {
+      if (!mesh.material) return;
+      if (mode === "wireframe") {
+        mesh.material.wireframe = true;
+      } else {
+        mesh.material.wireframe = false;
+      }
     });
   }
 
@@ -212,6 +270,11 @@ export class ArcaneSceneEngine {
     const cfg = ARCANE_CONFIG.modes[modeKey];
     if (!cfg) return;
     this.currentMode = modeKey;
+    if (modeKey === "wireframe") {
+      this.setShadingMode("wireframe");
+    } else {
+      this.setShadingMode("pbr");
+    }
     this.keyLight.color.setHex(cfg.keyColor);
     this.rimCyan.color.setHex(cfg.rimCyan);
     this.rimMagenta.color.setHex(cfg.rimMagenta);
@@ -241,6 +304,11 @@ export class ArcaneSceneEngine {
       const dt = this.clock.getDelta();
       const elapsed = this.clock.getElapsedTime();
 
+      // Update Animation Mixer
+      if (this.mixer) {
+        this.mixer.update(dt);
+      }
+
       this.frameCount++;
       this.fpsAccum += dt;
       if (this.fpsAccum >= 0.5) {
@@ -252,24 +320,13 @@ export class ArcaneSceneEngine {
         }
       }
 
-      this.shockwavePulse += (1.0 - this.shockwavePulse) * 0.06;
+      this.shockwavePulse = Math.max(1.0, this.shockwavePulse - dt * 2.2);
       this.particleUniforms.uTime.value = elapsed;
-      this.particleUniforms.uShockwave.value = this.shockwavePulse;
+      this.particleUniforms.uPulse.value = this.shockwavePulse;
       this.ringUniforms.uTime.value = elapsed;
 
-      if (this.lumenParts && this.lumenParts.length > 0) {
-        const hoverOffset = Math.sin(elapsed * 2.4) * 0.022;
-        for (const part of this.lumenParts) {
-          if (part._baseY === undefined) part._baseY = part.position.y;
-          part.position.y = part._baseY + hoverOffset;
-          if (part.name === "Lumen_Orbital_Ring") {
-            part.rotation.z += dt * 1.6;
-          }
-        }
-      }
-
-      if (this.autoRotate && this.characterRoot) {
-        this.characterRoot.rotation.y += dt * 0.55;
+      if (this.autoRotate) {
+        this.characterRoot?.rotateY(dt * 0.45);
       }
 
       this.controls.update();

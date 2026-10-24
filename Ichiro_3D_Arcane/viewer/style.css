@@ -346,3 +346,121 @@ body, html {
   background: rgba(255, 85, 0, 0.18);
   box-shadow: 0 0 14px rgba(255, 85, 0, 0.5);
 }
+
+/* Right HUD Controls: Facial ARKit & Animations */
+.hud-controls-right {
+  top: 96px;
+  right: 24px;
+  width: 320px;
+  padding: 20px;
+  border-radius: 6px;
+  border-right: 4px solid var(--neon-gold);
+}
+
+.slider-group {
+  margin-bottom: 14px;
+}
+
+.slider-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: var(--text-dim);
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.slider-val {
+  font-weight: 700;
+}
+
+.cyber-slider {
+  width: 100%;
+  appearance: none;
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 3px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.cyber-slider::-webkit-slider-thumb {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: var(--neon-cyan);
+  cursor: pointer;
+  box-shadow: 0 0 8px var(--neon-cyan);
+}
+
+.reset-facial-btn {
+  width: 100%;
+  background: rgba(255, 85, 0, 0.12);
+  border: 1px solid var(--neon-magma);
+  color: var(--neon-magma);
+  padding: 8px;
+  font-family: var(--font-display);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  cursor: pointer;
+  border-radius: 4px;
+  margin-top: 6px;
+  transition: all 0.2s ease;
+}
+
+.reset-facial-btn:hover {
+  background: var(--neon-magma);
+  color: #05080f;
+  box-shadow: 0 0 12px rgba(255, 85, 0, 0.5);
+}
+
+.anim-btn-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.anim-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(18, 25, 38, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: var(--text-dim);
+  padding: 10px 14px;
+  font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.anim-btn:hover {
+  border-color: var(--neon-cyan);
+  color: #fff;
+}
+
+.anim-btn.active {
+  background: rgba(0, 240, 255, 0.15);
+  border-color: var(--neon-cyan);
+  color: var(--neon-cyan);
+  box-shadow: 0 0 10px rgba(0, 240, 255, 0.3);
+}
+
+.anim-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--text-dim);
+}
+
+.anim-btn.active .anim-dot {
+  background: var(--neon-cyan);
+  box-shadow: 0 0 8px var(--neon-cyan);
+}
+

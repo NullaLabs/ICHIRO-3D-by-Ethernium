@@ -9,13 +9,13 @@ export const ARCANE_CONFIG = {
     title: "THE SILENT SENTINEL // BLADEWALKER",
     origin: "SOLIS",
     faction: "WANDERER",
-    heightMeters: 1.800,
-    widthMeters: 0.942,
+    heightMeters: 1.810,
+    widthMeters: 0.878,
     depthMeters: 0.365,
     quads: 46650,
     restDeltaMicrons: 0.12,
     companion: "LUMEN RECON DRONE // DUAL CRIMSON OPTICS",
-    modelUrl: "../models/Ichiro_2390_Arcane.glb",
+    modelUrl: "./models/Ichiro_2390_Arcane_GameReady.glb",
   },
   modes: {
     standard: {
@@ -36,6 +36,15 @@ export const ARCANE_CONFIG = {
       bloomIntensity: 2.25,
       shockwaveSpeed: 2.6,
     },
+    wireframe: {
+      label: "MANIFOLD TOPOLOGY // WIREFRAME",
+      keyColor: 0x88bbff,
+      rimCyan: 0x00f0ff,
+      rimMagenta: 0x00aaff,
+      magmaGlow: 0x00f0ff,
+      bloomIntensity: 1.0,
+      shockwaveSpeed: 0.5,
+    }
   },
   particles: {
     count: 2400,
@@ -44,9 +53,9 @@ export const ARCANE_CONFIG = {
   },
   cameras: {
     hero34:    { pos: [0.82, 0.96, 2.75], target: [0.0, 0.90, 0.0], fov: 38 },
-    portrait:  { pos: [0.18, 1.54, 1.05], target: [0.0, 1.52, 0.0], fov: 32 },
-    frontOrtho:{ pos: [0.00, 0.92, 3.10], target: [0.0, 0.90, 0.0], fov: 35 },
-    sideOrtho: { pos: [-3.00, 0.92, 0.00], target: [0.0, 0.90, 0.0], fov: 35 },
-    backOrtho: { pos: [0.00, 0.92, -3.10], target: [0.0, 0.90, 0.0], fov: 35 },
+    portrait:  { pos: [0.12, 1.58, 0.82], target: [0.0, 1.58, 0.0], fov: 28 },
+    frontOrtho:{ pos: [0.00, 0.92, 2.90], target: [0.0, 0.90, 0.0], fov: 35 },
+    sideOrtho: { pos: [-2.90, 0.92, 0.00], target: [0.0, 0.90, 0.0], fov: 35 },
+    backOrtho: { pos: [0.00, 0.92, -2.90], target: [0.0, 0.90, 0.0], fov: 35 },
   },
 };
