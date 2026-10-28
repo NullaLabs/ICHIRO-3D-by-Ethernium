@@ -95,5 +95,26 @@ hipótesis de forma local, no profundidad medida de las referencias. Maestro
 fuente y sesión abierta permanecen intactos. La escena derivada se conserva
 localmente; script, informe y renders se versionan para reproducirla.
 
+## WF-003b — extensión lateral con dirección de expansión local
+
+El generador admite -- --outer. Amplía la guía hasta el landmark 4 y orienta
+las filas exteriores según la perpendicular a la tangente en el plano YZ,
+en lugar de desplazarlas siempre hacia abajo. Resultado: 39 vértices, 24 quads,
+distancia máxima de proyección 0.00376475, límite conservado en 0.004.
+Normales comprobadas; frontal y perfil positivo inspeccionados visualmente.
+
+Intentar incluir el landmark 3 produjo un punto sin soporte y abortó antes de
+guardar. La versión conservada termina en 4: no se elevó el umbral para forzar
+el encaje. Falta completar margen superior y comisuras con una máscara revisada.
+La banda sigue siendo piel periocular, sin espesor, contacto ocular ni rig.
+
+Comando reproducible desde Ichiro_Chibi (usar la ruta local de Blender):
+```powershell
+& 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' --background --factory-startup --python-exit-code 1 --python tools/build_lower_lid_strip.py -- --outer
+& 'C:\Program Files\Blender Foundation\Blender 5.2\blender.exe' --background --factory-startup --python-exit-code 1 --python tools/render_landmark_depth_review.py -- --outer
+```
+--python-exit-code 1 evita confundir una excepción Python con ejecución correcta
+del proceso Blender. Escena local: Ichiro_Chibi_Outer_Lid_Strip_Review.blend.
+
 Cada bloque debe producir una mejora verificable; no añadir capas de servicios
 antes de tener un caso geométrico útil. La reconstrucción artística sigue pendiente.
