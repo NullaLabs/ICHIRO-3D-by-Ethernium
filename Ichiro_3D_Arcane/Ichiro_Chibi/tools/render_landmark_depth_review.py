@@ -14,6 +14,8 @@ depth_mode='--depth' in sys.argv
 contact_mode='--contact' in sys.argv
 closed_mode='--closed' in sys.argv
 relax_mode='--relax' in sys.argv
+shrink_mode='--shrinkwrap' in sys.argv
+relax_mode=relax_mode or shrink_mode
 closed_mode=closed_mode or relax_mode
 contact_mode=contact_mode or closed_mode
 depth_mode=depth_mode or contact_mode
@@ -27,6 +29,7 @@ if depth_mode: filename='Ichiro_Chibi_Depth_Lid_Strip_Review.blend'
 if contact_mode: filename='Ichiro_Chibi_Contact_Lid_Strip_Review.blend'
 if closed_mode: filename='Ichiro_Chibi_Closed_Eye_Review.blend'
 if relax_mode: filename='Ichiro_Chibi_Closed_Eye_Relax_Review.blend'
+if shrink_mode: filename='Ichiro_Chibi_Shrinkwrap_Review.blend'
 bpy.ops.wm.open_mainfile(filepath=str(ROOT/filename))
 scene=bpy.context.scene
 for obj in scene.objects:
@@ -72,5 +75,6 @@ for label,loc in [('front',(1.5,0,.275)),('negative_y',(.04,-1.5,.275)),('positi
     if contact_mode: prefix='contact_strip'
     if closed_mode: prefix='closed_eye'
     if relax_mode: prefix='closed_eye_relax'
+    if shrink_mode: prefix='shrinkwrap_eye'
     scene.render.filepath=str(ROOT/'renders'/f'{prefix}_{label}.png')
     bpy.ops.render.render(write_still=True)

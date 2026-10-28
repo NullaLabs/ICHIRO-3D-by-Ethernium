@@ -1,0 +1,21 @@
+{
+  "method": "NEAREST_SURFACEPOINT",
+  "target": "SKIN_CANDIDATES__NOT_APPROVED",
+  "vertex_group": "INFERRED_DEPTH_REVIEW",
+  "base_vertices": 96,
+  "evaluated_vertices": 96,
+  "max_displacement": 0.004360397808667642,
+  "vertices_over_004": [
+    87,
+    88
+  ],
+  "degenerate_faces": 0,
+  "backwards_faces": 0,
+  "applied": false,
+  "production_approved": false,
+  "limitations": [
+    "Skin target remains incomplete color mask",
+    "Nearest mode has no configured distance cap",
+    "No globe contact or deformation validation"
+  ]
+}
