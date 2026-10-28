@@ -355,3 +355,24 @@ por el modo seguro del MCP, así que las curvas se reconstruyeron desde los
 `full_hit` del JSON sin guardar sobre el archivo abierto. Evitar renders
 headless de la malla densa: EEVEE agotó memoria al crear buffers. Ver
 `docs/EYE_BROW_SEPARATION_V03.md` y `tools/build_eye_brow_surface_guides_v03.py`.
+
+## WF-016 — arquitectura procedural reproducible asistida por IA
+
+Se evaluó el patrón compartido de reglas, parámetros, semilla estable, censo
+numérico, hoja de vistas, crítica y patch pequeño. Se adopta para herramientas,
+no para aleatorizar la identidad canónica de Ichiro. El canon será un spec
+medido y versionado; seeds solo variarán módulos secundarios explícitamente
+permitidos. Geometry Nodes se reserva para módulos editables y repetitivos;
+rostro, anatomía, escultura y retopo conservan guía artística. Los gates
+separan métricas geométricas de aprobación visual y de deformación: ningún
+render o conteo por sí solo aprueba un personaje riggeable.
+
+La investigación detecta cambio de API en Blender 5.0 y documenta fijar versión,
+consultar propiedades reales, aislar scripts, exigir exit code, medir la
+geometría invisible al render y limitar cada patch. Las cifras de benchmark del
+post compartido son auto-reportadas y no reproducidas aquí. No se instalaron
+addons ni dependencias. Decisión, arquitectura, límites y referencias:
+`docs/ETHERNIUM_CHARACTER_FOUNDRY_V01.md`. Próximo bloque Ichiro: inventario y
+clasificación por hash de fuentes/candidatos/rechazos, luego una hoja base de
+referencias y modelo con cámaras bloqueadas; no continuar ramificando el
+experimento local de párpado.
