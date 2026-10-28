@@ -49,7 +49,8 @@ sin renderizar y sin guardar la escena fuente. `tools/score_reference_fit.py`
 compara las cuatro placas individuales y los ocho paneles del turnaround; se
 documenta cada imagen en `docs/REFERENCE_CATALOG.md`. El informe incluye perfiles
 de anchura en 49 alturas por placa (`reference_fit_width_profiles.png`) para
-mostrar dónde aparece cada diferencia de silueta.
+mostrar dónde aparece cada diferencia de silueta. Puede recibir máscaras
+revisadas en PNG y registra sus hashes.
 
 Con la máscara GrabCut, el IoU actual es 0,515–0,560 en las cuatro placas y
 0,640–0,708 en la hoja de ocho vistas. Las proporciones ancho/alto de la fuente
