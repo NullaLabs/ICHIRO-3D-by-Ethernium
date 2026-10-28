@@ -42,6 +42,19 @@ auditoría, la guía de rig y el render de revisión. No se versionan entornos
 virtuales, cachés ni el clon de Hunyuan: son dependencias regenerables, no
 activos del personaje.
 
+## Comparación de referencias CPU — 2026-10-28
+
+`tools/project_reference_silhouettes.py` produce proyecciones para ocho ángulos
+sin renderizar y sin guardar la escena fuente. `tools/score_reference_fit.py`
+compara las cuatro placas individuales y los ocho paneles del turnaround; se
+documenta cada imagen en `docs/REFERENCE_CATALOG.md`.
+
+El IoU de la máscara actual es 0,40–0,52 en las cuatro placas y 0,64–0,71 en la
+hoja de ocho vistas. Los valores dependen del umbral y de sombras; sirven para
+localizar discrepancias con los overlays, no para aprobar el parecido. La fuente
+maestra permanece intacta. El siguiente paso técnico es calibrar cámaras y
+revisar/corregir máscaras antes de usar cualquier medición para una escultura.
+
 ## Auditoría de blockout 360 — V02
 
-El candidato de silueta está aislado en xports/visual_hull_v02/; gate geométrico PASS, pero revisión artística pendiente. Mide 0.525 × 0.575 × 1.000 m frente a la fuente (0.420 × 0.490 × 1.000 m), diferencia que se debe resolver con calibración de vistas y cámaras, no escalando el maestro. Detalle: docs/VISUAL_HULL_BLOCKOUT_V02.md. El inventario automatizado más reciente registra 177 archivos y 1 grupo de duplicados exactos; sus categorías son sugerencias por nombre/ruta, no aprobación.
+El candidato de silueta está aislado en `exports/visual_hull_v02/`; gate geométrico PASS, pero revisión artística pendiente. Mide 0.525 × 0.575 × 1.000 m frente a la fuente (0.420 × 0.490 × 1.000 m), diferencia que se debe resolver con calibración de vistas y cámaras, no escalando el maestro. Detalle: `docs/VISUAL_HULL_BLOCKOUT_V02.md`. El inventario automatizado más reciente registra 177 archivos y 1 grupo de duplicados exactos; sus categorías son sugerencias por nombre/ruta, no aprobación.

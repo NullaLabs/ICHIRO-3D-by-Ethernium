@@ -1,0 +1,185 @@
+{
+  "schema": "ethernium.reference-fit-renders.v2",
+  "blender_version": "5.2.0 LTS",
+  "source_file_name": "Ichiro_Chibi_HighDetail_Working.blend",
+  "source_file_sha256": "e08c086e2d8fad1be6f593647444455b4c3df034b97f4c3e262e7dd53f9a5024",
+  "source_object": "ICH_CHIBI_HIGHDETAIL_SOURCE__READONLY",
+  "source_dimensions_world_m": [
+    0.42310941219329834,
+    0.485243558883667,
+    1.0
+  ],
+  "source_bounds_world_m": {
+    "min": [
+      -0.21155470609664917,
+      -0.2426217794418335,
+      -0.5
+    ],
+    "max": [
+      0.21155470609664917,
+      0.2426217794418335,
+      0.5
+    ]
+  },
+  "source_mesh_counts": {
+    "vertices": 773535,
+    "edges": 2269034,
+    "polygons": 1495680
+  },
+  "axes": {
+    "front": "+X",
+    "left_profile_camera": "+Y",
+    "right_profile_camera": "-Y",
+    "up": "+Z"
+  },
+  "method": "BVHTree.FromObject + orthographic ray mask; no render engine or addon",
+  "source_scene_saved": false,
+  "requested_views": [
+    "front",
+    "front_left",
+    "left",
+    "left_back",
+    "back",
+    "back_right",
+    "right",
+    "front_right"
+  ],
+  "views": {
+    "front": {
+      "image": "source_front.pgm",
+      "camera_azimuth_degrees_about_z": 0,
+      "camera_direction_world": [
+        1.0,
+        0.0,
+        0.0
+      ],
+      "projection": "orthographic CPU BVH ray cast",
+      "sample_size_px": [
+        384,
+        384
+      ],
+      "frame_height_m": 1.12,
+      "hit_pixels": 36157,
+      "silhouette_sample_fraction": 0.2452053493923611
+    },
+    "front_left": {
+      "image": "source_front_left.pgm",
+      "camera_azimuth_degrees_about_z": 45,
+      "camera_direction_world": [
+        0.7071067690849304,
+        0.7071067690849304,
+        0.0
+      ],
+      "projection": "orthographic CPU BVH ray cast",
+      "sample_size_px": [
+        384,
+        384
+      ],
+      "frame_height_m": 1.12,
+      "hit_pixels": 36206,
+      "silhouette_sample_fraction": 0.2455376519097222
+    },
+    "left": {
+      "image": "source_left.pgm",
+      "camera_azimuth_degrees_about_z": 90,
+      "camera_direction_world": [
+        6.123234262925839e-17,
+        1.0,
+        0.0
+      ],
+      "projection": "orthographic CPU BVH ray cast",
+      "sample_size_px": [
+        384,
+        384
+      ],
+      "frame_height_m": 1.12,
+      "hit_pixels": 25906,
+      "silhouette_sample_fraction": 0.1756863064236111
+    },
+    "left_back": {
+      "image": "source_left_back.pgm",
+      "camera_azimuth_degrees_about_z": 135,
+      "camera_direction_world": [
+        -0.7071067690849304,
+        0.7071067690849304,
+        0.0
+      ],
+      "projection": "orthographic CPU BVH ray cast",
+      "sample_size_px": [
+        384,
+        384
+      ],
+      "frame_height_m": 1.12,
+      "hit_pixels": 33146,
+      "silhouette_sample_fraction": 0.2247856987847222
+    },
+    "back": {
+      "image": "source_back.pgm",
+      "camera_azimuth_degrees_about_z": 180,
+      "camera_direction_world": [
+        -1.0,
+        1.2246468525851679e-16,
+        0.0
+      ],
+      "projection": "orthographic CPU BVH ray cast",
+      "sample_size_px": [
+        384,
+        384
+      ],
+      "frame_height_m": 1.12,
+      "hit_pixels": 36159,
+      "silhouette_sample_fraction": 0.24521891276041666
+    },
+    "back_right": {
+      "image": "source_back_right.pgm",
+      "camera_azimuth_degrees_about_z": 225,
+      "camera_direction_world": [
+        -0.7071067690849304,
+        -0.7071067690849304,
+        0.0
+      ],
+      "projection": "orthographic CPU BVH ray cast",
+      "sample_size_px": [
+        384,
+        384
+      ],
+      "frame_height_m": 1.12,
+      "hit_pixels": 36208,
+      "silhouette_sample_fraction": 0.2455512152777778
+    },
+    "right": {
+      "image": "source_right.pgm",
+      "camera_azimuth_degrees_about_z": 270,
+      "camera_direction_world": [
+        -1.8369701465288538e-16,
+        -1.0,
+        0.0
+      ],
+      "projection": "orthographic CPU BVH ray cast",
+      "sample_size_px": [
+        384,
+        384
+      ],
+      "frame_height_m": 1.12,
+      "hit_pixels": 25908,
+      "silhouette_sample_fraction": 0.17569986979166666
+    },
+    "front_right": {
+      "image": "source_front_right.pgm",
+      "camera_azimuth_degrees_about_z": 315,
+      "camera_direction_world": [
+        0.7071067690849304,
+        -0.7071067690849304,
+        0.0
+      ],
+      "projection": "orthographic CPU BVH ray cast",
+      "sample_size_px": [
+        384,
+        384
+      ],
+      "frame_height_m": 1.12,
+      "hit_pixels": 33149,
+      "silhouette_sample_fraction": 0.22480604383680555
+    }
+  }
+}

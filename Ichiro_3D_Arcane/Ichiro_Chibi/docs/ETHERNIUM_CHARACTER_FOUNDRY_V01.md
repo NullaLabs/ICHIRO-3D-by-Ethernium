@@ -99,6 +99,8 @@ El pase ocular v03 mostró una mejora diagnóstica local, pero no generó párpa
 - Manual Blender Geometry Nodes 5.2: https://docs.blender.org/manual/en/latest/editors/geometry_node.html
 - Blender Studio, retopología limpia para workflow estilizado: https://studio.blender.org/training/stylized-character-workflow/chapter/5d384edea5b8f5c2c32c8507/
 - Blender Studio, retopología y por qué ayuda a rig/deformación: https://studio.blender.org/training/realistic-human-research/retopology/
+- Blender 5.2, límites del remesh automático para topología deformable: https://docs.blender.org/manual/en/5.2/modeling/meshes/retopology.html
+- Blender API, ray casting con `BVHTree`: https://docs.blender.org/api/current/mathutils.bvhtree.html
 - Blender Studio, curso de rig facial y ribbon guides/shape keys: https://studio.blender.org/training/facial-rigging/
 - RetopoFlow docs: snapping sobre fuente y workflow 4.x: https://docs.retopoflow.com/
 - Artículo compartido y benchmark auto-reportado: https://teapawt.net/0xCodio/article/2109275834984915150
@@ -125,6 +127,27 @@ V02 corrige escala, aspecto y winding; audita conectividad antes de aceptar el
 blockout. Resultado y límites: `docs/VISUAL_HULL_BLOCKOUT_V02.md` y
 `exports/visual_hull_v02/visual_hull_report_v02.json`. Se usa solo como soporte
 de proporción; no reemplaza el sculpt de alta densidad ni es topología de rig.
+
+## Tercer componente implementado: comparación 360 de referencias
+
+`tools/project_reference_silhouettes.py` proyecta la fuente bloqueada contra un
+BVH en CPU en ocho azimuts, sin renderizar ni guardar la escena fuente.
+`tools/score_reference_fit.py` compara las cuatro placas grandes y los ocho
+recortes de `ichiro_chibi_8view_turnaround.png`; genera máscaras, overlays,
+contact sheets y un informe versionado. `docs/REFERENCE_CATALOG.md` registra
+las seis imágenes, los landmarks auxiliares y el procedimiento.
+
+La segmentación automática aún incluye sombra de suelo y su score cambia al
+mover el umbral. Por eso los resultados son localizadores de discrepancias y
+material para revisión visual, no una calificación de canon. El siguiente pase
+añadirá máscaras corregibles y calibración de cámara antes de autorizar cualquier
+corrección de escultura. El cálculo utiliza `BVHTree` documentado por Blender;
+evita el fallo repetido del render EEVEE headless con el controlador OpenGL de
+este equipo.
+
+Evidencia de este pase: `renders/reference_fit_v02_cpu/comparison/` y
+`renders/reference_fit_v02_cpu/projections/projection_manifest.json`. El archivo
+maestro mantiene su hash en el manifiesto y `source_scene_saved` es `false`.
 
 ## Criterio de éxito del sistema
 

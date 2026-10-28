@@ -1,0 +1,593 @@
+{
+  "schema": "ethernium.reference-fit-silhouette-score.v2",
+  "purpose": "camera-normalized diagnostic across the four large orthographic references and eight turnaround panels; not canon approval",
+  "reference_mask_threshold_rgb_residual": 24,
+  "projection_mask_threshold": 127,
+  "canonical_four_view_metrics": {
+    "front": {
+      "intersection_px": 29020,
+      "union_px": 67178,
+      "reference_area_px": 60041,
+      "candidate_area_px": 36157,
+      "iou": 0.4319866623001578,
+      "dice": 0.6033389467556498,
+      "reference_bbox_px": [
+        65,
+        14,
+        321,
+        456
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 60042,
+        "foreground_area_px": 60041,
+        "foreground_bbox_px": [
+          65,
+          14,
+          321,
+          456
+        ],
+        "kept_component_count": 1,
+        "kept_component_areas_px": [
+          60041
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        109,
+        21,
+        275,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.579185520361991,
+      "render_bbox_aspect_width_over_height": 0.4853801169590643,
+      "height_normalization_scale": 1.2923976608187135,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_ortho_front.png",
+      "reference_mask": "reference_mask_ortho_front.png",
+      "reference": "references\\ichiro_chibi_front.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_front.pgm"
+    },
+    "back": {
+      "intersection_px": 29079,
+      "union_px": 69144,
+      "reference_area_px": 62064,
+      "candidate_area_px": 36159,
+      "iou": 0.4205570982297813,
+      "dice": 0.5921016462539324,
+      "reference_bbox_px": [
+        43,
+        2,
+        300,
+        442
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 62067,
+        "foreground_area_px": 62064,
+        "foreground_bbox_px": [
+          43,
+          2,
+          300,
+          442
+        ],
+        "kept_component_count": 1,
+        "kept_component_areas_px": [
+          62064
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        109,
+        21,
+        275,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.5840909090909091,
+      "render_bbox_aspect_width_over_height": 0.4853801169590643,
+      "height_normalization_scale": 1.286549707602339,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_ortho_back.png",
+      "reference_mask": "reference_mask_ortho_back.png",
+      "reference": "references\\ichiro_chibi_back.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_back.pgm"
+    },
+    "left": {
+      "intersection_px": 25179,
+      "union_px": 48614,
+      "reference_area_px": 47887,
+      "candidate_area_px": 25906,
+      "iou": 0.5179372197309418,
+      "dice": 0.6824224519940916,
+      "reference_bbox_px": [
+        79,
+        10,
+        277,
+        459
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 47888,
+        "foreground_area_px": 47887,
+        "foreground_bbox_px": [
+          79,
+          10,
+          277,
+          459
+        ],
+        "kept_component_count": 2,
+        "kept_component_areas_px": [
+          47877,
+          10
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        119,
+        21,
+        265,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.44097995545657015,
+      "render_bbox_aspect_width_over_height": 0.4269005847953216,
+      "height_normalization_scale": 1.3128654970760234,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_ortho_left.png",
+      "reference_mask": "reference_mask_ortho_left.png",
+      "reference": "references\\ichiro_chibi_left.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_left.pgm"
+    },
+    "right": {
+      "intersection_px": 20850,
+      "union_px": 51580,
+      "reference_area_px": 46522,
+      "candidate_area_px": 25908,
+      "iou": 0.4042264443582784,
+      "dice": 0.5757282893828524,
+      "reference_bbox_px": [
+        49,
+        2,
+        283,
+        451
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 46527,
+        "foreground_area_px": 46522,
+        "foreground_bbox_px": [
+          49,
+          2,
+          283,
+          451
+        ],
+        "kept_component_count": 1,
+        "kept_component_areas_px": [
+          46522
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        119,
+        21,
+        265,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.5211581291759465,
+      "render_bbox_aspect_width_over_height": 0.4269005847953216,
+      "height_normalization_scale": 1.3128654970760234,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_ortho_right.png",
+      "reference_mask": "reference_mask_ortho_right.png",
+      "reference": "references\\ichiro_chibi_right.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_right.pgm"
+    }
+  },
+  "turnaround_eight_view_metrics": {
+    "front": {
+      "intersection_px": 1930,
+      "union_px": 2814,
+      "reference_area_px": 2683,
+      "candidate_area_px": 2061,
+      "iou": 0.6858564321250888,
+      "dice": 0.8136593591905565,
+      "reference_bbox_px": [
+        22,
+        2,
+        72,
+        80
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 2683,
+        "foreground_area_px": 2683,
+        "foreground_bbox_px": [
+          22,
+          2,
+          72,
+          80
+        ],
+        "kept_component_count": 1,
+        "kept_component_areas_px": [
+          2683
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        109,
+        21,
+        275,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.6410256410256411,
+      "render_bbox_aspect_width_over_height": 0.4853801169590643,
+      "height_normalization_scale": 0.22807017543859648,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_turnaround_front.png",
+      "reference_mask": "reference_mask_turnaround_front.png",
+      "source_sheet": "references\\ichiro_chibi_8view_turnaround.png",
+      "source_panel_index_zero_based": 0,
+      "reference_crop": "renders\\reference_fit_v02_cpu\\comparison\\turnaround_reference_crops\\reference_front.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_front.pgm"
+    },
+    "front_left": {
+      "intersection_px": 1956,
+      "union_px": 2895,
+      "reference_area_px": 2818,
+      "candidate_area_px": 2033,
+      "iou": 0.6756476683937824,
+      "dice": 0.8064316635745207,
+      "reference_bbox_px": [
+        18,
+        2,
+        69,
+        80
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 2818,
+        "foreground_area_px": 2818,
+        "foreground_bbox_px": [
+          18,
+          2,
+          69,
+          80
+        ],
+        "kept_component_count": 1,
+        "kept_component_areas_px": [
+          2818
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        108,
+        21,
+        270,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.6538461538461539,
+      "render_bbox_aspect_width_over_height": 0.47368421052631576,
+      "height_normalization_scale": 0.22807017543859648,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_turnaround_front_left.png",
+      "reference_mask": "reference_mask_turnaround_front_left.png",
+      "source_sheet": "references\\ichiro_chibi_8view_turnaround.png",
+      "source_panel_index_zero_based": 1,
+      "reference_crop": "renders\\reference_fit_v02_cpu\\comparison\\turnaround_reference_crops\\reference_front_left.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_front_left.pgm"
+    },
+    "left": {
+      "intersection_px": 1431,
+      "union_px": 2135,
+      "reference_area_px": 2108,
+      "candidate_area_px": 1458,
+      "iou": 0.6702576112412177,
+      "dice": 0.8025799214806506,
+      "reference_bbox_px": [
+        18,
+        2,
+        63,
+        80
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 2108,
+        "foreground_area_px": 2108,
+        "foreground_bbox_px": [
+          18,
+          2,
+          63,
+          80
+        ],
+        "kept_component_count": 1,
+        "kept_component_areas_px": [
+          2108
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        119,
+        21,
+        265,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.5769230769230769,
+      "render_bbox_aspect_width_over_height": 0.4269005847953216,
+      "height_normalization_scale": 0.22807017543859648,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_turnaround_left.png",
+      "reference_mask": "reference_mask_turnaround_left.png",
+      "source_sheet": "references\\ichiro_chibi_8view_turnaround.png",
+      "source_panel_index_zero_based": 2,
+      "reference_crop": "renders\\reference_fit_v02_cpu\\comparison\\turnaround_reference_crops\\reference_left.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_left.pgm"
+    },
+    "left_back": {
+      "intersection_px": 1808,
+      "union_px": 2826,
+      "reference_area_px": 2774,
+      "candidate_area_px": 1860,
+      "iou": 0.6397735314932768,
+      "dice": 0.7803193785066896,
+      "reference_bbox_px": [
+        16,
+        2,
+        64,
+        80
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 2774,
+        "foreground_area_px": 2774,
+        "foreground_bbox_px": [
+          16,
+          2,
+          64,
+          80
+        ],
+        "kept_component_count": 1,
+        "kept_component_areas_px": [
+          2774
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        109,
+        21,
+        274,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.6153846153846154,
+      "render_bbox_aspect_width_over_height": 0.4824561403508772,
+      "height_normalization_scale": 0.22807017543859648,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_turnaround_left_back.png",
+      "reference_mask": "reference_mask_turnaround_left_back.png",
+      "source_sheet": "references\\ichiro_chibi_8view_turnaround.png",
+      "source_panel_index_zero_based": 3,
+      "reference_crop": "renders\\reference_fit_v02_cpu\\comparison\\turnaround_reference_crops\\reference_left_back.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_left_back.pgm"
+    },
+    "back": {
+      "intersection_px": 1994,
+      "union_px": 2875,
+      "reference_area_px": 2805,
+      "candidate_area_px": 2064,
+      "iou": 0.6935652173913044,
+      "dice": 0.8190593551037174,
+      "reference_bbox_px": [
+        17,
+        2,
+        68,
+        80
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 2805,
+        "foreground_area_px": 2805,
+        "foreground_bbox_px": [
+          17,
+          2,
+          68,
+          80
+        ],
+        "kept_component_count": 1,
+        "kept_component_areas_px": [
+          2805
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        109,
+        21,
+        275,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.6538461538461539,
+      "render_bbox_aspect_width_over_height": 0.4853801169590643,
+      "height_normalization_scale": 0.22807017543859648,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_turnaround_back.png",
+      "reference_mask": "reference_mask_turnaround_back.png",
+      "source_sheet": "references\\ichiro_chibi_8view_turnaround.png",
+      "source_panel_index_zero_based": 4,
+      "reference_crop": "renders\\reference_fit_v02_cpu\\comparison\\turnaround_reference_crops\\reference_back.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_back.pgm"
+    },
+    "back_right": {
+      "intersection_px": 1963,
+      "union_px": 2921,
+      "reference_area_px": 2847,
+      "candidate_area_px": 2037,
+      "iou": 0.672030126668949,
+      "dice": 0.8038493038493039,
+      "reference_bbox_px": [
+        20,
+        2,
+        68,
+        80
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 2847,
+        "foreground_area_px": 2847,
+        "foreground_bbox_px": [
+          20,
+          2,
+          68,
+          80
+        ],
+        "kept_component_count": 1,
+        "kept_component_areas_px": [
+          2847
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        114,
+        21,
+        276,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.6153846153846154,
+      "render_bbox_aspect_width_over_height": 0.47368421052631576,
+      "height_normalization_scale": 0.22807017543859648,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_turnaround_back_right.png",
+      "reference_mask": "reference_mask_turnaround_back_right.png",
+      "source_sheet": "references\\ichiro_chibi_8view_turnaround.png",
+      "source_panel_index_zero_based": 5,
+      "reference_crop": "renders\\reference_fit_v02_cpu\\comparison\\turnaround_reference_crops\\reference_back_right.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_back_right.pgm"
+    },
+    "right": {
+      "intersection_px": 1439,
+      "union_px": 2032,
+      "reference_area_px": 2005,
+      "candidate_area_px": 1466,
+      "iou": 0.7081692913385826,
+      "dice": 0.829155862863728,
+      "reference_bbox_px": [
+        19,
+        2,
+        64,
+        80
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 2005,
+        "foreground_area_px": 2005,
+        "foreground_bbox_px": [
+          19,
+          2,
+          64,
+          80
+        ],
+        "kept_component_count": 1,
+        "kept_component_areas_px": [
+          2005
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        119,
+        21,
+        265,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.5769230769230769,
+      "render_bbox_aspect_width_over_height": 0.4269005847953216,
+      "height_normalization_scale": 0.22807017543859648,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_turnaround_right.png",
+      "reference_mask": "reference_mask_turnaround_right.png",
+      "source_sheet": "references\\ichiro_chibi_8view_turnaround.png",
+      "source_panel_index_zero_based": 6,
+      "reference_crop": "renders\\reference_fit_v02_cpu\\comparison\\turnaround_reference_crops\\reference_right.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_right.pgm"
+    },
+    "front_right": {
+      "intersection_px": 1797,
+      "union_px": 2806,
+      "reference_area_px": 2744,
+      "candidate_area_px": 1859,
+      "iou": 0.6404133998574483,
+      "dice": 0.7807951336085162,
+      "reference_bbox_px": [
+        19,
+        2,
+        67,
+        80
+      ],
+      "reference_segmentation": {
+        "background_model": "smoothed side-border row medians, linearly blended across width",
+        "foreground_threshold_rgb_residual": 24,
+        "initial_foreground_area_px": 2744,
+        "foreground_area_px": 2744,
+        "foreground_bbox_px": [
+          19,
+          2,
+          67,
+          80
+        ],
+        "kept_component_count": 1,
+        "kept_component_areas_px": [
+          2744
+        ],
+        "discarded_border_component_area_px": 0,
+        "minimum_kept_component_area_px": 8
+      },
+      "source_render_bbox_px": [
+        110,
+        21,
+        275,
+        363
+      ],
+      "reference_bbox_aspect_width_over_height": 0.6153846153846154,
+      "render_bbox_aspect_width_over_height": 0.4824561403508772,
+      "height_normalization_scale": 0.22807017543859648,
+      "alignment": "bbox center + height only; width is never scaled independently",
+      "overlay": "overlay_turnaround_front_right.png",
+      "reference_mask": "reference_mask_turnaround_front_right.png",
+      "source_sheet": "references\\ichiro_chibi_8view_turnaround.png",
+      "source_panel_index_zero_based": 7,
+      "reference_crop": "renders\\reference_fit_v02_cpu\\comparison\\turnaround_reference_crops\\reference_front_right.png",
+      "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_front_right.pgm"
+    }
+  },
+  "turnaround_crop_method": {
+    "layout": "4 columns x 2 rows",
+    "panel_size_px": [
+      90,
+      120
+    ],
+    "crop_inset_px": [
+      2,
+      2
+    ],
+    "crop_bottom_row_px_relative_to_panel": 84,
+    "caption_area_excluded": true
+  },
+  "interpretation": "IoU compares silhouettes after matching each image's figure height and bbox center. It cannot recover depth, anatomy, concavities, expression, or topology, and can be biased by perspective, shadows, pose, low panel resolution, or masks. The four separate ortho plates are the primary silhouette constraints; turnaround panel scores are secondary rotation consistency evidence."
+}
