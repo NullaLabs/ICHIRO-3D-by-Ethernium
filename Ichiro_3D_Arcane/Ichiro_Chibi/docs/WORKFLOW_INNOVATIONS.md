@@ -168,5 +168,22 @@ Escena local Ichiro_Chibi_Depth_Lid_Strip_Review.blend; informe
 DEPTH_LID_STRIP_REVIEW.json y renders depth_strip_* versionados junto al código.
 La mejora es experimental y no acredita fidelidad ni comportamiento de rig.
 
+## WF-003f — contacto frontal acotado con comparación reversible
+
+refine_strip_contact.py lee la variante depth y ajusta X al primer impacto
+frontal sobre la fuente completa, más 0.0008 para visualizar. Solo acepta
+correcciones absolutas <=0.004. Esto comprueba cercanía y visibilidad, NO identidad
+semántica de piel. No garantiza excluir accesorios próximos.
+
+Resultado: 59/63 vértices ajustados; 33,54,55,62 conservados al superar el límite.
+Se verifican normales y áreas de caras antes de guardar. La forma anterior queda
+en shape key Before_Contact_Review (valor 1 restaura la variante depth; 0 muestra
+el ajuste). Render frontal inspeccionado: arco superior más visible. Persisten
+incertidumbres de superficie y anatomía, sin espesor ni globo validado.
+
+Escena local Ichiro_Chibi_Contact_Lid_Strip_Review.blend. Código, informe
+STRIP_CONTACT_REVIEW.json y renders contact_strip_* versionados. Ejecutar el
+generador con --python-exit-code 1 y el renderizador con -- --contact.
+
 Cada bloque debe producir una mejora verificable; no añadir capas de servicios
 antes de tener un caso geométrico útil. La reconstrucción artística sigue pendiente.

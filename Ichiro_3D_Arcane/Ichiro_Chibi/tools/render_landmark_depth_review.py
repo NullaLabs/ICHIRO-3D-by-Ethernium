@@ -11,6 +11,8 @@ outer_mode='--outer' in sys.argv
 upper_mode='--upper' in sys.argv
 smooth_mode='--smooth' in sys.argv
 depth_mode='--depth' in sys.argv
+contact_mode='--contact' in sys.argv
+depth_mode=depth_mode or contact_mode
 smooth_mode=smooth_mode or depth_mode
 upper_mode=upper_mode or smooth_mode
 strip_mode=strip_mode or outer_mode or upper_mode
@@ -18,6 +20,7 @@ filename='Ichiro_Chibi_Outer_Lid_Strip_Review.blend' if outer_mode else ('Ichiro
 if upper_mode: filename='Ichiro_Chibi_Upper_Lid_Strip_Review.blend'
 if smooth_mode: filename='Ichiro_Chibi_Smooth_Lid_Strip_Review.blend'
 if depth_mode: filename='Ichiro_Chibi_Depth_Lid_Strip_Review.blend'
+if contact_mode: filename='Ichiro_Chibi_Contact_Lid_Strip_Review.blend'
 bpy.ops.wm.open_mainfile(filepath=str(ROOT/filename))
 scene=bpy.context.scene
 for obj in scene.objects:
@@ -60,5 +63,6 @@ for label,loc in [('front',(1.5,0,.275)),('negative_y',(.04,-1.5,.275)),('positi
     if upper_mode: prefix='upper_strip'
     if smooth_mode: prefix='smooth_strip'
     if depth_mode: prefix='depth_strip'
+    if contact_mode: prefix='contact_strip'
     scene.render.filepath=str(ROOT/'renders'/f'{prefix}_{label}.png')
     bpy.ops.render.render(write_still=True)

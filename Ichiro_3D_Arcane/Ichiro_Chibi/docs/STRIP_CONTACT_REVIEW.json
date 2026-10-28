@@ -1,0 +1,330 @@
+{
+  "schema": "ethernium.strip-contact/0.1",
+  "max_correction": 0.004,
+  "display_offset": 0.0008,
+  "corrections": [
+    {
+      "vertex": 0,
+      "delta_x": -3.589391708858081e-08,
+      "status": "accepted"
+    },
+    {
+      "vertex": 1,
+      "delta_x": 1.573431491846966e-06,
+      "status": "accepted"
+    },
+    {
+      "vertex": 2,
+      "delta_x": 3.706799745559208e-05,
+      "status": "accepted"
+    },
+    {
+      "vertex": 3,
+      "delta_x": 0.00012034313678740971,
+      "status": "accepted"
+    },
+    {
+      "vertex": 4,
+      "delta_x": 0.0002801133871078443,
+      "status": "accepted"
+    },
+    {
+      "vertex": 5,
+      "delta_x": 0.00029648976325988285,
+      "status": "accepted"
+    },
+    {
+      "vertex": 6,
+      "delta_x": 0.0009622214913368177,
+      "status": "accepted"
+    },
+    {
+      "vertex": 7,
+      "delta_x": 0.000848436224460597,
+      "status": "accepted"
+    },
+    {
+      "vertex": 8,
+      "delta_x": 0.0009603737473487806,
+      "status": "accepted"
+    },
+    {
+      "vertex": 9,
+      "delta_x": 0.001599924135208125,
+      "status": "accepted"
+    },
+    {
+      "vertex": 10,
+      "delta_x": 0.0015686018943786573,
+      "status": "accepted"
+    },
+    {
+      "vertex": 11,
+      "delta_x": 1.7651784420008587e-05,
+      "status": "accepted"
+    },
+    {
+      "vertex": 12,
+      "delta_x": -0.0013465644240379382,
+      "status": "accepted"
+    },
+    {
+      "vertex": 13,
+      "delta_x": 0.0029035447716712903,
+      "status": "accepted"
+    },
+    {
+      "vertex": 14,
+      "delta_x": -0.00028599662780762203,
+      "status": "accepted"
+    },
+    {
+      "vertex": 15,
+      "delta_x": 0.00034360723495482914,
+      "status": "accepted"
+    },
+    {
+      "vertex": 16,
+      "delta_x": 0.0006797550797462415,
+      "status": "accepted"
+    },
+    {
+      "vertex": 17,
+      "delta_x": 0.0005155442833900403,
+      "status": "accepted"
+    },
+    {
+      "vertex": 18,
+      "delta_x": 0.0004961578726768445,
+      "status": "accepted"
+    },
+    {
+      "vertex": 19,
+      "delta_x": 0.000153080987930293,
+      "status": "accepted"
+    },
+    {
+      "vertex": 20,
+      "delta_x": 8.809566492962162e-09,
+      "status": "accepted"
+    },
+    {
+      "vertex": 21,
+      "delta_x": 0.000266150999069209,
+      "status": "accepted"
+    },
+    {
+      "vertex": 22,
+      "delta_x": 0.000173622238636012,
+      "status": "accepted"
+    },
+    {
+      "vertex": 23,
+      "delta_x": 0.00013142960071563237,
+      "status": "accepted"
+    },
+    {
+      "vertex": 24,
+      "delta_x": 0.00015017526149749272,
+      "status": "accepted"
+    },
+    {
+      "vertex": 25,
+      "delta_x": 0.0001319436907768201,
+      "status": "accepted"
+    },
+    {
+      "vertex": 26,
+      "delta_x": 9.247796535491459e-05,
+      "status": "accepted"
+    },
+    {
+      "vertex": 27,
+      "delta_x": 9.451942443847172e-05,
+      "status": "accepted"
+    },
+    {
+      "vertex": 28,
+      "delta_x": 6.49331688880872e-05,
+      "status": "accepted"
+    },
+    {
+      "vertex": 29,
+      "delta_x": -0.0002484680533409167,
+      "status": "accepted"
+    },
+    {
+      "vertex": 30,
+      "delta_x": -0.0004191608548164416,
+      "status": "accepted"
+    },
+    {
+      "vertex": 31,
+      "delta_x": -0.0007171170234680224,
+      "status": "accepted"
+    },
+    {
+      "vertex": 32,
+      "delta_x": -0.0013319687366485644,
+      "status": "accepted"
+    },
+    {
+      "vertex": 33,
+      "delta_x": -0.004391139876842504,
+      "status": "rejected"
+    },
+    {
+      "vertex": 34,
+      "delta_x": 0.002951228487491603,
+      "status": "accepted"
+    },
+    {
+      "vertex": 35,
+      "delta_x": -0.0006682114124298144,
+      "status": "accepted"
+    },
+    {
+      "vertex": 36,
+      "delta_x": 0.001763367521762843,
+      "status": "accepted"
+    },
+    {
+      "vertex": 37,
+      "delta_x": 0.0024645714640617322,
+      "status": "accepted"
+    },
+    {
+      "vertex": 38,
+      "delta_x": 0.0023921443700790357,
+      "status": "accepted"
+    },
+    {
+      "vertex": 39,
+      "delta_x": 0.0020590065598487806,
+      "status": "accepted"
+    },
+    {
+      "vertex": 40,
+      "delta_x": 0.0015937476038932752,
+      "status": "accepted"
+    },
+    {
+      "vertex": 41,
+      "delta_x": 0.0014296783685684156,
+      "status": "accepted"
+    },
+    {
+      "vertex": 42,
+      "delta_x": 0.0003420351624488782,
+      "status": "accepted"
+    },
+    {
+      "vertex": 43,
+      "delta_x": 0.0002541108608245801,
+      "status": "accepted"
+    },
+    {
+      "vertex": 44,
+      "delta_x": 0.00021130727529525273,
+      "status": "accepted"
+    },
+    {
+      "vertex": 45,
+      "delta_x": 0.00021103905439376347,
+      "status": "accepted"
+    },
+    {
+      "vertex": 46,
+      "delta_x": 0.0001954747915267896,
+      "status": "accepted"
+    },
+    {
+      "vertex": 47,
+      "delta_x": 0.00016897307634353154,
+      "status": "accepted"
+    },
+    {
+      "vertex": 48,
+      "delta_x": 0.00013474510908126347,
+      "status": "accepted"
+    },
+    {
+      "vertex": 49,
+      "delta_x": -1.2187790870671344e-05,
+      "status": "accepted"
+    },
+    {
+      "vertex": 50,
+      "delta_x": -0.00033411992788315303,
+      "status": "accepted"
+    },
+    {
+      "vertex": 51,
+      "delta_x": -0.0008283914446830798,
+      "status": "accepted"
+    },
+    {
+      "vertex": 52,
+      "delta_x": -0.0014709146142005969,
+      "status": "accepted"
+    },
+    {
+      "vertex": 53,
+      "delta_x": -0.0023901970505714465,
+      "status": "accepted"
+    },
+    {
+      "vertex": 54,
+      "delta_x": -0.0068117292046546984,
+      "status": "rejected"
+    },
+    {
+      "vertex": 55,
+      "delta_x": -0.005710369479656224,
+      "status": "rejected"
+    },
+    {
+      "vertex": 56,
+      "delta_x": -0.0006734938740730334,
+      "status": "accepted"
+    },
+    {
+      "vertex": 57,
+      "delta_x": 0.0031799315094947767,
+      "status": "accepted"
+    },
+    {
+      "vertex": 58,
+      "delta_x": 0.0038772536993026685,
+      "status": "accepted"
+    },
+    {
+      "vertex": 59,
+      "delta_x": 0.0036832107782363843,
+      "status": "accepted"
+    },
+    {
+      "vertex": 60,
+      "delta_x": 0.0030691115736961316,
+      "status": "accepted"
+    },
+    {
+      "vertex": 61,
+      "delta_x": 0.0025961040139198255,
+      "status": "accepted"
+    },
+    {
+      "vertex": 62,
+      "delta_x": 0.007038304078578944,
+      "status": "rejected"
+    }
+  ],
+  "production_approved": false,
+  "limitations": [
+    "Front visibility only, not anatomical segmentation",
+    "Rejected vertices retain previous position",
+    "No globe or blink validation"
+  ],
+  "accepted": 59,
+  "rejected": 4
+}
