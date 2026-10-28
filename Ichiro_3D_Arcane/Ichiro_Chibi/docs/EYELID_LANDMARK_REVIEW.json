@@ -1,0 +1,220 @@
+{
+  "schema": "ethernium.landmark-projection/0.1",
+  "landmark_sha256": "46e14c2ab19b2917db4e7555fdaaa7b243faea9c92f047864e95728b2cbbe21e",
+  "script_sha256": "5809001a2adcb5a2d4ec90a2651888f54a7d6102c57178cae596adb9a18ff46e",
+  "results": [
+    {
+      "contour": "SCREEN_LEFT",
+      "index": 0,
+      "pixel": [
+        184,
+        410
+      ],
+      "status": "occluded",
+      "position": [
+        0.08102598786354065,
+        -0.0833333358168602,
+        0.27416667342185974
+      ]
+    },
+    {
+      "contour": "SCREEN_LEFT",
+      "index": 1,
+      "pixel": [
+        218,
+        420
+      ],
+      "status": "missing",
+      "position": null
+    },
+    {
+      "contour": "SCREEN_LEFT",
+      "index": 2,
+      "pixel": [
+        254,
+        432
+      ],
+      "status": "missing",
+      "position": null
+    },
+    {
+      "contour": "SCREEN_LEFT",
+      "index": 3,
+      "pixel": [
+        284,
+        453
+      ],
+      "status": "candidate",
+      "position": [
+        0.08781677484512329,
+        -0.0416666679084301,
+        0.2562499940395355
+      ]
+    },
+    {
+      "contour": "SCREEN_LEFT",
+      "index": 4,
+      "pixel": [
+        283,
+        475
+      ],
+      "status": "candidate",
+      "position": [
+        0.08498209714889526,
+        -0.04208333417773247,
+        0.24708333611488342
+      ]
+    },
+    {
+      "contour": "SCREEN_LEFT",
+      "index": 5,
+      "pixel": [
+        247,
+        487
+      ],
+      "status": "candidate",
+      "position": [
+        0.08022251725196838,
+        -0.057083334773778915,
+        0.2420833259820938
+      ]
+    },
+    {
+      "contour": "SCREEN_LEFT",
+      "index": 6,
+      "pixel": [
+        209,
+        485
+      ],
+      "status": "candidate",
+      "position": [
+        0.07382634282112122,
+        -0.0729166641831398,
+        0.24291667342185974
+      ]
+    },
+    {
+      "contour": "SCREEN_LEFT",
+      "index": 7,
+      "pixel": [
+        177,
+        470
+      ],
+      "status": "occluded",
+      "position": [
+        0.06340742111206055,
+        -0.08624999970197678,
+        0.24916666746139526
+      ]
+    },
+    {
+      "contour": "SCREEN_RIGHT",
+      "index": 0,
+      "pixel": [
+        393,
+        426
+      ],
+      "status": "candidate",
+      "position": [
+        0.09612548351287842,
+        0.0037499999161809683,
+        0.26750001311302185
+      ]
+    },
+    {
+      "contour": "SCREEN_RIGHT",
+      "index": 1,
+      "pixel": [
+        424,
+        396
+      ],
+      "status": "missing",
+      "position": null
+    },
+    {
+      "contour": "SCREEN_RIGHT",
+      "index": 2,
+      "pixel": [
+        474,
+        373
+      ],
+      "status": "candidate",
+      "position": [
+        0.09792831540107727,
+        0.03750000149011612,
+        0.28958332538604736
+      ]
+    },
+    {
+      "contour": "SCREEN_RIGHT",
+      "index": 3,
+      "pixel": [
+        536,
+        353
+      ],
+      "status": "candidate",
+      "position": [
+        0.07506492733955383,
+        0.06333333253860474,
+        0.2979166805744171
+      ]
+    },
+    {
+      "contour": "SCREEN_RIGHT",
+      "index": 4,
+      "pixel": [
+        539,
+        385
+      ],
+      "status": "candidate",
+      "position": [
+        0.06600537896156311,
+        0.06458333134651184,
+        0.28458333015441895
+      ]
+    },
+    {
+      "contour": "SCREEN_RIGHT",
+      "index": 5,
+      "pixel": [
+        518,
+        427
+      ],
+      "status": "candidate",
+      "position": [
+        0.07634446024894714,
+        0.05583333224058151,
+        0.2670833468437195
+      ]
+    },
+    {
+      "contour": "SCREEN_RIGHT",
+      "index": 6,
+      "pixel": [
+        466,
+        450
+      ],
+      "status": "candidate",
+      "position": [
+        0.08475887775421143,
+        0.034166667610406876,
+        0.2574999928474426
+      ]
+    },
+    {
+      "contour": "SCREEN_RIGHT",
+      "index": 7,
+      "pixel": [
+        414,
+        453
+      ],
+      "status": "candidate",
+      "position": [
+        0.08940288424491882,
+        0.012500000186264515,
+        0.2562499940395355
+      ]
+    }
+  ],
+  "production_approved": false
+}

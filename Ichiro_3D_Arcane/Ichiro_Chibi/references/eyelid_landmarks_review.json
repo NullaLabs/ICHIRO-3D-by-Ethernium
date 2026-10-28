@@ -1,0 +1,11 @@
+{
+  "schema": "ethernium.landmarks/0.1",
+  "status": "estimated_on_source_render_not_canon_approved",
+  "image": "renders/skin_review_source.png",
+  "camera": {"projection": "orthographic", "width": 768, "height": 768, "scale": 0.32, "target_z": 0.285, "front": "+X"},
+  "note": "Outer skin contour estimates, not the lid margin. Screen-left eye is partly occluded. Must compare with canonical references and profiles before anatomy construction.",
+  "contours": [
+    {"name": "SCREEN_LEFT", "pixels": [[184,410],[218,420],[254,432],[284,453],[283,475],[247,487],[209,485],[177,470]], "occluded_indices": [0,7]},
+    {"name": "SCREEN_RIGHT", "pixels": [[393,426],[424,396],[474,373],[536,353],[539,385],[518,427],[466,450],[414,453]], "occluded_indices": []}
+  ]
+}

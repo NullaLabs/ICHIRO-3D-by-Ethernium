@@ -57,5 +57,24 @@ El informe se guarda en Git; el blend derivado permanece local.
 - WF-004: ajuste de plantilla anatómica y pruebas de deformación reproducibles.
 - WF-005: consumidor de packets en KREATIVE y trabajos versionados en LEGION.
 
+## WF-002b — revisión visual y landmarks explícitos (parcial)
+
+render_skin_mask_review.py produce dos renders con la misma cámara, fuente y
+máscara aislada. Inspección visual: se excluye pelo, pero también márgenes oscuros
+del ojo; quedan falsos positivos en iris rojo, trazos del cabello y arete. No usar
+el filtro como clasificación semántica aprobada.
+
+references/eyelid_landmarks_review.json fija 16 estimaciones de contorno exterior
+de piel en coordenadas de imagen. La cámara ortográfica queda documentada para
+reproyectar píxeles a rayos reproducibles. No son landmarks canónicos aprobados
+ni el borde interno del párpado. build_eyelid_landmark_review.py proyecta sin
+rellenar huecos y crea marcadores editables en una nueva escena local.
+
+Resultado: 11 candidatos, 3 sin impacto y 2 ocluidos. Ver
+EYELID_LANDMARK_REVIEW.json. La revisión de profundidad y contraste con las
+referencias canónicas sigue pendiente. No hay párpados nuevos ni rig final.
+Se versionan scripts, coordenadas, informes y renders; las escenas derivadas
+se regeneran a partir de la fuente y quedan guardadas localmente.
+
 Cada bloque debe producir una mejora verificable; no añadir capas de servicios
 antes de tener un caso geométrico útil. La reconstrucción artística sigue pendiente.
