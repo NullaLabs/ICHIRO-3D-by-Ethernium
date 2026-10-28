@@ -55,6 +55,9 @@ def add_uv(name, location, scale, mat, role):
     obj["status"] = "PASS01_NON_FINAL__PRESERVE_FOR_RIG_REFERENCE"
     for linked in list(obj.users_collection): linked.objects.unlink(obj)
     collection.objects.link(obj)
+    obj.hide_render = True
+    obj.hide_set(True)
+    obj["validation"] = "PENDING: lateral intersection detected; enable explicitly for calibration"
     return obj
 
 for side, x in (("L", -0.052), ("R", 0.052)):
