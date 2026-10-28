@@ -461,6 +461,10 @@ def write_width_profile_sheet(path, profiles):
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--renders", type=Path, default=ROOT / "renders" / "reference_fit_v02_cpu" / "projections")
+    parser.add_argument("--projection-prefix", default="source_",
+                        help="filename prefix for projected PGM masks, e.g. source_ or candidate_")
+    parser.add_argument("--projection-manifest", type=Path,
+                        help="optional projection manifest to embed as compact provenance")
     parser.add_argument("--output-dir", type=Path, default=ROOT / "renders" / "reference_fit_v02_cpu" / "comparison")
     parser.add_argument("--turnaround-sheet", type=Path, default=TURNAROUND_SHEET)
     parser.add_argument("--threshold", type=float, default=24)
@@ -471,6 +475,24 @@ def main():
     args = parser.parse_args()
     args.renders = args.renders.resolve()
     args.output_dir = args.output_dir.resolve()
+    if args.projection_manifest is not None:
+        projection_manifest_path = args.projection_manifest.resolve()
+    else:
+        manifest_candidates = sorted(args.renders.glob("*manifest.json"))
+        projection_manifest_path = manifest_candidates[0] if len(manifest_candidates) == 1 else None
+    projection_context = None
+    if projection_manifest_path is not None and projection_manifest_path.is_file():
+        source_manifest = json.loads(projection_manifest_path.read_text(encoding="utf-8"))
+        projection_context = {
+            "manifest_file": display_path(projection_manifest_path, args.renders),
+            "manifest_sha256": sha256_file(projection_manifest_path),
+            "schema": source_manifest.get("schema"),
+            "source_file_sha256": source_manifest.get("source_file_sha256"),
+            "source_object": source_manifest.get("source_object"),
+            "candidate_object": source_manifest.get("candidate_object"),
+            "transform": source_manifest.get("transform"),
+            "source_scene_saved": source_manifest.get("source_scene_saved"),
+        }
     if args.manual_masks_dir is not None:
         args.manual_masks_dir = args.manual_masks_dir.resolve()
         if not args.manual_masks_dir.is_dir():
@@ -481,7 +503,7 @@ def main():
     canonical_overlays = []
     canonical_profiles = {}
     for view, reference_path in REFERENCES.items():
-        candidate_path = args.renders / f"source_{view}.pgm"
+        candidate_path = args.renders / f"{args.projection_prefix}{view}.pgm"
         if not candidate_path.is_file():
             raise FileNotFoundError(candidate_path)
         ref_image, ref_mask, ref_bbox, segmentation = reference_foreground_mask(
@@ -510,7 +532,7 @@ def main():
     turnaround_sheet = Image.open(args.turnaround_sheet).convert("RGB")
     crops, crop_metadata = crop_turnaround_panels(turnaround_sheet)
     for view, panel_index in TURNAROUND_VIEWS:
-        candidate_path = args.renders / f"source_{view}.pgm"
+        candidate_path = args.renders / f"{args.projection_prefix}{view}.pgm"
         if not candidate_path.is_file():
             raise FileNotFoundError(candidate_path)
         crop_path = crop_dir / f"reference_{view}.png"
@@ -534,10 +556,12 @@ def main():
         turnaround_overlays.append((view, overlay_path, metrics["iou"]))
 
     report = {
-        "schema": "ethernium.reference-fit-silhouette-score.v4",
+        "schema": "ethernium.reference-fit-silhouette-score.v5",
         "purpose": "camera-normalized diagnostic across four high-resolution reference plates and eight turnaround panels; not canon approval",
         "border_model_threshold_rgb_residual": args.threshold,
         "projection_mask_threshold": 127,
+        "projection_filename_prefix": args.projection_prefix,
+        "projection_context": projection_context,
         "reference_segmenter_requested": args.segmenter,
         "optional_opencv_version": cv2.__version__ if cv2 is not None else None,
         "manual_mask_overrides_requested": args.manual_masks_dir is not None,

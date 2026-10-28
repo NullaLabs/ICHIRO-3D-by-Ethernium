@@ -1,8 +1,19 @@
 {
-  "schema": "ethernium.reference-fit-silhouette-score.v4",
+  "schema": "ethernium.reference-fit-silhouette-score.v5",
   "purpose": "camera-normalized diagnostic across four high-resolution reference plates and eight turnaround panels; not canon approval",
   "border_model_threshold_rgb_residual": 24,
   "projection_mask_threshold": 127,
+  "projection_filename_prefix": "source_",
+  "projection_context": {
+    "manifest_file": "projection_manifest.json",
+    "manifest_sha256": "e5a691aa38ee1082f206e69315e79b4b55c6a0aa2ae380ab9433726c15eac762",
+    "schema": "ethernium.reference-fit-renders.v2",
+    "source_file_sha256": "e08c086e2d8fad1be6f593647444455b4c3df034b97f4c3e262e7dd53f9a5024",
+    "source_object": "ICH_CHIBI_HIGHDETAIL_SOURCE__READONLY",
+    "candidate_object": null,
+    "transform": null,
+    "source_scene_saved": false
+  },
   "reference_segmenter_requested": "auto",
   "optional_opencv_version": "4.12.0",
   "manual_mask_overrides_requested": false,

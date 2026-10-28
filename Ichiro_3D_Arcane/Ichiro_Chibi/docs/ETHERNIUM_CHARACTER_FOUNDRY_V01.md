@@ -154,6 +154,12 @@ Evidencia de este pase: `renders/reference_fit_v02_cpu/comparison/` y
 `renders/reference_fit_v02_cpu/projections/projection_manifest.json`. El archivo
 maestro mantiene su hash en el manifiesto y `source_scene_saved` es `false`.
 
+La primera corrección paramétrica de pelvis por perfil se probó en copias en
+memoria y empeoró las cuatro placas y los ocho ángulos al 5 %, 10 % y 15 % de
+compresión. Quedó rechazada y documentada en
+`docs/WIDTH_BAND_EXPERIMENT_V01.md`; el siguiente morph debe estar delimitado
+por una región de referencia revisada, no por una curva global de anchura.
+
 ## Criterio de éxito del sistema
 
 Para el mismo spec/version/seed, el build produce hashes y métricas repetibles. Un cambio afecta solo el módulo declarado. Cada pase muestra evidencia visual y auditoría numérica asociadas. Los proyectos futuros reutilizan herramientas y contratos, pero no transfieren identidad ni proporciones de Ichiro a otros personajes. El personaje solo progresa cuando supera una puerta visual/técnica; más código, polígonos o renders no cuentan por sí solos.
