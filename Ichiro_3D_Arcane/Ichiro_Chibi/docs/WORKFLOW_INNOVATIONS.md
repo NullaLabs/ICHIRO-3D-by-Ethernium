@@ -254,3 +254,11 @@ hashes de entrada/herramienta. Ejecutar con Blender 5.2 en modo background y el
 script tools/classify_eyelid_projection_support.py. La siguiente mejora debe
 ser una región de cara etiquetada manualmente contra las referencias, con
 segmentación/landmarks revisables; no relajar más la tira actual.
+
+## WF-007 — separar autoría Blender de integración Unreal
+
+docs/RIG_HOST_DECISION_BLENDER_VS_UNREAL.md fija Blender como maestro para
+escultura, retopología, UV, pesos y correctivos; Unreal Engine 5.8 queda como
+destino posterior de Control Rig e integración. UE permite crear huesos y pesos,
+pero no compensa la topología de cara/manos que aún falta. El documento define
+gates y el ciclo de ida/vuelta FBX sin duplicar la autoridad de la malla.
