@@ -8,8 +8,10 @@ ROOT=Path(__file__).resolve().parents[1]
 import sys
 strip_mode='--strip' in sys.argv
 outer_mode='--outer' in sys.argv
-strip_mode=strip_mode or outer_mode
+upper_mode='--upper' in sys.argv
+strip_mode=strip_mode or outer_mode or upper_mode
 filename='Ichiro_Chibi_Outer_Lid_Strip_Review.blend' if outer_mode else ('Ichiro_Chibi_Lower_Lid_Strip_Review.blend' if strip_mode else 'Ichiro_Chibi_Eyelid_Landmark_Review.blend')
+if upper_mode: filename='Ichiro_Chibi_Upper_Lid_Strip_Review.blend'
 bpy.ops.wm.open_mainfile(filepath=str(ROOT/filename))
 scene=bpy.context.scene
 for obj in scene.objects:
@@ -49,5 +51,6 @@ for label,loc in [('front',(1.5,0,.275)),('negative_y',(.04,-1.5,.275)),('positi
     cam.location=loc
     cam.rotation_euler=(target-cam.location).to_track_quat('-Z','Y').to_euler()
     prefix='outer_strip' if outer_mode else ('lower_strip' if strip_mode else 'landmark_depth')
+    if upper_mode: prefix='upper_strip'
     scene.render.filepath=str(ROOT/'renders'/f'{prefix}_{label}.png')
     bpy.ops.render.render(write_still=True)

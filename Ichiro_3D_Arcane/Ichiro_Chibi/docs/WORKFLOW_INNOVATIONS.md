@@ -116,5 +116,21 @@ Comando reproducible desde Ichiro_Chibi (usar la ruta local de Blender):
 --python-exit-code 1 evita confundir una excepción Python con ejecución correcta
 del proceso Blender. Escena local: Ichiro_Chibi_Outer_Lid_Strip_Review.blend.
 
+## WF-003c — ancho variable para explorar el arco superior
+
+Los dos scripts anteriores admiten -- --upper. La guía continúa por 3 y 2;
+el ancho se reduce progresivamente a la mitad al aproximarse al arco superior.
+Se mantiene el límite de proyección 0.004. Se añadió rechazo de caras con área
+inferior a 1e-10 unidades cuadradas de modelo, además de normales invertidas.
+
+Ejecución real: 63 vértices, 40 quads, distancia máxima 0.00334550, área mínima
+6.431e-7. Escena local: Ichiro_Chibi_Upper_Lid_Strip_Review.blend. Informe:
+UPPER_LID_STRIP_REVIEW.json. Renders frontal y perfil positivo inspeccionados.
+
+La esquina externa es demasiado angular y algunas filas superiores quedan
+muy próximas: la prueba numérica NO aprueba el diseño. Conservar como candidato;
+corregir recorrido y distribución antes de espesor o rig. El arco interior sigue
+incompleto. Este bloque no acredita fidelidad a todas las referencias canónicas.
+
 Cada bloque debe producir una mejora verificable; no añadir capas de servicios
 antes de tener un caso geométrico útil. La reconstrucción artística sigue pendiente.
