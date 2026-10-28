@@ -4,11 +4,12 @@ import bpy
 from mathutils import Vector
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / "renders" / "facial_pass01_front.png"
+PREFIX = globals().get('DIAGNOSTIC_PREFIX', 'facial_pass01')
+OUT = ROOT / "renders" / f"{PREFIX}_front.png"
 scene = bpy.context.scene
 for obj in bpy.data.collections['20_FACIAL_ANATOMY_COMPONENTS__PASS01'].objects:
-    obj.hide_render = False
-    obj.hide_set(False)
+    obj.hide_render = not globals().get('SHOW_EYE_GUIDES', True)
+    obj.hide_set(not globals().get('SHOW_EYE_GUIDES', True))
 scene.render.engine = 'BLENDER_EEVEE'
 scene.render.resolution_x = 768
 scene.render.resolution_y = 768
@@ -42,7 +43,7 @@ for label, location in (
 ):
     camera.location = location
     point(camera, (0, 0, 0.29))
-    scene.render.filepath = str(OUT.with_name(f'facial_pass01_{label}.png'))
+    scene.render.filepath = str(OUT.with_name(f'{PREFIX}_{label}.png'))
     bpy.ops.render.render(write_still=True)
 
 for obj in scene.objects:
@@ -51,5 +52,5 @@ for obj in scene.objects:
 camera.location = (1.5, 0, 0.278)
 point(camera, (0, 0, 0.278))
 camera.data.ortho_scale = 0.18
-scene.render.filepath = str(OUT.with_name('facial_pass01_eyes_isolated.png'))
+scene.render.filepath = str(OUT.with_name(f'{PREFIX}_eyes_isolated.png'))
 bpy.ops.render.render(write_still=True)
