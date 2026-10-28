@@ -13,14 +13,22 @@ canónica no está disponible; esto es registro de imagen, no calibración de c�
 - La proyección de 12 puntos canónicos contra la máscara cálida encuentra 7
   impactos candidatos y 5 sin soporte. No se obtuvo un estado fiable de piel
   para todos los puntos.
-- La lámina `renders/face_registration_probe_v02.png` permite inspeccionar los
-  puntos. Verde = impacto candidato pendiente de juicio; rojo = la máscara no
-  tiene candidato. Ninguno está aprobado como geometría.
+- En los 20 puntos de contorno ocular proyectados, 7 caen en la máscara
+  candidata y 13 no. Un punto sin máscara no significa que falte malla fuente.
+- `renders/eye_contour_alignment_v01.png` superpone el trazo verde del borde
+  visible del ojo fuente y el contorno canónico transferido (rojo/cian). El RMS
+  de contorno es 16.10 px para el ojo derecho (6.85% de la distancia ocular),
+  con el arco superior transferido en promedio 23.3 px por encima del trazo
+  fuente. El ojo parcialmente ocluido izquierdo da RMS 26.84 px, 11.42%.
+  Estas trazas manuales son aproximadas y comparan liner estilizado, no anatomía
+  aprobada.
 
 La imagen muestra que el ajuste sirve para guiar una revisión aproximada de los
 ojos, nariz y mentón. Los puntos altos del ojo derecho y los puntos ocluidos del
 flequillo no tienen soporte semántico. La esquina izquierda de la boca acusa el
 mayor desvío, señal de que un ajuste afín global no conserva todos los rasgos.
+El desacuerdo del arco superior exige marcar los cantos y márgenes en fuente y
+referencia por separado antes de construir loops.
 
 ## Reproducción
 

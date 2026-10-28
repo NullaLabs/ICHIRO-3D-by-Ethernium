@@ -5,9 +5,11 @@ from PIL import Image, ImageDraw, ImageFont
 
 ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "docs" / "FACE_REGISTRATION_PROBE_V02.json"
+SOURCE_TRACES = ROOT / "references" / "source_eye_contours_estimate_v01.json"
 SOURCE = ROOT / "renders" / "skin_review_source.png"
-OUTPUT = ROOT / "renders" / "face_registration_probe_v02.png"
+OUTPUT = ROOT / "renders" / "eye_contour_alignment_v01.png"
 report = json.loads(REPORT.read_text(encoding="utf-8"))
+traces = json.loads(SOURCE_TRACES.read_text(encoding="utf-8"))
 image = Image.open(SOURCE).convert("RGBA")
 canvas = Image.new("RGBA", (image.width + 260, image.height), (28, 30, 36, 255))
 canvas.alpha_composite(image, (0, 0))
@@ -25,11 +27,28 @@ for item in report["projected_landmarks"]:
     draw.ellipse((x-4, y-4, x+4, y+4), fill=color, outline=(5, 5, 5, 255), width=1)
     draw.text((x+6, y-8), item["id"], fill=color, font=font,
               stroke_width=1, stroke_fill=(0, 0, 0, 230))
+contour_colors = {"screen_left_partial": (255, 90, 90, 255), "screen_right": (80, 230, 255, 255)}
+for name, points in report["projected_eye_contours"].items():
+    coords = [tuple(map(round, p["source_render_px"])) for p in points]
+    draw.line(coords + [coords[0]], fill=contour_colors[name], width=2)
+    for point in points:
+        x, y = map(round, point["source_render_px"])
+        color = colors[point["status"]]
+        draw.ellipse((x-3, y-3, x+3, y+3), fill=color, outline=(0,0,0,255))
+    actual = [tuple(p) for p in traces["contours"][name]["points"]]
+    draw.line(actual + [actual[0]], fill=(130, 255, 90, 255), width=2)
+    for x, y in actual:
+        draw.ellipse((x-2, y-2, x+2, y+2), fill=(130,255,90,255), outline=(0,0,0,255))
 legend = ImageDraw.Draw(canvas)
 legend.text((image.width+10, 12), "AFFINE TRANSFER PROBE", fill=(255,235,130,255), font=font)
 legend.text((image.width+10, 34), f"RMS {report['registration_rms_px']:.1f}px / eye spacing {100*report['registration_rms_over_source_eye_spacing']:.1f}%", fill=(230,230,230,255), font=font)
+legend.text((image.width+10, 48), f"eye contour samples: {sum(report['projected_eye_contour_counts'].values())}", fill=(230,230,230,255), font=font)
+legend.line((image.width+12, 62, image.width+30, 62), fill=(80,230,255,255), width=2)
+legend.text((image.width+36, 56), "canonical contour mapped", fill=(80,230,255,255), font=font)
+legend.line((image.width+12, 82, image.width+30, 82), fill=(130,255,90,255), width=2)
+legend.text((image.width+36, 76), "manual source eye trace", fill=(130,255,90,255), font=font)
 for i, (status, color) in enumerate(colors.items()):
-    y = 62 + i*34
+    y = 104 + i*34
     legend.ellipse((image.width+12, y, image.width+22, y+10), fill=color)
     legend.text((image.width+30, y), status.replace('_', ' '), fill=color, font=font)
 canvas.alpha_composite(overlay, (0, 0))

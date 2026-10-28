@@ -1,0 +1,21 @@
+{
+  "schema": "ethernium.source-eye-contours/0.1",
+  "image": "renders/skin_review_source.png",
+  "image_size_px": [768, 768],
+  "status": "manual_pixel_grid_trace_for_review_only",
+  "coordinate_origin": "top_left",
+  "warning": "These points follow visible stylized eyeliner/eye silhouette, not a verified anatomical eyelid edge. Screen-left contour is partly hidden by fringe. Coordinates are estimated from an image grid and must not be treated as final topology.",
+  "correspondence_order": "same 10-point order as canonical eye_contours in references/canonical_face_landmarks_v02.json",
+  "contours": {
+    "screen_left_partial": {
+      "confidence": 0.45,
+      "visibility": "partly_occluded_by_fringe",
+      "points": [[178,454],[183,443],[203,439],[231,442],[257,448],[280,454],[267,466],[241,472],[213,468],[190,461]]
+    },
+    "screen_right": {
+      "confidence": 0.62,
+      "visibility": "visible_approximate",
+      "points": [[399,431],[415,418],[434,405],[460,393],[484,388],[533,390],[519,415],[496,435],[469,445],[436,445]]
+    }
+  }
+}

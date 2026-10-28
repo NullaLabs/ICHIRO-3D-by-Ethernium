@@ -297,6 +297,18 @@ métrica aproximada. La anotación aún no calibra cámaras ni permite transferi
 coordenadas a 3D. Evidencia y código: canonical_face_landmarks_v02.json,
 FACE_PROPORTION_COMPARISON_V02.json y tools/compare_face_proportions.py.
 
+## WF-012 — validar el contorno ocular además de sus centros
+
+La afinidad de centros faciales no conserva el borde de los ojos. Dos trazas
+manuales del render dan RMS de 16.10 px (6.85% del espacio interocular) en el
+ojo derecho y 26.84 px (11.42%) en el izquierdo parcial. El arco superior
+transferido queda, en promedio, 23.32 px y 33.67 px por encima del borde
+visible fuente. Solo 7/20 muestras de contorno tienen candidato en la máscara
+cromática. Esto bloquea los parches anteriores; no prueba cuál imagen tiene la
+forma correcta. Informe `docs/EYE_CONTOUR_ALIGNMENT_V01.md` y superposición
+`renders/eye_contour_alignment_v01.png` documentan la incertidumbre antes de
+modelar loops.
+
 ## WF-011 — ajuste afín para ubicar landmarks y auditar soporte
 
 tools/register_canonical_face_to_source.py ajusta cinco anclas 2D y prueba los
