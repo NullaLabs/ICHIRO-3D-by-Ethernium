@@ -86,12 +86,9 @@ width, height = source_landmarks["image_size_px"]
 cam = source_landmarks["camera"]
 
 probe_points = []
-for item in lm:
-    projected = transform(item["point"])
+def classify_projection(projected):
     u, v = projected
-    row = {"id": item["id"], "canonical_px": item["point"],
-           "source_render_px": projected, "confidence": item["confidence"],
-           "visibility": item["visibility"]}
+    row = {"source_render_px": projected}
     if not (0 <= u < width and 0 <= v < height):
         row["status"] = "outside_source_render"
     else:
@@ -112,11 +109,28 @@ for item in lm:
         row["full_hit"] = list(fh) if fh is not None else None
         row["skin_candidate_hit"] = list(sh) if sh is not None else None
         row["front_surface_delta_x"] = float(fh.x-sh.x) if fh is not None and sh is not None else None
+    return row
+
+for item in lm:
+    projected = transform(item["point"])
+    row = {"id": item["id"], "canonical_px": item["point"],
+           "confidence": item["confidence"], "visibility": item["visibility"]}
+    row.update(classify_projection(projected))
     probe_points.append(row)
 
 counts = {}
 for row in probe_points:
     counts[row["status"]] = counts.get(row["status"], 0) + 1
+contour_probes = {}
+contour_counts = {}
+for name, points in canonical["eye_contours"].items():
+    rows = []
+    for index, point in enumerate(points):
+        row = {"index": index, "canonical_px": point}
+        row.update(classify_projection(transform(point)))
+        rows.append(row)
+        contour_counts[row["status"]] = contour_counts.get(row["status"], 0) + 1
+    contour_probes[name] = rows
 report = {
     "schema": "ethernium.face-registration-probe/0.2",
     "method": "five-anchor affine 2D fit, followed by orthographic ray casts into source and warm-color candidate mask",
@@ -131,6 +145,8 @@ report = {
     "registration_rms_over_source_eye_spacing": rms / source_eye_spacing,
     "projected_landmark_counts": counts,
     "projected_landmarks": probe_points,
+    "projected_eye_contour_counts": contour_counts,
+    "projected_eye_contours": contour_probes,
     "decision": "DIAGNOSTIC_MAPPING_ONLY__NO_GEOMETRY_GENERATED",
     "limitations": ["manual correspondences and partial occlusion", "unknown canonical camera model",
                     "warm-color skin mask is not semantic truth", "ray hits do not validate anatomy or topology"]
