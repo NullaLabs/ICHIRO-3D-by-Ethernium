@@ -223,3 +223,18 @@ informe y renders quedan versionados; no se modifica la sesión abierta.
 
 Cada bloque debe producir una mejora verificable; no añadir capas de servicios
 antes de tener un caso geométrico útil. La reconstrucción artística sigue pendiente.
+
+## WF-005 — rechazo de la tira ocular por contacto flotante
+
+La tira 96v/64q relajada se importó en una colección independiente de la sesión
+Blender abierta para inspección con MCP, conservando intacta la malla de origen.
+La inspección cercana desde frente, perfil y tres cuartos mostró separación
+respecto al volumen del párpado y tramos flotantes causados por profundidades
+inferidas. Se rechazó para producción y se ocultó; no se fusionó ni se guardó
+sobre el archivo de trabajo del usuario. La escena abierta permanece modificada
+en memoria, y antes de MCP existe la copia de recuperación en E:/WORKSPACE.
+
+Decisión del flujo: una mejora de suavidad numérica no acredita contacto
+anatómico. La próxima construcción facial requiere validar superficie y silueta
+por vistas antes de aceptar una malla; los vértices inferidos quedan señalados
+como incertidumbre, nunca cubiertos por un Shrinkwrap sin soporte suficiente.
