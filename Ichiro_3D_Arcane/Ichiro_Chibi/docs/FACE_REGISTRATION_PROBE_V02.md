@@ -30,6 +30,10 @@ mayor desvío, señal de que un ajuste afín global no conserva todos los rasgos
 El desacuerdo del arco superior exige marcar los cantos y márgenes en fuente y
 referencia por separado antes de construir loops.
 
+La ampliación v02 traza explícitamente el borde ocular fuente encima de la
+proyección canónica; véase `docs/EYE_CONTOUR_ALIGNMENT_V02.md` y
+`renders/eye_contour_alignment_v02.png` para la comparación por segmentos.
+
 ## Reproducción
 
 Con Blender 5.2:

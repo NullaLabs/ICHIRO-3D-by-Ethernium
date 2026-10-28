@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 REPORT = ROOT / "docs" / "FACE_REGISTRATION_PROBE_V02.json"
 SOURCE_TRACES = ROOT / "references" / "source_eye_contours_estimate_v01.json"
 SOURCE = ROOT / "renders" / "skin_review_source.png"
-OUTPUT = ROOT / "renders" / "eye_contour_alignment_v01.png"
+OUTPUT = ROOT / "renders" / "eye_contour_alignment_v02.png"
 report = json.loads(REPORT.read_text(encoding="utf-8"))
 traces = json.loads(SOURCE_TRACES.read_text(encoding="utf-8"))
 image = Image.open(SOURCE).convert("RGBA")

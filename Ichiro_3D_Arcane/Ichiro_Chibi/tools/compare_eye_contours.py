@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "references" / "source_eye_contours_estimate_v01.json"
 REGISTRATION = ROOT / "docs" / "FACE_REGISTRATION_PROBE_V02.json"
-OUTPUT = ROOT / "docs" / "EYE_CONTOUR_ALIGNMENT_V01.json"
+OUTPUT = ROOT / "docs" / "EYE_CONTOUR_ALIGNMENT_V02.json"
 source = json.loads(SOURCE.read_text(encoding="utf-8"))
 registered = json.loads(REGISTRATION.read_text(encoding="utf-8"))
 eye_spacing = math.dist(
@@ -25,18 +25,27 @@ for name, src in source["contours"].items():
                      "delta_px": [dx, dy], "distance_px": math.hypot(dx, dy),
                      "projection_surface_status": projected["status"]})
     rms = math.sqrt(sum(r["distance_px"]**2 for r in rows) / len(rows))
-    upper = rows[1:5]
+    segments = {"canthi": [rows[i] for i in (0, 5)],
+                "upper_arc": rows[1:5], "lower_arc": rows[6:10]}
+    segment_metrics = {}
+    for segment, selected in segments.items():
+        segment_metrics[segment] = {
+            "rms_px": math.sqrt(sum(r["distance_px"]**2 for r in selected)/len(selected)),
+            "mean_vertical_delta_px": sum(r["delta_px"][1] for r in selected)/len(selected)
+        }
+    upper = segments["upper_arc"]
     results[name] = {
         "source_visibility": src["visibility"],
         "trace_confidence": src["confidence"],
         "rms_px": rms,
         "rms_over_interocular_spacing": rms / eye_spacing,
         "mean_upper_arc_vertical_delta_px": sum(r["delta_px"][1] for r in upper)/len(upper),
+        "segments": segment_metrics,
         "max_error_px": max(r["distance_px"] for r in rows),
         "samples": rows
     }
 report = {
-    "schema": "ethernium.eye-contour-alignment/0.1",
+    "schema": "ethernium.eye-contour-alignment/0.2",
     "method": "paired 10-point manual contour traces compared to five-anchor affine transfer",
     "source_contours": "references/source_eye_contours_estimate_v01.json",
     "registration_report": "docs/FACE_REGISTRATION_PROBE_V02.json",
@@ -53,5 +62,5 @@ report = {
 }
 OUTPUT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
 print(json.dumps({name: {"rms_px": v["rms_px"], "rms_eye_spacing_percent": 100*v["rms_over_interocular_spacing"],
-                         "upper_arc_vertical_delta_px": v["mean_upper_arc_vertical_delta_px"],
-                         "max_px": v["max_error_px"]} for name,v in results.items()}, indent=2))
+                         "segments": v["segments"], "max_px": v["max_error_px"]}
+                  for name,v in results.items()}, indent=2))

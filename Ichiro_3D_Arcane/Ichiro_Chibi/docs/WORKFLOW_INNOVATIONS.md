@@ -319,3 +319,13 @@ superposición revela desvíos locales y soporte faltante. No es calibración de
 cámara ni transferencia aprobada; no se creó ni guardó geometría. Informe:
 FACE_REGISTRATION_PROBE_V02.md y JSON. Primero se necesita máscara facial
 etiquetada y validación local de contornos/perfiles.
+
+## WF-013 — localizar el error por arco sin mover el ojo completo
+
+La comparación segmentada (docs/EYE_CONTOUR_ALIGNMENT_V02.md) muestra que el
+ojo derecho tiene cantos a 5.70 px RMS y arco inferior a 5.38 px, pero el arco
+superior queda a 24.56 px RMS (23.32 px más alto en promedio). En el izquierdo
+parcial, el arco superior queda a 39.42 px RMS; su lectura tiene baja confianza
+por cabello. Siguiente corrección: revisar ceja y arco superior de manera local,
+con el ojo y los cantos como anclas. No escalar ni trasladar el globo completo.
+No se construyó geometría.
