@@ -273,7 +273,7 @@ oclusión del flequillo. Es una anotación 2D de consulta, no un ajuste XYZ ni
 aprobación de anatomía. Antes de proyectar, hace falta registrar la cámara,
 validar correspondencias y restringir impactos a una región facial etiquetada.
 
-## WF-009 — alarma de proporción antes de trasladar landmarks
+## WF-009 — alarma de proporción antes de trasladar landmarks (INVALIDADA)
 
 tools/compare_face_proportions.py compara distancias normalizadas de puntos
 aproximados sobre el render fuente y la referencia. La relación separación
@@ -284,3 +284,15 @@ sí bloquea una proyección automática. Las anotaciones fuente se renderizan pa
 revisión en source_face_landmarks_estimate_v01.png. Evaluar la forma antes de
 continuar párpados; corregir solo tras una comparación registrada con vistas y
 capas reversibles. Informe: docs/FACE_PROPORTION_COMPARISON_V01.json.
+
+## WF-010 — corregir landmarks bajos y retirar la falsa alarma v01
+
+La cuadrícula de la referencia reveló que nariz, boca y mentón se habían
+marcado demasiado abajo en v01. Ese error elevó artificialmente el supuesto
+desajuste ocular de +51%; WF-009 queda invalidado para decisiones de forma. El
+packet v02, revisado sobre una cuadrícula de píxeles, da una relación de
+separación ocular a distancia centro-ocular–mentón de 0.922 en la referencia y
+0.905 en el render fuente (−1.9%). No se detecta discrepancia grande en esta
+métrica aproximada. La anotación aún no calibra cámaras ni permite transferir
+coordenadas a 3D. Evidencia y código: canonical_face_landmarks_v02.json,
+FACE_PROPORTION_COMPARISON_V02.json y tools/compare_face_proportions.py.

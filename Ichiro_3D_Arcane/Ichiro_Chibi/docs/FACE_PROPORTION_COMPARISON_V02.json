@@ -1,0 +1,32 @@
+{
+  "schema": "ethernium.face-proportion-comparison/0.2",
+  "canonical_reference": "ichiro_chibi_front.png",
+  "source_render": "renders/skin_review_source.png",
+  "method": "Scale-independent landmark ratios from manual 2D point estimates; cameras are not registered.",
+  "canonical_estimates": {
+    "eye_spacing_px": 46.11398920067532,
+    "eye_mid_to_chin_px": 50.00999900019995,
+    "eye_spacing_over_eye_mid_to_chin": 0.9220953833750517,
+    "eye_mid_to_nose_over_eye_mid_to_chin": 0.480320431496761,
+    "nose_to_chin_over_eye_mid_to_chin": 0.5198960311896037
+  },
+  "source_render_estimates": {
+    "eye_spacing_px": 235.05318547086316,
+    "eye_mid_to_chin_px": 259.8547671296411,
+    "eye_spacing_over_eye_mid_to_chin": 0.9045559874358414,
+    "eye_mid_to_nose_over_eye_mid_to_chin": 0.4911149936781137,
+    "nose_to_chin_over_eye_mid_to_chin": 0.5105641533892311
+  },
+  "relative_differences_percent": {
+    "eye_spacing_over_eye_mid_to_chin": -1.902123820966617,
+    "eye_mid_to_nose_over_eye_mid_to_chin": 2.247366856270294,
+    "nose_to_chin_over_eye_mid_to_chin": -1.7949507671793152
+  },
+  "decision": "NO_LARGE_SCALE_INDEPENDENT_EYE_SPACING_MISMATCH_DETECTED; CAMERA_REGISTRATION_STILL_REQUIRED_FOR_3D_TRANSFER",
+  "limitations": [
+    "Source render points are approximate and partly occluded.",
+    "Canonical image and source render use different, unregistered camera framing.",
+    "Ratios are a coarse cross-view sanity check, not proof of exact shape match.",
+    "No 3D coordinates, sculpt edits, or topology were generated."
+  ]
+}
