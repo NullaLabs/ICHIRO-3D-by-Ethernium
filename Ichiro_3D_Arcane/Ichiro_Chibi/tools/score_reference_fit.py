@@ -6,6 +6,7 @@ and not a reconstruction target. Requires Pillow and NumPy; OpenCV is optional.
 from pathlib import Path
 import argparse
 from collections import deque
+import hashlib
 import json
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
@@ -33,6 +34,15 @@ TURNAROUND_VIEWS = (
     ("right", 6),
     ("front_right", 7),
 )
+
+
+def display_path(path, base=ROOT):
+    """Prefer project-relative report paths without rejecting external outputs."""
+    path = Path(path).resolve()
+    try:
+        return path.relative_to(Path(base).resolve()).as_posix()
+    except ValueError:
+        return path.name
 
 
 def _largest_components(mask, minimum_area=8):
@@ -194,6 +204,35 @@ def projected_mask(path):
     if not len(xs):
         raise RuntimeError(f"No projected foreground found in {path}")
     return image, binary, (int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)
+
+
+def sha256_file(path):
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def manual_mask(path, expected_size):
+    """Load an optional reviewed binary mask without altering its silhouette."""
+    image = Image.open(path).convert("L")
+    if image.size != expected_size:
+        raise ValueError(f"Manual mask {path} is {image.size}; expected {expected_size}")
+    binary = np.asarray(image) > 127
+    ys, xs = np.where(binary)
+    if not len(xs):
+        raise ValueError(f"Manual mask contains no white foreground pixels: {path}")
+    bbox = (int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)
+    return binary, bbox, {
+        "segmenter": "manual binary mask override",
+        "manual_mask_file": path.name,
+        "manual_mask_sha256": sha256_file(path),
+        "manual_mask_size_px": list(image.size),
+        "foreground_polarity": "white",
+        "foreground_area_px": int(binary.sum()),
+        "foreground_bbox_px": list(bbox),
+    }
 
 
 def align_candidate(candidate, source_bbox, canvas_size, target_bbox):
@@ -427,9 +466,15 @@ def main():
     parser.add_argument("--threshold", type=float, default=24)
     parser.add_argument("--segmenter", choices=("auto", "border", "grabcut"), default="auto",
                         help="auto uses optional GrabCut on high-resolution plates and the border model on small panels")
+    parser.add_argument("--manual-masks-dir", type=Path,
+                        help="optional reviewed PNG masks: ortho_<view>.png and turnaround_<view>.png")
     args = parser.parse_args()
     args.renders = args.renders.resolve()
     args.output_dir = args.output_dir.resolve()
+    if args.manual_masks_dir is not None:
+        args.manual_masks_dir = args.manual_masks_dir.resolve()
+        if not args.manual_masks_dir.is_dir():
+            parser.error(f"manual mask directory does not exist: {args.manual_masks_dir}")
     args.output_dir.mkdir(parents=True, exist_ok=True)
 
     canonical_results = {}
@@ -443,14 +488,18 @@ def main():
             reference_path, args.threshold, args.segmenter
         )
         overlay_stem = f"ortho_{view}"
+        if args.manual_masks_dir is not None:
+            override_path = args.manual_masks_dir / f"{overlay_stem}.png"
+            if override_path.is_file():
+                ref_mask, ref_bbox, segmentation = manual_mask(override_path, ref_image.size)
         metrics, overlay_path, aligned = compare_view(view, ref_image, ref_mask, ref_bbox,
                                                       segmentation, candidate_path,
                                                       args.output_dir, overlay_stem)
         profile = silhouette_width_profile(ref_mask, aligned, ref_bbox)
         metrics["scanline_width_profile"] = profile
         canonical_profiles[view] = profile
-        metrics.update({"reference": str(reference_path.relative_to(ROOT)),
-                        "source_render": str(candidate_path.relative_to(ROOT))})
+        metrics.update({"reference": display_path(reference_path),
+                        "source_render": display_path(candidate_path)})
         canonical_results[view] = metrics
         canonical_overlays.append((view, overlay_path, metrics["iou"]))
 
@@ -470,23 +519,28 @@ def main():
             crops[panel_index], args.threshold, args.segmenter
         )
         overlay_stem = f"turnaround_{view}"
+        if args.manual_masks_dir is not None:
+            override_path = args.manual_masks_dir / f"{overlay_stem}.png"
+            if override_path.is_file():
+                ref_mask, ref_bbox, segmentation = manual_mask(override_path, ref_image.size)
         metrics, overlay_path, _aligned = compare_view(view, ref_image, ref_mask, ref_bbox,
                                                        segmentation, candidate_path,
                                                        args.output_dir, overlay_stem)
-        metrics.update({"source_sheet": str(args.turnaround_sheet.resolve().relative_to(ROOT)),
+        metrics.update({"source_sheet": display_path(args.turnaround_sheet),
                         "source_panel_index_zero_based": panel_index,
-                        "reference_crop": str(crop_path.relative_to(ROOT)),
-                        "source_render": str(candidate_path.relative_to(ROOT))})
+                        "reference_crop": display_path(crop_path, args.output_dir),
+                        "source_render": display_path(candidate_path)})
         turnaround_results[view] = metrics
         turnaround_overlays.append((view, overlay_path, metrics["iou"]))
 
     report = {
-        "schema": "ethernium.reference-fit-silhouette-score.v3",
+        "schema": "ethernium.reference-fit-silhouette-score.v4",
         "purpose": "camera-normalized diagnostic across four high-resolution reference plates and eight turnaround panels; not canon approval",
         "border_model_threshold_rgb_residual": args.threshold,
         "projection_mask_threshold": 127,
         "reference_segmenter_requested": args.segmenter,
         "optional_opencv_version": cv2.__version__ if cv2 is not None else None,
+        "manual_mask_overrides_requested": args.manual_masks_dir is not None,
         "canonical_four_view_metrics": canonical_results,
         "canonical_scanline_width_profiles": canonical_profiles,
         "turnaround_eight_view_metrics": turnaround_results,

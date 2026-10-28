@@ -138,7 +138,8 @@ recortes de `ichiro_chibi_8view_turnaround.png`; genera máscaras, overlays,
 perfiles de anchura por altura, contact sheets y un informe versionado. Usa GrabCut determinista en las cuatro
 placas grandes si OpenCV ya está disponible; usa el modelo simple de borde en
 los paneles de baja resolución o como fallback. No se instaló ninguna
-dependencia. `docs/REFERENCE_CATALOG.md` registra las seis imágenes, los
+dependencia. Puede recibir máscaras PNG corregidas por el artista y registra su
+hash sin volver a segmentarlas. `docs/REFERENCE_CATALOG.md` registra las seis imágenes, los
 landmarks auxiliares y el procedimiento.
 
 La segmentación automática puede retener sombras y sus scores dependen de la

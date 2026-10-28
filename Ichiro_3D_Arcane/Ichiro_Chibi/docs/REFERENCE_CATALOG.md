@@ -28,6 +28,8 @@ Toda coordenada de pantalla conserva su referencia, escala, lado de la imagen, v
 
 `tools/score_reference_fit.py` compara esas máscaras con las cuatro placas grandes y con los ocho paneles recortados de la hoja. `--segmenter auto` utiliza GrabCut de OpenCV en las cuatro imágenes de alta resolución, inicializado con un rectángulo encontrado por el modelo del fondo; fija la semilla aleatoria en 0 y registra la versión de OpenCV. Para los paneles pequeños usa el modelo de fondo por medianas de bordes, ya que GrabCut recortó partes de varios perfiles a baja resolución. Si OpenCV no está disponible, `auto` cae al modelo de fondo para todas las vistas; `--segmenter border` permite fijar ese modo. OpenCV es opcional y no se instaló en este pase. Además de IoU, calcula anchura de silueta por 49 alturas normalizadas para las cuatro placas grandes. El gráfico `reference_fit_width_profiles.png` superpone referencia y fuente sin asignar nombres anatómicos automáticos a cada franja. Requiere NumPy y Pillow en el Python anfitrión; el script de proyección usa la API incluida en Blender 5.2.
 
+Para corregir una máscara con trazos manuales, `--manual-masks-dir` acepta PNGs escala de grises, blanco = personaje y negro = fondo. Deben conservar el tamaño exacto de la placa o recorte. Los nombres son `ortho_front.png`, `ortho_back.png`, `ortho_left.png`, `ortho_right.png` y `turnaround_<vista>.png`; solo los archivos presentes sustituyen el segmentador automático. El informe guarda hash, tamaño y área de cada override usado. Esto permite corregir flecos/sombras en cualquier editor de imagen sin instalar una herramienta y mantener la revisión reproducible.
+
 El modelo de fondo de los ocho paneles usa umbral RGB residual 24. El GrabCut de las cuatro placas grandes elimina más sombra de suelo y hace que sus IoU y relaciones ancho/alto cambien poco o nada con ese umbral. Las máscaras todavía dependen de la inicialización automática y de cámaras que no se han calibrado. Los scores sirven para localizar diferencias, nunca como puertas automáticas ni aprobación de parecido.
 
 ### Baseline visual del archivo fuente
@@ -53,7 +55,7 @@ blender --background --factory-startup Ichiro_Chibi_HighDetail_Working.blend --t
 python tools/score_reference_fit.py --renders renders/reference_fit_v02_cpu/projections --output-dir renders/reference_fit_v02_cpu/comparison --segmenter auto
 ```
 
-El segundo comando rehace el informe, perfiles de anchura, máscaras de referencia, overlays, recortes del turnaround y hojas de contacto. Para una salida sin OpenCV, usar `--segmenter border`; el informe registra método y versiones para que las salidas no se confundan. `--threshold` controla el modelo de fondo de los paneles pequeños. Se debe revisar la hoja y las curvas, no elegir ajustes por maximizar IoU.
+El segundo comando rehace el informe, perfiles de anchura, máscaras de referencia, overlays, recortes del turnaround y hojas de contacto. Para una salida sin OpenCV, usar `--segmenter border`; el informe registra método y versiones para que las salidas no se confundan. `--threshold` controla el modelo de fondo de los paneles pequeños. Para aplicar una carpeta de máscaras corregidas, añade `--manual-masks-dir <carpeta>`. Se debe revisar la hoja y las curvas, no elegir ajustes por maximizar IoU.
 
 ## Siguiente mejora del comparador
 
