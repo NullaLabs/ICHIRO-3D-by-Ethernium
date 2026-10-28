@@ -206,5 +206,20 @@ Escena local Ichiro_Chibi_Closed_Eye_Review.blend. Renderizador: -- --closed.
 Código, CLOSED_EYE_REVIEW.json y renders closed_eye_* versionados. La escena
 fuente y los experimentos anteriores permanecen preservados.
 
+## WF-004b — regularización de profundidad con puntos fijos
+
+relax_closed_eye_depth.py ajusta solo X de los 29 vértices inferidos mediante
+40 iteraciones de promedio de vecinos, paso 0.5 y desplazamiento acotado a 0.004.
+Los 67 restantes quedan exactamente fijos (assert). Normales y áreas verificadas.
+Máximo movimiento observado 0.00333401; energía de Laplaciano cuadrado sobre
+puntos libres pasa de 1.44786e-5 a 2.19528e-10. Esta energía mide suavidad,
+no fidelidad ni contacto. La proyección/contacto no se ha revalidado.
+
+Perfil positivo inspeccionado: persiste separación superior. No aprobar como
+anatomía final. La forma anterior se conserva en Before_Depth_Regularization.
+Escena local Ichiro_Chibi_Closed_Eye_Relax_Review.blend, informe
+CLOSED_EYE_RELAX_REVIEW.json. Renderizador admite -- --relax. Scripts,
+informe y renders quedan versionados; no se modifica la sesión abierta.
+
 Cada bloque debe producir una mejora verificable; no añadir capas de servicios
 antes de tener un caso geométrico útil. La reconstrucción artística sigue pendiente.

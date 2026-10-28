@@ -1,0 +1,16 @@
+{
+  "schema": "ethernium.depth-regularization/0.1",
+  "iterations": 40,
+  "adjusted_vertex_count": 29,
+  "fixed_vertex_count": 67,
+  "max_displacement": 0.0033340109773135063,
+  "squared_laplacian_before": 1.4478589016633949e-05,
+  "squared_laplacian_after": 2.1952808276681515e-10,
+  "production_approved": false,
+  "contact_status": "not_revalidated",
+  "limitations": [
+    "Smoothness is not anatomical accuracy",
+    "Inferred points may leave source surface",
+    "No globe contact or blink validation"
+  ]
+}
