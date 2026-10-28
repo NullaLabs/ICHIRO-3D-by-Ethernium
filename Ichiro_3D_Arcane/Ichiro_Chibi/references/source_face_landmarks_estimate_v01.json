@@ -1,0 +1,14 @@
+{
+  "schema": "ethernium.source-face-landmarks/0.1",
+  "image": "renders/skin_review_source.png",
+  "image_size_px": [768, 768],
+  "status": "manual_visual_estimates_for_comparison_only",
+  "coordinate_origin": "top_left",
+  "landmarks": {
+    "eye_screen_left_center": {"point": [232, 439], "confidence": 0.48, "visibility": "partly_occluded_by_fringe"},
+    "eye_screen_right_center": {"point": [465, 408], "confidence": 0.62, "visibility": "visible"},
+    "nose_tip": {"point": [354, 551], "confidence": 0.58, "visibility": "visible"},
+    "chin_center": {"point": [375, 682], "confidence": 0.46, "visibility": "visible_approximate"}
+  },
+  "warning": "Approximate points read from a rendered diagnostic with an orthographic camera; the canonical reference has a different, uncalibrated camera. Use only to detect large proportion mismatch, never for direct surface projection."
+}

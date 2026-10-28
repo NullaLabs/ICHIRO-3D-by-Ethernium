@@ -272,3 +272,15 @@ reproducible. La lectura manual del ojo a la izquierda de la imagen marca la
 oclusión del flequillo. Es una anotación 2D de consulta, no un ajuste XYZ ni
 aprobación de anatomía. Antes de proyectar, hace falta registrar la cámara,
 validar correspondencias y restringir impactos a una región facial etiquetada.
+
+## WF-009 — alarma de proporción antes de trasladar landmarks
+
+tools/compare_face_proportions.py compara distancias normalizadas de puntos
+aproximados sobre el render fuente y la referencia. La relación separación
+ocular/centro-ocular-a-mentón resulta 0.905 en el render frente a 0.599 en la
+referencia (+51%). Los puntos de la fuente son estimaciones manuales de baja
+confianza y las cámaras no están calibradas: esto no prueba un defecto, pero
+sí bloquea una proyección automática. Las anotaciones fuente se renderizan para
+revisión en source_face_landmarks_estimate_v01.png. Evaluar la forma antes de
+continuar párpados; corregir solo tras una comparación registrada con vistas y
+capas reversibles. Informe: docs/FACE_PROPORTION_COMPARISON_V01.json.
