@@ -1,0 +1,17 @@
+{
+  "vertices": 27,
+  "quads": 16,
+  "max_projection_distance": 0.002395110670477152,
+  "projection_limit": 0.004,
+  "source_landmarks": [
+    7,
+    6,
+    5
+  ],
+  "production_approved": false,
+  "limitations": [
+    "Partial lower skin band",
+    "No thickness or globe contact",
+    "No deformation test"
+  ]
+}

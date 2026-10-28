@@ -76,5 +76,24 @@ referencias canónicas sigue pendiente. No hay párpados nuevos ni rig final.
 Se versionan scripts, coordenadas, informes y renders; las escenas derivadas
 se regeneran a partir de la fuente y quedan guardadas localmente.
 
+## WF-003a — banda periocular inferior editable
+
+build_lower_lid_strip.py crea 27 vértices y 16 quads a partir de landmarks 7,6,5
+del ojo visible (SCREEN_RIGHT). Interpola una guía y proyecta cada punto contra
+la máscara regional con distancia máxima 0.004 unidades de modelo. Si no existe
+impacto dentro de ese radio, aborta. Distancia máxima observada: 0.00239511.
+Verifica normales hacia +X antes de guardar una escena nueva.
+
+render_landmark_depth_review.py genera frontal y ambos perfiles; con -- --strip
+muestra la banda. Inspección frontal: sigue la piel bajo el margen oscuro del ojo.
+El perfil positivo permite revisar profundidad; el negativo queda ocluido por
+cabello. No se ha validado aún contra todos los dibujos canónicos.
+
+Es una banda parcial de piel, no un párpado completo: faltan canto, margen,
+espesor, contacto con globo y pruebas de parpadeo. La interpolación es una
+hipótesis de forma local, no profundidad medida de las referencias. Maestro
+fuente y sesión abierta permanecen intactos. La escena derivada se conserva
+localmente; script, informe y renders se versionan para reproducirla.
+
 Cada bloque debe producir una mejora verificable; no añadir capas de servicios
 antes de tener un caso geométrico útil. La reconstrucción artística sigue pendiente.
