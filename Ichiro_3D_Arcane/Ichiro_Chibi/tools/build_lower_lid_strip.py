@@ -14,6 +14,8 @@ ROOT=Path(__file__).resolve().parents[1]
 outer_mode='--outer' in sys.argv
 upper_mode='--upper' in sys.argv
 smooth_mode='--smooth' in sys.argv
+depth_mode='--depth' in sys.argv
+smooth_mode=smooth_mode or depth_mode
 upper_mode=upper_mode or smooth_mode
 outer_mode=outer_mode or upper_mode
 bpy.ops.wm.open_mainfile(filepath=str(ROOT/'Ichiro_Chibi_Eyelid_Landmark_Review.blend'))
@@ -55,6 +57,13 @@ for offset in [0,.003,.006]:
         query=p+offset*width_factor*outward
         hit,normal,index,distance=bvh.find_nearest(query,.004)
         if hit is None: raise RuntimeError(f'Unsupported strip point {i}, offset {offset}; review mask')
+        if depth_mode:
+            # Preserve authored image-plane contour; only infer depth from support.
+            candidate=Vector((hit.x,query.y,query.z))
+            support=bvh.find_nearest(candidate,.004)
+            if support[0] is None: raise RuntimeError('Depth-only candidate lacks bounded support')
+            hit=candidate
+            distance=support[3]
         verts.append(hit+Vector((.0008,0,0))); distances.append(distance)
 n=len(path)
 faces=[]
@@ -80,6 +89,7 @@ wire.show_viewport=False
 output=ROOT/('Ichiro_Chibi_Outer_Lid_Strip_Review.blend' if outer_mode else 'Ichiro_Chibi_Lower_Lid_Strip_Review.blend')
 if upper_mode: output=ROOT/'Ichiro_Chibi_Upper_Lid_Strip_Review.blend'
 if smooth_mode: output=ROOT/'Ichiro_Chibi_Smooth_Lid_Strip_Review.blend'
+if depth_mode: output=ROOT/'Ichiro_Chibi_Depth_Lid_Strip_Review.blend'
 bpy.ops.wm.save_as_mainfile(filepath=str(output))
 report=dict(vertices=len(verts),quads=len(faces),max_projection_distance=max(distances),
     projection_limit=.004,source_landmarks=anchor_order,production_approved=False,
@@ -88,6 +98,8 @@ report['minimum_face_area']=min(p.area for p in mesh.polygons)
 report['upper_width_factor']=.5 if upper_mode else 1
 report_name='UPPER_LID_STRIP_REVIEW.json' if upper_mode else ('OUTER_LID_STRIP_REVIEW.json' if outer_mode else 'LOWER_LID_STRIP_REVIEW.json')
 if smooth_mode: report_name='SMOOTH_LID_STRIP_REVIEW.json'
+if depth_mode: report_name='DEPTH_LID_STRIP_REVIEW.json'
+report['projection_method']='depth_only_with_bounded_support' if depth_mode else 'nearest_surface'
 report['guide_method']='three_corner_cutting_passes_equal_arc_spacing' if smooth_mode else 'linear_per_anchor'
 def max_turn(points):
     from math import degrees

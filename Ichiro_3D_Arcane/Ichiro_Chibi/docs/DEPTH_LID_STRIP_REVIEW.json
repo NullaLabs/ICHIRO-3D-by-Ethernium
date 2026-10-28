@@ -1,0 +1,27 @@
+{
+  "vertices": 63,
+  "quads": 40,
+  "max_projection_distance": 0.0038474961183965206,
+  "projection_limit": 0.004,
+  "source_landmarks": [
+    7,
+    6,
+    5,
+    4,
+    3,
+    2
+  ],
+  "production_approved": false,
+  "limitations": [
+    "Partial lower skin band",
+    "No thickness or globe contact",
+    "No deformation test"
+  ],
+  "minimum_face_area": 8.759127922530752e-06,
+  "upper_width_factor": 0.5,
+  "projection_method": "depth_only_with_bounded_support",
+  "guide_method": "three_corner_cutting_passes_equal_arc_spacing",
+  "guide_max_turn_degrees": 37.03232603823075,
+  "projected_inner_max_turn_degrees": 50.92706524415232,
+  "original_guide_max_turn_degrees": 77.0786369722697
+}

@@ -150,5 +150,23 @@ SMOOTH_LID_STRIP_REVIEW.json y tres renders. Frontal inspeccionado: contorno
 algo más suave, esquina superior aún demasiado marcada. Pendiente superficie
 de apoyo revisada y anatomía completa. No añadir rig basándose en estas métricas.
 
+## WF-003e — conservación del contorno frontal al ajustar profundidad
+
+Modo -- --depth en ambos scripts. Conserva YZ de la guía y toma X del soporte
+más cercano. Comprueba de nuevo que el candidato está a menos de 0.004 de la
+máscara antes del desplazamiento de visualización +0.0008 en X. La distancia
+reportada excluye ese desplazamiento. No equivale a contacto sobre la superficie:
+el candidato puede quedar flotando sobre un hueco de la máscara.
+
+Resultado: 40 quads, giro máximo de fila interior 50.93 grados frente a 67.59
+en la proyección libre suavizada. Área mínima 8.759e-6, distancia máxima de
+soporte 0.00384750. Inspección frontal y perfil: mejor distribución inferior y
+lateral, pero parte del arco superior queda tapada por la geometría oscura del
+ojo. No aprobado como párpado; falta resolver contacto, margen y soporte real.
+
+Escena local Ichiro_Chibi_Depth_Lid_Strip_Review.blend; informe
+DEPTH_LID_STRIP_REVIEW.json y renders depth_strip_* versionados junto al código.
+La mejora es experimental y no acredita fidelidad ni comportamiento de rig.
+
 Cada bloque debe producir una mejora verificable; no añadir capas de servicios
 antes de tener un caso geométrico útil. La reconstrucción artística sigue pendiente.
