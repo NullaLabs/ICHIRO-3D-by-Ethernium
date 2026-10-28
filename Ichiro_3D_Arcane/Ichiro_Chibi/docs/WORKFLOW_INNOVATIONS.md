@@ -238,3 +238,19 @@ Decisión del flujo: una mejora de suavidad numérica no acredita contacto
 anatómico. La próxima construcción facial requiere validar superficie y silueta
 por vistas antes de aceptar una malla; los vértices inferidos quedan señalados
 como incertidumbre, nunca cubiertos por un Shrinkwrap sin soporte suficiente.
+
+## WF-006 — clasificar soporte antes de generar otra malla facial
+
+tools/classify_eyelid_projection_support.py repite las 256 muestras previstas
+para dos parches y registra el primer impacto en la fuente completa: polígono,
+material, normal, posición y color UV aproximado. En esta fuente, todas las
+256 muestras alcanzan alguna superficie, pero solo 62 superan el heurístico de
+color cálido. Como solo hay una ranura de material y el cabello puede ocluir la
+piel, ese dato no identifica piel de forma fiable. El resultado bloquea la
+generación automática; no pretende resolver la semántica ni corrige landmarks.
+
+El informe docs/EYELID_SUPPORT_CLASSIFICATION.json conserva cada muestra y los
+hashes de entrada/herramienta. Ejecutar con Blender 5.2 en modo background y el
+script tools/classify_eyelid_projection_support.py. La siguiente mejora debe
+ser una región de cara etiquetada manualmente contra las referencias, con
+segmentación/landmarks revisables; no relajar más la tira actual.

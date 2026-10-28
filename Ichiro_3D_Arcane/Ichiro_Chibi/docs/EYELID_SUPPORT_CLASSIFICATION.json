@@ -1,0 +1,6676 @@
+{
+  "schema": "ethernium.eyelid-support-classification/0.1",
+  "script_sha256": "d7de10c349bf99c1f83e4d8c8cbd003d49fb08810b4665a24386604da0adde03",
+  "source_sha256": "d906a5b55041a8047a3b38d8e346cf41f9fa6cd7f08ccc3f121c2b8c41fb5b86",
+  "method": "ray hits against full high-detail source; polygon material index + UV-centroid texture evidence",
+  "counts": {
+    "source_hit_unclassified": 256
+  },
+  "color_candidates": 62,
+  "total": 256,
+  "samples": [
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 0,
+      "status": "source_hit_unclassified",
+      "source_polygon": 714105,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0885852,
+        -0.046,
+        0.2588
+      ],
+      "normal": [
+        0.91129,
+        -0.11137,
+        -0.39641
+      ],
+      "distance": 0.41141477227211,
+      "uv_centroid_rgb": [
+        0.53333,
+        0.3451,
+        0.27451
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 1,
+      "status": "source_hit_unclassified",
+      "source_polygon": 710956,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0890375,
+        -0.0463651,
+        0.2598975
+      ],
+      "normal": [
+        0.93914,
+        -0.0612,
+        -0.33804
+      ],
+      "distance": 0.41096246242523193,
+      "uv_centroid_rgb": [
+        0.2902,
+        0.17647,
+        0.13333
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 2,
+      "status": "source_hit_unclassified",
+      "source_polygon": 707665,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0894073,
+        -0.0474463,
+        0.2608068
+      ],
+      "normal": [
+        0.93312,
+        -0.0001,
+        -0.35957
+      ],
+      "distance": 0.4105926752090454,
+      "uv_centroid_rgb": [
+        0.06667,
+        0.03529,
+        0.02353
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 3,
+      "status": "source_hit_unclassified",
+      "source_polygon": 701258,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0896223,
+        -0.0492021,
+        0.261493
+      ],
+      "normal": [
+        0.89935,
+        -0.0849,
+        -0.42891
+      ],
+      "distance": 0.41037774085998535,
+      "uv_centroid_rgb": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 4,
+      "status": "source_hit_unclassified",
+      "source_polygon": 692471,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0894708,
+        -0.051565,
+        0.2619297
+      ],
+      "normal": [
+        0.68958,
+        -0.30755,
+        -0.65566
+      ],
+      "distance": 0.4105291962623596,
+      "uv_centroid_rgb": [
+        0.02745,
+        0.04706,
+        0.06275
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 5,
+      "status": "source_hit_unclassified",
+      "source_polygon": 684079,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0846727,
+        -0.0544442,
+        0.2621
+      ],
+      "normal": [
+        0.76293,
+        -0.54279,
+        -0.35116
+      ],
+      "distance": 0.4153273105621338,
+      "uv_centroid_rgb": [
+        0.00784,
+        0.04314,
+        0.0549
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 6,
+      "status": "source_hit_unclassified",
+      "source_polygon": 672716,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0840527,
+        -0.057729,
+        0.2619975
+      ],
+      "normal": [
+        0.99003,
+        -0.02636,
+        -0.13837
+      ],
+      "distance": 0.4159472584724426,
+      "uv_centroid_rgb": [
+        0.6549,
+        0.70196,
+        0.71373
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 7,
+      "status": "source_hit_unclassified",
+      "source_polygon": 661109,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0838782,
+        -0.0612933,
+        0.2616261
+      ],
+      "normal": [
+        0.97469,
+        -0.06835,
+        -0.21286
+      ],
+      "distance": 0.4161217510700226,
+      "uv_centroid_rgb": [
+        0.01176,
+        0.0549,
+        0.07059
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 8,
+      "status": "source_hit_unclassified",
+      "source_polygon": 647238,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0825535,
+        -0.065,
+        0.261
+      ],
+      "normal": [
+        0.77684,
+        -0.59961,
+        -0.19232
+      ],
+      "distance": 0.417446494102478,
+      "uv_centroid_rgb": [
+        0.01176,
+        0.07451,
+        0.07451
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 9,
+      "status": "source_hit_unclassified",
+      "source_polygon": 635524,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0793266,
+        -0.0687067,
+        0.2601434
+      ],
+      "normal": [
+        0.817,
+        -0.53334,
+        -0.21923
+      ],
+      "distance": 0.4206734299659729,
+      "uv_centroid_rgb": [
+        0.24314,
+        0.0549,
+        0.0549
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 10,
+      "status": "source_hit_unclassified",
+      "source_polygon": 619810,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0776592,
+        -0.072271,
+        0.2590891
+      ],
+      "normal": [
+        0.93539,
+        -0.26424,
+        -0.23499
+      ],
+      "distance": 0.4223407804965973,
+      "uv_centroid_rgb": [
+        0.85098,
+        0.17647,
+        0.1098
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 11,
+      "status": "source_hit_unclassified",
+      "source_polygon": 609801,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.075735,
+        -0.0755558,
+        0.2578776
+      ],
+      "normal": [
+        0.69229,
+        -0.61985,
+        -0.36949
+      ],
+      "distance": 0.4242649972438812,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98431,
+        0.98431
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 12,
+      "status": "source_hit_unclassified",
+      "source_polygon": 599470,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.072049,
+        -0.078435,
+        0.2565556
+      ],
+      "normal": [
+        0.59679,
+        -0.70355,
+        -0.38582
+      ],
+      "distance": 0.42795097827911377,
+      "uv_centroid_rgb": [
+        0.98824,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 13,
+      "status": "source_hit_unclassified",
+      "source_polygon": 588286,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0685927,
+        -0.0807979,
+        0.2551738
+      ],
+      "normal": [
+        0.70031,
+        -0.71201,
+        0.05104
+      ],
+      "distance": 0.43140727281570435,
+      "uv_centroid_rgb": [
+        0.99216,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 14,
+      "status": "source_hit_unclassified",
+      "source_polygon": 581372,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.068372,
+        -0.0825537,
+        0.2537854
+      ],
+      "normal": [
+        0.88452,
+        -0.19327,
+        0.42459
+      ],
+      "distance": 0.43162795901298523,
+      "uv_centroid_rgb": [
+        0.96863,
+        0.95294,
+        0.95294
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 15,
+      "status": "source_hit_unclassified",
+      "source_polygon": 574724,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0684113,
+        -0.0836349,
+        0.2524436
+      ],
+      "normal": [
+        0.80379,
+        -0.57693,
+        0.14516
+      ],
+      "distance": 0.43158867955207825,
+      "uv_centroid_rgb": [
+        0.22353,
+        0.18824,
+        0.2
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 16,
+      "status": "source_hit_unclassified",
+      "source_polygon": 574723,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.068104,
+        -0.084,
+        0.2512
+      ],
+      "normal": [
+        0.67751,
+        -0.7283,
+        -0.10278
+      ],
+      "distance": 0.4318959712982178,
+      "uv_centroid_rgb": [
+        0.0549,
+        0.08235,
+        0.10588
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 17,
+      "status": "source_hit_unclassified",
+      "source_polygon": 578036,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0682268,
+        -0.0836349,
+        0.2501025
+      ],
+      "normal": [
+        0.59669,
+        -0.72749,
+        -0.3387
+      ],
+      "distance": 0.43177321553230286,
+      "uv_centroid_rgb": [
+        0.0549,
+        0.06667,
+        0.09412
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 18,
+      "status": "source_hit_unclassified",
+      "source_polygon": 581349,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0692003,
+        -0.0825537,
+        0.2491932
+      ],
+      "normal": [
+        0.66758,
+        -0.66527,
+        -0.3343
+      ],
+      "distance": 0.430799663066864,
+      "uv_centroid_rgb": [
+        0.04314,
+        0.07843,
+        0.09804
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 19,
+      "status": "source_hit_unclassified",
+      "source_polygon": 588230,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0706067,
+        -0.0807979,
+        0.248507
+      ],
+      "normal": [
+        0.82715,
+        -0.56196,
+        0.00371
+      ],
+      "distance": 0.4293932616710663,
+      "uv_centroid_rgb": [
+        0.04706,
+        0.10196,
+        0.10196
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 20,
+      "status": "source_hit_unclassified",
+      "source_polygon": 599466,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0720304,
+        -0.078435,
+        0.2480704
+      ],
+      "normal": [
+        0.90173,
+        -0.36858,
+        0.2259
+      ],
+      "distance": 0.4279695749282837,
+      "uv_centroid_rgb": [
+        0.01961,
+        0.06667,
+        0.09804
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 21,
+      "status": "source_hit_unclassified",
+      "source_polygon": 609837,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0731848,
+        -0.0755558,
+        0.2479
+      ],
+      "normal": [
+        0.80258,
+        -0.2547,
+        0.53943
+      ],
+      "distance": 0.4268152117729187,
+      "uv_centroid_rgb": [
+        0.22353,
+        0.26667,
+        0.27843
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 22,
+      "status": "source_hit_unclassified",
+      "source_polygon": 623020,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0740049,
+        -0.072271,
+        0.2480025
+      ],
+      "normal": [
+        0.78213,
+        -0.20093,
+        0.58983
+      ],
+      "distance": 0.4259951114654541,
+      "uv_centroid_rgb": [
+        0.49804,
+        0.52549,
+        0.53333
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 23,
+      "status": "source_hit_unclassified",
+      "source_polygon": 635590,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0750897,
+        -0.0687067,
+        0.2483739
+      ],
+      "normal": [
+        0.87389,
+        -0.41051,
+        0.26038
+      ],
+      "distance": 0.424910306930542,
+      "uv_centroid_rgb": [
+        0.8,
+        0.79608,
+        0.8
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 24,
+      "status": "source_hit_unclassified",
+      "source_polygon": 647324,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0770746,
+        -0.065,
+        0.249
+      ],
+      "normal": [
+        0.78472,
+        -0.35296,
+        -0.50953
+      ],
+      "distance": 0.42292535305023193,
+      "uv_centroid_rgb": [
+        0.7451,
+        0.43922,
+        0.43529
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 25,
+      "status": "source_hit_unclassified",
+      "source_polygon": 661193,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0792317,
+        -0.0612933,
+        0.2498566
+      ],
+      "normal": [
+        0.78555,
+        -0.31113,
+        -0.5349
+      ],
+      "distance": 0.42076829075813293,
+      "uv_centroid_rgb": [
+        0.61176,
+        0.22745,
+        0.20784
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 26,
+      "status": "source_hit_unclassified",
+      "source_polygon": 669768,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0810638,
+        -0.057729,
+        0.2509109
+      ],
+      "normal": [
+        0.86681,
+        -0.25705,
+        -0.42728
+      ],
+      "distance": 0.41893622279167175,
+      "uv_centroid_rgb": [
+        0.84706,
+        0.09804,
+        0.03922
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 27,
+      "status": "source_hit_unclassified",
+      "source_polygon": 684108,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0824919,
+        -0.0544442,
+        0.2521223
+      ],
+      "normal": [
+        0.90874,
+        -0.21598,
+        -0.35713
+      ],
+      "distance": 0.4175080955028534,
+      "uv_centroid_rgb": [
+        0.77647,
+        0.06667,
+        0.0549
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 28,
+      "status": "source_hit_unclassified",
+      "source_polygon": 689712,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0837403,
+        -0.051565,
+        0.2534444
+      ],
+      "normal": [
+        0.90025,
+        -0.2278,
+        -0.37102
+      ],
+      "distance": 0.41625967621803284,
+      "uv_centroid_rgb": [
+        0.62353,
+        0.3098,
+        0.3451
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 29,
+      "status": "source_hit_unclassified",
+      "source_polygon": 701333,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0846156,
+        -0.0492021,
+        0.2548262
+      ],
+      "normal": [
+        0.96928,
+        -0.08223,
+        -0.23181
+      ],
+      "distance": 0.4153844118118286,
+      "uv_centroid_rgb": [
+        0.82745,
+        0.89804,
+        0.90196
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 30,
+      "status": "source_hit_unclassified",
+      "source_polygon": 704365,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0850552,
+        -0.0474463,
+        0.2562146
+      ],
+      "normal": [
+        0.93044,
+        -0.13364,
+        -0.34119
+      ],
+      "distance": 0.4149447977542877,
+      "uv_centroid_rgb": [
+        0.00392,
+        0.01961,
+        0.04314
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 0,
+      "sample": 31,
+      "status": "source_hit_unclassified",
+      "source_polygon": 710989,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0873792,
+        -0.0463651,
+        0.2575564
+      ],
+      "normal": [
+        0.48228,
+        -0.48085,
+        -0.73225
+      ],
+      "distance": 0.41262078285217285,
+      "uv_centroid_rgb": [
+        0.00392,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 0,
+      "status": "source_hit_unclassified",
+      "source_polygon": 723322,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0889263,
+        -0.043,
+        0.2594
+      ],
+      "normal": [
+        0.94111,
+        -0.00531,
+        -0.33807
+      ],
+      "distance": 0.4110736846923828,
+      "uv_centroid_rgb": [
+        0.76471,
+        0.45882,
+        0.32941
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 1,
+      "status": "source_hit_unclassified",
+      "source_polygon": 723316,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0897442,
+        -0.0434227,
+        0.2609737
+      ],
+      "normal": [
+        0.73731,
+        -0.40242,
+        -0.54262
+      ],
+      "distance": 0.4102557599544525,
+      "uv_centroid_rgb": [
+        0.76471,
+        0.40784,
+        0.2902
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 2,
+      "status": "source_hit_unclassified",
+      "source_polygon": 717225,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0914777,
+        -0.0446746,
+        0.2623179
+      ],
+      "normal": [
+        0.23568,
+        -0.27287,
+        -0.93274
+      ],
+      "distance": 0.4085223376750946,
+      "uv_centroid_rgb": [
+        0.77647,
+        0.24706,
+        0.11373
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 3,
+      "status": "source_hit_unclassified",
+      "source_polygon": 714097,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0937174,
+        -0.0467077,
+        0.2633808
+      ],
+      "normal": [
+        0.20243,
+        -0.22056,
+        -0.95414
+      ],
+      "distance": 0.4062826335430145,
+      "uv_centroid_rgb": [
+        0.82745,
+        0.21569,
+        0.06667
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 4,
+      "status": "source_hit_unclassified",
+      "source_polygon": 701250,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0937549,
+        -0.0494437,
+        0.2641217
+      ],
+      "normal": [
+        0.18162,
+        -0.26726,
+        -0.94635
+      ],
+      "distance": 0.40624508261680603,
+      "uv_centroid_rgb": [
+        0.80392,
+        0.21569,
+        0.07059
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 5,
+      "status": "source_hit_unclassified",
+      "source_polygon": 689633,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0916565,
+        -0.0527775,
+        0.264512
+      ],
+      "normal": [
+        0.6853,
+        -0.15442,
+        -0.7117
+      ],
+      "distance": 0.40834352374076843,
+      "uv_centroid_rgb": [
+        0.0549,
+        0.01961,
+        0.01176
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 6,
+      "status": "source_hit_unclassified",
+      "source_polygon": 675534,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0898744,
+        -0.056581,
+        0.2645368
+      ],
+      "normal": [
+        0.15221,
+        -0.3406,
+        -0.92781
+      ],
+      "distance": 0.4101255536079407,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.07451,
+        0.07843
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 7,
+      "status": "source_hit_unclassified",
+      "source_polygon": 661094,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0843872,
+        -0.060708,
+        0.2641951
+      ],
+      "normal": [
+        0.97421,
+        -0.05476,
+        -0.21892
+      ],
+      "distance": 0.41561275720596313,
+      "uv_centroid_rgb": [
+        0.01569,
+        0.05882,
+        0.06667
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 8,
+      "status": "source_hit_unclassified",
+      "source_polygon": 647241,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0831314,
+        -0.065,
+        0.2635
+      ],
+      "normal": [
+        0.77947,
+        -0.60807,
+        -0.15058
+      ],
+      "distance": 0.41686856746673584,
+      "uv_centroid_rgb": [
+        0.02745,
+        0.07059,
+        0.07843
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 9,
+      "status": "source_hit_unclassified",
+      "source_polygon": 632564,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0795155,
+        -0.069292,
+        0.2624783
+      ],
+      "normal": [
+        0.86379,
+        -0.46963,
+        -0.18253
+      ],
+      "distance": 0.4204844534397125,
+      "uv_centroid_rgb": [
+        0.22745,
+        0.0549,
+        0.0549
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 10,
+      "status": "source_hit_unclassified",
+      "source_polygon": 616529,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0778068,
+        -0.073419,
+        0.2611692
+      ],
+      "normal": [
+        0.94085,
+        -0.27266,
+        -0.20114
+      ],
+      "distance": 0.4221932291984558,
+      "uv_centroid_rgb": [
+        0.87059,
+        0.39608,
+        0.34902
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 11,
+      "status": "source_hit_unclassified",
+      "source_polygon": 602915,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0750196,
+        -0.0772225,
+        0.259623
+      ],
+      "normal": [
+        0.67777,
+        -0.67536,
+        -0.29073
+      ],
+      "distance": 0.42498040199279785,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98431,
+        0.98431
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 12,
+      "status": "source_hit_unclassified",
+      "source_polygon": 588245,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0702051,
+        -0.0805563,
+        0.2578991
+      ],
+      "normal": [
+        0.57695,
+        -0.75008,
+        -0.32327
+      ],
+      "distance": 0.42979490756988525,
+      "uv_centroid_rgb": [
+        0.97647,
+        0.96863,
+        0.96863
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 13,
+      "status": "source_hit_unclassified",
+      "source_polygon": 577549,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1375699,
+        -0.0832923,
+        0.2560639
+      ],
+      "normal": [
+        0.24496,
+        0.9159,
+        -0.31801
+      ],
+      "distance": 0.36243006587028503,
+      "uv_centroid_rgb": [
+        0.16863,
+        0.19608,
+        0.21961
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 14,
+      "status": "source_hit_unclassified",
+      "source_polygon": 567122,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1396234,
+        -0.0853254,
+        0.2541877
+      ],
+      "normal": [
+        0.60778,
+        0.742,
+        -0.28291
+      ],
+      "distance": 0.3603765666484833,
+      "uv_centroid_rgb": [
+        0.16078,
+        0.19608,
+        0.21569
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 15,
+      "status": "source_hit_unclassified",
+      "source_polygon": 563303,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1552418,
+        -0.0865773,
+        0.2523428
+      ],
+      "normal": [
+        0.17068,
+        0.98055,
+        -0.09691
+      ],
+      "distance": 0.34475815296173096,
+      "uv_centroid_rgb": [
+        0.19608,
+        0.24706,
+        0.27059
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 16,
+      "status": "source_hit_unclassified",
+      "source_polygon": 563283,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1560808,
+        -0.087,
+        0.2506
+      ],
+      "normal": [
+        0.42723,
+        0.89919,
+        -0.09452
+      ],
+      "distance": 0.34391921758651733,
+      "uv_centroid_rgb": [
+        0.19216,
+        0.25098,
+        0.27059
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 17,
+      "status": "source_hit_unclassified",
+      "source_polygon": 563348,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1529094,
+        -0.0865773,
+        0.2490263
+      ],
+      "normal": [
+        0.08255,
+        0.99349,
+        -0.07853
+      ],
+      "distance": 0.34709057211875916,
+      "uv_centroid_rgb": [
+        0.18824,
+        0.23922,
+        0.26275
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 18,
+      "status": "source_hit_unclassified",
+      "source_polygon": 567756,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0644634,
+        -0.0853254,
+        0.2476821
+      ],
+      "normal": [
+        0.6842,
+        -0.72856,
+        0.0327
+      ],
+      "distance": 0.43553656339645386,
+      "uv_centroid_rgb": [
+        0.70588,
+        0.34902,
+        0.25098
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 19,
+      "status": "source_hit_unclassified",
+      "source_polygon": 578097,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0664668,
+        -0.0832923,
+        0.2466192
+      ],
+      "normal": [
+        0.72747,
+        -0.68589,
+        -0.01819
+      ],
+      "distance": 0.4335331618785858,
+      "uv_centroid_rgb": [
+        0.43137,
+        0.20784,
+        0.13725
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 20,
+      "status": "source_hit_unclassified",
+      "source_polygon": 588258,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0692235,
+        -0.0805563,
+        0.2458783
+      ],
+      "normal": [
+        0.52038,
+        -0.78201,
+        -0.34302
+      ],
+      "distance": 0.43077653646469116,
+      "uv_centroid_rgb": [
+        0.1451,
+        0.0902,
+        0.08627
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 21,
+      "status": "source_hit_unclassified",
+      "source_polygon": 602964,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0725552,
+        -0.0772225,
+        0.245488
+      ],
+      "normal": [
+        0.73097,
+        -0.56515,
+        -0.38247
+      ],
+      "distance": 0.42744484543800354,
+      "uv_centroid_rgb": [
+        0.03137,
+        0.07451,
+        0.08235
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 22,
+      "status": "source_hit_unclassified",
+      "source_polygon": 616569,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0747389,
+        -0.073419,
+        0.2454632
+      ],
+      "normal": [
+        0.88731,
+        -0.46117,
+        0.00141
+      ],
+      "distance": 0.4252610504627228,
+      "uv_centroid_rgb": [
+        0.01176,
+        0.07843,
+        0.10588
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 23,
+      "status": "source_hit_unclassified",
+      "source_polygon": 632612,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0763689,
+        -0.069292,
+        0.2458049
+      ],
+      "normal": [
+        0.91559,
+        -0.33011,
+        0.22962
+      ],
+      "distance": 0.42363110184669495,
+      "uv_centroid_rgb": [
+        0.04314,
+        0.08235,
+        0.11373
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 24,
+      "status": "source_hit_unclassified",
+      "source_polygon": 647302,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.077442,
+        -0.065,
+        0.2465
+      ],
+      "normal": [
+        0.7688,
+        -0.2663,
+        0.58141
+      ],
+      "distance": 0.4225580096244812,
+      "uv_centroid_rgb": [
+        0.30196,
+        0.25882,
+        0.25882
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 25,
+      "status": "source_hit_unclassified",
+      "source_polygon": 664016,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0783548,
+        -0.060708,
+        0.2475217
+      ],
+      "normal": [
+        0.83396,
+        -0.32316,
+        0.4473
+      ],
+      "distance": 0.42164522409439087,
+      "uv_centroid_rgb": [
+        0.92157,
+        0.88627,
+        0.88235
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 26,
+      "status": "source_hit_unclassified",
+      "source_polygon": 675667,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0802072,
+        -0.056581,
+        0.2488308
+      ],
+      "normal": [
+        0.84472,
+        -0.25427,
+        -0.47095
+      ],
+      "distance": 0.4197928011417389,
+      "uv_centroid_rgb": [
+        0.92157,
+        0.8902,
+        0.8902
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 27,
+      "status": "source_hit_unclassified",
+      "source_polygon": 689752,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0819563,
+        -0.0527775,
+        0.250377
+      ],
+      "normal": [
+        0.85417,
+        -0.13753,
+        -0.50147
+      ],
+      "distance": 0.41804367303848267,
+      "uv_centroid_rgb": [
+        0.99608,
+        0.97647,
+        0.97647
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 28,
+      "status": "source_hit_unclassified",
+      "source_polygon": 701345,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0835039,
+        -0.0494437,
+        0.2521009
+      ],
+      "normal": [
+        0.88327,
+        -0.16018,
+        -0.44065
+      ],
+      "distance": 0.41649606823921204,
+      "uv_centroid_rgb": [
+        0.85882,
+        0.91765,
+        0.93333
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 29,
+      "status": "source_hit_unclassified",
+      "source_polygon": 711045,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0845077,
+        -0.0467077,
+        0.2539361
+      ],
+      "normal": [
+        0.96637,
+        -0.02484,
+        -0.25596
+      ],
+      "distance": 0.41549232602119446,
+      "uv_centroid_rgb": [
+        0.10588,
+        0.13333,
+        0.17255
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 30,
+      "status": "source_hit_unclassified",
+      "source_polygon": 717301,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.08643,
+        -0.0446746,
+        0.2558123
+      ],
+      "normal": [
+        0.46954,
+        -0.54511,
+        -0.69454
+      ],
+      "distance": 0.4135700464248657,
+      "uv_centroid_rgb": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 1,
+      "sample": 31,
+      "status": "source_hit_unclassified",
+      "source_polygon": 723349,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0882834,
+        -0.0434227,
+        0.2576572
+      ],
+      "normal": [
+        0.91925,
+        -0.05782,
+        -0.3894
+      ],
+      "distance": 0.41171663999557495,
+      "uv_centroid_rgb": [
+        0.76863,
+        0.45882,
+        0.32941
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 0,
+      "status": "source_hit_unclassified",
+      "source_polygon": 734793,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0912288,
+        -0.04,
+        0.26
+      ],
+      "normal": [
+        0.40331,
+        -0.56763,
+        -0.71773
+      ],
+      "distance": 0.40877118706703186,
+      "uv_centroid_rgb": [
+        0.76471,
+        0.40392,
+        0.27843
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 1,
+      "status": "source_hit_unclassified",
+      "source_polygon": 731987,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0955894,
+        -0.0404804,
+        0.2620499
+      ],
+      "normal": [
+        0.25403,
+        -0.39452,
+        -0.88308
+      ],
+      "distance": 0.40441063046455383,
+      "uv_centroid_rgb": [
+        0.80784,
+        0.22745,
+        0.08627
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 2,
+      "status": "source_hit_unclassified",
+      "source_polygon": 729125,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1113151,
+        -0.041903,
+        0.2638289
+      ],
+      "normal": [
+        0.48083,
+        -0.15672,
+        -0.86269
+      ],
+      "distance": 0.38868486881256104,
+      "uv_centroid_rgb": [
+        0.16863,
+        0.20392,
+        0.18431
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 3,
+      "status": "source_hit_unclassified",
+      "source_polygon": 720273,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1126905,
+        -0.0442133,
+        0.2652686
+      ],
+      "normal": [
+        0.59828,
+        -0.19207,
+        -0.77792
+      ],
+      "distance": 0.3873095214366913,
+      "uv_centroid_rgb": [
+        0.16863,
+        0.2,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 4,
+      "status": "source_hit_unclassified",
+      "source_polygon": 704250,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1128376,
+        -0.0473223,
+        0.2663137
+      ],
+      "normal": [
+        0.63936,
+        -0.25177,
+        -0.72652
+      ],
+      "distance": 0.38716235756874084,
+      "uv_centroid_rgb": [
+        0.17255,
+        0.19216,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 5,
+      "status": "source_hit_unclassified",
+      "source_polygon": 692410,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1119002,
+        -0.0511107,
+        0.266924
+      ],
+      "normal": [
+        0.63624,
+        -0.30827,
+        -0.70722
+      ],
+      "distance": 0.3880997598171234,
+      "uv_centroid_rgb": [
+        0.16078,
+        0.17647,
+        0.17255
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 6,
+      "status": "source_hit_unclassified",
+      "source_polygon": 681085,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1094211,
+        -0.0554329,
+        0.2670761
+      ],
+      "normal": [
+        0.4706,
+        -0.39833,
+        -0.78732
+      ],
+      "distance": 0.3905789256095886,
+      "uv_centroid_rgb": [
+        0.23922,
+        0.24706,
+        0.24706
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 7,
+      "status": "source_hit_unclassified",
+      "source_polygon": 663798,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0925372,
+        -0.0601227,
+        0.2667641
+      ],
+      "normal": [
+        0.66464,
+        -0.31822,
+        -0.67601
+      ],
+      "distance": 0.40746283531188965,
+      "uv_centroid_rgb": [
+        0.01569,
+        0.00784,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 8,
+      "status": "source_hit_unclassified",
+      "source_polygon": 647233,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0840551,
+        -0.065,
+        0.266
+      ],
+      "normal": [
+        0.58279,
+        -0.53602,
+        -0.61077
+      ],
+      "distance": 0.4159449338912964,
+      "uv_centroid_rgb": [
+        0.03137,
+        0.07451,
+        0.07843
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 9,
+      "status": "source_hit_unclassified",
+      "source_polygon": 632566,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0796259,
+        -0.0698773,
+        0.2648132
+      ],
+      "normal": [
+        0.86484,
+        -0.4787,
+        -0.15135
+      ],
+      "distance": 0.4203741252422333,
+      "uv_centroid_rgb": [
+        0.04314,
+        0.06667,
+        0.06667
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 10,
+      "status": "source_hit_unclassified",
+      "source_polygon": 613157,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0778753,
+        -0.0745671,
+        0.2632492
+      ],
+      "normal": [
+        0.93431,
+        -0.31418,
+        -0.1684
+      ],
+      "distance": 0.4221246838569641,
+      "uv_centroid_rgb": [
+        0.75686,
+        0.6902,
+        0.6902
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 11,
+      "status": "source_hit_unclassified",
+      "source_polygon": 599427,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0740018,
+        -0.0788893,
+        0.2613683
+      ],
+      "normal": [
+        0.65409,
+        -0.7057,
+        -0.27232
+      ],
+      "distance": 0.42599818110466003,
+      "uv_centroid_rgb": [
+        0.96078,
+        0.95294,
+        0.95686
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 12,
+      "status": "source_hit_unclassified",
+      "source_polygon": 580876,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.138585,
+        -0.0826777,
+        0.2592427
+      ],
+      "normal": [
+        0.4271,
+        0.8738,
+        -0.23252
+      ],
+      "distance": 0.36141499876976013,
+      "uv_centroid_rgb": [
+        0.16471,
+        0.19216,
+        0.21569
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 13,
+      "status": "source_hit_unclassified",
+      "source_polygon": 567011,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1508456,
+        -0.0857867,
+        0.2569539
+      ],
+      "normal": [
+        0.10643,
+        0.99165,
+        -0.07279
+      ],
+      "distance": 0.34915435314178467,
+      "uv_centroid_rgb": [
+        0.18039,
+        0.23137,
+        0.2549
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 14,
+      "status": "source_hit_unclassified",
+      "source_polygon": 555837,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1580121,
+        -0.088097,
+        0.2545901
+      ],
+      "normal": [
+        0.76671,
+        0.63146,
+        -0.11583
+      ],
+      "distance": 0.3419879078865051,
+      "uv_centroid_rgb": [
+        0.19216,
+        0.25098,
+        0.27059
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 15,
+      "status": "source_hit_unclassified",
+      "source_polygon": 551810,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1587947,
+        -0.0895196,
+        0.2522421
+      ],
+      "normal": [
+        0.78292,
+        0.61108,
+        -0.11671
+      ],
+      "distance": 0.34120526909828186,
+      "uv_centroid_rgb": [
+        0.18039,
+        0.24706,
+        0.27451
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 16,
+      "status": "source_hit_unclassified",
+      "source_polygon": 547644,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.15883,
+        -0.09,
+        0.25
+      ],
+      "normal": [
+        0.77497,
+        0.61924,
+        -0.12637
+      ],
+      "distance": 0.34116995334625244,
+      "uv_centroid_rgb": [
+        0.17255,
+        0.24706,
+        0.27451
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 17,
+      "status": "source_hit_unclassified",
+      "source_polygon": 551818,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1581066,
+        -0.0895196,
+        0.2479501
+      ],
+      "normal": [
+        0.76713,
+        0.62781,
+        -0.1318
+      ],
+      "distance": 0.34189337491989136,
+      "uv_centroid_rgb": [
+        0.17255,
+        0.24706,
+        0.27451
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 18,
+      "status": "source_hit_unclassified",
+      "source_polygon": 555845,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1565872,
+        -0.088097,
+        0.2461711
+      ],
+      "normal": [
+        0.74365,
+        0.65453,
+        -0.13629
+      ],
+      "distance": 0.343412846326828,
+      "uv_centroid_rgb": [
+        0.18824,
+        0.24706,
+        0.27451
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 19,
+      "status": "source_hit_unclassified",
+      "source_polygon": 567754,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.06407,
+        -0.0857867,
+        0.2447314
+      ],
+      "normal": [
+        0.6791,
+        -0.73399,
+        0.00871
+      ],
+      "distance": 0.43592995405197144,
+      "uv_centroid_rgb": [
+        0.76078,
+        0.4,
+        0.29412
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 20,
+      "status": "source_hit_unclassified",
+      "source_polygon": 581400,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.067179,
+        -0.0826777,
+        0.2436863
+      ],
+      "normal": [
+        0.76155,
+        -0.64737,
+        0.03107
+      ],
+      "distance": 0.43282097578048706,
+      "uv_centroid_rgb": [
+        0.63137,
+        0.30588,
+        0.21961
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 21,
+      "status": "source_hit_unclassified",
+      "source_polygon": 595828,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0700126,
+        -0.0788893,
+        0.243076
+      ],
+      "normal": [
+        0.84299,
+        -0.5331,
+        0.07197
+      ],
+      "distance": 0.429987370967865,
+      "uv_centroid_rgb": [
+        0.63529,
+        0.31373,
+        0.23922
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 22,
+      "status": "source_hit_unclassified",
+      "source_polygon": 613247,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0727938,
+        -0.0745671,
+        0.2429239
+      ],
+      "normal": [
+        0.79585,
+        -0.45686,
+        -0.39738
+      ],
+      "distance": 0.42720621824264526,
+      "uv_centroid_rgb": [
+        0.51765,
+        0.22353,
+        0.14902
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 23,
+      "status": "source_hit_unclassified",
+      "source_polygon": 632610,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.075721,
+        -0.0698773,
+        0.2432359
+      ],
+      "normal": [
+        0.77562,
+        -0.36509,
+        -0.51491
+      ],
+      "distance": 0.42427903413772583,
+      "uv_centroid_rgb": [
+        0.59216,
+        0.2549,
+        0.18431
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 24,
+      "status": "source_hit_unclassified",
+      "source_polygon": 647301,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0781021,
+        -0.065,
+        0.244
+      ],
+      "normal": [
+        0.88711,
+        -0.33596,
+        -0.31648
+      ],
+      "distance": 0.42189788818359375,
+      "uv_centroid_rgb": [
+        0.62745,
+        0.27059,
+        0.18824
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 25,
+      "status": "source_hit_unclassified",
+      "source_polygon": 666818,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0798559,
+        -0.0601227,
+        0.2451868
+      ],
+      "normal": [
+        0.91216,
+        -0.29891,
+        0.28039
+      ],
+      "distance": 0.42014414072036743,
+      "uv_centroid_rgb": [
+        0.61569,
+        0.23922,
+        0.18431
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 26,
+      "status": "source_hit_unclassified",
+      "source_polygon": 681286,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0808938,
+        -0.0554329,
+        0.2467507
+      ],
+      "normal": [
+        0.84301,
+        -0.33782,
+        0.41859
+      ],
+      "distance": 0.41910621523857117,
+      "uv_centroid_rgb": [
+        0.59608,
+        0.32157,
+        0.27451
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 27,
+      "status": "source_hit_unclassified",
+      "source_polygon": 695630,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0815635,
+        -0.0511107,
+        0.2486317
+      ],
+      "normal": [
+        0.90973,
+        -0.39069,
+        -0.14053
+      ],
+      "distance": 0.4184364974498749,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 28,
+      "status": "source_hit_unclassified",
+      "source_polygon": 707767,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0832256,
+        -0.0473223,
+        0.2507574
+      ],
+      "normal": [
+        0.91638,
+        -0.18439,
+        -0.35531
+      ],
+      "distance": 0.41677436232566833,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 29,
+      "status": "source_hit_unclassified",
+      "source_polygon": 720395,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0844756,
+        -0.0442133,
+        0.2530461
+      ],
+      "normal": [
+        0.88857,
+        -0.36004,
+        -0.28427
+      ],
+      "distance": 0.41552436351776123,
+      "uv_centroid_rgb": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 30,
+      "status": "source_hit_unclassified",
+      "source_polygon": 726292,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0874559,
+        -0.041903,
+        0.2554099
+      ],
+      "normal": [
+        0.8673,
+        -0.17665,
+        -0.4654
+      ],
+      "distance": 0.4125440716743469,
+      "uv_centroid_rgb": [
+        0.78431,
+        0.45882,
+        0.34118
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 2,
+      "sample": 31,
+      "status": "source_hit_unclassified",
+      "source_polygon": 732032,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0885711,
+        -0.0404804,
+        0.2577579
+      ],
+      "normal": [
+        0.84901,
+        -0.2527,
+        -0.46402
+      ],
+      "distance": 0.41142889857292175,
+      "uv_centroid_rgb": [
+        0.75686,
+        0.43529,
+        0.31765
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 0,
+      "status": "source_hit_unclassified",
+      "source_polygon": 743269,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0985155,
+        -0.037,
+        0.2606
+      ],
+      "normal": [
+        0.23179,
+        -0.62932,
+        -0.74178
+      ],
+      "distance": 0.40148448944091797,
+      "uv_centroid_rgb": [
+        0.78039,
+        0.29804,
+        0.16863
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 1,
+      "status": "source_hit_unclassified",
+      "source_polygon": 743239,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1109619,
+        -0.037538,
+        0.2631261
+      ],
+      "normal": [
+        0.58287,
+        0.13619,
+        -0.80107
+      ],
+      "distance": 0.3890380859375,
+      "uv_centroid_rgb": [
+        0.16863,
+        0.2,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 2,
+      "status": "source_hit_unclassified",
+      "source_polygon": 737559,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1138309,
+        -0.0391314,
+        0.2653399
+      ],
+      "normal": [
+        0.68655,
+        0.06916,
+        -0.72379
+      ],
+      "distance": 0.3861691355705261,
+      "uv_centroid_rgb": [
+        0.17647,
+        0.20392,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 3,
+      "status": "source_hit_unclassified",
+      "source_polygon": 729106,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1152124,
+        -0.0417189,
+        0.2671564
+      ],
+      "normal": [
+        0.78181,
+        -0.12994,
+        -0.60982
+      ],
+      "distance": 0.3847876191139221,
+      "uv_centroid_rgb": [
+        0.16471,
+        0.19608,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 4,
+      "status": "source_hit_unclassified",
+      "source_polygon": 717149,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1152192,
+        -0.045201,
+        0.2685058
+      ],
+      "normal": [
+        0.85106,
+        -0.24023,
+        -0.46688
+      ],
+      "distance": 0.3847808241844177,
+      "uv_centroid_rgb": [
+        0.04706,
+        0.12549,
+        0.15294
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 5,
+      "status": "source_hit_unclassified",
+      "source_polygon": 701166,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1142606,
+        -0.049444,
+        0.269336
+      ],
+      "normal": [
+        0.87276,
+        -0.30808,
+        -0.37864
+      ],
+      "distance": 0.38573941588401794,
+      "uv_centroid_rgb": [
+        0.09412,
+        0.13725,
+        0.15294
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 6,
+      "status": "source_hit_unclassified",
+      "source_polygon": 683901,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1124838,
+        -0.0542849,
+        0.2696154
+      ],
+      "normal": [
+        0.81538,
+        -0.3712,
+        -0.44426
+      ],
+      "distance": 0.38751623034477234,
+      "uv_centroid_rgb": [
+        0.12941,
+        0.16078,
+        0.16471
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 7,
+      "status": "source_hit_unclassified",
+      "source_polygon": 666565,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1089717,
+        -0.0595375,
+        0.2693331
+      ],
+      "normal": [
+        0.61053,
+        -0.46638,
+        -0.64011
+      ],
+      "distance": 0.3910283148288727,
+      "uv_centroid_rgb": [
+        0.18039,
+        0.20392,
+        0.20392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 8,
+      "status": "source_hit_unclassified",
+      "source_polygon": 647140,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0911407,
+        -0.065,
+        0.2685
+      ],
+      "normal": [
+        0.82533,
+        -0.39931,
+        -0.39923
+      ],
+      "distance": 0.4088592529296875,
+      "uv_centroid_rgb": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 9,
+      "status": "source_hit_unclassified",
+      "source_polygon": 629413,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0824925,
+        -0.0704625,
+        0.2671481
+      ],
+      "normal": [
+        0.1182,
+        -0.19976,
+        -0.97269
+      ],
+      "distance": 0.41750749945640564,
+      "uv_centroid_rgb": [
+        0.03529,
+        0.06667,
+        0.07451
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 10,
+      "status": "source_hit_unclassified",
+      "source_polygon": 609783,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0777763,
+        -0.0757151,
+        0.2653294
+      ],
+      "normal": [
+        0.9001,
+        -0.4068,
+        -0.15596
+      ],
+      "distance": 0.42222365736961365,
+      "uv_centroid_rgb": [
+        0.98824,
+        0.96863,
+        0.96863
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 11,
+      "status": "source_hit_unclassified",
+      "source_polygon": 588210,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0727622,
+        -0.080556,
+        0.2631136
+      ],
+      "normal": [
+        0.62498,
+        -0.74375,
+        -0.23714
+      ],
+      "distance": 0.4272378385066986,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98431,
+        0.98431
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 12,
+      "status": "source_hit_unclassified",
+      "source_polygon": 570633,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1417948,
+        -0.084799,
+        0.2605861
+      ],
+      "normal": [
+        0.62862,
+        0.73807,
+        -0.24514
+      ],
+      "distance": 0.35820522904396057,
+      "uv_centroid_rgb": [
+        0.14902,
+        0.18039,
+        0.18824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 13,
+      "status": "source_hit_unclassified",
+      "source_polygon": 555822,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1585881,
+        -0.0882811,
+        0.257844
+      ],
+      "normal": [
+        0.78712,
+        0.60946,
+        -0.09484
+      ],
+      "distance": 0.34141191840171814,
+      "uv_centroid_rgb": [
+        0.19608,
+        0.24706,
+        0.27059
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 14,
+      "status": "source_hit_unclassified",
+      "source_polygon": 547633,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.160191,
+        -0.0908686,
+        0.2549925
+      ],
+      "normal": [
+        0.79868,
+        0.59467,
+        -0.09203
+      ],
+      "distance": 0.33980903029441833,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.22745,
+        0.2549
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 15,
+      "status": "source_hit_unclassified",
+      "source_polygon": 534790,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1610044,
+        -0.092462,
+        0.2521413
+      ],
+      "normal": [
+        0.80398,
+        0.58571,
+        -0.10275
+      ],
+      "distance": 0.33899563550949097,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.23137,
+        0.26667
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 16,
+      "status": "source_hit_unclassified",
+      "source_polygon": 530210,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.161025,
+        -0.093,
+        0.2494
+      ],
+      "normal": [
+        0.80138,
+        0.58706,
+        -0.11469
+      ],
+      "distance": 0.3389749825000763,
+      "uv_centroid_rgb": [
+        0.13725,
+        0.23137,
+        0.27059
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 17,
+      "status": "source_hit_unclassified",
+      "source_polygon": 534799,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1602406,
+        -0.092462,
+        0.2468739
+      ],
+      "normal": [
+        0.79006,
+        0.60017,
+        -0.12491
+      ],
+      "distance": 0.3397594094276428,
+      "uv_centroid_rgb": [
+        0.12549,
+        0.23137,
+        0.26667
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 18,
+      "status": "source_hit_unclassified",
+      "source_polygon": 543454,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1586286,
+        -0.0908686,
+        0.24466
+      ],
+      "normal": [
+        0.76939,
+        0.62383,
+        -0.13739
+      ],
+      "distance": 0.3413713872432709,
+      "uv_centroid_rgb": [
+        0.14118,
+        0.23529,
+        0.27451
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 19,
+      "status": "source_hit_unclassified",
+      "source_polygon": 555854,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1560824,
+        -0.0882811,
+        0.2428436
+      ],
+      "normal": [
+        0.71488,
+        0.68451,
+        -0.14279
+      ],
+      "distance": 0.343917578458786,
+      "uv_centroid_rgb": [
+        0.18431,
+        0.24314,
+        0.27059
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 20,
+      "status": "source_hit_unclassified",
+      "source_polygon": 571287,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0650138,
+        -0.084799,
+        0.2414943
+      ],
+      "normal": [
+        0.6494,
+        -0.75574,
+        -0.08448
+      ],
+      "distance": 0.4349862039089203,
+      "uv_centroid_rgb": [
+        0.77255,
+        0.42745,
+        0.31373
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 21,
+      "status": "source_hit_unclassified",
+      "source_polygon": 584720,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0690015,
+        -0.080556,
+        0.240664
+      ],
+      "normal": [
+        0.78469,
+        -0.61958,
+        0.0194
+      ],
+      "distance": 0.4309985339641571,
+      "uv_centroid_rgb": [
+        0.71765,
+        0.38039,
+        0.27451
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 22,
+      "status": "source_hit_unclassified",
+      "source_polygon": 609861,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0722369,
+        -0.0757151,
+        0.2403846
+      ],
+      "normal": [
+        0.86931,
+        -0.48474,
+        0.09659
+      ],
+      "distance": 0.42776307463645935,
+      "uv_centroid_rgb": [
+        0.73725,
+        0.39608,
+        0.28627
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 23,
+      "status": "source_hit_unclassified",
+      "source_polygon": 629489,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0749248,
+        -0.0704625,
+        0.2406669
+      ],
+      "normal": [
+        0.88075,
+        -0.43211,
+        0.1938
+      ],
+      "distance": 0.4250752329826355,
+      "uv_centroid_rgb": [
+        0.7098,
+        0.36863,
+        0.26275
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 24,
+      "status": "source_hit_unclassified",
+      "source_polygon": 647320,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0771761,
+        -0.065,
+        0.2415
+      ],
+      "normal": [
+        0.9105,
+        -0.37134,
+        0.18194
+      ],
+      "distance": 0.4228239357471466,
+      "uv_centroid_rgb": [
+        0.67451,
+        0.32157,
+        0.22745
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 25,
+      "status": "source_hit_unclassified",
+      "source_polygon": 666837,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0794384,
+        -0.0595375,
+        0.2428519
+      ],
+      "normal": [
+        0.8882,
+        -0.25878,
+        -0.37964
+      ],
+      "distance": 0.42056161165237427,
+      "uv_centroid_rgb": [
+        0.65098,
+        0.2902,
+        0.18431
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 26,
+      "status": "source_hit_unclassified",
+      "source_polygon": 684141,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0815447,
+        -0.0542849,
+        0.2446707
+      ],
+      "normal": [
+        0.94327,
+        -0.21704,
+        -0.25128
+      ],
+      "distance": 0.4184553325176239,
+      "uv_centroid_rgb": [
+        0.71765,
+        0.34902,
+        0.23922
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 27,
+      "status": "source_hit_unclassified",
+      "source_polygon": 701362,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0827293,
+        -0.049444,
+        0.2468864
+      ],
+      "normal": [
+        0.96641,
+        -0.22823,
+        0.11819
+      ],
+      "distance": 0.4172707200050354,
+      "uv_centroid_rgb": [
+        0.75686,
+        0.43137,
+        0.36471
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 28,
+      "status": "source_hit_unclassified",
+      "source_polygon": 717351,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0833922,
+        -0.045201,
+        0.2494139
+      ],
+      "normal": [
+        0.9756,
+        -0.20673,
+        -0.07392
+      ],
+      "distance": 0.4166077673435211,
+      "uv_centroid_rgb": [
+        0.99216,
+        0.97255,
+        0.97255
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 29,
+      "status": "source_hit_unclassified",
+      "source_polygon": 729271,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0851509,
+        -0.0417189,
+        0.252156
+      ],
+      "normal": [
+        0.7093,
+        -0.43904,
+        -0.55149
+      ],
+      "distance": 0.41484907269477844,
+      "uv_centroid_rgb": [
+        0.80392,
+        0.4549,
+        0.33725
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 30,
+      "status": "source_hit_unclassified",
+      "source_polygon": 737659,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0878582,
+        -0.0391314,
+        0.2550075
+      ],
+      "normal": [
+        0.7802,
+        -0.52078,
+        -0.34653
+      ],
+      "distance": 0.4121418297290802,
+      "uv_centroid_rgb": [
+        0.76471,
+        0.44706,
+        0.32941
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "A",
+      "ring": 3,
+      "sample": 31,
+      "status": "source_hit_unclassified",
+      "source_polygon": 743292,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0918444,
+        -0.037538,
+        0.2578587
+      ],
+      "normal": [
+        0.41044,
+        -0.71984,
+        -0.55979
+      ],
+      "distance": 0.4081555902957916,
+      "uv_centroid_rgb": [
+        0.76471,
+        0.43529,
+        0.31373
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 0,
+      "status": "source_hit_unclassified",
+      "source_polygon": 997983,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0750704,
+        0.054,
+        0.2778
+      ],
+      "normal": [
+        0.94298,
+        0.33174,
+        0.02705
+      ],
+      "distance": 0.42492958903312683,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 1,
+      "status": "source_hit_unclassified",
+      "source_polygon": 997984,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.075173,
+        0.0536349,
+        0.2788975
+      ],
+      "normal": [
+        0.81823,
+        0.5737,
+        -0.03698
+      ],
+      "distance": 0.42482703924179077,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 2,
+      "status": "source_hit_unclassified",
+      "source_polygon": 995367,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0763583,
+        0.0525537,
+        0.2798069
+      ],
+      "normal": [
+        0.68027,
+        0.73091,
+        -0.05486
+      ],
+      "distance": 0.42364174127578735,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 3,
+      "status": "source_hit_unclassified",
+      "source_polygon": 987186,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0784014,
+        0.0507979,
+        0.280493
+      ],
+      "normal": [
+        0.65508,
+        0.74819,
+        -0.1053
+      ],
+      "distance": 0.4215986132621765,
+      "uv_centroid_rgb": [
+        0.99216,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 4,
+      "status": "source_hit_unclassified",
+      "source_polygon": 979336,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0811171,
+        0.048435,
+        0.2809297
+      ],
+      "normal": [
+        0.66582,
+        0.68431,
+        -0.29733
+      ],
+      "distance": 0.41888293623924255,
+      "uv_centroid_rgb": [
+        0.89412,
+        0.87451,
+        0.87059
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 5,
+      "status": "source_hit_unclassified",
+      "source_polygon": 970580,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0843453,
+        0.0455558,
+        0.2811
+      ],
+      "normal": [
+        0.35214,
+        0.49737,
+        -0.79286
+      ],
+      "distance": 0.41565465927124023,
+      "uv_centroid_rgb": [
+        0.58824,
+        0.56078,
+        0.56078
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 6,
+      "status": "source_hit_unclassified",
+      "source_polygon": 959248,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0939105,
+        0.042271,
+        0.2809975
+      ],
+      "normal": [
+        0.52609,
+        0.42472,
+        -0.73678
+      ],
+      "distance": 0.40608954429626465,
+      "uv_centroid_rgb": [
+        0.00392,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 7,
+      "status": "source_hit_unclassified",
+      "source_polygon": 950611,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0957061,
+        0.0387067,
+        0.2806261
+      ],
+      "normal": [
+        0.69357,
+        0.33236,
+        -0.63914
+      ],
+      "distance": 0.4042939245700836,
+      "uv_centroid_rgb": [
+        0.00392,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 8,
+      "status": "source_hit_unclassified",
+      "source_polygon": 937947,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0968836,
+        0.035,
+        0.28
+      ],
+      "normal": [
+        0.72816,
+        0.28086,
+        -0.62522
+      ],
+      "distance": 0.4031164050102234,
+      "uv_centroid_rgb": [
+        0.00392,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 9,
+      "status": "source_hit_unclassified",
+      "source_polygon": 925939,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0974834,
+        0.0312933,
+        0.2791434
+      ],
+      "normal": [
+        0.79113,
+        0.18338,
+        -0.58351
+      ],
+      "distance": 0.402516633272171,
+      "uv_centroid_rgb": [
+        0.00392,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 10,
+      "status": "source_hit_unclassified",
+      "source_polygon": 916750,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0974736,
+        0.027729,
+        0.2780891
+      ],
+      "normal": [
+        0.75739,
+        0.16186,
+        -0.63258
+      ],
+      "distance": 0.4025264382362366,
+      "uv_centroid_rgb": [
+        0.03922,
+        0.03529,
+        0.03137
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 11,
+      "status": "source_hit_unclassified",
+      "source_polygon": 906335,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0969615,
+        0.0244442,
+        0.2768776
+      ],
+      "normal": [
+        0.76697,
+        0.09735,
+        -0.63426
+      ],
+      "distance": 0.40303847193717957,
+      "uv_centroid_rgb": [
+        0.03922,
+        0.02353,
+        0.02353
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 12,
+      "status": "source_hit_unclassified",
+      "source_polygon": 898557,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0956201,
+        0.021565,
+        0.2755556
+      ],
+      "normal": [
+        0.41603,
+        0.19512,
+        -0.88817
+      ],
+      "distance": 0.4043799042701721,
+      "uv_centroid_rgb": [
+        0.16863,
+        0.06667,
+        0.06275
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 13,
+      "status": "source_hit_unclassified",
+      "source_polygon": 892159,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0933296,
+        0.0192021,
+        0.2741738
+      ],
+      "normal": [
+        0.21632,
+        0.39355,
+        -0.89349
+      ],
+      "distance": 0.40667039155960083,
+      "uv_centroid_rgb": [
+        0.21176,
+        0.12941,
+        0.11765
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 14,
+      "status": "source_hit_unclassified",
+      "source_polygon": 888014,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0920542,
+        0.0174463,
+        0.2727854
+      ],
+      "normal": [
+        0.28834,
+        0.40813,
+        -0.86619
+      ],
+      "distance": 0.40794581174850464,
+      "uv_centroid_rgb": [
+        0.83137,
+        0.78824,
+        0.78039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 15,
+      "status": "source_hit_unclassified",
+      "source_polygon": 885965,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0908486,
+        0.0163651,
+        0.2714435
+      ],
+      "normal": [
+        0.79765,
+        0.23554,
+        -0.55523
+      ],
+      "distance": 0.40915143489837646,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 16,
+      "status": "source_hit_unclassified",
+      "source_polygon": 883914,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0902472,
+        0.016,
+        0.2702
+      ],
+      "normal": [
+        0.94427,
+        0.07516,
+        -0.32047
+      ],
+      "distance": 0.40975281596183777,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 17,
+      "status": "source_hit_unclassified",
+      "source_polygon": 885978,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0899718,
+        0.0163651,
+        0.2691025
+      ],
+      "normal": [
+        0.96911,
+        -0.08545,
+        -0.23134
+      ],
+      "distance": 0.41002821922302246,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 18,
+      "status": "source_hit_unclassified",
+      "source_polygon": 888052,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0898396,
+        0.0174463,
+        0.2681932
+      ],
+      "normal": [
+        0.96063,
+        -0.07971,
+        -0.26615
+      ],
+      "distance": 0.4101603627204895,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 19,
+      "status": "source_hit_unclassified",
+      "source_polygon": 892242,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0897613,
+        0.0192021,
+        0.267507
+      ],
+      "normal": [
+        0.94924,
+        -0.06405,
+        -0.30795
+      ],
+      "distance": 0.41023874282836914,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 20,
+      "status": "source_hit_unclassified",
+      "source_polygon": 898666,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0897203,
+        0.021565,
+        0.2670704
+      ],
+      "normal": [
+        0.9372,
+        -0.00168,
+        -0.34879
+      ],
+      "distance": 0.4102797210216522,
+      "uv_centroid_rgb": [
+        0.93725,
+        0.9098,
+        0.9098
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 21,
+      "status": "source_hit_unclassified",
+      "source_polygon": 906414,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0894496,
+        0.0244442,
+        0.2669
+      ],
+      "normal": [
+        0.94657,
+        0.11836,
+        -0.3
+      ],
+      "distance": 0.4105503559112549,
+      "uv_centroid_rgb": [
+        0.64706,
+        0.07843,
+        0.05882
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 22,
+      "status": "source_hit_unclassified",
+      "source_polygon": 916802,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0884744,
+        0.027729,
+        0.2670025
+      ],
+      "normal": [
+        0.91037,
+        0.3577,
+        -0.20802
+      ],
+      "distance": 0.4115256071090698,
+      "uv_centroid_rgb": [
+        0.84706,
+        0.12941,
+        0.06667
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 23,
+      "status": "source_hit_unclassified",
+      "source_polygon": 926029,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0868922,
+        0.0312933,
+        0.2673739
+      ],
+      "normal": [
+        0.89972,
+        0.43645,
+        -0.00302
+      ],
+      "distance": 0.41310784220695496,
+      "uv_centroid_rgb": [
+        0.81961,
+        0.11373,
+        0.04706
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 24,
+      "status": "source_hit_unclassified",
+      "source_polygon": 940432,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0853477,
+        0.035,
+        0.268
+      ],
+      "normal": [
+        0.94888,
+        0.26809,
+        -0.16661
+      ],
+      "distance": 0.4146522879600525,
+      "uv_centroid_rgb": [
+        0.81569,
+        0.10196,
+        0.04706
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 25,
+      "status": "source_hit_unclassified",
+      "source_polygon": 948101,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0844857,
+        0.0387067,
+        0.2688566
+      ],
+      "normal": [
+        0.94186,
+        0.23002,
+        -0.24493
+      ],
+      "distance": 0.4155142605304718,
+      "uv_centroid_rgb": [
+        0.80784,
+        0.0902,
+        0.01961
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 26,
+      "status": "source_hit_unclassified",
+      "source_polygon": 959348,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0830412,
+        0.042271,
+        0.2699109
+      ],
+      "normal": [
+        0.73332,
+        0.56275,
+        -0.38152
+      ],
+      "distance": 0.4169587790966034,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 27,
+      "status": "source_hit_unclassified",
+      "source_polygon": 970680,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0807274,
+        0.0455558,
+        0.2711223
+      ],
+      "normal": [
+        0.68832,
+        0.64659,
+        -0.32884
+      ],
+      "distance": 0.4192725718021393,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 28,
+      "status": "source_hit_unclassified",
+      "source_polygon": 979418,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0786175,
+        0.048435,
+        0.2724444
+      ],
+      "normal": [
+        0.6949,
+        0.65386,
+        -0.29929
+      ],
+      "distance": 0.4213825464248657,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 29,
+      "status": "source_hit_unclassified",
+      "source_polygon": 987257,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0769875,
+        0.0507979,
+        0.2738262
+      ],
+      "normal": [
+        0.83568,
+        0.54582,
+        -0.06097
+      ],
+      "distance": 0.42301249504089355,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 30,
+      "status": "source_hit_unclassified",
+      "source_polygon": 992746,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0760292,
+        0.0525537,
+        0.2752146
+      ],
+      "normal": [
+        0.9161,
+        0.34192,
+        0.20939
+      ],
+      "distance": 0.4239707589149475,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 0,
+      "sample": 31,
+      "status": "source_hit_unclassified",
+      "source_polygon": 997978,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0754263,
+        0.0536349,
+        0.2765564
+      ],
+      "normal": [
+        0.92359,
+        -0.14278,
+        0.35579
+      ],
+      "distance": 0.4245736598968506,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 0,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1008567,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0747706,
+        0.057,
+        0.2784
+      ],
+      "normal": [
+        0.85844,
+        0.10957,
+        0.50108
+      ],
+      "distance": 0.42522937059402466,
+      "uv_centroid_rgb": [
+        0.13333,
+        0.12549,
+        0.12549
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 1,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1008610,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0737429,
+        0.0565773,
+        0.2799737
+      ],
+      "normal": [
+        0.82354,
+        -0.07584,
+        0.56217
+      ],
+      "distance": 0.4262571334838867,
+      "uv_centroid_rgb": [
+        0.18039,
+        0.2,
+        0.21961
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 2,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1003261,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0737583,
+        0.0553253,
+        0.2813179
+      ],
+      "normal": [
+        0.79552,
+        0.60041,
+        -0.0816
+      ],
+      "distance": 0.4262417256832123,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 3,
+      "status": "source_hit_unclassified",
+      "source_polygon": 995371,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0759636,
+        0.0532923,
+        0.2823808
+      ],
+      "normal": [
+        0.65888,
+        0.73045,
+        -0.17979
+      ],
+      "distance": 0.4240364134311676,
+      "uv_centroid_rgb": [
+        0.9451,
+        0.93333,
+        0.93333
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 4,
+      "status": "source_hit_unclassified",
+      "source_polygon": 986971,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0901095,
+        0.0505564,
+        0.2831217
+      ],
+      "normal": [
+        0.45093,
+        0.49602,
+        -0.74204
+      ],
+      "distance": 0.40989047288894653,
+      "uv_centroid_rgb": [
+        0.00392,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 5,
+      "status": "source_hit_unclassified",
+      "source_polygon": 976396,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0930361,
+        0.0472225,
+        0.283512
+      ],
+      "normal": [
+        0.81519,
+        0.50716,
+        -0.27974
+      ],
+      "distance": 0.40696385502815247,
+      "uv_centroid_rgb": [
+        0.00392,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 6,
+      "status": "source_hit_unclassified",
+      "source_polygon": 964844,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.095,
+        0.043419,
+        0.2835368
+      ],
+      "normal": [
+        0.90894,
+        0.40478,
+        -0.09989
+      ],
+      "distance": 0.4050000309944153,
+      "uv_centroid_rgb": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 7,
+      "status": "source_hit_unclassified",
+      "source_polygon": 948005,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0963801,
+        0.039292,
+        0.2831951
+      ],
+      "normal": [
+        0.97085,
+        0.23668,
+        0.03791
+      ],
+      "distance": 0.4036199152469635,
+      "uv_centroid_rgb": [
+        0.0,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 8,
+      "status": "source_hit_unclassified",
+      "source_polygon": 935469,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0973807,
+        0.035,
+        0.2825
+      ],
+      "normal": [
+        0.98503,
+        0.12421,
+        0.11951
+      ],
+      "distance": 0.40261930227279663,
+      "uv_centroid_rgb": [
+        0.0,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 9,
+      "status": "source_hit_unclassified",
+      "source_polygon": 925930,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0980057,
+        0.030708,
+        0.2814783
+      ],
+      "normal": [
+        0.98868,
+        0.06866,
+        0.13338
+      ],
+      "distance": 0.4019942581653595,
+      "uv_centroid_rgb": [
+        0.00784,
+        0.00784,
+        0.00784
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 10,
+      "status": "source_hit_unclassified",
+      "source_polygon": 911636,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0982065,
+        0.026581,
+        0.2801692
+      ],
+      "normal": [
+        0.99831,
+        -0.04178,
+        0.04035
+      ],
+      "distance": 0.4017934799194336,
+      "uv_centroid_rgb": [
+        0.05098,
+        0.02353,
+        0.01176
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 11,
+      "status": "source_hit_unclassified",
+      "source_polygon": 900953,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.097847,
+        0.0227775,
+        0.278623
+      ],
+      "normal": [
+        0.98958,
+        -0.01694,
+        -0.14301
+      ],
+      "distance": 0.40215298533439636,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.06667,
+        0.03922
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 12,
+      "status": "source_hit_unclassified",
+      "source_polygon": 892111,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0972074,
+        0.0194437,
+        0.2768991
+      ],
+      "normal": [
+        0.94635,
+        -0.04398,
+        -0.32012
+      ],
+      "distance": 0.40279263257980347,
+      "uv_centroid_rgb": [
+        0.19608,
+        0.08235,
+        0.05098
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 13,
+      "status": "source_hit_unclassified",
+      "source_polygon": 885841,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0961614,
+        0.0167077,
+        0.2750639
+      ],
+      "normal": [
+        0.87278,
+        -0.05904,
+        -0.48453
+      ],
+      "distance": 0.403838574886322,
+      "uv_centroid_rgb": [
+        0.18039,
+        0.09412,
+        0.06275
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 14,
+      "status": "source_hit_unclassified",
+      "source_polygon": 881799,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0950084,
+        0.0146747,
+        0.2731877
+      ],
+      "normal": [
+        0.88946,
+        0.07592,
+        -0.45065
+      ],
+      "distance": 0.40499159693717957,
+      "uv_centroid_rgb": [
+        0.12157,
+        0.06667,
+        0.05098
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 15,
+      "status": "source_hit_unclassified",
+      "source_polygon": 879785,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0938492,
+        0.0134227,
+        0.2713428
+      ],
+      "normal": [
+        0.66634,
+        0.363,
+        -0.65132
+      ],
+      "distance": 0.40615078806877136,
+      "uv_centroid_rgb": [
+        0.13725,
+        0.1098,
+        0.10588
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 16,
+      "status": "source_hit_unclassified",
+      "source_polygon": 877870,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0923254,
+        0.013,
+        0.2696
+      ],
+      "normal": [
+        0.57154,
+        0.57816,
+        -0.58231
+      ],
+      "distance": 0.40767455101013184,
+      "uv_centroid_rgb": [
+        0.92941,
+        0.91373,
+        0.91373
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 17,
+      "status": "source_hit_unclassified",
+      "source_polygon": 877902,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0899999,
+        0.0134227,
+        0.2680263
+      ],
+      "normal": [
+        0.78658,
+        0.45547,
+        -0.41694
+      ],
+      "distance": 0.4100000560283661,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 18,
+      "status": "source_hit_unclassified",
+      "source_polygon": 881932,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0892702,
+        0.0146747,
+        0.2666821
+      ],
+      "normal": [
+        0.96288,
+        0.00884,
+        -0.26977
+      ],
+      "distance": 0.4107298254966736,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 19,
+      "status": "source_hit_unclassified",
+      "source_polygon": 885996,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0890126,
+        0.0167077,
+        0.2656192
+      ],
+      "normal": [
+        0.95623,
+        -0.05083,
+        -0.28817
+      ],
+      "distance": 0.41098740696907043,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 20,
+      "status": "source_hit_unclassified",
+      "source_polygon": 892256,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0888522,
+        0.0194437,
+        0.2648783
+      ],
+      "normal": [
+        0.9373,
+        -0.02103,
+        -0.3479
+      ],
+      "distance": 0.4111478328704834,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 21,
+      "status": "source_hit_unclassified",
+      "source_polygon": 901074,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.088542,
+        0.0227775,
+        0.264488
+      ],
+      "normal": [
+        0.86673,
+        0.12451,
+        -0.48299
+      ],
+      "distance": 0.41145795583724976,
+      "uv_centroid_rgb": [
+        0.87059,
+        0.90588,
+        0.91765
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 22,
+      "status": "source_hit_unclassified",
+      "source_polygon": 914322,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0875411,
+        0.026581,
+        0.2644632
+      ],
+      "normal": [
+        0.76378,
+        0.29041,
+        -0.57645
+      ],
+      "distance": 0.4124589264392853,
+      "uv_centroid_rgb": [
+        0.41569,
+        0.13333,
+        0.14902
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 23,
+      "status": "source_hit_unclassified",
+      "source_polygon": 923732,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0858917,
+        0.030708,
+        0.2648049
+      ],
+      "normal": [
+        0.73432,
+        0.37615,
+        -0.56505
+      ],
+      "distance": 0.4141083061695099,
+      "uv_centroid_rgb": [
+        0.63137,
+        0.1098,
+        0.11373
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 24,
+      "status": "source_hit_unclassified",
+      "source_polygon": 935603,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0843002,
+        0.035,
+        0.2655
+      ],
+      "normal": [
+        0.78807,
+        0.34337,
+        -0.51093
+      ],
+      "distance": 0.4156997799873352,
+      "uv_centroid_rgb": [
+        0.73725,
+        0.0902,
+        0.06667
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 25,
+      "status": "source_hit_unclassified",
+      "source_polygon": 950745,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0831563,
+        0.039292,
+        0.2665217
+      ],
+      "normal": [
+        0.77434,
+        0.42174,
+        -0.47174
+      ],
+      "distance": 0.4168436825275421,
+      "uv_centroid_rgb": [
+        0.35686,
+        0.07451,
+        0.08627
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 26,
+      "status": "source_hit_unclassified",
+      "source_polygon": 965015,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0809144,
+        0.043419,
+        0.2678308
+      ],
+      "normal": [
+        0.69408,
+        0.60647,
+        -0.38787
+      ],
+      "distance": 0.4190855920314789,
+      "uv_centroid_rgb": [
+        0.99216,
+        0.97647,
+        0.97647
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 27,
+      "status": "source_hit_unclassified",
+      "source_polygon": 976653,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0786085,
+        0.0472225,
+        0.269377
+      ],
+      "normal": [
+        0.94158,
+        0.29559,
+        0.16143
+      ],
+      "distance": 0.42139145731925964,
+      "uv_centroid_rgb": [
+        0.99608,
+        0.97647,
+        0.97647
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 28,
+      "status": "source_hit_unclassified",
+      "source_polygon": 987214,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0776935,
+        0.0505564,
+        0.2711008
+      ],
+      "normal": [
+        0.83532,
+        -0.19994,
+        0.51212
+      ],
+      "distance": 0.42230650782585144,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 29,
+      "status": "source_hit_unclassified",
+      "source_polygon": 995323,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0772514,
+        0.0532923,
+        0.2729361
+      ],
+      "normal": [
+        0.89743,
+        -0.16974,
+        0.4072
+      ],
+      "distance": 0.4227485954761505,
+      "uv_centroid_rgb": [
+        0.32157,
+        0.32157,
+        0.32549
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 30,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1003130,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0764604,
+        0.0553253,
+        0.2748123
+      ],
+      "normal": [
+        0.95062,
+        0.13441,
+        0.27973
+      ],
+      "distance": 0.4235396385192871,
+      "uv_centroid_rgb": [
+        0.15686,
+        0.16863,
+        0.17647
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 1,
+      "sample": 31,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1005765,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0755776,
+        0.0565773,
+        0.2766572
+      ],
+      "normal": [
+        0.88819,
+        0.11923,
+        0.44373
+      ],
+      "distance": 0.42442235350608826,
+      "uv_centroid_rgb": [
+        0.1451,
+        0.13725,
+        0.14118
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 0,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1016455,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0732874,
+        0.06,
+        0.279
+      ],
+      "normal": [
+        0.77927,
+        0.61567,
+        0.117
+      ],
+      "distance": 0.42671260237693787,
+      "uv_centroid_rgb": [
+        0.16471,
+        0.17647,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 1,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1016509,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0729047,
+        0.0595196,
+        0.2810499
+      ],
+      "normal": [
+        0.81367,
+        0.48213,
+        0.32479
+      ],
+      "distance": 0.42709529399871826,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 2,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1011434,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0724733,
+        0.058097,
+        0.2828289
+      ],
+      "normal": [
+        0.96766,
+        0.07342,
+        0.24134
+      ],
+      "distance": 0.4275267422199249,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.16863,
+        0.17647
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 3,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1002925,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0864612,
+        0.0557867,
+        0.2842686
+      ],
+      "normal": [
+        0.47741,
+        0.56428,
+        -0.67354
+      ],
+      "distance": 0.41353878378868103,
+      "uv_centroid_rgb": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 4,
+      "status": "source_hit_unclassified",
+      "source_polygon": 995119,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0899156,
+        0.0526777,
+        0.2853137
+      ],
+      "normal": [
+        0.81718,
+        0.56913,
+        -0.09116
+      ],
+      "distance": 0.41008442640304565,
+      "uv_centroid_rgb": [
+        0.00392,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 5,
+      "status": "source_hit_unclassified",
+      "source_polygon": 981727,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0923253,
+        0.0488893,
+        0.285924
+      ],
+      "normal": [
+        0.85741,
+        0.5097,
+        0.07113
+      ],
+      "distance": 0.40767472982406616,
+      "uv_centroid_rgb": [
+        0.00392,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 6,
+      "status": "source_hit_unclassified",
+      "source_polygon": 967676,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0941701,
+        0.0445671,
+        0.2860761
+      ],
+      "normal": [
+        0.86973,
+        0.30837,
+        0.38534
+      ],
+      "distance": 0.40582987666130066,
+      "uv_centroid_rgb": [
+        0.01176,
+        0.01176,
+        0.01176
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 7,
+      "status": "source_hit_unclassified",
+      "source_polygon": 950615,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0954284,
+        0.0398773,
+        0.2857641
+      ],
+      "normal": [
+        0.86753,
+        0.14909,
+        0.47452
+      ],
+      "distance": 0.4045715630054474,
+      "uv_centroid_rgb": [
+        0.00784,
+        0.01176,
+        0.01176
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 8,
+      "status": "source_hit_unclassified",
+      "source_polygon": 937949,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0962684,
+        0.035,
+        0.285
+      ],
+      "normal": [
+        0.84552,
+        0.02078,
+        0.53354
+      ],
+      "distance": 0.40373164415359497,
+      "uv_centroid_rgb": [
+        0.01176,
+        0.01176,
+        0.01176
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 9,
+      "status": "source_hit_unclassified",
+      "source_polygon": 923619,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0977617,
+        0.0301227,
+        0.2838132
+      ],
+      "normal": [
+        0.81175,
+        0.28851,
+        -0.50776
+      ],
+      "distance": 0.40223830938339233,
+      "uv_centroid_rgb": [
+        0.03529,
+        0.02745,
+        0.02353
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 10,
+      "status": "source_hit_unclassified",
+      "source_polygon": 908962,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1088172,
+        0.0254329,
+        0.2822493
+      ],
+      "normal": [
+        0.14431,
+        0.59112,
+        -0.79357
+      ],
+      "distance": 0.3911827802658081,
+      "uv_centroid_rgb": [
+        0.08235,
+        0.13725,
+        0.15686
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 11,
+      "status": "source_hit_unclassified",
+      "source_polygon": 898419,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.112243,
+        0.0211107,
+        0.2803683
+      ],
+      "normal": [
+        0.421,
+        0.57744,
+        -0.69951
+      ],
+      "distance": 0.38775697350502014,
+      "uv_centroid_rgb": [
+        0.14902,
+        0.16863,
+        0.17647
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 12,
+      "status": "source_hit_unclassified",
+      "source_polygon": 885670,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1134064,
+        0.0173223,
+        0.2782426
+      ],
+      "normal": [
+        0.54917,
+        0.50893,
+        -0.66288
+      ],
+      "distance": 0.3865935504436493,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 13,
+      "status": "source_hit_unclassified",
+      "source_polygon": 881632,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1133106,
+        0.0142133,
+        0.2759539
+      ],
+      "normal": [
+        0.49602,
+        0.48883,
+        -0.71764
+      ],
+      "distance": 0.38668936491012573,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 14,
+      "status": "source_hit_unclassified",
+      "source_polygon": 875813,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0953854,
+        0.011903,
+        0.2735901
+      ],
+      "normal": [
+        0.4394,
+        0.24714,
+        -0.86362
+      ],
+      "distance": 0.40461456775665283,
+      "uv_centroid_rgb": [
+        0.45882,
+        0.25882,
+        0.19608
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 15,
+      "status": "source_hit_unclassified",
+      "source_polygon": 871909,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0940689,
+        0.0104804,
+        0.2712421
+      ],
+      "normal": [
+        0.89972,
+        0.03897,
+        -0.43473
+      ],
+      "distance": 0.4059310853481293,
+      "uv_centroid_rgb": [
+        0.31373,
+        0.18039,
+        0.13333
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 16,
+      "status": "source_hit_unclassified",
+      "source_polygon": 869935,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0930431,
+        0.01,
+        0.269
+      ],
+      "normal": [
+        0.91137,
+        -0.02835,
+        -0.41061
+      ],
+      "distance": 0.4069569408893585,
+      "uv_centroid_rgb": [
+        0.30196,
+        0.16863,
+        0.12941
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 17,
+      "status": "source_hit_unclassified",
+      "source_polygon": 871939,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.091878,
+        0.0104804,
+        0.2669501
+      ],
+      "normal": [
+        0.83424,
+        0.31766,
+        -0.4507
+      ],
+      "distance": 0.4081220030784607,
+      "uv_centroid_rgb": [
+        0.10588,
+        0.08627,
+        0.08627
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 18,
+      "status": "source_hit_unclassified",
+      "source_polygon": 875927,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0891882,
+        0.011903,
+        0.2651711
+      ],
+      "normal": [
+        0.8457,
+        0.34091,
+        -0.41057
+      ],
+      "distance": 0.41081175208091736,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 19,
+      "status": "source_hit_unclassified",
+      "source_polygon": 879857,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0884888,
+        0.0142133,
+        0.2637314
+      ],
+      "normal": [
+        0.96728,
+        0.05726,
+        -0.24716
+      ],
+      "distance": 0.41151121258735657,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98824,
+        0.98824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 20,
+      "status": "source_hit_unclassified",
+      "source_polygon": 888083,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0880527,
+        0.0173223,
+        0.2626863
+      ],
+      "normal": [
+        0.94286,
+        0.01146,
+        -0.33298
+      ],
+      "distance": 0.4119473397731781,
+      "uv_centroid_rgb": [
+        0.98824,
+        0.98039,
+        0.97647
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 21,
+      "status": "source_hit_unclassified",
+      "source_polygon": 898711,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.087478,
+        0.0211107,
+        0.262076
+      ],
+      "normal": [
+        0.9013,
+        0.15276,
+        -0.40536
+      ],
+      "distance": 0.4125220477581024,
+      "uv_centroid_rgb": [
+        0.5451,
+        0.53725,
+        0.54118
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 22,
+      "status": "source_hit_unclassified",
+      "source_polygon": 911802,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0863595,
+        0.0254329,
+        0.2619239
+      ],
+      "normal": [
+        0.95586,
+        0.28824,
+        -0.057
+      ],
+      "distance": 0.4136405289173126,
+      "uv_centroid_rgb": [
+        0.2549,
+        0.26667,
+        0.27451
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 23,
+      "status": "source_hit_unclassified",
+      "source_polygon": 923738,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.085289,
+        0.0301227,
+        0.2622359
+      ],
+      "normal": [
+        0.97742,
+        0.17106,
+        0.12403
+      ],
+      "distance": 0.41471099853515625,
+      "uv_centroid_rgb": [
+        0.99608,
+        0.97647,
+        0.97647
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 24,
+      "status": "source_hit_unclassified",
+      "source_polygon": 938075,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0839778,
+        0.035,
+        0.263
+      ],
+      "normal": [
+        0.94579,
+        0.14062,
+        0.29276
+      ],
+      "distance": 0.4160221815109253,
+      "uv_centroid_rgb": [
+        0.99608,
+        0.97647,
+        0.97647
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 25,
+      "status": "source_hit_unclassified",
+      "source_polygon": 950740,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0826384,
+        0.0398773,
+        0.2641868
+      ],
+      "normal": [
+        0.88053,
+        0.30038,
+        0.36666
+      ],
+      "distance": 0.41736161708831787,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 26,
+      "status": "source_hit_unclassified",
+      "source_polygon": 967843,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0807228,
+        0.0445671,
+        0.2657507
+      ],
+      "normal": [
+        0.83187,
+        -0.04531,
+        0.55312
+      ],
+      "distance": 0.419277161359787,
+      "uv_centroid_rgb": [
+        1.0,
+        0.98039,
+        0.98039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 27,
+      "status": "source_hit_unclassified",
+      "source_polygon": 981958,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.079707,
+        0.0488893,
+        0.2676317
+      ],
+      "normal": [
+        0.86452,
+        -0.03783,
+        0.50117
+      ],
+      "distance": 0.42029303312301636,
+      "uv_centroid_rgb": [
+        0.81961,
+        0.80784,
+        0.80784
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 28,
+      "status": "source_hit_unclassified",
+      "source_polygon": 992645,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0786453,
+        0.0526777,
+        0.2697574
+      ],
+      "normal": [
+        0.94308,
+        0.17707,
+        0.2815
+      ],
+      "distance": 0.4213546812534332,
+      "uv_centroid_rgb": [
+        0.15686,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 29,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1003082,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0770986,
+        0.0557867,
+        0.2720461
+      ],
+      "normal": [
+        0.92107,
+        0.37241,
+        0.11377
+      ],
+      "distance": 0.4229014217853546,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 30,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1011266,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0753801,
+        0.058097,
+        0.2744099
+      ],
+      "normal": [
+        0.71154,
+        0.69853,
+        0.07595
+      ],
+      "distance": 0.4246198832988739,
+      "uv_centroid_rgb": [
+        0.16471,
+        0.17647,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 2,
+      "sample": 31,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1013922,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0741046,
+        0.0595196,
+        0.2767579
+      ],
+      "normal": [
+        0.82364,
+        0.5641,
+        0.05832
+      ],
+      "distance": 0.4258953928947449,
+      "uv_centroid_rgb": [
+        0.16078,
+        0.17647,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 0,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1027295,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0680044,
+        0.063,
+        0.2796
+      ],
+      "normal": [
+        0.69387,
+        0.71731,
+        0.06337
+      ],
+      "distance": 0.43199560046195984,
+      "uv_centroid_rgb": [
+        0.83137,
+        0.4902,
+        0.36078
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 1,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1024498,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0689265,
+        0.062462,
+        0.2821261
+      ],
+      "normal": [
+        0.39146,
+        0.91781,
+        -0.06617
+      ],
+      "distance": 0.43107348680496216,
+      "uv_centroid_rgb": [
+        0.75686,
+        0.45098,
+        0.32157
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 2,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1019189,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0712941,
+        0.0608686,
+        0.28434
+      ],
+      "normal": [
+        0.7597,
+        0.63721,
+        -0.12968
+      ],
+      "distance": 0.4287058711051941,
+      "uv_centroid_rgb": [
+        0.06275,
+        0.05098,
+        0.0549
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 3,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1011021,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0854004,
+        0.0582811,
+        0.2861564
+      ],
+      "normal": [
+        0.69171,
+        0.71095,
+        -0.12685
+      ],
+      "distance": 0.41459956765174866,
+      "uv_centroid_rgb": [
+        0.00392,
+        0.00392,
+        0.00392
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 4,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1000305,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0882253,
+        0.054799,
+        0.2875057
+      ],
+      "normal": [
+        0.79463,
+        0.56876,
+        0.2123
+      ],
+      "distance": 0.4117746949195862,
+      "uv_centroid_rgb": [
+        0.01569,
+        0.01569,
+        0.01569
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 5,
+      "status": "source_hit_unclassified",
+      "source_polygon": 986962,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0905816,
+        0.050556,
+        0.288336
+      ],
+      "normal": [
+        0.82941,
+        0.41729,
+        0.37142
+      ],
+      "distance": 0.4094184339046478,
+      "uv_centroid_rgb": [
+        0.01569,
+        0.01569,
+        0.01569
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 6,
+      "status": "source_hit_unclassified",
+      "source_polygon": 973526,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0923163,
+        0.0457151,
+        0.2886154
+      ],
+      "normal": [
+        0.82991,
+        0.24989,
+        0.49881
+      ],
+      "distance": 0.40768367052078247,
+      "uv_centroid_rgb": [
+        0.02353,
+        0.02745,
+        0.02745
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 7,
+      "status": "source_hit_unclassified",
+      "source_polygon": 953388,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.09363,
+        0.0404625,
+        0.2883331
+      ],
+      "normal": [
+        0.74314,
+        0.38488,
+        0.54736
+      ],
+      "distance": 0.40637001395225525,
+      "uv_centroid_rgb": [
+        0.07059,
+        0.05882,
+        0.0549
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 8,
+      "status": "source_hit_unclassified",
+      "source_polygon": 937933,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0981361,
+        0.035,
+        0.2875
+      ],
+      "normal": [
+        0.45182,
+        0.56553,
+        -0.68995
+      ],
+      "distance": 0.40186387300491333,
+      "uv_centroid_rgb": [
+        0.58824,
+        0.31765,
+        0.22353
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 9,
+      "status": "source_hit_unclassified",
+      "source_polygon": 921291,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.109229,
+        0.0295375,
+        0.2861481
+      ],
+      "normal": [
+        0.5006,
+        0.66198,
+        -0.55784
+      ],
+      "distance": 0.3907710313796997,
+      "uv_centroid_rgb": [
+        0.16078,
+        0.17647,
+        0.17647
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 10,
+      "status": "source_hit_unclassified",
+      "source_polygon": 906210,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1129107,
+        0.0242849,
+        0.2843294
+      ],
+      "normal": [
+        0.71983,
+        0.55739,
+        -0.41371
+      ],
+      "distance": 0.3870893120765686,
+      "uv_centroid_rgb": [
+        0.15686,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 11,
+      "status": "source_hit_unclassified",
+      "source_polygon": 891960,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1149307,
+        0.019444,
+        0.2821136
+      ],
+      "normal": [
+        0.80537,
+        0.43489,
+        -0.40281
+      ],
+      "distance": 0.3850692808628082,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 12,
+      "status": "source_hit_unclassified",
+      "source_polygon": 881590,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1158236,
+        0.015201,
+        0.2795861
+      ],
+      "normal": [
+        0.83205,
+        0.36193,
+        -0.42036
+      ],
+      "distance": 0.3841763734817505,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 13,
+      "status": "source_hit_unclassified",
+      "source_polygon": 875639,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.1157087,
+        0.0117189,
+        0.276844
+      ],
+      "normal": [
+        0.81595,
+        0.30342,
+        -0.4921
+      ],
+      "distance": 0.38429129123687744,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 14,
+      "status": "source_hit_unclassified",
+      "source_polygon": 867653,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.114459,
+        0.0091314,
+        0.2739925
+      ],
+      "normal": [
+        0.65928,
+        0.30207,
+        -0.68855
+      ],
+      "distance": 0.38554099202156067,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 15,
+      "status": "source_hit_unclassified",
+      "source_polygon": 863874,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.096068,
+        0.007538,
+        0.2711413
+      ],
+      "normal": [
+        0.33239,
+        0.58036,
+        -0.74344
+      ],
+      "distance": 0.40393203496932983,
+      "uv_centroid_rgb": [
+        0.74118,
+        0.42353,
+        0.32157
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 16,
+      "status": "source_hit_unclassified",
+      "source_polygon": 863938,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0931215,
+        0.007,
+        0.2684
+      ],
+      "normal": [
+        0.81296,
+        0.35584,
+        -0.46095
+      ],
+      "distance": 0.4068785309791565,
+      "uv_centroid_rgb": [
+        0.7098,
+        0.38431,
+        0.27843
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 17,
+      "status": "source_hit_unclassified",
+      "source_polygon": 865929,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0918761,
+        0.007538,
+        0.2658739
+      ],
+      "normal": [
+        0.95018,
+        0.03258,
+        -0.31
+      ],
+      "distance": 0.40812385082244873,
+      "uv_centroid_rgb": [
+        0.35686,
+        0.17255,
+        0.11373
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 18,
+      "status": "source_hit_unclassified",
+      "source_polygon": 867916,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0904891,
+        0.0091314,
+        0.26366
+      ],
+      "normal": [
+        0.76862,
+        0.39412,
+        -0.50388
+      ],
+      "distance": 0.40951088070869446,
+      "uv_centroid_rgb": [
+        0.6902,
+        0.65882,
+        0.66275
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 19,
+      "status": "source_hit_unclassified",
+      "source_polygon": 873975,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0883762,
+        0.0117189,
+        0.2618436
+      ],
+      "normal": [
+        0.96635,
+        0.22006,
+        -0.1332
+      ],
+      "distance": 0.4116237759590149,
+      "uv_centroid_rgb": [
+        0.98431,
+        0.96863,
+        0.96863
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 20,
+      "status": "source_hit_unclassified",
+      "source_polygon": 883954,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0876464,
+        0.015201,
+        0.2604943
+      ],
+      "normal": [
+        0.97577,
+        0.12435,
+        -0.18005
+      ],
+      "distance": 0.4123535752296448,
+      "uv_centroid_rgb": [
+        0.41961,
+        0.34118,
+        0.31373
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 21,
+      "status": "source_hit_unclassified",
+      "source_polygon": 894342,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0874901,
+        0.019444,
+        0.259664
+      ],
+      "normal": [
+        0.92976,
+        0.01617,
+        0.36782
+      ],
+      "distance": 0.41250988841056824,
+      "uv_centroid_rgb": [
+        0.15686,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 22,
+      "status": "source_hit_unclassified",
+      "source_polygon": 903690,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0873001,
+        0.0242849,
+        0.2593846
+      ],
+      "normal": [
+        0.95047,
+        0.07658,
+        0.30124
+      ],
+      "distance": 0.4126998782157898,
+      "uv_centroid_rgb": [
+        0.17647,
+        0.18431,
+        0.18431
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 23,
+      "status": "source_hit_unclassified",
+      "source_polygon": 921501,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0865313,
+        0.0295375,
+        0.2596669
+      ],
+      "normal": [
+        0.94214,
+        0.16986,
+        0.289
+      ],
+      "distance": 0.41346868872642517,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 24,
+      "status": "source_hit_unclassified",
+      "source_polygon": 935575,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0852516,
+        0.035,
+        0.2605
+      ],
+      "normal": [
+        0.91419,
+        0.19214,
+        0.35684
+      ],
+      "distance": 0.4147484302520752,
+      "uv_centroid_rgb": [
+        0.15686,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 25,
+      "status": "source_hit_unclassified",
+      "source_polygon": 953467,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0838409,
+        0.0404625,
+        0.2618519
+      ],
+      "normal": [
+        0.94789,
+        0.14875,
+        0.28176
+      ],
+      "distance": 0.416159063577652,
+      "uv_centroid_rgb": [
+        0.15686,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 26,
+      "status": "source_hit_unclassified",
+      "source_polygon": 970632,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0821719,
+        0.0457151,
+        0.2636707
+      ],
+      "normal": [
+        0.94754,
+        0.15386,
+        0.28016
+      ],
+      "distance": 0.4178280830383301,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 27,
+      "status": "source_hit_unclassified",
+      "source_polygon": 987111,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0802114,
+        0.050556,
+        0.2658864
+      ],
+      "normal": [
+        0.91905,
+        0.38128,
+        0.09986
+      ],
+      "distance": 0.41978856921195984,
+      "uv_centroid_rgb": [
+        0.15294,
+        0.17255,
+        0.18039
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 28,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1000442,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0779047,
+        0.054799,
+        0.2684138
+      ],
+      "normal": [
+        0.77446,
+        0.61962,
+        -0.1276
+      ],
+      "distance": 0.42209526896476746,
+      "uv_centroid_rgb": [
+        0.17647,
+        0.18431,
+        0.18824
+      ],
+      "color_heuristic_skin_candidate": false
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 29,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1011322,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0740299,
+        0.0582811,
+        0.271156
+      ],
+      "normal": [
+        0.38562,
+        0.89881,
+        -0.2084
+      ],
+      "distance": 0.4259701073169708,
+      "uv_centroid_rgb": [
+        0.70196,
+        0.42353,
+        0.31373
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 30,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1019177,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0708287,
+        0.0608686,
+        0.2740075
+      ],
+      "normal": [
+        0.69633,
+        0.69582,
+        0.17596
+      ],
+      "distance": 0.42917126417160034,
+      "uv_centroid_rgb": [
+        0.82745,
+        0.48627,
+        0.35686
+      ],
+      "color_heuristic_skin_candidate": true
+    },
+    {
+      "patch": "B",
+      "ring": 3,
+      "sample": 31,
+      "status": "source_hit_unclassified",
+      "source_polygon": 1024489,
+      "material_index": 0,
+      "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "hit_world": [
+        0.0689444,
+        0.062462,
+        0.2768587
+      ],
+      "normal": [
+        0.76883,
+        0.63391,
+        0.08402
+      ],
+      "distance": 0.43105563521385193,
+      "uv_centroid_rgb": [
+        0.83137,
+        0.4902,
+        0.36078
+      ],
+      "color_heuristic_skin_candidate": true
+    }
+  ],
+  "production_approved": false,
+  "limitations": [
+    "material labels and UV-centroid colors are proxies, not semantic surface truth",
+    "single frontal ray may select occluding hair or eyelid surface",
+    "landmark positions remain provisional",
+    "no eye globe/contact/deformation validation"
+  ]
+}
