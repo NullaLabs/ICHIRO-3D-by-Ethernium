@@ -160,6 +160,14 @@ compresión. Quedó rechazada y documentada en
 `docs/WIDTH_BAND_EXPERIMENT_V01.md`; el siguiente morph debe estar delimitado
 por una región de referencia revisada, no por una curva global de anchura.
 
+La auditoría geométrica encontró 181 islas conectadas dentro del objeto maestro
+y un solo material/atlas 4K. Los raycasts sobre la malla completa no sirven
+como destino de retopología facial: pueden atravesar límites semánticos sin
+detectarlos. `tools/build_component_map_review.py` genera IDs espaciales y
+vistas de revisión para seleccionar objetivos; sus IDs son diagnósticos y
+requieren clasificación visual antes de usarse en nuevos parches. Véase
+`docs/COMPONENT_MAP_REVIEW_V01.md`.
+
 ## Criterio de éxito del sistema
 
 Para el mismo spec/version/seed, el build produce hashes y métricas repetibles. Un cambio afecta solo el módulo declarado. Cada pase muestra evidencia visual y auditoría numérica asociadas. Los proyectos futuros reutilizan herramientas y contratos, pero no transfieren identidad ni proporciones de Ichiro a otros personajes. El personaje solo progresa cuando supera una puerta visual/técnica; más código, polígonos o renders no cuentan por sí solos.

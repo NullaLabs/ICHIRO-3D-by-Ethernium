@@ -65,6 +65,12 @@ memoria al 5 %, 10 % y 15 % y empeoró las métricas en las cuatro placas y ocho
 vistas. Se descartó; no se modificó la forma maestra. Ver
 `docs/WIDTH_BAND_EXPERIMENT_V01.md`.
 
+El maestro también se auditó por islas conectadas: un solo objeto contiene
+181 islas y un único material/atlas 4K. El mapa por componentes v0.1 expone
+estos grupos en cinco vistas sin tocar ni guardar la fuente. Ningún ID se
+considera semánticamente clasificado todavía. Ver
+`docs/COMPONENT_MAP_REVIEW_V01.md` y `renders/component_map_review_v01/`.
+
 ## Auditoría de blockout 360 — V02
 
 El candidato de silueta está aislado en `exports/visual_hull_v02/`; gate geométrico PASS, pero revisión artística pendiente. Mide 0.525 × 0.575 × 1.000 m frente a la fuente (0.420 × 0.490 × 1.000 m), diferencia que se debe resolver con calibración de vistas y cámaras, no escalando el maestro. Detalle: `docs/VISUAL_HULL_BLOCKOUT_V02.md`. El inventario automatizado más reciente registra 177 archivos y 1 grupo de duplicados exactos; sus categorías son sugerencias por nombre/ruta, no aprobación.
