@@ -1,0 +1,1203 @@
+{
+  "schema": "ethernium.character_asset_inventory.v1",
+  "scope": ".",
+  "classification_policy": "Filename and folder heuristics only; never approval.",
+  "file_count": 168,
+  "category_counts": {
+    "backup": 4,
+    "candidate": 2,
+    "declared_master_path_mismatch": 1,
+    "geometry_unclassified": 2,
+    "reference": 13,
+    "render_evidence": 38,
+    "review_candidate": 50,
+    "workflow_source": 58
+  },
+  "exact_duplicate_groups": [
+    {
+      "sha256": "bb71d401107e93d5bfb4ad4100a41f2f6f72d858c4e8d7edb04ad0b6147e4efa",
+      "paths": [
+        "renders/eye_contour_alignment_v01.png",
+        "renders/eye_contour_alignment_v02.png"
+      ]
+    }
+  ],
+  "assets": [
+    {
+      "path": "docs/ART_DIRECTION_CHECKLIST.md",
+      "bytes": 1650,
+      "sha256": "d0a38c34568db109769f283cc7998049f0b4d1cb0aa7bf676adb95292c439f90",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/ASSET_INVENTORY.json",
+      "bytes": 49531,
+      "sha256": "f7e9f869494b9251ea3dcad9346c3d9ade8fe289b938e1fa7863fc54c30e6235",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/BLENDER_MCP_INSTALLATION.md",
+      "bytes": 3295,
+      "sha256": "d5fbc51e1a5ae14fa56d0af2cc8a3c170145822ae228bd562a4701b11ee1aecc",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/BODY_RETOPO_CANDIDATE_AUDIT.json",
+      "bytes": 203,
+      "sha256": "cddcb3c144cd80d1b7055300ea136d646a3c11f24c6ca1d1d0164b69369ce786",
+      "category": "candidate",
+      "classification_note": "Candidate asset; approval requires project status and visual review"
+    },
+    {
+      "path": "docs/CANONICAL_FACE_LANDMARK_REVIEW.md",
+      "bytes": 1474,
+      "sha256": "3b90ff54ee4bbe920784886c9376e01fc3c32602523c9e7f02edfb601cd75831",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/CLOSED_EYE_RELAX_REVIEW.json",
+      "bytes": 531,
+      "sha256": "3e4f0b4c4873c221300b1e5dd89abab0edd1b266ce3b2da9755ca0899a6f2d0d",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/CLOSED_EYE_REVIEW.json",
+      "bytes": 13732,
+      "sha256": "98c9589df611e5bb1a8739aff76222ce7baea561ee67b8d2a4d2aa579a943d35",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/DEPTH_LID_STRIP_REVIEW.json",
+      "bytes": 723,
+      "sha256": "986dfa4b7ef2fa3e69e5c862d4e9de5faa66abc4b7393bd711e596ef0ec662a3",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/ETHERNIUM_CHARACTER_FOUNDRY_V01.md",
+      "bytes": 11365,
+      "sha256": "03f79d9d4fdeb2d1e9bc8f15258f093e6fe8eb13e884145a8001a5b0fa6f14bc",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/EYE_BROW_SEPARATION_V03.md",
+      "bytes": 3153,
+      "sha256": "a2bee7785d12333007bfd351c4f3664bd8f15f6d1c2f6bc01f3b593f0e6ef757",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/EYE_CONTOUR_ALIGNMENT_V01.json",
+      "bytes": 11042,
+      "sha256": "42d585877273f1fde55d4083bb608719123f2b04b7f22d6a8296d4c1939994c3",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/EYE_CONTOUR_ALIGNMENT_V01.md",
+      "bytes": 1578,
+      "sha256": "f66157cf903a88ff3259813a70f9712e1d75a9ce375252319cff8eb9bf93a33f",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/EYE_CONTOUR_ALIGNMENT_V02.json",
+      "bytes": 11891,
+      "sha256": "0cee2b3e742ded7e9e1fded5865aeb68ad1dccb4d808f17d1da918f55c65002f",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/EYE_CONTOUR_ALIGNMENT_V02.md",
+      "bytes": 1469,
+      "sha256": "58201022fa7f5bbd461988b3d9078f8dfd644cd0488dd1d767eea2950be9cf95",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/EYE_CONTOUR_ALIGNMENT_V03.json",
+      "bytes": 11887,
+      "sha256": "b8c0f698fa7c1df4e834140a9df1a6e36afd611d70e654266e80f2c00e898300",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/EYELID_GEOMETRY_AUDIT.json",
+      "bytes": 4326,
+      "sha256": "ca5335668e1f5600b614f6427c9af82117c0a77525202e5848b2570acb1b2e61",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/EYELID_LANDMARK_REVIEW.json",
+      "bytes": 4340,
+      "sha256": "af3316c39a7dc48b26c5c50bff2eff0b082481acf4dfe212c9d0e58e9d063994",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/EYELID_SUPPORT_CLASSIFICATION.json",
+      "bytes": 153566,
+      "sha256": "44e9e28ba762df7d077b82e838fd822badefa06de80ad5b638c78b6256a5e722",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/FACE_PROPORTION_COMPARISON_V01.json",
+      "bytes": 1555,
+      "sha256": "73cada95e6c8a07b1c479c8b430c796a0ef49844ce66374e53a0786474799f56",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/FACE_PROPORTION_COMPARISON_V02.json",
+      "bytes": 1588,
+      "sha256": "67ec53f730560da326afcdb6340677cd35a2207f782f691d63973801fa43722a",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/FACE_PROPORTION_REVIEW.md",
+      "bytes": 2281,
+      "sha256": "b643962ad52ad912efa732961783da816936d2f910d004eca6830be165d10d9a",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/FACE_REGISTRATION_PROBE_V02.json",
+      "bytes": 19685,
+      "sha256": "9ddc533a3aa72e53ed62d94f1235b36d53ab4f1723cbc8e4c01b22bc7c9c6afb",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/FACE_REGISTRATION_PROBE_V02.md",
+      "bytes": 3047,
+      "sha256": "98b4bd6507eaaa419c3ec3bd038ac250def8107a7ab36c9927fb95a44f31d788",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/FACE_REGISTRATION_PROBE_V03.json",
+      "bytes": 52951,
+      "sha256": "75dd36d59b7b16dd39ff2aa7d95a11d96aad1497f573a754473466d866952898",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/FACIAL_PASS01_VALIDATION.md",
+      "bytes": 912,
+      "sha256": "50f298398c4934b4e63a0d5079064e2216a9819d3e50e5e114e1dd38a826bcd1",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/HIGHDETAIL_CANDIDATE_AUDIT.json",
+      "bytes": 2175,
+      "sha256": "70771e0c859340bc1fde5dd87348df9ece1b4156b8f0da397d0fb274dedaf731",
+      "category": "candidate",
+      "classification_note": "Candidate asset; approval requires project status and visual review"
+    },
+    {
+      "path": "docs/LIVE_SCENE_INSPECTION.json",
+      "bytes": 1929,
+      "sha256": "99f834af728e48e742fc98d75514397ae63dfcb0f19ef45b45870bfe888d33f7",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/LOWER_LID_STRIP_REVIEW.json",
+      "bytes": 332,
+      "sha256": "29e571f70ee350476b2ec48ec91d40d5081570e14dc242924c000cdf6c5a60db",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/MCP_CONNECTION_CHECK.json",
+      "bytes": 3394,
+      "sha256": "a3101a94a99899495ec31855de5d1f2353a6e46945c96fcc291e1b3664ad5688",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/NEXT_PRODUCTION_BLOCK.md",
+      "bytes": 2215,
+      "sha256": "e8d5eff4312759f8b83ef3bbcaeb44644d9805fa57b7c0508d62d7c3183ce74b",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/OUTER_LID_STRIP_REVIEW.json",
+      "bytes": 340,
+      "sha256": "4187fe013ee94c35707a473401171a4f38dd46de34a8412700af55c7499c1a42",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/PRODUCTION_PLAN_2026-10-28.md",
+      "bytes": 5216,
+      "sha256": "13f7d01ded8e5386abcbb6aee40c20bf7b189e3c95ddc5cba73db3933cc094be",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/REFERENCE_MANIFEST.md",
+      "bytes": 2176,
+      "sha256": "1bdaef3edfdaaf43abf8c3fa85d2ea34570e4894d5b71e04acc4541b1d043c77",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/REVIEW_GATE_REPORT.json",
+      "bytes": 5955,
+      "sha256": "66c83793dfdb7fc9764a07eae10e48fc46cb669588b8df11d53cf0e52fee031a",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/RIG_FEATURE_COMPONENTS.json",
+      "bytes": 37249,
+      "sha256": "0a3c84ff6df89abd3fae679267ce17feb21234441b5868cf3824d29a64e1feb1",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/RIG_GUIDE.md",
+      "bytes": 685,
+      "sha256": "ee2fd7bba55b57120622a1451230902bd9230cfbef335c1e64a718c26dc7a398",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/RIG_HOST_DECISION_BLENDER_VS_UNREAL.md",
+      "bytes": 3812,
+      "sha256": "91c325a2a3002492c6e6753c4927226f51d8c3b14eabc5cdb66f67c84ba8a0e8",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/RIGGABLE_ANATOMY_CONTRACT.md",
+      "bytes": 2346,
+      "sha256": "b1ab5597670cab3654496603f69ca3ccac7302351328a4d38deb427068c4a97f",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/SHRINKWRAP_REVIEW.json",
+      "bytes": 562,
+      "sha256": "c22b0543bfa76dc986983008073934dc6383e5653568e635b3309644a370f66a",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/SINGLE_CHARACTER_CONTRACT.md",
+      "bytes": 2254,
+      "sha256": "f72a2ba5180e94cbf443e58420e22fd52bbc07c7eb771779b358d24eb4054c83",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/SKIN_PROJECTION_PROBE.json",
+      "bytes": 84669,
+      "sha256": "479a1be3b1df5309b440bdbfe2419e07e0028153098a01ee06aebf913b9d0187",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/SMOOTH_LID_STRIP_REVIEW.json",
+      "bytes": 664,
+      "sha256": "b07894faa07a88700f7d7b6be4574c65935da1209ba2344c90dfb1926343cbfb",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/STRIP_CONTACT_REVIEW.json",
+      "bytes": 6997,
+      "sha256": "4b73bf92533b735dae0144f91350cb6753de21f7db6b290c3d50b5d87dc85b5f",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/TOOLING.md",
+      "bytes": 1783,
+      "sha256": "ad3905c53ab71b1cfb710fc76a336b278fa98d264284e0da3614d3be854d4768",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/TOOLING_DECISION_2026-10-28.md",
+      "bytes": 2708,
+      "sha256": "1ba4e29d5e1087d22f338d2addc083292dd8329cc6e6d338760a519c022f1cfc",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "docs/UPPER_LID_STRIP_REVIEW.json",
+      "bytes": 432,
+      "sha256": "e4113df0d28eba5637c5a0dccbb56bb7b47dee2ae116770301a0187886d4c4e2",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "docs/WORKFLOW_INNOVATIONS.md",
+      "bytes": 22998,
+      "sha256": "c83d70dfdeaebbf5ae1360a35edacdb49bee27846394f74f3b7b283c16bf633c",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "exports/ethernium_review_packet.json",
+      "bytes": 56442,
+      "sha256": "c3de7c9542bca9e1633547c315c3eaa1bf631be085e6031d52f4a933c57a80a9",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Closed_Eye_Relax_Review.blend",
+      "bytes": 15558546,
+      "sha256": "079b6ab23e9c1719b819c26096f484160b66724b71e0962f014d3492849a672a",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Closed_Eye_Review.blend",
+      "bytes": 15556971,
+      "sha256": "96eb38c14be0eb5ea65352a2abbcd335b92bad4a143f601d465fe99814c3450d",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Closed_Eye_Review.blend1",
+      "bytes": 15556980,
+      "sha256": "12d1a70ddf9246f7d6eef3ba4e81219adcbd17780cb8871572778e60534580df",
+      "category": "backup",
+      "classification_note": "Blender automatic backup; not a production authority"
+    },
+    {
+      "path": "Ichiro_Chibi_Contact_Lid_Strip_Review.blend",
+      "bytes": 15560366,
+      "sha256": "16b45311ee96fcdeb867120e8b277d44d7c20006bddb522e38cef65442de7c4d",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Depth_Lid_Strip_Review.blend",
+      "bytes": 15559187,
+      "sha256": "53acc63fd4787e446408651bbf3fd2d753c06b70112b5540a88c4730bddeb687",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Eye_Brow_Surface_Guides_v03.blend",
+      "bytes": 14125501,
+      "sha256": "c31bb9b13da5fc36fd8a7a0905a57c1232f6bf1425df9e8085a6155d205af409",
+      "category": "geometry_unclassified",
+      "classification_note": "Geometry file; role and approval need review"
+    },
+    {
+      "path": "Ichiro_Chibi_Eye_Brow_Surface_Guides_v03.blend1",
+      "bytes": 14125501,
+      "sha256": "f8b16852017575e58e315f2bacdece109331ef05e025f3ac507e9383da5d072c",
+      "category": "backup",
+      "classification_note": "Blender automatic backup; not a production authority"
+    },
+    {
+      "path": "Ichiro_Chibi_Eyelid_Landmark_Review.blend",
+      "bytes": 15554354,
+      "sha256": "f0a8dc516a7e5e25bd10d0c1814f196a602bdd5c4317f997dca42d466a140a55",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Eyelid_Topology_Pass02.blend",
+      "bytes": 14123308,
+      "sha256": "264930be22c17a2befd1a2fce8e8151bd653c136c3b1998fe2a95132e1b4dfc7",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Eyelid_Topology_Pass02.blend1",
+      "bytes": 14123330,
+      "sha256": "e07550d3296ca694ec797b3051e53f06d0e702a6c8dfc19f80978c357825ee72",
+      "category": "backup",
+      "classification_note": "Blender automatic backup; not a production authority"
+    },
+    {
+      "path": "Ichiro_Chibi_HEAD_HANDS_Topology_Workspace.blend",
+      "bytes": 14116275,
+      "sha256": "d906a5b55041a8047a3b38d8e346cf41f9fa6cd7f08ccc3f121c2b8c41fb5b86",
+      "category": "geometry_unclassified",
+      "classification_note": "Geometry file; role and approval need review"
+    },
+    {
+      "path": "Ichiro_Chibi_HEAD_HANDS_Topology_Workspace.blend1",
+      "bytes": 14114025,
+      "sha256": "36ead85bd5fd5ad6168d6199b2ca43a05e248d2dd56a02ea8ba84be70ad94695",
+      "category": "backup",
+      "classification_note": "Blender automatic backup; not a production authority"
+    },
+    {
+      "path": "Ichiro_Chibi_HighDetail_Working.blend",
+      "bytes": 88289445,
+      "sha256": "e08c086e2d8fad1be6f593647444455b4c3df034b97f4c3e262e7dd53f9a5024",
+      "category": "declared_master_path_mismatch",
+      "classification_note": "PROJECT_STATUS declares this as active master under blend/; file is outside that path"
+    },
+    {
+      "path": "Ichiro_Chibi_Lower_Lid_Strip_Review.blend",
+      "bytes": 15558077,
+      "sha256": "5f1bfde2d32a716584050d0604eca18d7482f0899391287ccee2477d884bcc1e",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Outer_Lid_Strip_Review.blend",
+      "bytes": 15556833,
+      "sha256": "53ae05a5fa430efaefbbf43fad90cba015d07c1e81e69e0fca42745028b2576c",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Shrinkwrap_Review.blend",
+      "bytes": 15558683,
+      "sha256": "24df5fb4a5b0a701494f731716b01d5235072d519116e93bb25db265211c2cc2",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Skin_Projection_Experiment.blend",
+      "bytes": 15553232,
+      "sha256": "904cbbb045a1d0df79465310733778572445f6b39e00dbf6f1e290af708aa9b1",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Smooth_Lid_Strip_Review.blend",
+      "bytes": 15559172,
+      "sha256": "10e6e6bfd13696aa769cf2986b4216bb939501ca8bd81fdc70b3208e3febbdf8",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "Ichiro_Chibi_Upper_Lid_Strip_Review.blend",
+      "bytes": 15559183,
+      "sha256": "328552a14227682a43350d5fa82555ebebd779aa4daf9341cedfae6b2a6c97ab",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "PROJECT_STATUS.md",
+      "bytes": 1498,
+      "sha256": "91ade9bcfcf154e7bbf00f2e946f4b982ce1f89737238827801cfdfad7ffe6e5",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "references/canonical_face_landmarks_v01.json",
+      "bytes": 2416,
+      "sha256": "80ee47b628ec0e47e004cc55f968d6262bad733dfbe303107eab903ffc0021e9",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/canonical_face_landmarks_v02.json",
+      "bytes": 2523,
+      "sha256": "56668cc3c2c7a77b3ab54aed0d6f5eb7e528929120f574bd4b472a9bd8faf001",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/canonical_face_landmarks_v03.json",
+      "bytes": 3354,
+      "sha256": "4afbf41666b016664925fd3fb8e8b215430e3848783e9359f7fa1a2894381703",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/eyelid_landmarks_review.json",
+      "bytes": 766,
+      "sha256": "46e14c2ab19b2917db4e7555fdaaa7b243faea9c92f047864e95728b2cbbe21e",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/ichiro_chibi_8view_turnaround.png",
+      "bytes": 147927,
+      "sha256": "9e78a34fe9371ea0ac771c6656fe46c1da5262a58e934c0ac7d6687e01e548be",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/ichiro_chibi_back.png",
+      "bytes": 201020,
+      "sha256": "04a38f80e9fe25840304a94ae452c465450ed4e91e509814e392d447dd82aab1",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/ichiro_chibi_front.png",
+      "bytes": 213948,
+      "sha256": "213792383b67f6bcad13781103bca05e8fa362031aeabcbd4be16aecb9b9ebe4",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/ichiro_chibi_kimi_pipeline_board.png",
+      "bytes": 186689,
+      "sha256": "5e7494bd15a5290d845ee4fb78e0a7455bbad60acd9feeacf3b1950a6e21f136",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/ichiro_chibi_left.png",
+      "bytes": 194451,
+      "sha256": "3fa944ea39039d6034edba3767ff75e8494843cdc6ad719ff5206436b228a681",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/ichiro_chibi_right.png",
+      "bytes": 188384,
+      "sha256": "bade5c0f3ce7ec289e27d453daa9bfd353bf4cdc9334f4f0fcc1ce49d0377513",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/source_eye_contours_estimate_v01.json",
+      "bytes": 1059,
+      "sha256": "d789dac7de99d5409878f7fe268eacebb86d67bb63b8bab022e11c89181b058f",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/source_face_landmarks_estimate_v01.json",
+      "bytes": 884,
+      "sha256": "a5eb078eeaf9837a0423cc62e0dab33acc95793cb37ca92cddd5db525811e4b8",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "references/source_face_landmarks_estimate_v02.json",
+      "bytes": 1021,
+      "sha256": "05955ff9bd0a07580d999c2fb1e70c6b26df7d0ce96baf646acca5f7efab28b0",
+      "category": "reference",
+      "classification_note": "Reference/source evidence; confirm its authority in the manifest"
+    },
+    {
+      "path": "renders/canonical_eye_brow_regions_v03.png",
+      "bytes": 234679,
+      "sha256": "07206ebf6bd1b85f98d5cb4fcd0c0bcddd3ccf58bf0aee4e2812a547ce640548",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/canonical_face_landmarks_v01.png",
+      "bytes": 246172,
+      "sha256": "0711a769d2b11460e62151884eafd7adec25cfa239aa09cf011a5891645d0ed3",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/canonical_face_landmarks_v02.png",
+      "bytes": 246328,
+      "sha256": "e441a95f52ce5bd6cc30ab4e3da0eb74e4b9b417fc9d052a12513565b44ebb35",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/closed_eye_front.png",
+      "bytes": 837359,
+      "sha256": "ab8c7c05d85eff97669d133c409260741b444aab2c1b87e0544ac80749b4d7cf",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/closed_eye_negative_y.png",
+      "bytes": 306800,
+      "sha256": "18f53cd3bc341ea5d7d6a98ee2cd600b7989355ca7f7f2294c6e23def3593505",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/closed_eye_positive_y.png",
+      "bytes": 811414,
+      "sha256": "6c9cbaecf90e507f8c73a0959b050816b72853214c1bc1f7790f7938a9ea4763",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/closed_eye_relax_front.png",
+      "bytes": 837529,
+      "sha256": "a44908b07503de446fcf902e437010dbad966afe58129bbbcc2f4a134728727e",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/closed_eye_relax_negative_y.png",
+      "bytes": 748087,
+      "sha256": "edb0a3fbebc98274e2cc9f086354cdc083fc6350aca47cdae3aa42cb1e9eb2b8",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/closed_eye_relax_positive_y.png",
+      "bytes": 811559,
+      "sha256": "74fa269aa4a3e1b7281facac499f248f455e2d619e8a3848c379c4edf70115e8",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/contact_strip_front.png",
+      "bytes": 838197,
+      "sha256": "cf42db1d149c4e7568019e8edfe8459e207ade40cea05adb6d97e67fa79942e2",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/contact_strip_negative_y.png",
+      "bytes": 748047,
+      "sha256": "0bc4c7c6f20c0f887d6b7d1da86891bfafd2e477095abc7d6f61abf64bced697",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/contact_strip_positive_y.png",
+      "bytes": 812280,
+      "sha256": "83dd7e3f005e5250c07b4a7bcfca198bf2d9a9464b8babed1f79fda6045e8dec",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/depth_strip_front.png",
+      "bytes": 837176,
+      "sha256": "2b83946a3126a882123c3a324e7d3927a501c741c0fff5be936eb9274c75139a",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/depth_strip_negative_y.png",
+      "bytes": 748085,
+      "sha256": "443fc4905d675968605a23fb4554d47d89323a09c732185959a5177c768b8c0f",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/depth_strip_positive_y.png",
+      "bytes": 811192,
+      "sha256": "83f06462a34c8f027f8eb8a653a7db1d38324f75295cd4cc236cc3658b614923",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/eye_brow_region_review_v03.png",
+      "bytes": 666496,
+      "sha256": "443d2a8958002c191a0e4565317a96cf6b375f2a5319691b1f4d6573d78eaf4b",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "renders/eye_contour_alignment_v01.png",
+      "bytes": 665287,
+      "sha256": "bb71d401107e93d5bfb4ad4100a41f2f6f72d858c4e8d7edb04ad0b6147e4efa",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/eye_contour_alignment_v02.png",
+      "bytes": 665287,
+      "sha256": "bb71d401107e93d5bfb4ad4100a41f2f6f72d858c4e8d7edb04ad0b6147e4efa",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/eyelid_pass02_eyes_isolated.png",
+      "bytes": 299277,
+      "sha256": "7d4943b6e89f59005bdf733d702fd7f9c2f7f4754d684a4e8092dc7da70a1c89",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "renders/eyelid_pass02_front.png",
+      "bytes": 795997,
+      "sha256": "86374912ed6043dd7ea9b0b91e58383408630e915c44a0799a544b751e220d52",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "renders/eyelid_pass02_profile_negative_y.png",
+      "bytes": 730479,
+      "sha256": "b4316b2fe42581e6eefbe7df430be67bac304d4531d5a4378bec155d1c815328",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "renders/eyelid_pass02_profile_positive_y.png",
+      "bytes": 756247,
+      "sha256": "2e3cda9fe14d9a0108d0d36f32ae0860c62fb9be208aa77d7bf80342970412f7",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "renders/face_registration_probe_v02.png",
+      "bytes": 662504,
+      "sha256": "67634580ff9291b249e23813b5cd26ff7afd79a3376623cc72e070ef8af3adc1",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/facial_pass01_eyes_isolated.png",
+      "bytes": 341478,
+      "sha256": "75555711fbf481bbae07d961e54879569f086dbbe196c4ff9c8b2c98fcf4eb25",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "renders/facial_pass01_front.png",
+      "bytes": 785083,
+      "sha256": "d85b89292393ad90f29e5f62d181c676ce8205b1f697f65d43758548ef43760b",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "renders/facial_pass01_profile_negative_y.png",
+      "bytes": 730575,
+      "sha256": "d1de01f0ce53dbeb8133f4d24dcbb46632dd916256dcb307fcb1ba4c94dea70d",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "renders/facial_pass01_profile_positive_y.png",
+      "bytes": 749060,
+      "sha256": "112305374fea002e14d46909e0b2e46170b4cc6f45dfc94b7693e91f4ffb9bb0",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "renders/ichiro_chibi_highdetail_turntable_contact_sheet.png",
+      "bytes": 1001472,
+      "sha256": "34b074177ad39ed8092013da8229a3721adab7afb8b705bd08e80e1fbd879d45",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/landmark_depth_front.png",
+      "bytes": 833998,
+      "sha256": "67b93817be5027b9e99ad09728746a1ae780fbc398b294eb58d40518e83391d6",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/landmark_depth_negative_y.png",
+      "bytes": 748025,
+      "sha256": "89e6c1328aa80011649b31d63632a894b03bdc1cd5ac3439767c21f92043c10e",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/landmark_depth_positive_y.png",
+      "bytes": 808669,
+      "sha256": "9bf830097ff0f6381519048b93a1f79268757c5b103f07c239dd50bbbbc3979d",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/lower_strip_front.png",
+      "bytes": 835296,
+      "sha256": "8b844b9056560b21dcf2660506a92c9c2bd741ee1a22f332e90e93c2e21d41a8",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/lower_strip_negative_y.png",
+      "bytes": 748025,
+      "sha256": "e712c5256d5d7a9fb43d14e20994bd28f6da1c3a38ddd191852e665dbaff85fd",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/lower_strip_positive_y.png",
+      "bytes": 809473,
+      "sha256": "4d072dc2521f9454b2e7ce58c7a0573d7d58725b3cd372384a7860956f794672",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/outer_strip_front.png",
+      "bytes": 836401,
+      "sha256": "54c36df2231faf250d6c7f7bfebf4c9b7c96be9c867b948a36549f1f32ec1b47",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/outer_strip_negative_y.png",
+      "bytes": 748047,
+      "sha256": "e3bbd157f5a91a3807ffd7edcca942343af67ad4c4fc3cdc6b3d10d78fb0af1d",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/outer_strip_positive_y.png",
+      "bytes": 810874,
+      "sha256": "c7070915ecf1418c1401e9814f351857e281d527d658f45648728ab4d2a710f5",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/shrinkwrap_eye_front.png",
+      "bytes": 837529,
+      "sha256": "84d7722d4a652e6fea425196a726dc31a0f9c21cd92687ae77006ea00e05462a",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/shrinkwrap_eye_negative_y.png",
+      "bytes": 748081,
+      "sha256": "f1f19c0c65329b534234f2e10962238927607128a88ce6022e1995b4ad37957f",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/shrinkwrap_eye_positive_y.png",
+      "bytes": 811379,
+      "sha256": "c386ed738495985c25bb9967dbf2f875aee8e96ad5bcadce1ae2b3d92d1f1cf7",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/skin_review_mask.png",
+      "bytes": 489922,
+      "sha256": "f5972121da599886886b3523eed87bf5d5025712076d8e3e308c170e74a80a37",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "renders/skin_review_source.png",
+      "bytes": 827161,
+      "sha256": "3927dac690d7ee3ca2a0cf2f2d36bfd2dabb655d7320654d413bc3e41b1f97b7",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "renders/smooth_strip_front.png",
+      "bytes": 837077,
+      "sha256": "2df74339f614dc5f4c3e5f35fd5888ad5aae0518d475168f53265f04d13fed4f",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/smooth_strip_negative_y.png",
+      "bytes": 748114,
+      "sha256": "5cc253d8a1961bd19c2b5f59fb7b55a318ed92ea38f35efcd1281ccc038b628d",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/smooth_strip_positive_y.png",
+      "bytes": 811425,
+      "sha256": "c0abf7f382cc9851856deeb706717e9e2a245af0120b465d59ac5721e12398b5",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/source_face_landmarks_estimate_v01.png",
+      "bytes": 616537,
+      "sha256": "5739c34e486613f0da93f5d5b49c90c4c85de563199c0a432629cff0397eec29",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/upper_strip_front.png",
+      "bytes": 837190,
+      "sha256": "a5c0b775b07bcccf130fa67469eee811bd5df7071d30099e19928764d3bfc41f",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/upper_strip_negative_y.png",
+      "bytes": 748050,
+      "sha256": "54c3da8db7c9f2503d4236f03993c49c4eabb785ad3a347819143c5f9eb57ce8",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "renders/upper_strip_positive_y.png",
+      "bytes": 811862,
+      "sha256": "4a4e825d44dc643188c847f1c3685464bf0dbb9f3cc0b2aa085ae41814d24a34",
+      "category": "render_evidence",
+      "classification_note": "Rendered evidence; not source geometry"
+    },
+    {
+      "path": "tools/audit_eyelid_geometry.py",
+      "bytes": 2034,
+      "sha256": "50c3580fc77e6e25cd95d463e7f549d842b123168a72081427335f72a9069023",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/audit_highdetail_components.py",
+      "bytes": 1497,
+      "sha256": "c4b746d73938fba0638d25cab3f0d31bf64cb01f5faba40523a759d4881642fd",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/build_calibrated_visual_hull.py",
+      "bytes": 6514,
+      "sha256": "342819a748bfda605f7a1b98183f2b59c29c1cdb75cb0a01f515f1a128951cc6",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/build_closed_eye_review.py",
+      "bytes": 4457,
+      "sha256": "28142a90fa1adc1f73fa6c5bebda302c824b9e0596ab1af45b486de32f0f05bf",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/build_eye_brow_surface_guides_v03.py",
+      "bytes": 5623,
+      "sha256": "6dc0f3ce771477c505f99df96dc8f38681ca07a252e7fc08603f6ea420d02484",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/build_eyelid_landmark_review.py",
+      "bytes": 2516,
+      "sha256": "5809001a2adcb5a2d4ec90a2651888f54a7d6102c57178cae596adb9a18ff46e",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/build_eyelid_topology_pass02.py",
+      "bytes": 3397,
+      "sha256": "a23ef244b0bcc432b22ecae566e13061386817b20f12c5916460d2380d99e6ee",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/build_facial_anatomy_pass01.py",
+      "bytes": 3936,
+      "sha256": "94e3d24276a34ccd724d7072f9fed3b2a58862bf1ae1679fffca910698537ad4",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/build_lower_lid_strip.py",
+      "bytes": 5917,
+      "sha256": "d9136d9df814b27f80f1e63f81fc0a5762825282540a040f0bcbce304bde6c4a",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/classify_eyelid_projection_support.py",
+      "bytes": 3639,
+      "sha256": "d7de10c349bf99c1f83e4d8c8cbd003d49fb08810b4665a24386604da0adde03",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/compare_eye_contours.py",
+      "bytes": 3623,
+      "sha256": "b7f099d8a4f163d7a0fa7771ab2c992ad48306bd9bd51de90a0a1fd45755daa6",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/compare_face_proportions.py",
+      "bytes": 3298,
+      "sha256": "822f05a7cd2b4cc7a0eaa1945e3da436229dbe607811024562619c622f3cef06",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/create_head_hands_topology_workspace.py",
+      "bytes": 3886,
+      "sha256": "88840ef28c8fef90ba2fb314d10ec34f13c0dbb9835c52f93b8f99bd5c65185f",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/create_rig_guide.py",
+      "bytes": 3295,
+      "sha256": "a3d4a8b01c7f13e1c6e4ca792157d4f5104527a8d0a1a681b90414380e829905",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/ETHERNIUM_REVIEW_PACKET.md",
+      "bytes": 2684,
+      "sha256": "ccd1c9eb0bd33059fe4bd0f513fdb8548c316e4f59bf103ad9935f08d7458947",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/export_ethernium_review_packet.py",
+      "bytes": 3305,
+      "sha256": "f4d3bd7804d4b858d3356e918829066b43ba72a6ad20422e823e66572299a653",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/extract_head_projection_target.py",
+      "bytes": 3263,
+      "sha256": "30464725518e145fa3c6d83442bc64b694498d1684a904c6084ebf966ebe1bce",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/inspect_live_scene.py",
+      "bytes": 211,
+      "sha256": "0d7cfb25a36689c41dc9e6915253db7d0af9df1f862ac8051562ecfeee50336a",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/inventory_character_assets.py",
+      "bytes": 5021,
+      "sha256": "16a0285911cad6e4877b3cf3e33db6f04719301cf0fc525e1ade46470383ca98",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/make_turntable_contact_sheet.py",
+      "bytes": 1100,
+      "sha256": "cbdba535d242eefe964446775d9e1712f64d2a59210e4be621b0c9f4e5a5a01f",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/probe_skin_projection.py",
+      "bytes": 4939,
+      "sha256": "0207029a7cccb8b4d6185f7f6246b1345a404c030982315ff5e79ca125f0defe",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/refine_strip_contact.py",
+      "bytes": 2384,
+      "sha256": "6bef98213c57262481d2dd91c661aba8c758ca496d6ff50cc00104f32b99df47",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/register_canonical_face_to_source.py",
+      "bytes": 8663,
+      "sha256": "fe2dc4ed62d391279bcb1c72269133a1c379d3f470d043b39b33b0f9794657c8",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/relax_closed_eye_depth.py",
+      "bytes": 2147,
+      "sha256": "f3cb5998414a712aee38a2b9616b948e4ef3ddc666f6a398639e0bd2cae4eeb7",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/render_canonical_face_landmarks.py",
+      "bytes": 1942,
+      "sha256": "c7c241f295d05b1478b70167e36e697b4b455a1e34164a928802eacec212f160",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/render_canonical_face_landmarks_v02.py",
+      "bytes": 1889,
+      "sha256": "def761d57861bc8d3a80c8e3b74217887ab799c8fe492be555d834bb65f4df04",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/render_canonical_face_regions_v03.py",
+      "bytes": 3088,
+      "sha256": "b1e63a703254740b39590fc1df36f5d47b0f8ad8afdd78b0c2f5317fd7475216",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/render_face_registration_probe.py",
+      "bytes": 4038,
+      "sha256": "d90888d33461a566cf8269bf938ac4c1055057b81b6fa258478db938036aee96",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/render_facial_pass01.py",
+      "bytes": 2223,
+      "sha256": "b04e1570d948699427675a7a67f952946451e4b6fc31f90f93f4b1765a4125a8",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/render_highdetail_turntable.py",
+      "bytes": 1794,
+      "sha256": "a9875ceb5b88c9756f5fa327d3ecd06a474f14e3c79210e91209569fff17af26",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/render_landmark_depth_review.py",
+      "bytes": 3942,
+      "sha256": "09b534ee21cda6b45d392f35c33878da2f2a925ea6257999bc36c76f4504c27b",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/render_skin_mask_review.py",
+      "bytes": 1505,
+      "sha256": "259605a49019e7423fde5b47db7f9cb49ad8fb49edd4c2f8fbce65914f409c48",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/render_source_face_landmarks_estimate.py",
+      "bytes": 1320,
+      "sha256": "3db870cf8a14e1db0d1cee4290b9519c38fc229b35bf8d455122467bd634bfb0",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/run_blender_mcp.py",
+      "bytes": 1645,
+      "sha256": "c07fb24896e9e61f1689e4e2b78c8e7f9063e8359775ace3f969c875dbc59e8f",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
+      "path": "tools/setup_shrinkwrap_review.py",
+      "bytes": 2048,
+      "sha256": "f31de634964532966bf1609fe1445490bae554bf24ffa758f76eea48c1644652",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/test_review_gate.py",
+      "bytes": 1453,
+      "sha256": "bda5cd555ddc8a15b884adda9fcc4b04906ad573c844e8e3f74a74d81e1416cf",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/validate_review_packet.py",
+      "bytes": 4182,
+      "sha256": "8c3a236ec0ccb002c64b80857f5b3a26fc88daa386697b25dc493188f5eca754",
+      "category": "review_candidate",
+      "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "tools/verify_blender_mcp.py",
+      "bytes": 1944,
+      "sha256": "56b651326a16f7117e8ddf77a18a19406d2a2f302b8874c5711a681a446a92b3",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    }
+  ]
+}
