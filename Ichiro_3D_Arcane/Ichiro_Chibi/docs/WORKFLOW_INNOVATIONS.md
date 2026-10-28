@@ -262,3 +262,13 @@ escultura, retopología, UV, pesos y correctivos; Unreal Engine 5.8 queda como
 destino posterior de Control Rig e integración. UE permite crear huesos y pesos,
 pero no compensa la topología de cara/manos que aún falta. El documento define
 gates y el ciclo de ida/vuelta FBX sin duplicar la autoridad de la malla.
+
+## WF-008 — landmarks de cara sobre la referencia canónica
+
+references/canonical_face_landmarks_v01.json registra puntos visibles,
+parcialmente ocluidos e inferidos (con confianza) sobre la vista frontal
+canónica. tools/render_canonical_face_landmarks.py produce una lámina de revisión
+reproducible. La lectura manual del ojo a la izquierda de la imagen marca la
+oclusión del flequillo. Es una anotación 2D de consulta, no un ajuste XYZ ni
+aprobación de anatomía. Antes de proyectar, hace falta registrar la cámara,
+validar correspondencias y restringir impactos a una región facial etiquetada.

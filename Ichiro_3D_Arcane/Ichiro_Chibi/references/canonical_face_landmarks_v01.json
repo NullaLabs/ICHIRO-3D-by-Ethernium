@@ -1,0 +1,27 @@
+{
+  "schema": "ethernium.canonical-face-landmarks/0.1",
+  "reference": "ichiro_chibi_front.png",
+  "reference_size_px": [384, 472],
+  "status": "manual_visual_estimates_for_review",
+  "coordinate_origin": "top_left",
+  "units": "pixels",
+  "warning": "These 2D marks are estimated by visual inspection and are not approved 3D anatomy. The screen-left eye is partly occluded by fringe. Do not use them as direct mesh coordinates until camera registration is calibrated.",
+  "landmarks": [
+    {"id":"screen_left_eye_outer_visible","region":"eye_screen_left","point":[170,112],"visibility":"partly_occluded_by_fringe","confidence":0.55,"kind":"corner"},
+    {"id":"screen_left_eye_inner","region":"eye_screen_left","point":[193,115],"visibility":"visible","confidence":0.78,"kind":"corner"},
+    {"id":"screen_left_eye_upper_visible","region":"eye_screen_left","point":[180,105],"visibility":"visible","confidence":0.72,"kind":"upper_margin"},
+    {"id":"screen_left_eye_lower","region":"eye_screen_left","point":[182,119],"visibility":"visible","confidence":0.76,"kind":"lower_margin"},
+    {"id":"screen_right_eye_inner","region":"eye_screen_right","point":[214,110],"visibility":"visible","confidence":0.82,"kind":"corner"},
+    {"id":"screen_right_eye_outer","region":"eye_screen_right","point":[239,101],"visibility":"visible","confidence":0.82,"kind":"corner"},
+    {"id":"screen_right_eye_upper","region":"eye_screen_right","point":[228,96],"visibility":"visible","confidence":0.84,"kind":"upper_margin"},
+    {"id":"screen_right_eye_lower","region":"eye_screen_right","point":[226,114],"visibility":"visible","confidence":0.84,"kind":"lower_margin"},
+    {"id":"nose_tip","region":"nose","point":[202,143],"visibility":"visible","confidence":0.85,"kind":"anchor"},
+    {"id":"mouth_left_corner","region":"mouth","point":[186,160],"visibility":"visible","confidence":0.74,"kind":"corner"},
+    {"id":"mouth_right_corner","region":"mouth","point":[219,153],"visibility":"visible","confidence":0.78,"kind":"corner"},
+    {"id":"chin_center","region":"jaw","point":[204,186],"visibility":"visible","confidence":0.72,"kind":"anchor"}
+  ],
+  "eye_contours": {
+    "screen_left_partial": [[170,112],[175,107],[180,105],[186,106],[191,110],[193,115],[187,118],[182,119],[177,117],[173,115]],
+    "screen_right": [[214,110],[218,104],[223,100],[228,96],[233,97],[239,101],[236,107],[232,111],[226,114],[220,113]]
+  }
+}
