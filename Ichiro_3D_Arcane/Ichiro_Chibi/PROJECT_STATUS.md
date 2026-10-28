@@ -49,11 +49,13 @@ sin renderizar y sin guardar la escena fuente. `tools/score_reference_fit.py`
 compara las cuatro placas individuales y los ocho paneles del turnaround; se
 documenta cada imagen en `docs/REFERENCE_CATALOG.md`.
 
-El IoU de la máscara actual es 0,40–0,52 en las cuatro placas y 0,64–0,71 en la
-hoja de ocho vistas. Los valores dependen del umbral y de sombras; sirven para
-localizar discrepancias con los overlays, no para aprobar el parecido. La fuente
-maestra permanece intacta. El siguiente paso técnico es calibrar cámaras y
-revisar/corregir máscaras antes de usar cualquier medición para una escultura.
+Con la máscara GrabCut, el IoU actual es 0,515–0,560 en las cuatro placas y
+0,640–0,708 en la hoja de ocho vistas. Las proporciones ancho/alto de la fuente
+y las placas grandes coinciden casi exactamente; la medición inicial estaba
+sesgada por la sombra de suelo. Los IoU sirven para localizar diferencias con
+los overlays, no para aprobar parecido. La fuente maestra permanece intacta.
+El siguiente paso técnico es calibrar cámaras y revisar máscaras antes de usar
+cualquier medición para esculpir.
 
 ## Auditoría de blockout 360 — V02
 

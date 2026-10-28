@@ -1,36 +1,46 @@
 {
   "schema": "ethernium.reference-fit-silhouette-score.v2",
-  "purpose": "camera-normalized diagnostic across the four large orthographic references and eight turnaround panels; not canon approval",
-  "reference_mask_threshold_rgb_residual": 24,
+  "purpose": "camera-normalized diagnostic across four high-resolution reference plates and eight turnaround panels; not canon approval",
+  "border_model_threshold_rgb_residual": 24,
   "projection_mask_threshold": 127,
+  "reference_segmenter_requested": "auto",
+  "optional_opencv_version": "4.12.0",
   "canonical_four_view_metrics": {
     "front": {
-      "intersection_px": 29020,
-      "union_px": 67178,
-      "reference_area_px": 60041,
+      "intersection_px": 33790,
+      "union_px": 60330,
+      "reference_area_px": 57963,
       "candidate_area_px": 36157,
-      "iou": 0.4319866623001578,
-      "dice": 0.6033389467556498,
+      "iou": 0.5600861926073264,
+      "dice": 0.7180195495112622,
       "reference_bbox_px": [
-        65,
-        14,
-        321,
-        456
+        103,
+        15,
+        320,
+        455
       ],
       "reference_segmentation": {
-        "background_model": "smoothed side-border row medians, linearly blended across width",
-        "foreground_threshold_rgb_residual": 24,
-        "initial_foreground_area_px": 60042,
-        "foreground_area_px": 60041,
+        "segmenter": "OpenCV GrabCut initialized from border-model figure bounds",
+        "opencv_version": "4.12.0",
+        "opencv_rng_seed": 0,
+        "grabcut_iterations": 7,
+        "coarse_bbox_threshold_rgb_residual": 40,
+        "grabcut_rectangle_px": [
+          79,
+          3,
+          261,
+          464
+        ],
+        "foreground_area_px": 57963,
         "foreground_bbox_px": [
-          65,
-          14,
-          321,
-          456
+          103,
+          15,
+          320,
+          455
         ],
         "kept_component_count": 1,
         "kept_component_areas_px": [
-          60041
+          57963
         ],
         "discarded_border_component_area_px": 0,
         "minimum_kept_component_area_px": 8
@@ -41,9 +51,9 @@
         275,
         363
       ],
-      "reference_bbox_aspect_width_over_height": 0.579185520361991,
+      "reference_bbox_aspect_width_over_height": 0.49318181818181817,
       "render_bbox_aspect_width_over_height": 0.4853801169590643,
-      "height_normalization_scale": 1.2923976608187135,
+      "height_normalization_scale": 1.286549707602339,
       "alignment": "bbox center + height only; width is never scaled independently",
       "overlay": "overlay_ortho_front.png",
       "reference_mask": "reference_mask_ortho_front.png",
@@ -51,32 +61,40 @@
       "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_front.pgm"
     },
     "back": {
-      "intersection_px": 29079,
-      "union_px": 69144,
-      "reference_area_px": 62064,
+      "intersection_px": 33642,
+      "union_px": 62407,
+      "reference_area_px": 59890,
       "candidate_area_px": 36159,
-      "iou": 0.4205570982297813,
-      "dice": 0.5921016462539324,
+      "iou": 0.5390741423237778,
+      "dice": 0.7005174442211788,
       "reference_bbox_px": [
-        43,
+        84,
         2,
-        300,
-        442
+        296,
+        441
       ],
       "reference_segmentation": {
-        "background_model": "smoothed side-border row medians, linearly blended across width",
-        "foreground_threshold_rgb_residual": 24,
-        "initial_foreground_area_px": 62067,
-        "foreground_area_px": 62064,
+        "segmenter": "OpenCV GrabCut initialized from border-model figure bounds",
+        "opencv_version": "4.12.0",
+        "opencv_rng_seed": 0,
+        "grabcut_iterations": 7,
+        "coarse_bbox_threshold_rgb_residual": 40,
+        "grabcut_rectangle_px": [
+          54,
+          1,
+          261,
+          452
+        ],
+        "foreground_area_px": 59890,
         "foreground_bbox_px": [
-          43,
+          84,
           2,
-          300,
-          442
+          296,
+          441
         ],
         "kept_component_count": 1,
         "kept_component_areas_px": [
-          62064
+          59890
         ],
         "discarded_border_component_area_px": 0,
         "minimum_kept_component_area_px": 8
@@ -87,9 +105,9 @@
         275,
         363
       ],
-      "reference_bbox_aspect_width_over_height": 0.5840909090909091,
+      "reference_bbox_aspect_width_over_height": 0.48291571753986334,
       "render_bbox_aspect_width_over_height": 0.4853801169590643,
-      "height_normalization_scale": 1.286549707602339,
+      "height_normalization_scale": 1.2836257309941521,
       "alignment": "bbox center + height only; width is never scaled independently",
       "overlay": "overlay_ortho_back.png",
       "reference_mask": "reference_mask_ortho_back.png",
@@ -97,33 +115,40 @@
       "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_back.pgm"
     },
     "left": {
-      "intersection_px": 25179,
-      "union_px": 48614,
-      "reference_area_px": 47887,
+      "intersection_px": 24977,
+      "union_px": 48028,
+      "reference_area_px": 47099,
       "candidate_area_px": 25906,
-      "iou": 0.5179372197309418,
-      "dice": 0.6824224519940916,
+      "iou": 0.520050803697843,
+      "dice": 0.6842545031162249,
       "reference_bbox_px": [
-        79,
+        85,
         10,
         277,
         459
       ],
       "reference_segmentation": {
-        "background_model": "smoothed side-border row medians, linearly blended across width",
-        "foreground_threshold_rgb_residual": 24,
-        "initial_foreground_area_px": 47888,
-        "foreground_area_px": 47887,
+        "segmenter": "OpenCV GrabCut initialized from border-model figure bounds",
+        "opencv_version": "4.12.0",
+        "opencv_rng_seed": 0,
+        "grabcut_iterations": 7,
+        "coarse_bbox_threshold_rgb_residual": 40,
+        "grabcut_rectangle_px": [
+          66,
+          1,
+          230,
+          469
+        ],
+        "foreground_area_px": 47099,
         "foreground_bbox_px": [
-          79,
+          85,
           10,
           277,
           459
         ],
-        "kept_component_count": 2,
+        "kept_component_count": 1,
         "kept_component_areas_px": [
-          47877,
-          10
+          47099
         ],
         "discarded_border_component_area_px": 0,
         "minimum_kept_component_area_px": 8
@@ -134,7 +159,7 @@
         265,
         363
       ],
-      "reference_bbox_aspect_width_over_height": 0.44097995545657015,
+      "reference_bbox_aspect_width_over_height": 0.42761692650334077,
       "render_bbox_aspect_width_over_height": 0.4269005847953216,
       "height_normalization_scale": 1.3128654970760234,
       "alignment": "bbox center + height only; width is never scaled independently",
@@ -144,32 +169,40 @@
       "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_left.pgm"
     },
     "right": {
-      "intersection_px": 20850,
-      "union_px": 51580,
-      "reference_area_px": 46522,
+      "intersection_px": 24109,
+      "union_px": 46821,
+      "reference_area_px": 45022,
       "candidate_area_px": 25908,
-      "iou": 0.4042264443582784,
-      "dice": 0.5757282893828524,
+      "iou": 0.5149185194677602,
+      "dice": 0.6797969829409277,
       "reference_bbox_px": [
-        49,
+        89,
         2,
-        283,
+        282,
         451
       ],
       "reference_segmentation": {
-        "background_model": "smoothed side-border row medians, linearly blended across width",
-        "foreground_threshold_rgb_residual": 24,
-        "initial_foreground_area_px": 46527,
-        "foreground_area_px": 46522,
+        "segmenter": "OpenCV GrabCut initialized from border-model figure bounds",
+        "opencv_version": "4.12.0",
+        "opencv_rng_seed": 0,
+        "grabcut_iterations": 7,
+        "coarse_bbox_threshold_rgb_residual": 40,
+        "grabcut_rectangle_px": [
+          46,
+          1,
+          256,
+          455
+        ],
+        "foreground_area_px": 45022,
         "foreground_bbox_px": [
-          49,
+          89,
           2,
-          283,
+          282,
           451
         ],
         "kept_component_count": 1,
         "kept_component_areas_px": [
-          46522
+          45022
         ],
         "discarded_border_component_area_px": 0,
         "minimum_kept_component_area_px": 8
@@ -180,7 +213,7 @@
         265,
         363
       ],
-      "reference_bbox_aspect_width_over_height": 0.5211581291759465,
+      "reference_bbox_aspect_width_over_height": 0.4298440979955457,
       "render_bbox_aspect_width_over_height": 0.4269005847953216,
       "height_normalization_scale": 1.3128654970760234,
       "alignment": "bbox center + height only; width is never scaled independently",
@@ -220,7 +253,8 @@
           2683
         ],
         "discarded_border_component_area_px": 0,
-        "minimum_kept_component_area_px": 8
+        "minimum_kept_component_area_px": 8,
+        "segmenter": "smoothed side-border row model"
       },
       "source_render_bbox_px": [
         109,
@@ -268,7 +302,8 @@
           2818
         ],
         "discarded_border_component_area_px": 0,
-        "minimum_kept_component_area_px": 8
+        "minimum_kept_component_area_px": 8,
+        "segmenter": "smoothed side-border row model"
       },
       "source_render_bbox_px": [
         108,
@@ -316,7 +351,8 @@
           2108
         ],
         "discarded_border_component_area_px": 0,
-        "minimum_kept_component_area_px": 8
+        "minimum_kept_component_area_px": 8,
+        "segmenter": "smoothed side-border row model"
       },
       "source_render_bbox_px": [
         119,
@@ -364,7 +400,8 @@
           2774
         ],
         "discarded_border_component_area_px": 0,
-        "minimum_kept_component_area_px": 8
+        "minimum_kept_component_area_px": 8,
+        "segmenter": "smoothed side-border row model"
       },
       "source_render_bbox_px": [
         109,
@@ -412,7 +449,8 @@
           2805
         ],
         "discarded_border_component_area_px": 0,
-        "minimum_kept_component_area_px": 8
+        "minimum_kept_component_area_px": 8,
+        "segmenter": "smoothed side-border row model"
       },
       "source_render_bbox_px": [
         109,
@@ -460,7 +498,8 @@
           2847
         ],
         "discarded_border_component_area_px": 0,
-        "minimum_kept_component_area_px": 8
+        "minimum_kept_component_area_px": 8,
+        "segmenter": "smoothed side-border row model"
       },
       "source_render_bbox_px": [
         114,
@@ -508,7 +547,8 @@
           2005
         ],
         "discarded_border_component_area_px": 0,
-        "minimum_kept_component_area_px": 8
+        "minimum_kept_component_area_px": 8,
+        "segmenter": "smoothed side-border row model"
       },
       "source_render_bbox_px": [
         119,
@@ -556,7 +596,8 @@
           2744
         ],
         "discarded_border_component_area_px": 0,
-        "minimum_kept_component_area_px": 8
+        "minimum_kept_component_area_px": 8,
+        "segmenter": "smoothed side-border row model"
       },
       "source_render_bbox_px": [
         110,

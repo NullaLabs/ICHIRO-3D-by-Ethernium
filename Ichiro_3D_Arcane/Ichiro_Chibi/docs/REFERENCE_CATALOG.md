@@ -26,9 +26,9 @@ Toda coordenada de pantalla conserva su referencia, escala, lado de la imagen, v
 
 `tools/project_reference_silhouettes.py` proyecta la malla `ICH_CHIBI_HIGHDETAIL_SOURCE__READONLY` mediante rayos ortográficos CPU contra un BVH de Blender. Produce máscaras PGM a ocho azimuts alrededor de Z, con el frente en `+X` y los perfiles en `±Y`. No usa motor de render, materiales, GPU ni add-ons y escribe `source_scene_saved: false` en el manifiesto.
 
-`tools/score_reference_fit.py` compara esas máscaras con las cuatro placas grandes y con los ocho paneles recortados de la hoja. Para las placas, estima el fondo gris degradado usando medianas por fila tomadas en los bordes laterales; para la hoja, usa recortes fijos 4 × 2 con márgenes y excluye la franja de etiquetas. El umbral, las máscaras, los recortes y los overlays quedan guardados junto al informe. Requiere NumPy y Pillow en el Python anfitrión; el script de proyección usa la API incluida en Blender 5.2.
+`tools/score_reference_fit.py` compara esas máscaras con las cuatro placas grandes y con los ocho paneles recortados de la hoja. `--segmenter auto` utiliza GrabCut de OpenCV en las cuatro imágenes de alta resolución, inicializado con un rectángulo encontrado por el modelo del fondo; fija la semilla aleatoria en 0 y registra la versión de OpenCV. Para los paneles pequeños usa el modelo de fondo por medianas de bordes, ya que GrabCut recortó partes de varios perfiles a baja resolución. Si OpenCV no está disponible, `auto` cae al modelo de fondo para todas las vistas; `--segmenter border` permite fijar ese modo. OpenCV es opcional y no se instaló en este pase. Requiere NumPy y Pillow en el Python anfitrión; el script de proyección usa la API incluida en Blender 5.2.
 
-La ejecución actual usa umbral RGB residual 24. La máscara aún recoge parte de la sombra de suelo y es sensible al umbral: en la placa frontal, cambiarlo de 24 a 32 y 40 mueve IoU de 0,432 a 0,514 y 0,558. El aumento no prueba una mejora del modelo: al elevar el umbral se pierden bordes de bajo contraste. Por ello, las puntuaciones son señales para localizar diferencias, nunca puertas automáticas ni aprobación de parecido.
+El modelo de fondo de los ocho paneles usa umbral RGB residual 24. El GrabCut de las cuatro placas grandes elimina más sombra de suelo y hace que sus IoU y relaciones ancho/alto cambien poco o nada con ese umbral. Las máscaras todavía dependen de la inicialización automática y de cámaras que no se han calibrado. Los scores sirven para localizar diferencias, nunca como puertas automáticas ni aprobación de parecido.
 
 ### Baseline visual del archivo fuente
 
@@ -36,13 +36,13 @@ Resultados de `renders/reference_fit_v02_cpu/comparison/reference_fit_report.jso
 
 | Grupo | Vista | IoU | Lectura |
 |---|---:|---:|---|
-| Placas grandes | Frente | 0,432 | Diagnóstico provisional |
-| Placas grandes | Espalda | 0,421 | Diagnóstico provisional |
-| Placas grandes | Perfil izquierdo | 0,518 | Diagnóstico provisional |
-| Placas grandes | Perfil derecho | 0,404 | Diagnóstico provisional |
+| Placas grandes | Frente | 0,560 | GrabCut, diagnóstico provisional |
+| Placas grandes | Espalda | 0,539 | GrabCut, diagnóstico provisional |
+| Placas grandes | Perfil izquierdo | 0,520 | GrabCut, diagnóstico provisional |
+| Placas grandes | Perfil derecho | 0,515 | GrabCut, diagnóstico provisional |
 | Hoja 8 vistas | Ocho ángulos | 0,640–0,708 | Secundario; la baja resolución limita la precisión |
 
-En las placas frontales, la relación ancho/alto del bbox medido en la fuente es aproximadamente 16–17 % menor que la de la máscara de referencia. Esa diferencia aún mezcla silueta, sombra, perspectiva y encuadre; se registra como hipótesis para revisión, no como instrucción para ensanchar el personaje. Los perfiles están más cerca en esa métrica simple.
+Con GrabCut, las razones de bbox ancho/alto de la fuente y referencia son muy cercanas: frente 0,485/0,493; espalda 0,485/0,482; perfil izquierdo 0,427/0,428; perfil derecho 0,427/0,429. La medición inicial que mostraba una discrepancia frontal de 16–17 % estaba sesgada por la sombra de suelo. No hay evidencia de que se deba ensanchar la fuente. Los IoU restantes miden diferencias locales de contorno y todavía mezclan perspectiva y encuadre.
 
 ## Reproducción
 
@@ -50,10 +50,10 @@ Desde `Ichiro_Chibi/`, con Blender 5.2 disponible:
 
 ```powershell
 blender --background --factory-startup Ichiro_Chibi_HighDetail_Working.blend --threads 4 --python-exit-code 1 --python tools/project_reference_silhouettes.py -- --out renders/reference_fit_v02_cpu/projections --resolution 384
-python tools/score_reference_fit.py --renders renders/reference_fit_v02_cpu/projections --output-dir renders/reference_fit_v02_cpu/comparison
+python tools/score_reference_fit.py --renders renders/reference_fit_v02_cpu/projections --output-dir renders/reference_fit_v02_cpu/comparison --segmenter auto
 ```
 
-El segundo comando rehace el informe, máscaras de referencia, overlays, recortes del turnaround y hojas de contacto. `--threshold` permite probar otro residual sin cambiar la malla ni la escena. Se debe revisar la hoja y no escoger el umbral que produzca el IoU más alto.
+El segundo comando rehace el informe, máscaras de referencia, overlays, recortes del turnaround y hojas de contacto. Para una salida sin OpenCV, usar `--segmenter border`; el informe registra método y versiones para que las salidas no se confundan. `--threshold` controla el modelo de fondo de los paneles pequeños. Se debe revisar la hoja, no elegir ajustes por maximizar IoU.
 
 ## Siguiente mejora del comparador
 
@@ -62,6 +62,9 @@ La forma de hacer la segmentación reproducible y menos sesgada es guardar másc
 ## Referencias técnicas
 
 - Blender API, `BVHTree`: https://docs.blender.org/api/current/mathutils.bvhtree.html
+- OpenCV, segmentación GrabCut y retoque manual de errores: https://docs.opencv.org/4.x/d8/d83/tutorial_py_grabcut.html
 - Manual Blender 5.2, límites de remesh automático en retopología: https://docs.blender.org/manual/en/5.2/modeling/meshes/retopology.html
 - Blender Studio, flujo de personaje estilizado y edge flow: https://studio.blender.org/training/stylized-character-workflow/
-- ModelSheetTo3D, investigación de alineación entre hoja de diseño y reconstrucción 3D: https://onlinelibrary.wiley.com/doi/10.1111/cgf.70323
+- ModelSheetTo3D, investigación e implementación oficial: https://onlinelibrary.wiley.com/doi/10.1111/cgf.70323 y https://github.com/hjyoon02/ModelSheetTo3D
+
+ModelSheetTo3D sirve como referencia para alinear hojas de modelo con geometría, no como dependencia inmediata: su README documenta un entorno Conda con PyTorch 2.6/CUDA 12.6, Blender 4.3.2 y RTX 4090. Para Ichiro conviene reutilizar sus ideas de correspondencia entre vistas sin incorporar ese entorno pesado; no produce por sí solo la topología facial/anatómica lista para rig.

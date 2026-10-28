@@ -1,7 +1,7 @@
 """Compare locked-source projections with four canonical plates and eight turnaround views.
 
 The score is a camera-normalized silhouette diagnostic, not an artistic approval
-and not a reconstruction target. Requires the existing Pillow and NumPy stack.
+and not a reconstruction target. Requires Pillow and NumPy; OpenCV is optional.
 """
 from pathlib import Path
 import argparse
@@ -9,6 +9,11 @@ from collections import deque
 import json
 import numpy as np
 from PIL import Image, ImageDraw, ImageFont
+
+try:
+    import cv2
+except ImportError:  # OpenCV is an optional improvement, never an install requirement.
+    cv2 = None
 
 ROOT = Path(__file__).resolve().parents[1]
 REFERENCES = {
@@ -71,8 +76,8 @@ def _largest_components(mask, minimum_area=8):
     }
 
 
-def reference_foreground_mask(source, threshold=24):
-    image = source.convert("RGB") if isinstance(source, Image.Image) else Image.open(source).convert("RGB")
+def border_model_mask(image, threshold=24):
+    image = image.convert("RGB")
     array = np.asarray(image, dtype=np.float32)
     h, w, _ = array.shape
     # The studio backdrop is a smooth vertical gradient with a floor transition.
@@ -105,7 +110,7 @@ def reference_foreground_mask(source, threshold=24):
     binary, component_info = _largest_components(initial)
     ys, xs = np.where(binary)
     if not len(xs):
-        raise RuntimeError(f"No foreground found in {path}")
+        raise RuntimeError("No foreground found in reference image")
     bbox = (int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)
     diagnostics = {
         "background_model": "smoothed side-border row medians, linearly blended across width",
@@ -115,6 +120,70 @@ def reference_foreground_mask(source, threshold=24):
         "foreground_bbox_px": list(bbox),
         **component_info,
     }
+    return image, binary, bbox, diagnostics
+
+
+def grabcut_mask(image, iterations=7):
+    """Use the border model as a search rectangle, then refine a high-res plate."""
+    if cv2 is None:
+        raise RuntimeError("GrabCut was requested but optional OpenCV is unavailable")
+    image = image.convert("RGB")
+    _, _coarse_mask, coarse_bbox, _coarse_info = border_model_mask(image, 40)
+    rgb = np.asarray(image, dtype=np.uint8)
+    height, width, _ = rgb.shape
+    pad_x = max(3, round(width * 0.05))
+    pad_y = max(3, round(height * 0.025))
+    x0 = max(1, coarse_bbox[0] - pad_x)
+    y0 = max(1, coarse_bbox[1] - pad_y)
+    x1 = min(width - 1, coarse_bbox[2] + pad_x)
+    y1 = min(height - 2, coarse_bbox[3] + pad_y)
+    rectangle = (x0, y0, x1 - x0, y1 - y0)
+
+    mask = np.zeros((height, width), dtype=np.uint8)
+    background_model = np.zeros((1, 65), dtype=np.float64)
+    foreground_model = np.zeros((1, 65), dtype=np.float64)
+    cv2.setRNGSeed(0)
+    cv2.grabCut(cv2.cvtColor(rgb, cv2.COLOR_RGB2BGR), mask, rectangle,
+                background_model, foreground_model, iterations, cv2.GC_INIT_WITH_RECT)
+    initial = np.logical_or(mask == cv2.GC_FGD, mask == cv2.GC_PR_FGD)
+    initial[:2, :] = False
+    initial[-2:, :] = False
+    initial[:, :2] = False
+    initial[:, -2:] = False
+    binary, component_info = _largest_components(initial)
+    ys, xs = np.where(binary)
+    bbox = (int(xs.min()), int(ys.min()), int(xs.max()) + 1, int(ys.max()) + 1)
+    diagnostics = {
+        "segmenter": "OpenCV GrabCut initialized from border-model figure bounds",
+        "opencv_version": cv2.__version__,
+        "opencv_rng_seed": 0,
+        "grabcut_iterations": iterations,
+        "coarse_bbox_threshold_rgb_residual": 40,
+        "grabcut_rectangle_px": list(rectangle),
+        "foreground_area_px": int(binary.sum()),
+        "foreground_bbox_px": list(bbox),
+        **component_info,
+    }
+    return image, binary, bbox, diagnostics
+
+
+def reference_foreground_mask(source, threshold=24, segmenter="auto"):
+    image = source.convert("RGB") if isinstance(source, Image.Image) else Image.open(source).convert("RGB")
+    if segmenter not in {"auto", "border", "grabcut"}:
+        raise ValueError(f"Unknown segmenter: {segmenter}")
+    use_grabcut = segmenter == "grabcut" or (
+        segmenter == "auto" and cv2 is not None and min(image.size) >= 200
+    )
+    if use_grabcut and min(image.size) >= 200:
+        return grabcut_mask(image)
+    if segmenter == "grabcut" and cv2 is None:
+        raise RuntimeError("GrabCut was requested but optional OpenCV is unavailable")
+    image, binary, bbox, diagnostics = border_model_mask(image, threshold)
+    diagnostics["segmenter"] = "smoothed side-border row model"
+    if segmenter == "grabcut" and min(image.size) < 200:
+        diagnostics["segmenter_fallback_reason"] = "low-resolution turnaround panel"
+    elif segmenter == "auto" and min(image.size) >= 200 and cv2 is None:
+        diagnostics["segmenter_fallback_reason"] = "optional OpenCV is unavailable"
     return image, binary, bbox, diagnostics
 
 
@@ -245,6 +314,8 @@ def main():
     parser.add_argument("--output-dir", type=Path, default=ROOT / "renders" / "reference_fit_v02_cpu" / "comparison")
     parser.add_argument("--turnaround-sheet", type=Path, default=TURNAROUND_SHEET)
     parser.add_argument("--threshold", type=float, default=24)
+    parser.add_argument("--segmenter", choices=("auto", "border", "grabcut"), default="auto",
+                        help="auto uses optional GrabCut on high-resolution plates and the border model on small panels")
     args = parser.parse_args()
     args.renders = args.renders.resolve()
     args.output_dir = args.output_dir.resolve()
@@ -256,7 +327,9 @@ def main():
         candidate_path = args.renders / f"source_{view}.pgm"
         if not candidate_path.is_file():
             raise FileNotFoundError(candidate_path)
-        ref_image, ref_mask, ref_bbox, segmentation = reference_foreground_mask(reference_path, args.threshold)
+        ref_image, ref_mask, ref_bbox, segmentation = reference_foreground_mask(
+            reference_path, args.threshold, args.segmenter
+        )
         overlay_stem = f"ortho_{view}"
         metrics, overlay_path = compare_view(view, ref_image, ref_mask, ref_bbox,
                                              segmentation, candidate_path,
@@ -278,7 +351,9 @@ def main():
             raise FileNotFoundError(candidate_path)
         crop_path = crop_dir / f"reference_{view}.png"
         crops[panel_index].save(crop_path)
-        ref_image, ref_mask, ref_bbox, segmentation = reference_foreground_mask(crops[panel_index], args.threshold)
+        ref_image, ref_mask, ref_bbox, segmentation = reference_foreground_mask(
+            crops[panel_index], args.threshold, args.segmenter
+        )
         overlay_stem = f"turnaround_{view}"
         metrics, overlay_path = compare_view(view, ref_image, ref_mask, ref_bbox,
                                              segmentation, candidate_path,
@@ -292,9 +367,11 @@ def main():
 
     report = {
         "schema": "ethernium.reference-fit-silhouette-score.v2",
-        "purpose": "camera-normalized diagnostic across the four large orthographic references and eight turnaround panels; not canon approval",
-        "reference_mask_threshold_rgb_residual": args.threshold,
+        "purpose": "camera-normalized diagnostic across four high-resolution reference plates and eight turnaround panels; not canon approval",
+        "border_model_threshold_rgb_residual": args.threshold,
         "projection_mask_threshold": 127,
+        "reference_segmenter_requested": args.segmenter,
+        "optional_opencv_version": cv2.__version__ if cv2 is not None else None,
         "canonical_four_view_metrics": canonical_results,
         "turnaround_eight_view_metrics": turnaround_results,
         "turnaround_crop_method": crop_metadata,
