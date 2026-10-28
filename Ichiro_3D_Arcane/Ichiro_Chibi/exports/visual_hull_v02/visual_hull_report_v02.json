@@ -1,0 +1,111 @@
+{
+  "front": {
+    "image_size": [
+      384,
+      472
+    ],
+    "background_rgb": [
+      181.0,
+      181.0,
+      184.0
+    ],
+    "bbox_xyxy": [
+      96,
+      13,
+      322,
+      457
+    ]
+  },
+  "back": {
+    "image_size": [
+      384,
+      458
+    ],
+    "background_rgb": [
+      188.0,
+      188.0,
+      191.0
+    ],
+    "bbox_xyxy": [
+      44,
+      0,
+      298,
+      444
+    ]
+  },
+  "left": {
+    "image_size": [
+      384,
+      472
+    ],
+    "background_rgb": [
+      181.0,
+      181.0,
+      184.0
+    ],
+    "bbox_xyxy": [
+      82,
+      9,
+      279,
+      461
+    ]
+  },
+  "right": {
+    "image_size": [
+      384,
+      458
+    ],
+    "background_rgb": [
+      188.0,
+      187.0,
+      190.0
+    ],
+    "bbox_xyxy": [
+      48,
+      0,
+      284,
+      453
+    ]
+  },
+  "schema": "ethernium.visual_hull_report.v2",
+  "grid_xyz": [
+    80,
+    120,
+    80
+  ],
+  "occupied_voxels": 209900,
+  "vertices": 39924,
+  "quad_faces": 39922,
+  "mesh_audit": {
+    "unique_edges": 79844,
+    "boundary_edges": 0,
+    "non_manifold_edges": 0,
+    "loose_vertices": 0,
+    "degenerate_faces": 0,
+    "connected_components": 1,
+    "signed_volume_m3": 0.12146990740742618,
+    "edge_watertight": true,
+    "self_intersection_test": "not performed",
+    "blockout_gate": "PASS"
+  },
+  "target_height_m": 1.0,
+  "voxel_size_m": 0.008333333333333333,
+  "axes": {
+    "X": "front/back depth; face toward +X",
+    "Y": "character width",
+    "Z": "character height"
+  },
+  "source_hashes_sha256": {
+    "front": "213792383b67f6bcad13781103bca05e8fa362031aeabcbd4be16aecb9b9ebe4",
+    "back": "04a38f80e9fe25840304a94ae452c465450ed4e91e509814e392d447dd82aab1",
+    "left": "3fa944ea39039d6034edba3767ff75e8494843cdc6ad719ff5206436b228a681",
+    "right": "bade5c0f3ce7ec289e27d453daa9bfd353bf4cdc9334f4f0fcc1ce49d0377513"
+  },
+  "method": "aspect-preserving silhouette intersection; four primary views; orthographic approximation",
+  "limitations": [
+    "coarse voxel surface; not sculpt or rig topology",
+    "camera perspective and view registration are not solved",
+    "8-view turnaround and pipeline board remain review evidence, not geometric constraints"
+  ],
+  "output_obj": "exports/visual_hull_v02/Ichiro_Chibi_VisualHull_BLOCKOUT_V02.obj"
+}

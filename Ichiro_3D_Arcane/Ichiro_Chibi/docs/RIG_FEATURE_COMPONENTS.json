@@ -1,5 +1,5 @@
 {
-  "source": "E:\\WORKSPACE\\Ichiro_Chibi\\blend\\Ichiro_Chibi_HighDetail_Working.blend",
+  "source": "Ichiro_Chibi_HighDetail_Working.blend",
   "components_over_50_vertices": [
     {
       "vertices": 31683,
@@ -2263,5 +2263,6 @@
         0.20848
       ]
     }
-  ]
+  ],
+  "source_sha256": "e08c086e2d8fad1be6f593647444455b4c3df034b97f4c3e262e7dd53f9a5024"
 }

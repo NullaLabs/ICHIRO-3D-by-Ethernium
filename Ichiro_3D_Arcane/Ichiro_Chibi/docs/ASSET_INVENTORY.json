@@ -2,16 +2,18 @@
   "schema": "ethernium.character_asset_inventory.v1",
   "scope": ".",
   "classification_policy": "Filename and folder heuristics only; never approval.",
-  "file_count": 167,
+  "file_count": 177,
   "category_counts": {
     "backup": 4,
+    "blockout_candidate": 7,
     "candidate": 2,
-    "declared_master_path_mismatch": 1,
+    "declared_master": 1,
     "geometry_unclassified": 2,
+    "recovery_snapshot": 1,
     "reference": 13,
     "render_evidence": 38,
     "review_candidate": 50,
-    "workflow_source": 57
+    "workflow_source": 59
   },
   "exact_duplicate_groups": [
     {
@@ -74,8 +76,8 @@
     },
     {
       "path": "docs/ETHERNIUM_CHARACTER_FOUNDRY_V01.md",
-      "bytes": 12669,
-      "sha256": "50a7fc930c91ab019fa47338d21b3b793c5129c0671e99ad46b2b445b44c618c",
+      "bytes": 12929,
+      "sha256": "ade08928980ccb81c58209465c59efc2e08ae030ce6e76e03ad027b2275a8880",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
@@ -256,8 +258,8 @@
     },
     {
       "path": "docs/RIG_FEATURE_COMPONENTS.json",
-      "bytes": 37249,
-      "sha256": "0a3c84ff6df89abd3fae679267ce17feb21234441b5868cf3824d29a64e1feb1",
+      "bytes": 37303,
+      "sha256": "73a5657ae2e1dd0350dee6ffa0f64844d8253f291409b0e79f4b3b779e3bae79",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
@@ -319,8 +321,8 @@
     },
     {
       "path": "docs/TOOLING.md",
-      "bytes": 1783,
-      "sha256": "ad3905c53ab71b1cfb710fc76a336b278fa98d264284e0da3614d3be854d4768",
+      "bytes": 1892,
+      "sha256": "1c667f9a5450f443768058cba3ed7621710c8288ca0a48de04a022c4a2caf1fc",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
@@ -339,9 +341,16 @@
       "classification_note": "Review or experimental artifact; not approved by filename"
     },
     {
+      "path": "docs/VISUAL_HULL_BLOCKOUT_V02.md",
+      "bytes": 4010,
+      "sha256": "4b5348508b83083e230d1f4dcbaf80d38104c0f3a418f62dfc2af66e193680a0",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
       "path": "docs/WORKFLOW_INNOVATIONS.md",
-      "bytes": 23798,
-      "sha256": "c19207db94402aac192b515019e108bf24c659d796048749b12f3a39a2bf45da",
+      "bytes": 25544,
+      "sha256": "5eefe34cbc0f629f4cbb115c8508f70f4b4b06a72380eb59293156f5ed7f4d89",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
@@ -351,6 +360,55 @@
       "sha256": "c3de7c9542bca9e1633547c315c3eaa1bf631be085e6031d52f4a933c57a80a9",
       "category": "review_candidate",
       "classification_note": "Review or experimental artifact; not approved by filename"
+    },
+    {
+      "path": "exports/visual_hull_v02/Ichiro_Chibi_VISUAL_HULL_V02_REVIEW.blend",
+      "bytes": 1147305,
+      "sha256": "1caf1d378c964c21aefecf706cda5487465ed86e98f7b0118d3e916acafe9f5c",
+      "category": "blockout_candidate",
+      "classification_note": "Generated silhouette blockout; never final sculpt or rig topology"
+    },
+    {
+      "path": "exports/visual_hull_v02/Ichiro_Chibi_VisualHull_BLOCKOUT_V02.obj",
+      "bytes": 2289730,
+      "sha256": "b04335563ecf058a9265c2ec0e5d5a06dab63c67236dcc1c6471f5a0dc8dd919",
+      "category": "blockout_candidate",
+      "classification_note": "Generated silhouette blockout; never final sculpt or rig topology"
+    },
+    {
+      "path": "exports/visual_hull_v02/mask_back.png",
+      "bytes": 2173,
+      "sha256": "e6c688cafc1284bb34e65c9f52ed66fe75c48dff75390d4ad51583cfd03db4a7",
+      "category": "blockout_candidate",
+      "classification_note": "Generated silhouette blockout; never final sculpt or rig topology"
+    },
+    {
+      "path": "exports/visual_hull_v02/mask_front.png",
+      "bytes": 2154,
+      "sha256": "1e3ba2e589315b3d6a6085f97fedde3acbeaf1600f54388f2e113eea78a84722",
+      "category": "blockout_candidate",
+      "classification_note": "Generated silhouette blockout; never final sculpt or rig topology"
+    },
+    {
+      "path": "exports/visual_hull_v02/mask_left.png",
+      "bytes": 2176,
+      "sha256": "bfcbfd4cbcb9b3c85e0c186e651e2d36fd50ebc667cfe4992b0b7d052e5cca97",
+      "category": "blockout_candidate",
+      "classification_note": "Generated silhouette blockout; never final sculpt or rig topology"
+    },
+    {
+      "path": "exports/visual_hull_v02/mask_right.png",
+      "bytes": 2162,
+      "sha256": "e83628933fbd6cfd97dfea13703e8708ddc9082e7ed660535b50eb1485f94fe1",
+      "category": "blockout_candidate",
+      "classification_note": "Generated silhouette blockout; never final sculpt or rig topology"
+    },
+    {
+      "path": "exports/visual_hull_v02/visual_hull_report_v02.json",
+      "bytes": 2375,
+      "sha256": "4604d0d6ac1ebd0c06271b287a5bdf87f07a452d8a5028bb48f40af5d5268993",
+      "category": "blockout_candidate",
+      "classification_note": "Generated silhouette blockout; never final sculpt or rig topology"
     },
     {
       "path": "Ichiro_Chibi_Closed_Eye_Relax_Review.blend",
@@ -437,11 +495,18 @@
       "classification_note": "Blender automatic backup; not a production authority"
     },
     {
+      "path": "Ichiro_Chibi_HEAD_HANDS_Topology_Workspace_PRE_FOUNDRY_RECOVERY_2026-10-28.blend",
+      "bytes": 110754,
+      "sha256": "e3e704d676e7c6604241171f2033820685839e849fbe4b110859178c942c28dc",
+      "category": "recovery_snapshot",
+      "classification_note": "Local pre-change recovery copy; not the active working file"
+    },
+    {
       "path": "Ichiro_Chibi_HighDetail_Working.blend",
       "bytes": 88289445,
       "sha256": "e08c086e2d8fad1be6f593647444455b4c3df034b97f4c3e262e7dd53f9a5024",
-      "category": "declared_master_path_mismatch",
-      "classification_note": "PROJECT_STATUS declares this as active master under blend/; file is outside that path"
+      "category": "declared_master",
+      "classification_note": "Active high-detail source declared by PROJECT_STATUS.md"
     },
     {
       "path": "Ichiro_Chibi_Lower_Lid_Strip_Review.blend",
@@ -487,8 +552,8 @@
     },
     {
       "path": "PROJECT_STATUS.md",
-      "bytes": 1498,
-      "sha256": "91ade9bcfcf154e7bbf00f2e946f4b982ce1f89737238827801cfdfad7ffe6e5",
+      "bytes": 2620,
+      "sha256": "0586e19cfd57f911d5c6d2a2b8c627e1254b8ab0f77ca5ea07ac60d613e11825",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
@@ -942,8 +1007,8 @@
     },
     {
       "path": "tools/build_calibrated_visual_hull.py",
-      "bytes": 6514,
-      "sha256": "342819a748bfda605f7a1b98183f2b59c29c1cdb75cb0a01f515f1a128951cc6",
+      "bytes": 10108,
+      "sha256": "732fd911c7fb1f657cf26b38667cdb93e9bf0e28d2319dc38e5300aa719df9d7",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
@@ -1012,15 +1077,15 @@
     },
     {
       "path": "tools/create_head_hands_topology_workspace.py",
-      "bytes": 3886,
-      "sha256": "88840ef28c8fef90ba2fb314d10ec34f13c0dbb9835c52f93b8f99bd5c65185f",
+      "bytes": 3899,
+      "sha256": "a9268baa6157b882a2cdce44258d7a3431854dd2e5c1b61aab9300092c73aed1",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
     {
       "path": "tools/create_rig_guide.py",
-      "bytes": 3295,
-      "sha256": "a3d4a8b01c7f13e1c6e4ca792157d4f5104527a8d0a1a681b90414380e829905",
+      "bytes": 3744,
+      "sha256": "9dff0cb7067fc425b7e9cd242d8342408678dc05412d42507cb1b968f99ff0a9",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
@@ -1046,6 +1111,13 @@
       "classification_note": "Workflow code or documentation"
     },
     {
+      "path": "tools/import_visual_hull_blockout_v02.py",
+      "bytes": 1847,
+      "sha256": "acd2520c823e4afad5ae2fca76133217c855b107974b58321f700dad601e3004",
+      "category": "workflow_source",
+      "classification_note": "Workflow code or documentation"
+    },
+    {
       "path": "tools/inspect_live_scene.py",
       "bytes": 211,
       "sha256": "0d7cfb25a36689c41dc9e6915253db7d0af9df1f862ac8051562ecfeee50336a",
@@ -1054,15 +1126,15 @@
     },
     {
       "path": "tools/inventory_character_assets.py",
-      "bytes": 5079,
-      "sha256": "8fdc3a58f036bcbc3de119375793c7052a4b9c90d12eb4d8294e754c2d719c25",
+      "bytes": 5286,
+      "sha256": "6464fa56daadfcd67ebb9ce65d393fd04b2709c04e1b9120fe20521a17ac4937",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
     {
       "path": "tools/make_turntable_contact_sheet.py",
-      "bytes": 1100,
-      "sha256": "cbdba535d242eefe964446775d9e1712f64d2a59210e4be621b0c9f4e5a5a01f",
+      "bytes": 1301,
+      "sha256": "b8430147f73d54145b94b0c4cb7dc4307f6f51703ad7b986438fc73b2af656c0",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
@@ -1131,8 +1203,8 @@
     },
     {
       "path": "tools/render_highdetail_turntable.py",
-      "bytes": 1794,
-      "sha256": "a9875ceb5b88c9756f5fa327d3ecd06a474f14e3c79210e91209569fff17af26",
+      "bytes": 1864,
+      "sha256": "caa07c5da9674d64c34f7fa1b2907264ffab76fd7797754b43dc09941d44e899",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },

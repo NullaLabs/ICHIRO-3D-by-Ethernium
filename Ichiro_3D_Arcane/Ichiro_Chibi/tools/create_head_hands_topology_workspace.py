@@ -46,9 +46,9 @@ def marker(name, label, location):
     empty["instruction"] = "Start topology manually here; this marker is not geometry."
     topo_col.objects.link(empty)
 
-marker("HEAD_TOPOLOGY__START_MANUALLY", "Face loops: eyes, lids, mouth cavity, jaw", (0.0, -0.34, 0.30))
-marker("HAND_L_TOPOLOGY__START_MANUALLY", "Palm plus five articulated fingers", (-0.28, -0.05, -0.10))
-marker("HAND_R_TOPOLOGY__START_MANUALLY", "Palm plus five articulated fingers", (0.28, -0.05, -0.10))
+marker("HEAD_TOPOLOGY__START_MANUALLY", "Face loops: eyes, lids, mouth cavity, jaw; front faces +X", (0.27, 0.0, 0.30))
+marker("HAND_L_TOPOLOGY__START_MANUALLY", "Palm plus five articulated fingers", (0.02, -0.28, -0.10))
+marker("HAND_R_TOPOLOGY__START_MANUALLY", "Palm plus five articulated fingers", (0.02, 0.28, -0.10))
 
 # Make every supplied reference discoverable in the scene.  Image empties are
 # kept outside the working origin so they do not obscure the character.

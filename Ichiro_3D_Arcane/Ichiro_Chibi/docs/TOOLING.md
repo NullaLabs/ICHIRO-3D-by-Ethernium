@@ -1,18 +1,19 @@
 # Tooling and reproducibility
 
-## Active method: calibrated silhouette volume
+## Active method: calibrated silhouette blockout
 
-The first Chibi geometry is computed from the supplied front, back, left and
-right renders.  The process estimates a neutral-background mask, registers the
-four silhouettes into one normalized frame, and keeps only voxels supported by
-both the front/back and the left/right evidence.  It creates a locked OBJ
-source, masks for inspection, and a Blender scene that never overwrites the
-references.
+`tools/build_calibrated_visual_hull.py` derives a coarse blockout from the
+front, back, left and right images using paths relative to this project. V02
+preserves each crop's aspect ratio, writes source-standard X-front/Y-width/
+Z-up coordinates at a declared one-metre height, hashes its four inputs and
+audits face winding and edge incidence. Output is isolated under
+`exports/visual_hull_v02/`; earlier output under `E:/WORKSPACE` remains untouched.
 
 This is a **volume and proportion** step, not an automatic final character.
-It deliberately cannot infer hidden folds, facial planes, hair strand depth or
-mechanical construction.  Those are authored in the separate non-destructive
-costume, hair, and sculpt layers after silhouette approval.
+It cannot infer hidden folds, facial planes, hair strand depth, hands or
+mechanical construction. The V02 candidate is intentionally coarse and is
+kept separate from the locked high-detail source; it is only a sculpting and
+proportion reference after visual approval.
 
 ## Optional AI candidate tool
 

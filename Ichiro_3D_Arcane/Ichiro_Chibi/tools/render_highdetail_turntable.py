@@ -3,8 +3,8 @@ from pathlib import Path
 import bpy, math
 from mathutils import Vector
 
-ROOT=Path(r'E:/WORKSPACE/Ichiro_Chibi')
-INFILE=ROOT/'blend'/'Ichiro_Chibi_HighDetail_Working.blend'
+ROOT=Path(__file__).resolve().parents[1]
+INFILE=ROOT/'Ichiro_Chibi_HighDetail_Working.blend'
 OUT=ROOT/'renders'/'highdetail_turntable'
 OUT.mkdir(parents=True,exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=str(INFILE))
@@ -28,7 +28,8 @@ for loc,energy,size in [((2,-3,3),1100,3.0),((-2,-2,1.5),700,2.5),((0,2,3),900,2
 target=(0,0,0)
 for i,angle in enumerate(range(0,360,45)):
     r=3.0; a=math.radians(angle)
-    cam.location=(r*math.sin(a),-r*math.cos(a),.1); look(cam,target)
+    # Ichiro's canonical front faces +X; angle zero must be the frontal view.
+    cam.location=(r*math.cos(a),r*math.sin(a),.1); look(cam,target)
     scene.render.filepath=str(OUT/f'ichiro_chibi_high_{angle:03d}.png')
     bpy.ops.render.render(write_still=True)
 print(f'RENDERED {OUT}')

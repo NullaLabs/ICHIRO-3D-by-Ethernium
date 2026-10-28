@@ -383,9 +383,32 @@ experimento local de párpado.
 `tools/inventory_character_assets.py` cataloga los archivos de la carpeta de
 Ichiro Chibi con tamaño y SHA-256, agrupa duplicados exactos y sugiere clases
 por ruta/nombre. No escribe, mueve ni elimina entradas; el informe no sustituye
-la aprobación artística. Primera pasada: 167 activos, un duplicado exacto entre
-los PNG de alineación ocular v01/v02 y una discrepancia de ruta: el `.blend`
-`Ichiro_Chibi_HighDetail_Working.blend` está en la raíz de la carpeta mientras
-`PROJECT_STATUS.md` lo cita bajo `blend/`. Se conserva la duda para resolverla
-con revisión de identidad de escena. Informe: `docs/ASSET_INVENTORY.json`;
-arquitectura: `docs/ETHERNIUM_CHARACTER_FOUNDRY_V01.md`.
+la aprobación artística. La primera pasada reportó 167 activos y un PNG
+duplicado exacto. La supuesta discrepancia de ruta quedó resuelta al confirmar
+que el `.blend` del repo y el de `E:\WORKSPACE\Ichiro_Chibi\blend` comparten
+SHA-256. Informe actual: `docs/ASSET_INVENTORY.json`; arquitectura:
+`docs/ETHERNIUM_CHARACTER_FOUNDRY_V01.md`.
+
+## WF-018 — restablecer escala, ejes, aspecto y winding del bloque 360
+
+La auditoría encontró que el constructor de hull tenía ruta fija a `E:/WORKSPACE`,
+estiraba los recortes al mismo aspecto, emitía la altura en Y, usaba voxel de
+0.025 m para 120 muestras (3 m de altura objetivo) y escribía caras hacia
+adentro. V02 deriva la raíz del proyecto, encaja máscaras sin deformación,
+usa X=profundidad/frente +X, Y=anchura, Z=altura, calcula el voxel desde la
+altura declarada y hace censo de topología/volumen antes de aceptar el blockout.
+
+Resultado: 39,924 vértices, 39,922 quads, 1 m de altura, volumen firmado
+positivo, 0 aristas frontera/no manifold, 0 sueltos/degenerados, 1 componente;
+el gate de bloque pasa. La inspección en Blender enseña que el volumen queda
+escalonado y fusiona masas; sirve solo como referencia de proporción, no como
+personaje final. La cámara frontal del turntable ahora empieza desde +X, según
+la orientación de la fuente. Se fijaron rutas relativas de generadores de hull,
+turntable, guía de rig y marcadores de cabeza/manos. El blockout no modifica ni
+reemplaza la fuente maestra. Detalle y límites:
+`docs/VISUAL_HULL_BLOCKOUT_V02.md`.
+
+
+## WF-019 — medidas comparativas y reporte reproducible del candidato
+
+El bloque V02 se mide contra el .blend maestro antes de considerar cambios de proporción: 0.525 × 0.575 × 1.000 m frente a 0.420 × 0.490 × 1.000 m (+25% profundidad, +17.3% anchura). El exceso queda como señal para revisar cámaras y siluetas; no autoriza escalar la fuente. El informe de inventario actual cataloga 177 archivos por hash y heurísticas conservadoras; esas clases no equivalen a aprobación. La colección V02 se reconstruye con 	ools/import_visual_hull_blockout_v02.py; el .blend de revisión sigue local porque no es una dependencia del pipeline.

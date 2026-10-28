@@ -33,18 +33,20 @@ def sha256_file(path: Path) -> str:
 def classify(path: Path, root: Path) -> tuple[str, str]:
     rel = path.relative_to(root).as_posix().lower()
     name = path.name.lower()
+    if "pre_foundry_recovery" in name:
+        return "recovery_snapshot", "Local pre-change recovery copy; not the active working file"
     if path.suffix.lower() == ".blend1" or name.endswith(".blend1"):
         return "backup", "Blender automatic backup; not a production authority"
     if rel.startswith("references/"):
         return "reference", "Reference/source evidence; confirm its authority in the manifest"
+    if "visual_hull_v02" in rel:
+        return "blockout_candidate", "Generated silhouette blockout; never final sculpt or rig topology"
     if "review" in name or "experiment" in name or "_pass" in name:
         return "review_candidate", "Review or experimental artifact; not approved by filename"
     if "candidate" in name:
         return "candidate", "Candidate asset; approval requires project status and visual review"
     if name == "ichiro_chibi_highdetail_working.blend":
-        return "declared_master_path_mismatch", (
-            "PROJECT_STATUS declares this as active master under blend/; file is outside that path"
-        )
+        return "declared_master", "Active high-detail source declared by PROJECT_STATUS.md"
     if path.suffix.lower() in {".png", ".jpg", ".jpeg", ".webp", ".tif", ".tiff", ".exr"}:
         if rel.startswith("renders/"):
             return "render_evidence", "Rendered evidence; not source geometry"

@@ -5,10 +5,12 @@ not bind weights: binding happens only after the final clean single mesh exists.
 """
 from pathlib import Path
 import bpy
+from mathutils import Vector
 
-ROOT=Path(r'E:/WORKSPACE/Ichiro_Chibi')
-INFILE=ROOT/'blend'/'Ichiro_Chibi_HighDetail_Working.blend'
-OUTFILE=ROOT/'blend'/'Ichiro_Chibi_RigGuide.blend'
+ROOT=Path(__file__).resolve().parents[1]
+INFILE=ROOT/'Ichiro_Chibi_HighDetail_Working.blend'
+OUTFILE=ROOT/'exports'/'Ichiro_Chibi_RigGuide_UNBOUND.blend'
+OUTFILE.parent.mkdir(parents=True,exist_ok=True)
 bpy.ops.wm.open_mainfile(filepath=str(INFILE))
 src=bpy.data.objects.get('ICH_CHIBI_HIGHDETAIL_SOURCE__READONLY')
 if not src: raise RuntimeError('High source missing')
@@ -33,7 +35,8 @@ bone('neck',(0,0,.20),(0,0,.28),'chest')
 bone('head',(0,0,.28),(0,0,.47),'neck')
 bone('jaw',(0,-.12,.29),(0,-.20,.28),'head')
 
-# Facial skeleton. Eye axis follows front depth (-Y); locations are guides only.
+# Provisional guide coordinates use a legacy front=-Y frame. The whole guide
+# is rotated to the source convention (+X front, Y lateral, Z up) below.
 for side,x in (('L',-.072),('R',.072)):
     bone(f'eye.{side}',(x,-.175,.350),(x,-.235,.350),'head')
     bone(f'lid_upper.{side}',(x,-.180,.380),(x,-.225,.380),'head')
@@ -49,19 +52,24 @@ for side,sgn in (('L',-1),('R',1)):
     bone(f'upper_arm.{side}',(x,0,.15),(sgn*.22,0,.02),f'clavicle.{side}')
     bone(f'forearm.{side}',(sgn*.22,0,.02),(sgn*.25,-.01,-.10),f'upper_arm.{side}')
     bone(f'hand.{side}',(sgn*.25,-.01,-.10),(sgn*.30,-.02,-.10),f'forearm.{side}')
-    for digit,zoff in (('thumb',-.045),('index',.030),('middle',.010),('ring',-.010),('pinky',-.030)):
+    for digit,lateral_offset in (('thumb',.045),('index',.025),('middle',.005),('ring',-.015),('pinky',-.035)):
         p=f'hand.{side}'
         for n in range(1,4):
-            a=sgn*(.29+.030*(n-1)); b=sgn*(.29+.030*n)
+            finger_x=sgn*(.30+lateral_offset)
+            z0=-.10-.025*(n-1); z1=z0-.025
             name=f'{digit}_{n}.{side}'
-            bone(name,(a,-.02,-.10+zoff),(b,-.02,-.10+zoff),p); p=name
+            bone(name,(finger_x,-.02,z0),(finger_x,-.02,z1),p); p=name
     bone(f'thigh.{side}',(sgn*.07,0,-.22),(sgn*.10,0,-.36),'pelvis')
     bone(f'shin.{side}',(sgn*.10,0,-.36),(sgn*.10,-.01,-.47),f'thigh.{side}')
     bone(f'foot.{side}',(sgn*.10,-.01,-.47),(sgn*.10,-.12,-.50),f'shin.{side}')
 
+for guide_bone in eb:
+    guide_bone.head=Vector((-guide_bone.head.y,guide_bone.head.x,guide_bone.head.z))
+    guide_bone.tail=Vector((-guide_bone.tail.y,guide_bone.tail.x,guide_bone.tail.z))
 bpy.ops.object.mode_set(mode='OBJECT')
 rig['status']='UNBOUND GUIDE — bind only after final manual face/hand topology passes validation.'
 rig['bones_required']='eyes, lids, jaw, lips, brows, hands and 5x3 finger chains included'
+bpy.context.scene['character_front_axis']='+X; lateral=Y; up=Z'
 bpy.context.scene['rig_stage']='Guide created; no animation and no automatic weights.'
 bpy.ops.wm.save_as_mainfile(filepath=str(OUTFILE))
 print(f'SAVED {OUTFILE}; bones={len(rig.data.bones)}')

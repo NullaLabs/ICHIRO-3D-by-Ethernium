@@ -2,11 +2,20 @@
 
 ## Activo maestro actual
 
-`blend/Ichiro_Chibi_HighDetail_Working.blend` contiene la fuente visual de
-alta densidad. Su revisión giratoria está en
-`renders/highdetail_turntable/ichiro_chibi_highdetail_turntable_contact_sheet.png`.
-Esta fuente es la referencia de forma y detalle: no debe convertirse en la
-malla final mediante un remesh automático.
+`Ichiro_Chibi_HighDetail_Working.blend` en esta carpeta contiene la fuente
+visual de alta densidad. Las seis referencias, guías y generadores usan rutas
+relativas al proyecto. Su hoja giratoria se regenera con
+`tools/render_highdetail_turntable.py` y `tools/make_turntable_contact_sheet.py`;
+el ángulo 0° parte de la cara frontal `+X`. La hoja antigua en
+`renders/ichiro_chibi_highdetail_turntable_contact_sheet.png` precede ese ajuste
+de orientación y queda como evidencia histórica. Esta fuente es la referencia
+de forma y detalle: no debe convertirse en la malla final mediante un remesh
+automático.
+
+La copia previa al replanteamiento de workflow está en
+`Ichiro_Chibi_HEAD_HANDS_Topology_Workspace_PRE_FOUNDRY_RECOVERY_2026-10-28.blend`.
+`exports/visual_hull_v02/` contiene un bloque de silueta independiente; el OBJ
+no sustituye la fuente de alta densidad ni cuenta como forma aprobada.
 
 ## Qué está aprobado para la siguiente fase
 
@@ -32,3 +41,7 @@ Los scripts de `tools/` documentan la construcción de la envolvente 360, la
 auditoría, la guía de rig y el render de revisión. No se versionan entornos
 virtuales, cachés ni el clon de Hunyuan: son dependencias regenerables, no
 activos del personaje.
+
+## Auditoría de blockout 360 — V02
+
+El candidato de silueta está aislado en xports/visual_hull_v02/; gate geométrico PASS, pero revisión artística pendiente. Mide 0.525 × 0.575 × 1.000 m frente a la fuente (0.420 × 0.490 × 1.000 m), diferencia que se debe resolver con calibración de vistas y cámaras, no escalando el maestro. Detalle: docs/VISUAL_HULL_BLOCKOUT_V02.md. El inventario automatizado más reciente registra 177 archivos y 1 grupo de duplicados exactos; sus categorías son sugerencias por nombre/ruta, no aprobación.

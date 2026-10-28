@@ -1,17 +1,22 @@
-"""Build a reproducible orthographic visual-hull source from Ichiro Chibi references.
+"""Build an aspect-preserving, Z-up visual-hull blockout from four references.
 
-Run with the Chibi venv Python.  Outputs only into E:/WORKSPACE/Ichiro_Chibi.
-The OBJ is a locked source for Blender; it is not the finished sculpt.
+The OBJ is a coarse silhouette candidate, never the finished sculpt or a rig
+mesh. Outputs are isolated under exports/visual_hull_v02 by default.
 """
 from pathlib import Path
+import argparse
+import hashlib
 import json
+import math
 import numpy as np
 from PIL import Image, ImageFilter
 
-ROOT = Path(r"E:/WORKSPACE/Ichiro_Chibi")
+ROOT = Path(__file__).resolve().parents[1]
 REF = ROOT / "references"
-OUT = ROOT / "exports" / "visual_hull"
-OUT.mkdir(parents=True, exist_ok=True)
+DEFAULT_OUT = ROOT / "exports" / "visual_hull_v02"
+GRID_X, GRID_HEIGHT, GRID_DEPTH = 80, 120, 80
+TARGET_HEIGHT_M = 1.0
+MASK_THRESHOLD = 24
 
 VIEWS = {
     "front": REF / "ichiro_chibi_front.png",
@@ -30,7 +35,7 @@ def background_mask(img):
     bg = np.median(corners, axis=0)
     # Chibi palette differs strongly from the desaturated studio background.
     d = np.linalg.norm(a - bg, axis=2)
-    mask = (d > 24).astype(np.uint8) * 255
+    mask = (d > MASK_THRESHOLD).astype(np.uint8) * 255
     m = Image.fromarray(mask).filter(ImageFilter.MaxFilter(5)).filter(ImageFilter.MinFilter(5))
     return np.asarray(m) > 0, bg
 
@@ -47,7 +52,7 @@ def largest_component(mask):
             while stack:
                 yy,xx=stack.pop(); group.append((yy,xx))
                 for dy,dx in ((1,0),(-1,0),(0,1),(0,-1)):
-                    ny,nx=yy+dy,nx if False else xx+dx
+                    ny,nx=yy+dy,xx+dx
                     if 0 <= ny < h and 0 <= nx < w and mask[ny,nx] and not seen[ny,nx]:
                         seen[ny,nx]=True; stack.append((ny,nx))
             if len(group)>len(best): best=group
@@ -74,7 +79,7 @@ def fill_enclosed_holes(mask):
         stack.extend(((y+1,x),(y-1,x),(y,x+1),(y,x-1)))
     return ~exterior
 
-def load_masks():
+def load_masks(out):
     result={}; report={}
     for name,path in VIEWS.items():
         img=Image.open(path)
@@ -84,29 +89,34 @@ def load_masks():
         bbox=[int(xs.min()),int(ys.min()),int(xs.max()+1),int(ys.max()+1)]
         result[name]=(mask,bbox,img.size)
         debug=Image.fromarray((mask*255).astype(np.uint8))
-        debug.save(OUT / f"mask_{name}.png")
+        debug.save(out / f"mask_{name}.png")
         report[name]={"image_size":list(img.size),"background_rgb":[round(float(x),1) for x in bg],"bbox_xyxy":bbox}
     return result,report
 
 def resample_crop(mask,bbox,grid_w,grid_h):
+    """Fit silhouette to a shared canvas without changing its aspect ratio."""
     x0,y0,x1,y1=bbox
     crop=Image.fromarray((mask[y0:y1,x0:x1]*255).astype(np.uint8))
-    # preserve comparable figure occupancy while each reference stays an anchor
-    return np.asarray(crop.resize((grid_w,grid_h), Image.Resampling.NEAREST)) > 0
+    scale=min(grid_w/(x1-x0),grid_h/(y1-y0))
+    out_w=max(1,round((x1-x0)*scale))
+    out_h=max(1,round((y1-y0)*scale))
+    fitted=crop.resize((out_w,out_h),Image.Resampling.NEAREST)
+    canvas=Image.new("L",(grid_w,grid_h),0)
+    canvas.paste(fitted,((grid_w-out_w)//2,(grid_h-out_h)//2))
+    return np.asarray(canvas)>0
 
-def write_voxel_surface(occ, path, unit=1.0):
-    """Write only exposed voxel faces; deterministic portable OBJ source."""
+def write_voxel_surface(occ, path, unit):
+    """Write exposed faces in Blender coordinates: X width, Y depth, Z up."""
     nz, ny, nx = occ.shape
     vertices=[]; faces=[]; vmap={}
     def vertex(c):
         if c not in vmap:
             vmap[c]=len(vertices)+1
-            # Image rows grow downward; Blender's character up axis must grow upward.
-            # The former formulation retained image-row direction and produced an
-            # upside-down 360 volume during the front-view validation gate.
-            vertices.append(((c[0]-nx/2)*unit,
-                             (ny/2-c[1])*unit,
-                             (c[2]-nz/2)*unit))
+            # Source scene convention: Ichiro faces +X; width is Y; Z is up.
+            # Map (image_x, image_y, profile_depth) -> (front_depth, width, up).
+            vertices.append((-(c[2]-nz/2)*unit,
+                             (c[0]-nx/2)*unit,
+                             (ny/2-c[1])*unit))
         return vmap[c]
     directions=[((-1,0,0),((0,0,0),(0,1,0),(0,1,1),(0,0,1))),
                 ((1,0,0),((1,0,0),(1,0,1),(1,1,1),(1,1,0))),
@@ -118,17 +128,66 @@ def write_voxel_surface(occ, path, unit=1.0):
         for (dx,dy,dz),quad in directions:
             xx,yy,zz=x+dx,y+dy,z+dz
             if 0<=xx<nx and 0<=yy<ny and 0<=zz<nz and occ[zz,yy,xx]: continue
-            faces.append([vertex((x+a,y+b,z+c)) for a,b,c in quad])
+            faces.append(list(reversed([vertex((x+a,y+b,z+c)) for a,b,c in quad])))
     with path.open("w",encoding="utf8") as f:
         f.write("# Ichiro Chibi calibrated visual hull — locked source\n")
         for x,y,z in vertices: f.write(f"v {x:.6f} {y:.6f} {z:.6f}\n")
         for q in faces: f.write("f " + " ".join(map(str,q)) + "\n")
-    return len(vertices),len(faces)
+    edge_uses={}
+    adjacency=[set() for _ in vertices]
+    degenerate_faces=0
+    signed_volume=0.0
+    for face in faces:
+        points=[np.asarray(vertices[i-1],dtype=np.float64) for i in face]
+        area=(np.linalg.norm(np.cross(points[1]-points[0],points[2]-points[0]))+
+              np.linalg.norm(np.cross(points[2]-points[0],points[3]-points[0])))*0.5
+        if not math.isfinite(float(area)) or area<=1e-14:
+            degenerate_faces+=1
+        signed_volume+=float(np.dot(points[0],np.cross(points[1],points[2]))+
+                             np.dot(points[0],np.cross(points[2],points[3])))/6.0
+        for a,b in zip(face,face[1:]+face[:1]):
+            edge=tuple(sorted((a,b)))
+            edge_uses[edge]=edge_uses.get(edge,0)+1
+            adjacency[a-1].add(b-1); adjacency[b-1].add(a-1)
+    seen=set(); components=0
+    for start in range(len(vertices)):
+        if start in seen: continue
+        components+=1; seen.add(start); stack=[start]
+        while stack:
+            current=stack.pop()
+            for neighbor in adjacency[current]:
+                if neighbor not in seen:
+                    seen.add(neighbor); stack.append(neighbor)
+    edge_counts=list(edge_uses.values())
+    audit={
+        "unique_edges":len(edge_uses),
+        "boundary_edges":sum(count==1 for count in edge_counts),
+        "non_manifold_edges":sum(count>2 for count in edge_counts),
+        "loose_vertices":sum(not neighbors for neighbors in adjacency),
+        "degenerate_faces":degenerate_faces,
+        "connected_components":components,
+        "signed_volume_m3":signed_volume,
+        "edge_watertight":bool(edge_counts) and all(count==2 for count in edge_counts),
+        "self_intersection_test":"not performed",
+    }
+    audit["blockout_gate"]="PASS" if (
+        audit["edge_watertight"] and audit["non_manifold_edges"]==0 and
+        audit["loose_vertices"]==0 and audit["degenerate_faces"]==0 and
+        audit["connected_components"]==1 and audit["signed_volume_m3"]>0
+    ) else "BLOCKED"
+    return len(vertices),len(faces),audit
 
 def main():
-    masks,report=load_masks()
-    # 96 vertical slices, chibi proportions; x=width, y=height, z=depth.
-    nx,ny,nz=80,120,80
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir",type=Path,default=DEFAULT_OUT)
+    parser.add_argument("--target-height-m",type=float,default=TARGET_HEIGHT_M)
+    args=parser.parse_args()
+    if not np.isfinite(args.target_height_m) or args.target_height_m<=0:
+        parser.error("--target-height-m must be finite and positive")
+    out=args.output_dir.resolve()
+    out.mkdir(parents=True,exist_ok=True)
+    masks,report=load_masks(out)
+    nx,ny,nz=GRID_X,GRID_HEIGHT,GRID_DEPTH
     f=resample_crop(*masks["front"][:2],nx,ny)
     b=resample_crop(*masks["back"][:2],nx,ny)
     l=resample_crop(*masks["left"][:2],nz,ny)
@@ -139,10 +198,24 @@ def main():
     occ=np.zeros((nz,ny,nx),dtype=bool)
     for z in range(nz):
         occ[z]=width & depth[:,z][:,None]
-    vcount,fcount=write_voxel_surface(occ,OUT/"Ichiro_Chibi_VisualHull_LOCKED.obj",unit=0.025)
-    report.update({"grid_xyz":[nx,ny,nz],"occupied_voxels":int(occ.sum()),"vertices":vcount,"quad_faces":fcount,
-                   "method":"orthographic silhouette intersection; all four primary views; 8-view and Kimi board retained as validation/process references"})
-    (OUT/"visual_hull_report.json").write_text(json.dumps(report,indent=2),encoding="utf8")
+    obj_path=out/"Ichiro_Chibi_VisualHull_BLOCKOUT_V02.obj"
+    voxel_size=args.target_height_m/ny
+    vcount,fcount,mesh_audit=write_voxel_surface(occ,obj_path,unit=voxel_size)
+    if mesh_audit["blockout_gate"]!="PASS":
+        raise RuntimeError(f"visual hull geometry gate blocked: {mesh_audit}")
+    report.update({
+        "schema":"ethernium.visual_hull_report.v2",
+        "grid_xyz":[nx,ny,nz],"occupied_voxels":int(occ.sum()),
+        "vertices":vcount,"quad_faces":fcount,
+        "mesh_audit":mesh_audit,
+        "target_height_m":args.target_height_m,"voxel_size_m":voxel_size,
+        "axes":{"X":"front/back depth; face toward +X","Y":"character width","Z":"character height"},
+        "source_hashes_sha256":{name:hashlib.sha256(path.read_bytes()).hexdigest() for name,path in VIEWS.items()},
+        "method":"aspect-preserving silhouette intersection; four primary views; orthographic approximation",
+        "limitations":["coarse voxel surface; not sculpt or rig topology","camera perspective and view registration are not solved","8-view turnaround and pipeline board remain review evidence, not geometric constraints"],
+        "output_obj":obj_path.relative_to(ROOT).as_posix() if obj_path.is_relative_to(ROOT) else str(obj_path),
+    })
+    (out/"visual_hull_report_v02.json").write_text(json.dumps(report,indent=2),encoding="utf8")
     print(json.dumps(report,indent=2))
 
 if __name__ == '__main__': main()
