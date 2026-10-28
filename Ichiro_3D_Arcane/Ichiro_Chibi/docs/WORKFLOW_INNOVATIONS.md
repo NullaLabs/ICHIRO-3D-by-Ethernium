@@ -185,5 +185,26 @@ Escena local Ichiro_Chibi_Contact_Lid_Strip_Review.blend. Código, informe
 STRIP_CONTACT_REVIEW.json y renders contact_strip_* versionados. Ejecutar el
 generador con --python-exit-code 1 y el renderizador con -- --contact.
 
+## WF-004 — contorno periocular cerrado con incertidumbre explícita
+
+build_closed_eye_review.py construye tres anillos de 32 vértices (64 quads).
+El landmark 1 conserva su píxel estimado pero infiere profundidad entre 0 y 2.
+Dos pasadas de corner cutting y remuestreo distribuyen las columnas. Es una
+hipótesis autorada, no reconstrucción exacta de las imágenes canónicas.
+
+La proyección frontal admite desplazamientos X <=0.004. Los puntos rechazados
+conservan profundidad inferida y pertenecen al grupo INFERRED_DEPTH_REVIEW.
+Resultado final: 29/96 pendientes de contacto aceptado. El informe conserva
+estado por vértice; no confundir contorno cerrado con aprobación anatómica.
+
+Comprobaciones: 64 aristas de frontera (dos bucles), sin aristas de más de dos
+caras, caras sin área casi nula y normales frontales positivas. Frontal y perfil
+positivo inspeccionados: el contorno rodea el ojo, pero el tramo superior muestra
+separación y quiebros pendientes de ajuste. No hay espesor ni cierre ocular.
+
+Escena local Ichiro_Chibi_Closed_Eye_Review.blend. Renderizador: -- --closed.
+Código, CLOSED_EYE_REVIEW.json y renders closed_eye_* versionados. La escena
+fuente y los experimentos anteriores permanecen preservados.
+
 Cada bloque debe producir una mejora verificable; no añadir capas de servicios
 antes de tener un caso geométrico útil. La reconstrucción artística sigue pendiente.
