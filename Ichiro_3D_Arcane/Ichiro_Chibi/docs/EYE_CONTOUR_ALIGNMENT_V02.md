@@ -1,5 +1,8 @@
 # Diagnóstico segmentado de contornos oculares — v02
 
+> Histórico, superado para evaluar el ojo derecho por `EYE_BROW_SEPARATION_V03.md`:
+> el punto superior canónico de v02 estaba sobre la ceja, no sobre el párpado.
+
 Esta versión desglosa los mismos trazos estimados por cantos, arco superior e
 inferior. Un delta vertical negativo indica que el contorno canónico registrado
 queda por encima del borde visible trazado en el render fuente.

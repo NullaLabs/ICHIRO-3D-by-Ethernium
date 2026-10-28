@@ -1,0 +1,2104 @@
+{
+  "schema": "ethernium.face-registration-probe/0.3",
+  "method": "five fixed anchor affine 2D fit, followed by orthographic ray casts into source and warm-color candidate mask",
+  "canonical_sha256": "4afbf41666b016664925fd3fb8e8b215430e3848783e9359f7fa1a2894381703",
+  "source_landmarks_sha256": "05955ff9bd0a07580d999c2fb1e70c6b26df7d0ce96baf646acca5f7efab28b0",
+  "blend_sha256": "904cbbb045a1d0df79465310733778572445f6b39e00dbf6f1e290af708aa9b1",
+  "script_sha256": "fe2dc4ed62d391279bcb1c72269133a1c379d3f470d043b39b33b0f9794657c8",
+  "camera": {
+    "projection": "orthographic",
+    "ortho_scale": 0.32,
+    "target_z": 0.285,
+    "front": "+X"
+  },
+  "affine_canonical_to_source_pixels": {
+    "x": [
+      5.220210582625899,
+      0.7029267234759904,
+      -793.2455637037169
+    ],
+    "y": [
+      0.17868433597455757,
+      5.062993160691716,
+      -165.11242562131153
+    ]
+  },
+  "anchor_residuals": {
+    "eye_screen_left_center": {
+      "predicted_px": [
+        232.17259246914523,
+        438.1265891420679
+      ],
+      "observed_px": [
+        232,
+        439
+      ],
+      "error_px": 0.890300335369635
+    },
+    "eye_screen_right_center": {
+      "predicted_px": [
+        464.4202235525538,
+        408.2842777237224
+      ],
+      "observed_px": [
+        465,
+        408
+      ],
+      "error_px": 0.6457201818265645
+    },
+    "nose_tip": {
+      "predicted_px": [
+        359.9464387916473,
+        544.5385849535218
+      ],
+      "observed_px": [
+        354,
+        551
+      ],
+      "error_px": 8.78123104727711
+    },
+    "mouth_center": {
+      "predicted_px": [
+        357.2382115846315,
+        599.8741410491816
+      ],
+      "observed_px": [
+        366,
+        587
+      ],
+      "error_px": 15.572811049708054
+    },
+    "chin_center": {
+      "predicted_px": [
+        378.2225336020231,
+        676.1764071315064
+      ],
+      "observed_px": [
+        375,
+        682
+      ],
+      "error_px": 6.655746142555136
+    }
+  },
+  "registration_rms_px": 8.545536948022491,
+  "registration_rms_over_source_eye_spacing": 0.03635575893559538,
+  "projected_landmark_counts": {
+    "missing_skin_candidate": 5,
+    "skin_candidate_requires_art_review": 7
+  },
+  "projected_landmarks": [
+    {
+      "id": "screen_left_eye_outer_visible",
+      "canonical_px": [
+        170,
+        112
+      ],
+      "confidence": 0.5,
+      "visibility": "partly_occluded_by_fringe",
+      "source_render_px": [
+        172.9180283719968,
+        432.31914549183534
+      ],
+      "status": "missing_skin_candidate",
+      "full_hit": [
+        0.15900763869285583,
+        -0.08795081824064255,
+        0.26486703753471375
+      ],
+      "skin_candidate_hit": null,
+      "front_surface_delta_x": null
+    },
+    {
+      "id": "screen_left_eye_inner",
+      "canonical_px": [
+        193,
+        115
+      ],
+      "confidence": 0.8,
+      "visibility": "visible",
+      "source_render_px": [
+        295.0916519428206,
+        451.6178647013253
+      ],
+      "status": "skin_candidate_requires_art_review",
+      "full_hit": [
+        0.09148773550987244,
+        -0.03704514354467392,
+        0.25682589411735535
+      ],
+      "skin_candidate_hit": [
+        0.09148773550987244,
+        -0.03704514354467392,
+        0.25682589411735535
+      ],
+      "front_surface_delta_x": 0.0
+    },
+    {
+      "id": "screen_left_eye_upper_visible",
+      "canonical_px": [
+        181,
+        112
+      ],
+      "confidence": 0.55,
+      "visibility": "partly_occluded_by_fringe",
+      "source_render_px": [
+        230.34034478088188,
+        434.2846731875554
+      ],
+      "status": "missing_skin_candidate",
+      "full_hit": [
+        0.08380305767059326,
+        -0.06402485817670822,
+        0.2640480399131775
+      ],
+      "skin_candidate_hit": null,
+      "front_surface_delta_x": null
+    },
+    {
+      "id": "screen_left_eye_lower",
+      "canonical_px": [
+        182,
+        119
+      ],
+      "confidence": 0.78,
+      "visibility": "visible",
+      "source_render_px": [
+        240.4810424278396,
+        469.9043096483721
+      ],
+      "status": "skin_candidate_requires_art_review",
+      "full_hit": [
+        0.07938238978385925,
+        -0.059799566864967346,
+        0.24920654296875
+      ],
+      "skin_candidate_hit": [
+        0.07938238978385925,
+        -0.059799566864967346,
+        0.24920654296875
+      ],
+      "front_surface_delta_x": 0.0
+    },
+    {
+      "id": "screen_right_eye_inner",
+      "canonical_px": [
+        214,
+        110
+      ],
+      "confidence": 0.82,
+      "visibility": "visible",
+      "source_render_px": [
+        401.2014405605844,
+        430.0552699533325
+      ],
+      "status": "skin_candidate_requires_art_review",
+      "full_hit": [
+        0.0918838381767273,
+        0.007167266681790352,
+        0.2658103108406067
+      ],
+      "skin_candidate_hit": [
+        0.0918838381767273,
+        0.007167266681790352,
+        0.2658103108406067
+      ],
+      "front_surface_delta_x": 0.0
+    },
+    {
+      "id": "screen_right_eye_outer",
+      "canonical_px": [
+        239,
+        101
+      ],
+      "confidence": 0.82,
+      "visibility": "visible",
+      "source_render_px": [
+        525.3803646149481,
+        388.95543990647093
+      ],
+      "status": "missing_skin_candidate",
+      "full_hit": [
+        0.07236698269844055,
+        0.05890848487615585,
+        0.282935231924057
+      ],
+      "skin_candidate_hit": null,
+      "front_surface_delta_x": null
+    },
+    {
+      "id": "screen_right_eye_upper",
+      "canonical_px": [
+        226,
+        101
+      ],
+      "confidence": 0.83,
+      "visibility": "visible",
+      "source_render_px": [
+        457.5176270408115,
+        386.63254353880177
+      ],
+      "status": "missing_skin_candidate",
+      "full_hit": [
+        0.09759452939033508,
+        0.030632345005869865,
+        0.2839030921459198
+      ],
+      "skin_candidate_hit": null,
+      "front_surface_delta_x": null
+    },
+    {
+      "id": "screen_right_eye_lower",
+      "canonical_px": [
+        226,
+        114
+      ],
+      "confidence": 0.84,
+      "visibility": "visible",
+      "source_render_px": [
+        466.65567444599924,
+        452.4514546277941
+      ],
+      "status": "skin_candidate_requires_art_review",
+      "full_hit": [
+        0.0848253071308136,
+        0.03443986549973488,
+        0.25647854804992676
+      ],
+      "skin_candidate_hit": [
+        0.0848253071308136,
+        0.03443986549973488,
+        0.25647854804992676
+      ],
+      "front_surface_delta_x": 0.0
+    },
+    {
+      "id": "nose_tip",
+      "canonical_px": [
+        203,
+        133
+      ],
+      "confidence": 0.86,
+      "visibility": "visible",
+      "source_render_px": [
+        359.9464387916473,
+        544.5385849535218
+      ],
+      "status": "skin_candidate_requires_art_review",
+      "full_hit": [
+        0.12140393257141113,
+        -0.010022317059338093,
+        0.2181089222431183
+      ],
+      "skin_candidate_hit": [
+        0.12140393257141113,
+        -0.010022317059338093,
+        0.2181089222431183
+      ],
+      "front_surface_delta_x": 0.0
+    },
+    {
+      "id": "mouth_left_corner",
+      "canonical_px": [
+        183,
+        149
+      ],
+      "confidence": 0.8,
+      "visibility": "visible",
+      "source_render_px": [
+        266.78905471474536,
+        621.9727888050982
+      ],
+      "status": "skin_candidate_requires_art_review",
+      "full_hit": [
+        0.06916847825050354,
+        -0.04883789271116257,
+        0.18584467470645905
+      ],
+      "skin_candidate_hit": [
+        0.06916847825050354,
+        -0.04883789271116257,
+        0.18584467470645905
+      ],
+      "front_surface_delta_x": 0.0
+    },
+    {
+      "id": "mouth_right_corner",
+      "canonical_px": [
+        219,
+        139
+      ],
+      "confidence": 0.8,
+      "visibility": "visible",
+      "source_render_px": [
+        447.6873684545176,
+        577.775493293265
+      ],
+      "status": "skin_candidate_requires_art_review",
+      "full_hit": [
+        0.08347877860069275,
+        0.026536403223872185,
+        0.2042602151632309
+      ],
+      "skin_candidate_hit": [
+        0.08347877860069275,
+        0.026536403223872185,
+        0.2042602151632309
+      ],
+      "front_surface_delta_x": 0.0
+    },
+    {
+      "id": "chin_center",
+      "canonical_px": [
+        203,
+        159
+      ],
+      "confidence": 0.78,
+      "visibility": "visible",
+      "source_render_px": [
+        378.2225336020231,
+        676.1764071315064
+      ],
+      "status": "missing_skin_candidate",
+      "full_hit": [
+        0.08488374948501587,
+        -0.002407277701422572,
+        0.1632598340511322
+      ],
+      "skin_candidate_hit": null,
+      "front_surface_delta_x": null
+    }
+  ],
+  "projected_eye_contour_counts": {
+    "missing_skin_candidate": 13,
+    "skin_candidate_requires_art_review": 7
+  },
+  "projected_eye_contours": {
+    "screen_left_partial": [
+      {
+        "index": 0,
+        "canonical_px": [
+          170,
+          112
+        ],
+        "source_render_px": [
+          172.9180283719968,
+          432.31914549183534
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.15900763869285583,
+          -0.08795081824064255,
+          0.26486703753471375
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 1,
+        "canonical_px": [
+          174,
+          111
+        ],
+        "source_render_px": [
+          193.09594397902447,
+          427.9708896750419
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.07514336705207825,
+          -0.07954335957765579,
+          0.2666788101196289
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 2,
+        "canonical_px": [
+          178,
+          111
+        ],
+        "source_render_px": [
+          213.97678630952817,
+          428.68562701894007
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.07964596152305603,
+          -0.07084300369024277,
+          0.26638099551200867
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 3,
+        "canonical_px": [
+          183,
+          112
+        ],
+        "source_render_px": [
+          240.78076594613367,
+          434.6420418595046
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.08434319496154785,
+          -0.05967468023300171,
+          0.26389914751052856
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 4,
+        "canonical_px": [
+          188,
+          113
+        ],
+        "source_render_px": [
+          267.58474558273906,
+          440.59845670006916
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.08965188264846802,
+          -0.04850635677576065,
+          0.26141729950904846
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 5,
+        "canonical_px": [
+          193,
+          115
+        ],
+        "source_render_px": [
+          295.0916519428206,
+          451.6178647013253
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.09148773550987244,
+          -0.03704514354467392,
+          0.25682589411735535
+        ],
+        "skin_candidate_hit": [
+          0.09148773550987244,
+          -0.03704514354467392,
+          0.25682589411735535
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 6,
+        "canonical_px": [
+          190,
+          118
+        ],
+        "source_render_px": [
+          281.53980036537087,
+          466.2707911754768
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.08417797088623047,
+          -0.04269174858927727,
+          0.2507205009460449
+        ],
+        "skin_candidate_hit": [
+          0.08417797088623047,
+          -0.04269174858927727,
+          0.2507205009460449
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 7,
+        "canonical_px": [
+          185,
+          120
+        ],
+        "source_render_px": [
+          256.8446008991932,
+          475.50335581698744
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.08178636431694031,
+          -0.0529814176261425,
+          0.24687360227108002
+        ],
+        "skin_candidate_hit": [
+          0.08178636431694031,
+          -0.0529814176261425,
+          0.24687360227108002
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 8,
+        "canonical_px": [
+          179,
+          119
+        ],
+        "source_render_px": [
+          224.82041067996192,
+          469.3682566404484
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.07672542333602905,
+          -0.06632483005523682,
+          0.24942989647388458
+        ],
+        "skin_candidate_hit": [
+          0.07672542333602905,
+          -0.06632483005523682,
+          0.24942989647388458
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 9,
+        "canonical_px": [
+          173,
+          116
+        ],
+        "source_render_px": [
+          191.39036701377847,
+          453.1071711425259
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.06965646147727966,
+          -0.08025401085615158,
+          0.25620535016059875
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      }
+    ],
+    "screen_right": [
+      {
+        "index": 0,
+        "canonical_px": [
+          214,
+          110
+        ],
+        "source_render_px": [
+          401.2014405605844,
+          430.0552699533325
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.0918838381767273,
+          0.007167266681790352,
+          0.2658103108406067
+        ],
+        "skin_candidate_hit": [
+          0.0918838381767273,
+          0.007167266681790352,
+          0.2658103108406067
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 1,
+        "canonical_px": [
+          217,
+          107
+        ],
+        "source_render_px": [
+          414.7532921380341,
+          415.402343479181
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.0944090187549591,
+          0.0128138717263937,
+          0.2719157040119171
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 2,
+        "canonical_px": [
+          221,
+          104
+        ],
+        "source_render_px": [
+          433.52535429810973,
+          400.9281013410041
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.09758296608924866,
+          0.020635563880205154,
+          0.2779466211795807
+        ],
+        "skin_candidate_hit": [
+          0.09758296608924866,
+          0.020635563880205154,
+          0.2779466211795807
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 3,
+        "canonical_px": [
+          226,
+          101
+        ],
+        "source_render_px": [
+          457.5176270408115,
+          386.63254353880177
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.09759452939033508,
+          0.030632345005869865,
+          0.2839030921459198
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 4,
+        "canonical_px": [
+          232,
+          100
+        ],
+        "source_render_px": [
+          488.13596381309094,
+          382.6416563939573
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.09473511576652527,
+          0.04338998347520828,
+          0.28556597232818604
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 5,
+        "canonical_px": [
+          239,
+          101
+        ],
+        "source_render_px": [
+          525.3803646149481,
+          388.95543990647093
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.07236698269844055,
+          0.05890848487615585,
+          0.282935231924057
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 6,
+        "canonical_px": [
+          236,
+          107
+        ],
+        "source_render_px": [
+          513.9372932079264,
+          418.7973458626975
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.07807111740112305,
+          0.05414053797721863,
+          0.27050110697746277
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 7,
+        "canonical_px": [
+          232,
+          111
+        ],
+        "source_render_px": [
+          495.86815777132665,
+          438.33458116156623
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.0820854902267456,
+          0.0466117337346077,
+          0.2623606026172638
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 8,
+        "canonical_px": [
+          226,
+          114
+        ],
+        "source_render_px": [
+          466.65567444599924,
+          452.4514546277941
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.0848253071308136,
+          0.03443986549973488,
+          0.25647854804992676
+        ],
+        "skin_candidate_hit": [
+          0.0848253071308136,
+          0.03443986549973488,
+          0.25647854804992676
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 9,
+        "canonical_px": [
+          220,
+          113
+        ],
+        "source_render_px": [
+          434.6314842267677,
+          446.31635545125505
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.08767271041870117,
+          0.021096451207995415,
+          0.2590348422527313
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      }
+    ]
+  },
+  "projected_brow_contours": {
+    "screen_left_partial": [
+      {
+        "index": 0,
+        "canonical_px": [
+          159,
+          105
+        ],
+        "source_render_px": [
+          110.5752248987801,
+          394.9126656712732
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.18142297863960266,
+          -0.11392699182033539,
+          0.28045305609703064
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 1,
+        "canonical_px": [
+          166,
+          104
+        ],
+        "source_render_px": [
+          146.41377225368535,
+          391.10046286240345
+        ],
+        "status": "candidate_occluded_by_front_surface",
+        "full_hit": [
+          0.16747501492500305,
+          -0.09899426251649857,
+          0.28204146027565
+        ],
+        "skin_candidate_hit": [
+          0.0662682056427002,
+          -0.09899426251649857,
+          0.28204146027565
+        ],
+        "front_surface_delta_x": 0.10120680928230286
+      },
+      {
+        "index": 2,
+        "canonical_px": [
+          176,
+          105
+        ],
+        "source_render_px": [
+          199.31880480342045,
+          397.95029938284074
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.1026422381401062,
+          -0.07695049792528152,
+          0.2791873812675476
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 3,
+        "canonical_px": [
+          185,
+          107
+        ],
+        "source_render_px": [
+          247.70655349400545,
+          409.6844447279951
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.11248862743377686,
+          -0.056788936257362366,
+          0.27429816126823425
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 4,
+        "canonical_px": [
+          193,
+          110
+        ],
+        "source_render_px": [
+          291.5770183254406,
+          426.3028988978667
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.11539879441261292,
+          -0.03850957751274109,
+          0.26737380027770996
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 5,
+        "canonical_px": [
+          190,
+          113
+        ],
+        "source_render_px": [
+          278.02516674799085,
+          440.95582537201824
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.08971905708312988,
+          -0.04415617883205414,
+          0.26126840710639954
+        ],
+        "skin_candidate_hit": [
+          0.08971905708312988,
+          -0.04415617883205414,
+          0.26126840710639954
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 6,
+        "canonical_px": [
+          180,
+          111
+        ],
+        "source_render_px": [
+          224.41720747477996,
+          429.04299569088926
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.08306977152824402,
+          -0.06649283319711685,
+          0.26623207330703735
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 7,
+        "canonical_px": [
+          170,
+          110
+        ],
+        "source_render_px": [
+          171.51217492504486,
+          422.19315917045196
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.1597810983657837,
+          -0.0885365903377533,
+          0.26908618211746216
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 8,
+        "canonical_px": [
+          162,
+          109
+        ],
+        "source_render_px": [
+          129.04756354056167,
+          415.70069132196375
+        ],
+        "status": "candidate_occluded_by_front_surface",
+        "full_hit": [
+          0.18024668097496033,
+          -0.10623018443584442,
+          0.27179136872291565
+        ],
+        "skin_candidate_hit": [
+          0.01671352982521057,
+          -0.10623018443584442,
+          0.27179136872291565
+        ],
+        "front_surface_delta_x": 0.16353315114974976
+      }
+    ],
+    "screen_right": [
+      {
+        "index": 0,
+        "canonical_px": [
+          207,
+          108
+        ],
+        "source_render_px": [
+          363.25411303525107,
+          418.6784932801271
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.11345076560974121,
+          -0.008644119836390018,
+          0.2705506384372711
+        ],
+        "skin_candidate_hit": [
+          0.11345076560974121,
+          -0.008644119836390018,
+          0.2705506384372711
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 1,
+        "canonical_px": [
+          213,
+          103
+        ],
+        "source_render_px": [
+          391.06074291362665,
+          394.4356334925159
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.11893981695175171,
+          0.0029419763013720512,
+          0.2806518077850342
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 2,
+        "canonical_px": [
+          221,
+          97
+        ],
+        "source_render_px": [
+          428.6048672337779,
+          365.48714921616204
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.11475947499275208,
+          0.018585361540317535,
+          0.2927137017250061
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 3,
+        "canonical_px": [
+          230,
+          92
+        ],
+        "source_render_px": [
+          472.07212886003117,
+          341.7803424364746
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.1080966591835022,
+          0.036696720868349075,
+          0.3025915324687958
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 4,
+        "canonical_px": [
+          237,
+          92
+        ],
+        "source_render_px": [
+          508.61360293841244,
+          343.0311327882964
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.09258878231048584,
+          0.05192233622074127,
+          0.30207034945487976
+        ],
+        "skin_candidate_hit": [
+          0.09258878231048584,
+          0.05192233622074127,
+          0.30207034945487976
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 5,
+        "canonical_px": [
+          240,
+          95
+        ],
+        "source_render_px": [
+          526.3830148567181,
+          358.75616527829527
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.07829552888870239,
+          0.059326257556676865,
+          0.29551827907562256
+        ],
+        "skin_candidate_hit": [
+          0.07829552888870239,
+          0.059326257556676865,
+          0.29551827907562256
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 6,
+        "canonical_px": [
+          233,
+          98
+        ],
+        "source_render_px": [
+          491.9503209487648,
+          372.6943544085484
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.09155052900314331,
+          0.04497930034995079,
+          0.2897107005119324
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 7,
+        "canonical_px": [
+          225,
+          101
+        ],
+        "source_render_px": [
+          452.2974164581856,
+          386.4538592028272
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.10003411769866943,
+          0.02845725603401661,
+          0.28397756814956665
+        ],
+        "skin_candidate_hit": [
+          0.10003411769866943,
+          0.02845725603401661,
+          0.28397756814956665
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 8,
+        "canonical_px": [
+          217,
+          105
+        ],
+        "source_render_px": [
+          413.34743869108206,
+          405.27635715779763
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.11497476696968079,
+          0.012228099629282951,
+          0.2761348485946655
+        ],
+        "skin_candidate_hit": [
+          0.10572829842567444,
+          0.012228099629282951,
+          0.2761348485946655
+        ],
+        "front_surface_delta_x": 0.009246468544006348
+      },
+      {
+        "index": 9,
+        "canonical_px": [
+          211,
+          109
+        ],
+        "source_render_px": [
+          384.8378820892308,
+          424.45622378471717
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.10322204232215881,
+          0.0003491175302769989,
+          0.2681432366371155
+        ],
+        "skin_candidate_hit": [
+          0.10322204232215881,
+          0.0003491175302769989,
+          0.2681432366371155
+        ],
+        "front_surface_delta_x": 0.0
+      }
+    ]
+  },
+  "expanded_right_eye_ring_counts": {
+    "1.0": {
+      "skin_candidate_requires_art_review": 3,
+      "missing_skin_candidate": 7
+    },
+    "1.04": {
+      "skin_candidate_requires_art_review": 4,
+      "missing_skin_candidate": 6
+    },
+    "1.08": {
+      "skin_candidate_requires_art_review": 4,
+      "candidate_occluded_by_front_surface": 1,
+      "missing_skin_candidate": 5
+    },
+    "1.12": {
+      "skin_candidate_requires_art_review": 7,
+      "missing_skin_candidate": 3
+    }
+  },
+  "expanded_right_eye_rings": {
+    "1.0": [
+      {
+        "index": 0,
+        "scale_from_eye_center": 1.0,
+        "canonical_px": [
+          214.0,
+          110.0
+        ],
+        "source_render_px": [
+          401.2014405605844,
+          430.0552699533325
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.0918838381767273,
+          0.007167266681790352,
+          0.2658103108406067
+        ],
+        "skin_candidate_hit": [
+          0.0918838381767273,
+          0.007167266681790352,
+          0.2658103108406067
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 1,
+        "scale_from_eye_center": 1.0,
+        "canonical_px": [
+          217.0,
+          107.0
+        ],
+        "source_render_px": [
+          414.7532921380341,
+          415.402343479181
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.0944090187549591,
+          0.0128138717263937,
+          0.2719157040119171
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 2,
+        "scale_from_eye_center": 1.0,
+        "canonical_px": [
+          221.0,
+          104.0
+        ],
+        "source_render_px": [
+          433.52535429810973,
+          400.9281013410041
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.09758296608924866,
+          0.020635563880205154,
+          0.2779466211795807
+        ],
+        "skin_candidate_hit": [
+          0.09758296608924866,
+          0.020635563880205154,
+          0.2779466211795807
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 3,
+        "scale_from_eye_center": 1.0,
+        "canonical_px": [
+          226.0,
+          101.0
+        ],
+        "source_render_px": [
+          457.5176270408115,
+          386.63254353880177
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.09759452939033508,
+          0.030632345005869865,
+          0.2839030921459198
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 4,
+        "scale_from_eye_center": 1.0,
+        "canonical_px": [
+          232.0,
+          100.0
+        ],
+        "source_render_px": [
+          488.13596381309094,
+          382.6416563939573
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.09473511576652527,
+          0.04338998347520828,
+          0.28556597232818604
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 5,
+        "scale_from_eye_center": 1.0,
+        "canonical_px": [
+          239.0,
+          101.0
+        ],
+        "source_render_px": [
+          525.3803646149481,
+          388.95543990647093
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.07236698269844055,
+          0.05890848487615585,
+          0.282935231924057
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 6,
+        "scale_from_eye_center": 1.0,
+        "canonical_px": [
+          236.0,
+          107.0
+        ],
+        "source_render_px": [
+          513.9372932079264,
+          418.7973458626975
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.07807111740112305,
+          0.05414053797721863,
+          0.27050110697746277
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 7,
+        "scale_from_eye_center": 1.0,
+        "canonical_px": [
+          232.0,
+          111.0
+        ],
+        "source_render_px": [
+          495.86815777132665,
+          438.33458116156623
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.0820854902267456,
+          0.0466117337346077,
+          0.2623606026172638
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 8,
+        "scale_from_eye_center": 1.0,
+        "canonical_px": [
+          226.0,
+          114.0
+        ],
+        "source_render_px": [
+          466.65567444599924,
+          452.4514546277941
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.0848253071308136,
+          0.03443986549973488,
+          0.25647854804992676
+        ],
+        "skin_candidate_hit": [
+          0.0848253071308136,
+          0.03443986549973488,
+          0.25647854804992676
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 9,
+        "scale_from_eye_center": 1.0,
+        "canonical_px": [
+          220.0,
+          113.0
+        ],
+        "source_render_px": [
+          434.6314842267677,
+          446.31635545125505
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.08767271041870117,
+          0.021096451207995415,
+          0.2590348422527313
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      }
+    ],
+    "1.04": [
+      {
+        "index": 0,
+        "scale_from_eye_center": 1.04,
+        "canonical_px": [
+          213.508,
+          110.128
+        ],
+        "source_render_px": [
+          398.72307157453747,
+          430.61542038460163
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.09201648831367493,
+          0.006134612951427698,
+          0.26557689905166626
+        ],
+        "skin_candidate_hit": [
+          0.09201648831367493,
+          0.006134612951427698,
+          0.26557689905166626
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 1,
+        "scale_from_eye_center": 1.04,
+        "canonical_px": [
+          216.628,
+          107.008
+        ],
+        "source_render_px": [
+          412.81699721508517,
+          415.376376851484
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.09441658854484558,
+          0.012007081881165504,
+          0.27192652225494385
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 2,
+        "scale_from_eye_center": 1.04,
+        "canonical_px": [
+          220.788,
+          103.888
+        ],
+        "source_render_px": [
+          432.33994186156406,
+          400.3231650277801
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.09763932228088379,
+          0.020141642540693283,
+          0.2781986892223358
+        ],
+        "skin_candidate_hit": [
+          0.09763932228088379,
+          0.020141642540693283,
+          0.2781986892223358
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 3,
+        "scale_from_eye_center": 1.04,
+        "canonical_px": [
+          225.988,
+          100.768
+        ],
+        "source_render_px": [
+          457.29190551397346,
+          385.45578491348954
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.09822854399681091,
+          0.030538294464349747,
+          0.28439342975616455
+        ],
+        "skin_candidate_hit": [
+          0.09822854399681091,
+          0.030538294464349747,
+          0.28439342975616455
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 4,
+        "scale_from_eye_center": 1.04,
+        "canonical_px": [
+          232.228,
+          99.728
+        ],
+        "source_render_px": [
+          489.13497575714405,
+          381.30526228285134
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.09439530968666077,
+          0.04380623996257782,
+          0.28612279891967773
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 5,
+        "scale_from_eye_center": 1.04,
+        "canonical_px": [
+          239.508,
+          100.768
+        ],
+        "source_render_px": [
+          527.8691525910756,
+          387.8715971358656
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.07196733355522156,
+          0.0599454790353775,
+          0.28338682651519775
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 6,
+        "scale_from_eye_center": 1.04,
+        "canonical_px": [
+          236.388,
+          107.008
+        ],
+        "source_render_px": [
+          515.9683583277729,
+          418.90717933034125
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.07776176929473877,
+          0.05498681589961052,
+          0.27045533061027527
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 7,
+        "scale_from_eye_center": 1.04,
+        "canonical_px": [
+          232.228,
+          111.168
+        ],
+        "source_render_px": [
+          497.17645747370943,
+          439.22590404116465
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.08176425099372864,
+          0.04715685546398163,
+          0.26198920607566833
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 8,
+        "scale_from_eye_center": 1.04,
+        "canonical_px": [
+          225.988,
+          114.288
+        ],
+        "source_render_px": [
+          466.79547481536883,
+          453.9074524460416
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.08504217863082886,
+          0.03449811413884163,
+          0.25587189197540283
+        ],
+        "skin_candidate_hit": [
+          0.08504217863082886,
+          0.03449811413884163,
+          0.25587189197540283
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 9,
+        "scale_from_eye_center": 1.04,
+        "canonical_px": [
+          219.748,
+          113.248
+        ],
+        "source_render_px": [
+          433.49031698736803,
+          447.5269493024409
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.0878455638885498,
+          0.02062096633017063,
+          0.2585304379463196
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      }
+    ],
+    "1.08": [
+      {
+        "index": 0,
+        "scale_from_eye_center": 1.08,
+        "canonical_px": [
+          213.016,
+          110.256
+        ],
+        "source_render_px": [
+          396.2447025884903,
+          431.1755708158705
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.09255912899971008,
+          0.005101959221065044,
+          0.2653435170650482
+        ],
+        "skin_candidate_hit": [
+          0.09255912899971008,
+          0.005101959221065044,
+          0.2653435170650482
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 1,
+        "scale_from_eye_center": 1.08,
+        "canonical_px": [
+          216.256,
+          107.016
+        ],
+        "source_render_px": [
+          410.8807022921362,
+          415.350410223787
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.0943777859210968,
+          0.011200292967259884,
+          0.2719373404979706
+        ],
+        "skin_candidate_hit": [
+          0.0943777859210968,
+          0.011200292967259884,
+          0.2719373404979706
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 2,
+        "scale_from_eye_center": 1.08,
+        "canonical_px": [
+          220.576,
+          103.776
+        ],
+        "source_render_px": [
+          431.1545294250177,
+          399.71822871455595
+        ],
+        "status": "candidate_occluded_by_front_surface",
+        "full_hit": [
+          0.10987415909767151,
+          0.019647721201181412,
+          0.27845072746276855
+        ],
+        "skin_candidate_hit": [
+          0.09802761673927307,
+          0.019647721201181412,
+          0.27845072746276855
+        ],
+        "front_surface_delta_x": 0.011846542358398438
+      },
+      {
+        "index": 3,
+        "scale_from_eye_center": 1.08,
+        "canonical_px": [
+          225.976,
+          100.536
+        ],
+        "source_render_px": [
+          457.06618398713545,
+          384.2790262881774
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.09926921129226685,
+          0.030444243922829628,
+          0.2848837375640869
+        ],
+        "skin_candidate_hit": [
+          0.09926921129226685,
+          0.030444243922829628,
+          0.2848837375640869
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 4,
+        "scale_from_eye_center": 1.08,
+        "canonical_px": [
+          232.456,
+          99.456
+        ],
+        "source_render_px": [
+          490.13398770119716,
+          379.9688681717455
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.0939842164516449,
+          0.04422249644994736,
+          0.28667962551116943
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 5,
+        "scale_from_eye_center": 1.08,
+        "canonical_px": [
+          240.016,
+          100.536
+        ],
+        "source_render_px": [
+          530.3579405672031,
+          386.7877543652602
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.0712718665599823,
+          0.06098247691988945,
+          0.2838384211063385
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 6,
+        "scale_from_eye_center": 1.08,
+        "canonical_px": [
+          236.776,
+          107.016
+        ],
+        "source_render_px": [
+          517.9994234476196,
+          419.0170127979849
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.07725262641906738,
+          0.05583309382200241,
+          0.27040958404541016
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 7,
+        "scale_from_eye_center": 1.08,
+        "canonical_px": [
+          232.456,
+          111.336
+        ],
+        "source_render_px": [
+          498.484757176092,
+          440.11722692076296
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.08131811022758484,
+          0.04770198091864586,
+          0.2616178095340729
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 8,
+        "scale_from_eye_center": 1.08,
+        "canonical_px": [
+          225.976,
+          114.576
+        ],
+        "source_render_px": [
+          466.93527518473843,
+          455.363450264289
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.08528196811676025,
+          0.03455636650323868,
+          0.2552652359008789
+        ],
+        "skin_candidate_hit": [
+          0.08528196811676025,
+          0.03455636650323868,
+          0.2552652359008789
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 9,
+        "scale_from_eye_center": 1.08,
+        "canonical_px": [
+          219.496,
+          113.496
+        ],
+        "source_render_px": [
+          432.34914974796857,
+          448.7375431536268
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.08798080682754517,
+          0.0201454795897007,
+          0.25802603363990784
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      }
+    ],
+    "1.12": [
+      {
+        "index": 0,
+        "scale_from_eye_center": 1.12,
+        "canonical_px": [
+          212.524,
+          110.384
+        ],
+        "source_render_px": [
+          393.7663336024434,
+          431.7357212471396
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.09349167346954346,
+          0.004069305490702391,
+          0.2651101052761078
+        ],
+        "skin_candidate_hit": [
+          0.09349167346954346,
+          0.004069305490702391,
+          0.2651101052761078
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 1,
+        "scale_from_eye_center": 1.12,
+        "canonical_px": [
+          215.884,
+          107.024
+        ],
+        "source_render_px": [
+          408.94440736918705,
+          415.32444359608996
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.0944119393825531,
+          0.010393503122031689,
+          0.2719481587409973
+        ],
+        "skin_candidate_hit": [
+          0.0944119393825531,
+          0.010393503122031689,
+          0.2719481587409973
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 2,
+        "scale_from_eye_center": 1.12,
+        "canonical_px": [
+          220.364,
+          103.664
+        ],
+        "source_render_px": [
+          429.9691169884718,
+          399.11329240133193
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.11191403865814209,
+          0.01915379799902439,
+          0.2787027955055237
+        ],
+        "skin_candidate_hit": [
+          0.10682553052902222,
+          0.01915379799902439,
+          0.2787027955055237
+        ],
+        "front_surface_delta_x": 0.005088508129119873
+      },
+      {
+        "index": 3,
+        "scale_from_eye_center": 1.12,
+        "canonical_px": [
+          225.964,
+          100.304
+        ],
+        "source_render_px": [
+          456.84046246029743,
+          383.1022676628652
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.10023677349090576,
+          0.03035019338130951,
+          0.2853740453720093
+        ],
+        "skin_candidate_hit": [
+          0.10023677349090576,
+          0.03035019338130951,
+          0.2853740453720093
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 4,
+        "scale_from_eye_center": 1.12,
+        "canonical_px": [
+          232.684,
+          99.184
+        ],
+        "source_render_px": [
+          491.13299964525027,
+          378.63247406063954
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.09354087710380554,
+          0.044638749212026596,
+          0.2872364819049835
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 5,
+        "scale_from_eye_center": 1.12,
+        "canonical_px": [
+          240.524,
+          100.304
+        ],
+        "source_render_px": [
+          532.8467285433305,
+          385.70391159465476
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.06993299722671509,
+          0.0620194710791111,
+          0.28429004549980164
+        ],
+        "skin_candidate_hit": [
+          0.06993299722671509,
+          0.0620194710791111,
+          0.28429004549980164
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 6,
+        "scale_from_eye_center": 1.12,
+        "canonical_px": [
+          237.164,
+          107.024
+        ],
+        "source_render_px": [
+          520.0304885674661,
+          419.1268462656285
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.07650700211524963,
+          0.0566793717443943,
+          0.27036380767822266
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 7,
+        "scale_from_eye_center": 1.12,
+        "canonical_px": [
+          232.684,
+          111.504
+        ],
+        "source_render_px": [
+          499.79305687847454,
+          441.0085498003615
+        ],
+        "status": "missing_skin_candidate",
+        "full_hit": [
+          0.08071687817573547,
+          0.04824710637331009,
+          0.2612464427947998
+        ],
+        "skin_candidate_hit": null,
+        "front_surface_delta_x": null
+      },
+      {
+        "index": 8,
+        "scale_from_eye_center": 1.12,
+        "canonical_px": [
+          225.964,
+          114.864
+        ],
+        "source_render_px": [
+          467.0750755541078,
+          456.8194480825366
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.08550205826759338,
+          0.03461461514234543,
+          0.2546585500240326
+        ],
+        "skin_candidate_hit": [
+          0.08550205826759338,
+          0.03461461514234543,
+          0.2546585500240326
+        ],
+        "front_surface_delta_x": 0.0
+      },
+      {
+        "index": 9,
+        "scale_from_eye_center": 1.12,
+        "canonical_px": [
+          219.244,
+          113.744
+        ],
+        "source_render_px": [
+          431.2079825085689,
+          449.9481370048129
+        ],
+        "status": "skin_candidate_requires_art_review",
+        "full_hit": [
+          0.08805534243583679,
+          0.019669992849230766,
+          0.2575215995311737
+        ],
+        "skin_candidate_hit": [
+          0.08805534243583679,
+          0.019669992849230766,
+          0.2575215995311737
+        ],
+        "front_surface_delta_x": 0.0
+      }
+    ]
+  },
+  "decision": "DIAGNOSTIC_MAPPING_ONLY__NO_GEOMETRY_GENERATED",
+  "limitations": [
+    "manual correspondences and partial occlusion",
+    "unknown canonical camera model",
+    "warm-color skin mask is not semantic truth",
+    "ray hits do not validate anatomy or topology"
+  ]
+}

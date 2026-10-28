@@ -297,7 +297,7 @@ métrica aproximada. La anotación aún no calibra cámaras ni permite transferi
 coordenadas a 3D. Evidencia y código: canonical_face_landmarks_v02.json,
 FACE_PROPORTION_COMPARISON_V02.json y tools/compare_face_proportions.py.
 
-## WF-012 — validar el contorno ocular además de sus centros
+## WF-012 — validar el contorno ocular además de sus centros (SUPERSEDIDO)
 
 La afinidad de centros faciales no conserva el borde de los ojos. Dos trazas
 manuales del render dan RMS de 16.10 px (6.85% del espacio interocular) en el
@@ -320,7 +320,7 @@ cámara ni transferencia aprobada; no se creó ni guardó geometría. Informe:
 FACE_REGISTRATION_PROBE_V02.md y JSON. Primero se necesita máscara facial
 etiquetada y validación local de contornos/perfiles.
 
-## WF-013 — localizar el error por arco sin mover el ojo completo
+## WF-013 — localizar el error por arco sin mover el ojo completo (SUPERSEDIDO)
 
 La comparación segmentada (docs/EYE_CONTOUR_ALIGNMENT_V02.md) muestra que el
 ojo derecho tiene cantos a 5.70 px RMS y arco inferior a 5.38 px, pero el arco
@@ -329,3 +329,29 @@ parcial, el arco superior queda a 39.42 px RMS; su lectura tiene baja confianza
 por cabello. Siguiente corrección: revisar ceja y arco superior de manera local,
 con el ojo y los cantos como anclas. No escalar ni trasladar el globo completo.
 No se construyó geometría.
+
+## WF-014 — separar el arco ocular de la ceja y recalcular
+
+La inspección de píxel encontró que el punto superior derecho v02 `[228,96]`
+estaba en la ceja. v03 lo mueve al margen ocular visible `[226,101]`, separa la
+curva de ceja y rebaja la confianza del arco izquierdo ocluido. Con los mismos
+anclajes, RMS del contorno derecho baja de 16.10 a 5.45 px; su arco superior de
+24.56 a 5.39 px. El anterior desfase era principalmente clasificación errónea
+del landmark; no usarlo para deformar cabeza/ceja. El derecho ya alinea, pero la
+piel candidata aún no cubre todos los puntos. No generar parche hasta etiquetar
+la región facial. Evidencia: `docs/EYE_BROW_SEPARATION_V03.md`, landmarks v03,
+registro v03 y lámina de separación.
+
+
+## WF-015 — guías 3D reversibles de ojo y ceja
+
+Los impactos 3D v03 se dibujan como cuatro curvas finas en la superficie fuente:
+ojo derecho cerrado, segmento visible del ojo izquierdo y cejas derecha/izquierda
+por separado. La revisión frontal y oblicua confirma que el contorno derecho
+cae sobre el párpado; la oclusión izquierda se conserva como segmentos abiertos.
+Las guías son solo viewport, no se renderizan y no cuentan como geometría de
+párpado riggeable. En la sesión viva, la carga de otro `.blend` está bloqueada
+por el modo seguro del MCP, así que las curvas se reconstruyeron desde los
+`full_hit` del JSON sin guardar sobre el archivo abierto. Evitar renders
+headless de la malla densa: EEVEE agotó memoria al crear buffers. Ver
+`docs/EYE_BROW_SEPARATION_V03.md` y `tools/build_eye_brow_surface_guides_v03.py`.

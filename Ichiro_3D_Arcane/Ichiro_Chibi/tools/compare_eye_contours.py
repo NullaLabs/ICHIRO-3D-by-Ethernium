@@ -6,8 +6,8 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
 SOURCE = ROOT / "references" / "source_eye_contours_estimate_v01.json"
-REGISTRATION = ROOT / "docs" / "FACE_REGISTRATION_PROBE_V02.json"
-OUTPUT = ROOT / "docs" / "EYE_CONTOUR_ALIGNMENT_V02.json"
+REGISTRATION = ROOT / "docs" / "FACE_REGISTRATION_PROBE_V03.json"
+OUTPUT = ROOT / "docs" / "EYE_CONTOUR_ALIGNMENT_V03.json"
 source = json.loads(SOURCE.read_text(encoding="utf-8"))
 registered = json.loads(REGISTRATION.read_text(encoding="utf-8"))
 eye_spacing = math.dist(
@@ -45,10 +45,10 @@ for name, src in source["contours"].items():
         "samples": rows
     }
 report = {
-    "schema": "ethernium.eye-contour-alignment/0.2",
+    "schema": "ethernium.eye-contour-alignment/0.3",
     "method": "paired 10-point manual contour traces compared to five-anchor affine transfer",
     "source_contours": "references/source_eye_contours_estimate_v01.json",
-    "registration_report": "docs/FACE_REGISTRATION_PROBE_V02.json",
+    "registration_report": "docs/FACE_REGISTRATION_PROBE_V03.json",
     "source_contours_sha256": hashlib.sha256(SOURCE.read_bytes()).hexdigest(),
     "registration_sha256": hashlib.sha256(REGISTRATION.read_bytes()).hexdigest(),
     "script_sha256": hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),

@@ -1,0 +1,43 @@
+{
+  "schema": "ethernium.canonical-face-landmarks/0.3",
+  "reference": "ichiro_chibi_front.png",
+  "reference_size_px": [384, 472],
+  "status": "eye_brow_separation_review",
+  "coordinate_origin": "top_left",
+  "units": "pixels",
+  "supersedes": "canonical_face_landmarks_v02.json for eye margins only; v02 upper eye points were partly placed on eyebrow strokes.",
+  "warning": "Manual 2D image annotation. Not approved 3D anatomy. Left-eye upper margin remains partly occluded by fringe. The brow and eye outlines are separate visual guides; do not transfer them to 3D without local calibration.",
+  "registration_anchor_points": {
+    "eye_screen_left_center": [181.25,112.75],
+    "eye_screen_right_center": [226.75,105.25],
+    "nose_tip": [203,133],
+    "mouth_center": [201,144],
+    "chin_center": [203,159]
+  },
+  "landmarks": [
+    {"id":"screen_left_eye_outer_visible","region":"eye_screen_left","point":[170,112],"visibility":"partly_occluded_by_fringe","confidence":0.50,"kind":"corner"},
+    {"id":"screen_left_eye_inner","region":"eye_screen_left","point":[193,115],"visibility":"visible","confidence":0.80,"kind":"corner"},
+    {"id":"screen_left_eye_upper_visible","region":"eye_screen_left","point":[181,112],"visibility":"partly_occluded_by_fringe","confidence":0.55,"kind":"upper_margin"},
+    {"id":"screen_left_eye_lower","region":"eye_screen_left","point":[182,119],"visibility":"visible","confidence":0.78,"kind":"lower_margin"},
+    {"id":"screen_right_eye_inner","region":"eye_screen_right","point":[214,110],"visibility":"visible","confidence":0.82,"kind":"corner"},
+    {"id":"screen_right_eye_outer","region":"eye_screen_right","point":[239,101],"visibility":"visible","confidence":0.82,"kind":"corner"},
+    {"id":"screen_right_eye_upper","region":"eye_screen_right","point":[226,101],"visibility":"visible","confidence":0.83,"kind":"upper_margin"},
+    {"id":"screen_right_eye_lower","region":"eye_screen_right","point":[226,114],"visibility":"visible","confidence":0.84,"kind":"lower_margin"},
+    {"id":"nose_tip","region":"nose","point":[203,133],"visibility":"visible","confidence":0.86,"kind":"anchor"},
+    {"id":"mouth_left_corner","region":"mouth","point":[183,149],"visibility":"visible","confidence":0.80,"kind":"corner"},
+    {"id":"mouth_right_corner","region":"mouth","point":[219,139],"visibility":"visible","confidence":0.80,"kind":"corner"},
+    {"id":"chin_center","region":"jaw","point":[203,159],"visibility":"visible","confidence":0.78,"kind":"anchor"}
+  ],
+  "eye_contours": {
+    "screen_left_partial": [[170,112],[174,111],[178,111],[183,112],[188,113],[193,115],[190,118],[185,120],[179,119],[173,116]],
+    "screen_right": [[214,110],[217,107],[221,104],[226,101],[232,100],[239,101],[236,107],[232,111],[226,114],[220,113]]
+  },
+  "eye_contour_visibility": {
+    "screen_left_partial": ["occluded","partly_occluded","visible","visible","visible","visible","visible","visible","partly_occluded","occluded"],
+    "screen_right": ["visible","visible","visible","visible","visible","visible","visible","visible","visible","visible"]
+  },
+  "brow_contours": {
+    "screen_left_partial": [[159,105],[166,104],[176,105],[185,107],[193,110],[190,113],[180,111],[170,110],[162,109]],
+    "screen_right": [[207,108],[213,103],[221,97],[230,92],[237,92],[240,95],[233,98],[225,101],[217,105],[211,109]]
+  }
+}

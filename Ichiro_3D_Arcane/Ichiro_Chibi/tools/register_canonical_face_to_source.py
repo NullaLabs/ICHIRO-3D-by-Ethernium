@@ -12,10 +12,10 @@ from mathutils import Vector
 from mathutils.bvhtree import BVHTree
 
 ROOT = Path(__file__).resolve().parents[1]
-CANON_PATH = ROOT / "references" / "canonical_face_landmarks_v02.json"
+CANON_PATH = ROOT / "references" / "canonical_face_landmarks_v03.json"
 SOURCE_LANDMARKS_PATH = ROOT / "references" / "source_face_landmarks_estimate_v02.json"
 BLEND_PATH = ROOT / "Ichiro_Chibi_Skin_Projection_Experiment.blend"
-OUTPUT = ROOT / "docs" / "FACE_REGISTRATION_PROBE_V02.json"
+OUTPUT = ROOT / "docs" / "FACE_REGISTRATION_PROBE_V03.json"
 
 canonical = json.loads(CANON_PATH.read_text(encoding="utf-8"))
 source_landmarks = json.loads(SOURCE_LANDMARKS_PATH.read_text(encoding="utf-8"))
@@ -27,13 +27,13 @@ def mean(points):
 def group_center(prefix):
     return mean([item["point"] for item in lm if item["id"].startswith(prefix)])
 
-canonical_anchors = {
+canonical_anchors = canonical.get("registration_anchor_points", {
     "eye_screen_left_center": group_center("screen_left_eye_"),
     "eye_screen_right_center": group_center("screen_right_eye_"),
     "nose_tip": next(item["point"] for item in lm if item["id"] == "nose_tip"),
     "mouth_center": mean([item["point"] for item in lm if item["id"].startswith("mouth_")]),
     "chin_center": next(item["point"] for item in lm if item["id"] == "chin_center"),
-}
+})
 observed = source_landmarks["anchors"]
 
 def solve3(matrix, rhs):
@@ -131,9 +131,32 @@ for name, points in canonical["eye_contours"].items():
         rows.append(row)
         contour_counts[row["status"]] = contour_counts.get(row["status"], 0) + 1
     contour_probes[name] = rows
+brow_probes = {}
+for name, points in canonical.get("brow_contours", {}).items():
+    rows = []
+    for index, point in enumerate(points):
+        row = {"index": index, "canonical_px": point}
+        row.update(classify_projection(transform(point)))
+        rows.append(row)
+    brow_probes[name] = rows
+right_eye = canonical["eye_contours"]["screen_right"]
+right_eye_center = mean(right_eye)
+expanded_eye_rings = {}
+expanded_eye_ring_counts = {}
+for factor in (1.00, 1.04, 1.08, 1.12):
+    rows = []
+    for index, point in enumerate(right_eye):
+        expanded = [right_eye_center[i] + (point[i]-right_eye_center[i])*factor for i in range(2)]
+        row = {"index": index, "scale_from_eye_center": factor, "canonical_px": expanded}
+        row.update(classify_projection(transform(expanded)))
+        rows.append(row)
+        expanded_eye_ring_counts[str(factor)] = expanded_eye_ring_counts.get(str(factor), {})
+        bucket = expanded_eye_ring_counts[str(factor)]
+        bucket[row["status"]] = bucket.get(row["status"], 0) + 1
+    expanded_eye_rings[str(factor)] = rows
 report = {
-    "schema": "ethernium.face-registration-probe/0.2",
-    "method": "five-anchor affine 2D fit, followed by orthographic ray casts into source and warm-color candidate mask",
+    "schema": "ethernium.face-registration-probe/0.3",
+    "method": "five fixed anchor affine 2D fit, followed by orthographic ray casts into source and warm-color candidate mask",
     "canonical_sha256": hashlib.sha256(CANON_PATH.read_bytes()).hexdigest(),
     "source_landmarks_sha256": hashlib.sha256(SOURCE_LANDMARKS_PATH.read_bytes()).hexdigest(),
     "blend_sha256": hashlib.sha256(BLEND_PATH.read_bytes()).hexdigest(),
@@ -147,6 +170,9 @@ report = {
     "projected_landmarks": probe_points,
     "projected_eye_contour_counts": contour_counts,
     "projected_eye_contours": contour_probes,
+    "projected_brow_contours": brow_probes,
+    "expanded_right_eye_ring_counts": expanded_eye_ring_counts,
+    "expanded_right_eye_rings": expanded_eye_rings,
     "decision": "DIAGNOSTIC_MAPPING_ONLY__NO_GEOMETRY_GENERATED",
     "limitations": ["manual correspondences and partial occlusion", "unknown canonical camera model",
                     "warm-color skin mask is not semantic truth", "ray hits do not validate anatomy or topology"]
@@ -154,4 +180,5 @@ report = {
 OUTPUT.write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
 print(json.dumps({"output": str(OUTPUT), "rms_px": rms,
                   "rms_over_eye_spacing": rms/source_eye_spacing,
-                  "counts": counts, "decision": report["decision"]}, indent=2))
+                  "counts": counts, "eye_contour_counts": contour_counts,
+                  "decision": report["decision"]}, indent=2))

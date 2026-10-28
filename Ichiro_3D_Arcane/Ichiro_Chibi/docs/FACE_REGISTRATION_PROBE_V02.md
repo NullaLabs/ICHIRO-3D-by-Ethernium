@@ -1,5 +1,8 @@
 # Registro 2D de landmarks canónicos — probe v02
 
+> Histórico. El contorno ocular v02 incluía un punto superior sobre la ceja;
+> consulta la corrección y métricas vigentes en `EYE_BROW_SEPARATION_V03.md`.
+
 Se ajustó una transformación afín 2D de cinco anclas (centros oculares, nariz,
 centro de boca y mentón) desde `ichiro_chibi_front.png` hacia
 `renders/skin_review_source.png`. La cámara de este último es ortográfica,

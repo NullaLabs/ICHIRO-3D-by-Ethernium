@@ -1,5 +1,8 @@
 # Alineación de contornos oculares — v01
 
+> Versión histórica superada por `EYE_BROW_SEPARATION_V03.md`. V01 y v02
+> usaban un landmark superior que estaba anotado en la ceja.
+
 Se trazó a mano el borde visible de ambos ojos en `skin_review_source.png`,
 guiándose por cuadrícula de 10 px. Cada trazo corresponde por orden a los diez
 puntos del contorno canónico v02, ya transferidos por la afinidad 2D de cinco
