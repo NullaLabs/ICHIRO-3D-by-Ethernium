@@ -1,0 +1,16 @@
+{
+  "schema": "ethernium.source-face-landmarks/0.2",
+  "image": "renders/skin_review_source.png",
+  "image_size_px": [768, 768],
+  "status": "manual_visual_estimates_for_affine_registration_review",
+  "coordinate_origin": "top_left",
+  "camera": {"projection":"orthographic","ortho_scale":0.32,"target_z":0.285,"front":"+X"},
+  "anchors": {
+    "eye_screen_left_center": {"point":[232,439],"confidence":0.48,"visibility":"partly_occluded_by_fringe"},
+    "eye_screen_right_center": {"point":[465,408],"confidence":0.62,"visibility":"visible"},
+    "nose_tip": {"point":[354,551],"confidence":0.58,"visibility":"visible"},
+    "mouth_center": {"point":[366,587],"confidence":0.50,"visibility":"visible_approximate"},
+    "chin_center": {"point":[375,682],"confidence":0.46,"visibility":"visible_approximate"}
+  },
+  "warning": "All source anchor pixels are manual approximations. The canonical image uses an unknown camera. Registration is diagnostic only; projected pixels are not production anatomy or rig landmarks."
+}

@@ -296,3 +296,14 @@ separación ocular a distancia centro-ocular–mentón de 0.922 en la referencia
 métrica aproximada. La anotación aún no calibra cámaras ni permite transferir
 coordenadas a 3D. Evidencia y código: canonical_face_landmarks_v02.json,
 FACE_PROPORTION_COMPARISON_V02.json y tools/compare_face_proportions.py.
+
+## WF-011 — ajuste afín para ubicar landmarks y auditar soporte
+
+tools/register_canonical_face_to_source.py ajusta cinco anclas 2D y prueba los
+12 landmarks contra la superficie completa y la máscara candidata. El RMS es
+8.55 px (3.64% de la separación ocular estimada), con máximo de 15.57 px en el
+centro de boca; 7 puntos reciben candidato de piel por color y 5 no. La
+superposición revela desvíos locales y soporte faltante. No es calibración de
+cámara ni transferencia aprobada; no se creó ni guardó geometría. Informe:
+FACE_REGISTRATION_PROBE_V02.md y JSON. Primero se necesita máscara facial
+etiquetada y validación local de contornos/perfiles.
