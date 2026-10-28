@@ -37,11 +37,11 @@ sclera = material("PASS01_Eye_Sclera", (0.09, 0.075, 0.065), roughness=0.25)
 iris = material("PASS01_Eye_Iris_Red", (0.55, 0.012, 0.018), roughness=0.2)
 pupil = material("PASS01_Eye_Pupil", (0.004, 0.002, 0.002), roughness=0.22)
 
-def surface_hit(x, z):
-    # The canonical front marker sits at negative Y. Raycast into the face.
-    hit = bvh.ray_cast(Vector((x, -1.0, z)), Vector((0.0, 1.0, 0.0)), 2.0)
+def surface_hit(lateral, z):
+    # Turntable 090 is frontal: the face points toward +X, lateral axis is Y.
+    hit = bvh.ray_cast(Vector((1.0, lateral, z)), Vector((-1.0, 0.0, 0.0)), 2.0)
     if hit[0] is None:
-        raise RuntimeError(f"No facial surface hit at x={x}, z={z}")
+        raise RuntimeError(f"No facial surface hit at lateral={lateral}, z={z}")
     return hit[0]
 
 def add_uv(name, location, scale, mat, role):
@@ -58,16 +58,15 @@ def add_uv(name, location, scale, mat, role):
     return obj
 
 for side, x in (("L", -0.052), ("R", 0.052)):
-    hit = surface_hit(x, 0.346)
+    hit = surface_hit(x, 0.278)
     # Place the globe just behind the current high-detail eyelid surface.
-    globe_center = hit + Vector((0.0, 0.043, 0.0))
-    eye = add_uv(f"EYE_GLOBE_{side}__PASS01", globe_center, (0.020, 0.017, 0.018), sclera,
+    globe_center = hit + Vector((-0.022, 0.0, 0.0))
+    eye = add_uv(f"EYE_GLOBE_{side}__PASS01", globe_center, (0.017, 0.020, 0.018), sclera,
                  "Rig eye globe; final object will retain as disconnected topology component")
-    # Iris/pupil project slightly toward negative Y (the established front).
-    add_uv(f"IRIS_{side}__PASS01", globe_center + Vector((0.0, -0.016, 0.0)),
-           (0.010, 0.0025, 0.010), iris, "Iris reference for eyelid framing")
-    add_uv(f"PUPIL_{side}__PASS01", globe_center + Vector((0.0, -0.0185, 0.0)),
-           (0.004, 0.0015, 0.005), pupil, "Pupil reference for gaze direction")
+    add_uv(f"IRIS_{side}__PASS01", globe_center + Vector((0.016, 0.0, 0.0)),
+           (0.0025, 0.010, 0.010), iris, "Iris reference for eyelid framing")
+    add_uv(f"PUPIL_{side}__PASS01", globe_center + Vector((0.0185, 0.0, 0.0)),
+           (0.0015, 0.004, 0.005), pupil, "Pupil reference for gaze direction")
     eye["surface_hit"] = tuple(round(v, 6) for v in hit)
 
 collection["purpose"] = "Eye anatomy targets for manual eyelid, brow and facial loop construction"
