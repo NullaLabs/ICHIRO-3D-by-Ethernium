@@ -2,7 +2,7 @@
   "schema": "ethernium.character_asset_inventory.v1",
   "scope": ".",
   "classification_policy": "Filename and folder heuristics only; never approval.",
-  "file_count": 168,
+  "file_count": 167,
   "category_counts": {
     "backup": 4,
     "candidate": 2,
@@ -11,7 +11,7 @@
     "reference": 13,
     "render_evidence": 38,
     "review_candidate": 50,
-    "workflow_source": 58
+    "workflow_source": 57
   },
   "exact_duplicate_groups": [
     {
@@ -27,13 +27,6 @@
       "path": "docs/ART_DIRECTION_CHECKLIST.md",
       "bytes": 1650,
       "sha256": "d0a38c34568db109769f283cc7998049f0b4d1cb0aa7bf676adb95292c439f90",
-      "category": "workflow_source",
-      "classification_note": "Workflow code or documentation"
-    },
-    {
-      "path": "docs/ASSET_INVENTORY.json",
-      "bytes": 49531,
-      "sha256": "f7e9f869494b9251ea3dcad9346c3d9ade8fe289b938e1fa7863fc54c30e6235",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
@@ -81,8 +74,8 @@
     },
     {
       "path": "docs/ETHERNIUM_CHARACTER_FOUNDRY_V01.md",
-      "bytes": 11365,
-      "sha256": "03f79d9d4fdeb2d1e9bc8f15258f093e6fe8eb13e884145a8001a5b0fa6f14bc",
+      "bytes": 12669,
+      "sha256": "50a7fc930c91ab019fa47338d21b3b793c5129c0671e99ad46b2b445b44c618c",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
@@ -347,8 +340,8 @@
     },
     {
       "path": "docs/WORKFLOW_INNOVATIONS.md",
-      "bytes": 22998,
-      "sha256": "c83d70dfdeaebbf5ae1360a35edacdb49bee27846394f74f3b7b283c16bf633c",
+      "bytes": 23798,
+      "sha256": "c19207db94402aac192b515019e108bf24c659d796048749b12f3a39a2bf45da",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },
@@ -1061,8 +1054,8 @@
     },
     {
       "path": "tools/inventory_character_assets.py",
-      "bytes": 5021,
-      "sha256": "16a0285911cad6e4877b3cf3e33db6f04719301cf0fc525e1ade46470383ca98",
+      "bytes": 5079,
+      "sha256": "8fdc3a58f036bcbc3de119375793c7052a4b9c90d12eb4d8294e754c2d719c25",
       "category": "workflow_source",
       "classification_note": "Workflow code or documentation"
     },

@@ -105,6 +105,18 @@ El pase ocular v03 mostró una mejora diagnóstica local, pero no generó párpa
 - Ejemplo comunitario reproducible de pipeline de personaje asistido por IA con pasos humanos: https://github.com/ChilyerStudiosLLC/blender-character-pipeline
 - CharacterGen, generación multi-vista de personaje desde imagen (paper/proyecto): https://arxiv.org/abs/2402.17214
 
+## Primer componente implementado: inventario de activos
+
+`tools/inventory_character_assets.py` recorre solo `Ichiro_Chibi/`, calcula SHA-256 en streaming y escribe `docs/ASSET_INVENTORY.json`. No modifica los archivos inventariados. Clasifica por ruta/nombre como sugerencia y conserva una nota de que la clase no equivale a aprobación. Agrupa duplicados exactos y excluye el propio informe para que una reejecución no se vuelva entrada de sí misma.
+
+Primera ejecución: 167 archivos; 13 referencias, 38 renders, 50 candidatos de revisión, 4 backups, 2 candidatos, 2 geometrías sin clasificar, 57 scripts/documentos de workflow y 1 archivo cuya ruta declarada no coincide con el estado del proyecto. Se encontró una pareja de PNG idénticos (`eye_contour_alignment_v01.png` y `v02.png`). El `.blend` `Ichiro_Chibi_HighDetail_Working.blend` aparece en la carpeta raíz, mientras que `PROJECT_STATUS.md` dice `blend/Ichiro_Chibi_HighDetail_Working.blend`; la discrepancia queda señalada, no se movió ni renombró. Las categorías por heurística requieren confirmación humana.
+
+Reproducir desde `Ichiro_Chibi/`:
+
+```powershell
+python tools/inventory_character_assets.py
+```
+
 ## Criterio de éxito del sistema
 
 Para el mismo spec/version/seed, el build produce hashes y métricas repetibles. Un cambio afecta solo el módulo declarado. Cada pase muestra evidencia visual y auditoría numérica asociadas. Los proyectos futuros reutilizan herramientas y contratos, pero no transfieren identidad ni proporciones de Ichiro a otros personajes. El personaje solo progresa cuando supera una puerta visual/técnica; más código, polígonos o renders no cuentan por sí solos.

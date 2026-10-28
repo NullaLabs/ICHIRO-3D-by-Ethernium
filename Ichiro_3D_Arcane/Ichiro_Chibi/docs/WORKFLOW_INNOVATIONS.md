@@ -376,3 +376,16 @@ addons ni dependencias. Decisión, arquitectura, límites y referencias:
 clasificación por hash de fuentes/candidatos/rechazos, luego una hoja base de
 referencias y modelo con cámaras bloqueadas; no continuar ramificando el
 experimento local de párpado.
+
+
+## WF-017 — inventario de activos con hash y clasificación conservadora
+
+`tools/inventory_character_assets.py` cataloga los archivos de la carpeta de
+Ichiro Chibi con tamaño y SHA-256, agrupa duplicados exactos y sugiere clases
+por ruta/nombre. No escribe, mueve ni elimina entradas; el informe no sustituye
+la aprobación artística. Primera pasada: 167 activos, un duplicado exacto entre
+los PNG de alineación ocular v01/v02 y una discrepancia de ruta: el `.blend`
+`Ichiro_Chibi_HighDetail_Working.blend` está en la raíz de la carpeta mientras
+`PROJECT_STATUS.md` lo cita bajo `blend/`. Se conserva la duda para resolverla
+con revisión de identidad de escena. Informe: `docs/ASSET_INVENTORY.json`;
+arquitectura: `docs/ETHERNIUM_CHARACTER_FOUNDRY_V01.md`.
