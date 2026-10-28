@@ -71,6 +71,11 @@ estos grupos en cinco vistas sin tocar ni guardar la fuente. Ningún ID se
 considera semánticamente clasificado todavía. Ver
 `docs/COMPONENT_MAP_REVIEW_V01.md` y `renders/component_map_review_v01/`.
 
+La clasificación de rayos faciales localiza tres islas bajo el contorno A
+(20/103/5 muestras) y una bajo el contorno B (128). No se proyectará el parche A
+como una sola banda; el informe `docs/EYELID_SUPPORT_CLASSIFICATION.json`
+conserva cada muestra, UV y componente para la revisión semántica siguiente.
+
 ## Auditoría de blockout 360 — V02
 
 El candidato de silueta está aislado en `exports/visual_hull_v02/`; gate geométrico PASS, pero revisión artística pendiente. Mide 0.525 × 0.575 × 1.000 m frente a la fuente (0.420 × 0.490 × 1.000 m), diferencia que se debe resolver con calibración de vistas y cámaras, no escalando el maestro. Detalle: `docs/VISUAL_HULL_BLOCKOUT_V02.md`. El inventario automatizado más reciente registra 177 archivos y 1 grupo de duplicados exactos; sus categorías son sugerencias por nombre/ruta, no aprobación.

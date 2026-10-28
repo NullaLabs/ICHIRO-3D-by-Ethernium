@@ -29,6 +29,9 @@ blender --background --factory-startup Ichiro_Chibi_HEAD_HANDS_Topology_Workspac
   --out renders/component_map_review_v01 --resolution 768
 ```
 
+La indexación compartida vive en `tools/component_islands.py`; el mapa y los
+diagnósticos de proyección usan el mismo orden determinista de IDs.
+
 La evidencia del pase está en `renders/component_map_review_v01/`. Los IDs se
 ordenan por número de vértices descendente y luego por índice raíz; el JSON
 incluye color, caja, centro y cantidad de caras/vértices para cada ID.
@@ -54,3 +57,18 @@ pero toda región sigue requiriendo revisión visual. Después se crean a mano
 las superficies de ojos, párpados, boca y dedos sobre esos objetivos. No se
 aplica QuadriFlow, voxel remesh ni un raycast indiscriminado como topología
 final.
+
+## Prueba de soporte de párpados
+
+`tools/classify_eyelid_projection_support.py` asocia ahora cada muestra de
+raycast con el ID de la isla alcanzada. En el contorno A, 128 muestras se
+reparten entre los IDs 9 (20), 49 (103) y 54 (5); en el contorno B, las 128
+muestras caen en el ID 27. El estimador de color UV marca 39/128 como posibles
+colores de piel en A y 23/128 en B. Son pistas, no etiquetas anatómicas: el
+atlas es compartido y el centro UV no describe necesariamente una cara
+completa.
+
+El informe es `docs/EYELID_SUPPORT_CLASSIFICATION.json`. No se debe crear el
+parche A como una banda continua hasta clasificar y revisar sus tres islas. El
+contorno B tiene soporte geométrico consistente en una isla, pero aún hay que
+confirmar que esa isla es piel y revisar el contacto con el globo ocular.

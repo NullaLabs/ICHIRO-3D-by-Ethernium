@@ -166,7 +166,10 @@ como destino de retopología facial: pueden atravesar límites semánticos sin
 detectarlos. `tools/build_component_map_review.py` genera IDs espaciales y
 vistas de revisión para seleccionar objetivos; sus IDs son diagnósticos y
 requieren clasificación visual antes de usarse en nuevos parches. Véase
-`docs/COMPONENT_MAP_REVIEW_V01.md`.
+`docs/COMPONENT_MAP_REVIEW_V01.md`. El clasificador de raycast registra ahora
+el ID alcanzado por cada muestra. Si un contorno cruza varias islas, el
+generador debe dividir el trabajo por objetivo o rechazar esa proyección; no
+debe unirlas automáticamente.
 
 ## Criterio de éxito del sistema
 

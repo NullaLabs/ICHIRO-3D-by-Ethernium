@@ -1,8 +1,96 @@
 {
-  "schema": "ethernium.eyelid-support-classification/0.1",
-  "script_sha256": "d7de10c349bf99c1f83e4d8c8cbd003d49fb08810b4665a24386604da0adde03",
+  "schema": "ethernium.eyelid-support-classification/0.2",
+  "script_sha256": "b8c462bb4ec3695eb58415487ba9da234c9eff08b50688f6e642b5402dcf3f59",
   "source_sha256": "d906a5b55041a8047a3b38d8e346cf41f9fa6cd7f08ccc3f121c2b8c41fb5b86",
-  "method": "ray hits against full high-detail source; polygon material index + UV-centroid texture evidence",
+  "method": "ray hits against full high-detail source; each hit is mapped through its polygon vertex to a deterministic connected-component ID; polygon material index + UV-centroid texture evidence",
+  "component_count": 181,
+  "component_indexing": "descending vertex count, then stable root vertex index",
+  "component_hit_summary": [
+    {
+      "component_id": 9,
+      "vertex_count": 13510,
+      "face_count": 26338,
+      "ray_hit_samples": 20,
+      "skin_color_heuristic_samples": 0,
+      "bounds_local_m": [
+        [
+          0.0723269,
+          0.2115547
+        ],
+        [
+          -0.1187725,
+          0.000747
+        ],
+        [
+          0.2271146,
+          0.4010947
+        ]
+      ]
+    },
+    {
+      "component_id": 27,
+      "vertex_count": 8754,
+      "face_count": 17119,
+      "ray_hit_samples": 128,
+      "skin_color_heuristic_samples": 23,
+      "bounds_local_m": [
+        [
+          0.0454137,
+          0.1208477
+        ],
+        [
+          -0.036816,
+          0.0767224
+        ],
+        [
+          0.2387364,
+          0.3618411
+        ]
+      ]
+    },
+    {
+      "component_id": 49,
+      "vertex_count": 5971,
+      "face_count": 11515,
+      "ray_hit_samples": 103,
+      "skin_color_heuristic_samples": 34,
+      "bounds_local_m": [
+        [
+          0.047437,
+          0.1192856
+        ],
+        [
+          -0.1178501,
+          -0.0248031
+        ],
+        [
+          0.2327584,
+          0.3422482
+        ]
+      ]
+    },
+    {
+      "component_id": 54,
+      "vertex_count": 5436,
+      "face_count": 10285,
+      "ray_hit_samples": 5,
+      "skin_color_heuristic_samples": 5,
+      "bounds_local_m": [
+        [
+          -0.0720973,
+          0.0704285
+        ],
+        [
+          -0.1296347,
+          -0.077522
+        ],
+        [
+          0.2295318,
+          0.407824
+        ]
+      ]
+    }
+  ],
   "counts": {
     "source_hit_unclassified": 256
   },
@@ -17,6 +105,9 @@
       "source_polygon": 714105,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0885852,
         -0.046,
@@ -43,6 +134,9 @@
       "source_polygon": 710956,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0890375,
         -0.0463651,
@@ -69,6 +163,9 @@
       "source_polygon": 707665,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0894073,
         -0.0474463,
@@ -95,6 +192,9 @@
       "source_polygon": 701258,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0896223,
         -0.0492021,
@@ -121,6 +221,9 @@
       "source_polygon": 692471,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0894708,
         -0.051565,
@@ -147,6 +250,9 @@
       "source_polygon": 684079,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0846727,
         -0.0544442,
@@ -173,6 +279,9 @@
       "source_polygon": 672716,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0840527,
         -0.057729,
@@ -199,6 +308,9 @@
       "source_polygon": 661109,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0838782,
         -0.0612933,
@@ -225,6 +337,9 @@
       "source_polygon": 647238,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0825535,
         -0.065,
@@ -251,6 +366,9 @@
       "source_polygon": 635524,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0793266,
         -0.0687067,
@@ -277,6 +395,9 @@
       "source_polygon": 619810,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0776592,
         -0.072271,
@@ -303,6 +424,9 @@
       "source_polygon": 609801,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.075735,
         -0.0755558,
@@ -329,6 +453,9 @@
       "source_polygon": 599470,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.072049,
         -0.078435,
@@ -355,6 +482,9 @@
       "source_polygon": 588286,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0685927,
         -0.0807979,
@@ -381,6 +511,9 @@
       "source_polygon": 581372,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.068372,
         -0.0825537,
@@ -407,6 +540,9 @@
       "source_polygon": 574724,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0684113,
         -0.0836349,
@@ -433,6 +569,9 @@
       "source_polygon": 574723,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.068104,
         -0.084,
@@ -459,6 +598,9 @@
       "source_polygon": 578036,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0682268,
         -0.0836349,
@@ -485,6 +627,9 @@
       "source_polygon": 581349,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0692003,
         -0.0825537,
@@ -511,6 +656,9 @@
       "source_polygon": 588230,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0706067,
         -0.0807979,
@@ -537,6 +685,9 @@
       "source_polygon": 599466,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0720304,
         -0.078435,
@@ -563,6 +714,9 @@
       "source_polygon": 609837,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0731848,
         -0.0755558,
@@ -589,6 +743,9 @@
       "source_polygon": 623020,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0740049,
         -0.072271,
@@ -615,6 +772,9 @@
       "source_polygon": 635590,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0750897,
         -0.0687067,
@@ -641,6 +801,9 @@
       "source_polygon": 647324,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0770746,
         -0.065,
@@ -667,6 +830,9 @@
       "source_polygon": 661193,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0792317,
         -0.0612933,
@@ -693,6 +859,9 @@
       "source_polygon": 669768,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0810638,
         -0.057729,
@@ -719,6 +888,9 @@
       "source_polygon": 684108,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0824919,
         -0.0544442,
@@ -745,6 +917,9 @@
       "source_polygon": 689712,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0837403,
         -0.051565,
@@ -771,6 +946,9 @@
       "source_polygon": 701333,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0846156,
         -0.0492021,
@@ -797,6 +975,9 @@
       "source_polygon": 704365,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0850552,
         -0.0474463,
@@ -823,6 +1004,9 @@
       "source_polygon": 710989,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0873792,
         -0.0463651,
@@ -849,6 +1033,9 @@
       "source_polygon": 723322,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0889263,
         -0.043,
@@ -875,6 +1062,9 @@
       "source_polygon": 723316,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0897442,
         -0.0434227,
@@ -901,6 +1091,9 @@
       "source_polygon": 717225,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0914777,
         -0.0446746,
@@ -927,6 +1120,9 @@
       "source_polygon": 714097,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0937174,
         -0.0467077,
@@ -953,6 +1149,9 @@
       "source_polygon": 701250,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0937549,
         -0.0494437,
@@ -979,6 +1178,9 @@
       "source_polygon": 689633,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0916565,
         -0.0527775,
@@ -1005,6 +1207,9 @@
       "source_polygon": 675534,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0898744,
         -0.056581,
@@ -1031,6 +1236,9 @@
       "source_polygon": 661094,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0843872,
         -0.060708,
@@ -1057,6 +1265,9 @@
       "source_polygon": 647241,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0831314,
         -0.065,
@@ -1083,6 +1294,9 @@
       "source_polygon": 632564,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0795155,
         -0.069292,
@@ -1109,6 +1323,9 @@
       "source_polygon": 616529,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0778068,
         -0.073419,
@@ -1135,6 +1352,9 @@
       "source_polygon": 602915,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0750196,
         -0.0772225,
@@ -1161,6 +1381,9 @@
       "source_polygon": 588245,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0702051,
         -0.0805563,
@@ -1187,6 +1410,9 @@
       "source_polygon": 577549,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1375699,
         -0.0832923,
@@ -1213,6 +1439,9 @@
       "source_polygon": 567122,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1396234,
         -0.0853254,
@@ -1239,6 +1468,9 @@
       "source_polygon": 563303,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1552418,
         -0.0865773,
@@ -1265,6 +1497,9 @@
       "source_polygon": 563283,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1560808,
         -0.087,
@@ -1291,6 +1526,9 @@
       "source_polygon": 563348,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1529094,
         -0.0865773,
@@ -1317,6 +1555,9 @@
       "source_polygon": 567756,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 54,
+      "component_vertex_count": 5436,
+      "component_face_count": 10285,
       "hit_world": [
         0.0644634,
         -0.0853254,
@@ -1343,6 +1584,9 @@
       "source_polygon": 578097,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 54,
+      "component_vertex_count": 5436,
+      "component_face_count": 10285,
       "hit_world": [
         0.0664668,
         -0.0832923,
@@ -1369,6 +1613,9 @@
       "source_polygon": 588258,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0692235,
         -0.0805563,
@@ -1395,6 +1642,9 @@
       "source_polygon": 602964,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0725552,
         -0.0772225,
@@ -1421,6 +1671,9 @@
       "source_polygon": 616569,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0747389,
         -0.073419,
@@ -1447,6 +1700,9 @@
       "source_polygon": 632612,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0763689,
         -0.069292,
@@ -1473,6 +1729,9 @@
       "source_polygon": 647302,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.077442,
         -0.065,
@@ -1499,6 +1758,9 @@
       "source_polygon": 664016,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0783548,
         -0.060708,
@@ -1525,6 +1787,9 @@
       "source_polygon": 675667,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0802072,
         -0.056581,
@@ -1551,6 +1816,9 @@
       "source_polygon": 689752,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0819563,
         -0.0527775,
@@ -1577,6 +1845,9 @@
       "source_polygon": 701345,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0835039,
         -0.0494437,
@@ -1603,6 +1874,9 @@
       "source_polygon": 711045,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0845077,
         -0.0467077,
@@ -1629,6 +1903,9 @@
       "source_polygon": 717301,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.08643,
         -0.0446746,
@@ -1655,6 +1932,9 @@
       "source_polygon": 723349,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0882834,
         -0.0434227,
@@ -1681,6 +1961,9 @@
       "source_polygon": 734793,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0912288,
         -0.04,
@@ -1707,6 +1990,9 @@
       "source_polygon": 731987,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0955894,
         -0.0404804,
@@ -1733,6 +2019,9 @@
       "source_polygon": 729125,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1113151,
         -0.041903,
@@ -1759,6 +2048,9 @@
       "source_polygon": 720273,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1126905,
         -0.0442133,
@@ -1785,6 +2077,9 @@
       "source_polygon": 704250,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1128376,
         -0.0473223,
@@ -1811,6 +2106,9 @@
       "source_polygon": 692410,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1119002,
         -0.0511107,
@@ -1837,6 +2135,9 @@
       "source_polygon": 681085,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1094211,
         -0.0554329,
@@ -1863,6 +2164,9 @@
       "source_polygon": 663798,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0925372,
         -0.0601227,
@@ -1889,6 +2193,9 @@
       "source_polygon": 647233,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0840551,
         -0.065,
@@ -1915,6 +2222,9 @@
       "source_polygon": 632566,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0796259,
         -0.0698773,
@@ -1941,6 +2251,9 @@
       "source_polygon": 613157,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0778753,
         -0.0745671,
@@ -1967,6 +2280,9 @@
       "source_polygon": 599427,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0740018,
         -0.0788893,
@@ -1993,6 +2309,9 @@
       "source_polygon": 580876,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.138585,
         -0.0826777,
@@ -2019,6 +2338,9 @@
       "source_polygon": 567011,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1508456,
         -0.0857867,
@@ -2045,6 +2367,9 @@
       "source_polygon": 555837,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1580121,
         -0.088097,
@@ -2071,6 +2396,9 @@
       "source_polygon": 551810,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1587947,
         -0.0895196,
@@ -2097,6 +2425,9 @@
       "source_polygon": 547644,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.15883,
         -0.09,
@@ -2123,6 +2454,9 @@
       "source_polygon": 551818,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1581066,
         -0.0895196,
@@ -2149,6 +2483,9 @@
       "source_polygon": 555845,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1565872,
         -0.088097,
@@ -2175,6 +2512,9 @@
       "source_polygon": 567754,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 54,
+      "component_vertex_count": 5436,
+      "component_face_count": 10285,
       "hit_world": [
         0.06407,
         -0.0857867,
@@ -2201,6 +2541,9 @@
       "source_polygon": 581400,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 54,
+      "component_vertex_count": 5436,
+      "component_face_count": 10285,
       "hit_world": [
         0.067179,
         -0.0826777,
@@ -2227,6 +2570,9 @@
       "source_polygon": 595828,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0700126,
         -0.0788893,
@@ -2253,6 +2599,9 @@
       "source_polygon": 613247,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0727938,
         -0.0745671,
@@ -2279,6 +2628,9 @@
       "source_polygon": 632610,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.075721,
         -0.0698773,
@@ -2305,6 +2657,9 @@
       "source_polygon": 647301,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0781021,
         -0.065,
@@ -2331,6 +2686,9 @@
       "source_polygon": 666818,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0798559,
         -0.0601227,
@@ -2357,6 +2715,9 @@
       "source_polygon": 681286,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0808938,
         -0.0554329,
@@ -2383,6 +2744,9 @@
       "source_polygon": 695630,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0815635,
         -0.0511107,
@@ -2409,6 +2773,9 @@
       "source_polygon": 707767,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0832256,
         -0.0473223,
@@ -2435,6 +2802,9 @@
       "source_polygon": 720395,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0844756,
         -0.0442133,
@@ -2461,6 +2831,9 @@
       "source_polygon": 726292,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0874559,
         -0.041903,
@@ -2487,6 +2860,9 @@
       "source_polygon": 732032,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0885711,
         -0.0404804,
@@ -2513,6 +2889,9 @@
       "source_polygon": 743269,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0985155,
         -0.037,
@@ -2539,6 +2918,9 @@
       "source_polygon": 743239,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1109619,
         -0.037538,
@@ -2565,6 +2947,9 @@
       "source_polygon": 737559,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1138309,
         -0.0391314,
@@ -2591,6 +2976,9 @@
       "source_polygon": 729106,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1152124,
         -0.0417189,
@@ -2617,6 +3005,9 @@
       "source_polygon": 717149,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1152192,
         -0.045201,
@@ -2643,6 +3034,9 @@
       "source_polygon": 701166,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1142606,
         -0.049444,
@@ -2669,6 +3063,9 @@
       "source_polygon": 683901,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1124838,
         -0.0542849,
@@ -2695,6 +3092,9 @@
       "source_polygon": 666565,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.1089717,
         -0.0595375,
@@ -2721,6 +3121,9 @@
       "source_polygon": 647140,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0911407,
         -0.065,
@@ -2747,6 +3150,9 @@
       "source_polygon": 629413,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0824925,
         -0.0704625,
@@ -2773,6 +3179,9 @@
       "source_polygon": 609783,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0777763,
         -0.0757151,
@@ -2799,6 +3208,9 @@
       "source_polygon": 588210,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0727622,
         -0.080556,
@@ -2825,6 +3237,9 @@
       "source_polygon": 570633,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1417948,
         -0.084799,
@@ -2851,6 +3266,9 @@
       "source_polygon": 555822,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1585881,
         -0.0882811,
@@ -2877,6 +3295,9 @@
       "source_polygon": 547633,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.160191,
         -0.0908686,
@@ -2903,6 +3324,9 @@
       "source_polygon": 534790,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1610044,
         -0.092462,
@@ -2929,6 +3353,9 @@
       "source_polygon": 530210,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.161025,
         -0.093,
@@ -2955,6 +3382,9 @@
       "source_polygon": 534799,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1602406,
         -0.092462,
@@ -2981,6 +3411,9 @@
       "source_polygon": 543454,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1586286,
         -0.0908686,
@@ -3007,6 +3440,9 @@
       "source_polygon": 555854,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 9,
+      "component_vertex_count": 13510,
+      "component_face_count": 26338,
       "hit_world": [
         0.1560824,
         -0.0882811,
@@ -3033,6 +3469,9 @@
       "source_polygon": 571287,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 54,
+      "component_vertex_count": 5436,
+      "component_face_count": 10285,
       "hit_world": [
         0.0650138,
         -0.084799,
@@ -3059,6 +3498,9 @@
       "source_polygon": 584720,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0690015,
         -0.080556,
@@ -3085,6 +3527,9 @@
       "source_polygon": 609861,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0722369,
         -0.0757151,
@@ -3111,6 +3556,9 @@
       "source_polygon": 629489,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0749248,
         -0.0704625,
@@ -3137,6 +3585,9 @@
       "source_polygon": 647320,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0771761,
         -0.065,
@@ -3163,6 +3614,9 @@
       "source_polygon": 666837,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0794384,
         -0.0595375,
@@ -3189,6 +3643,9 @@
       "source_polygon": 684141,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0815447,
         -0.0542849,
@@ -3215,6 +3672,9 @@
       "source_polygon": 701362,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0827293,
         -0.049444,
@@ -3241,6 +3701,9 @@
       "source_polygon": 717351,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0833922,
         -0.045201,
@@ -3267,6 +3730,9 @@
       "source_polygon": 729271,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0851509,
         -0.0417189,
@@ -3293,6 +3759,9 @@
       "source_polygon": 737659,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0878582,
         -0.0391314,
@@ -3319,6 +3788,9 @@
       "source_polygon": 743292,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 49,
+      "component_vertex_count": 5971,
+      "component_face_count": 11515,
       "hit_world": [
         0.0918444,
         -0.037538,
@@ -3345,6 +3817,9 @@
       "source_polygon": 997983,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0750704,
         0.054,
@@ -3371,6 +3846,9 @@
       "source_polygon": 997984,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.075173,
         0.0536349,
@@ -3397,6 +3875,9 @@
       "source_polygon": 995367,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0763583,
         0.0525537,
@@ -3423,6 +3904,9 @@
       "source_polygon": 987186,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0784014,
         0.0507979,
@@ -3449,6 +3933,9 @@
       "source_polygon": 979336,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0811171,
         0.048435,
@@ -3475,6 +3962,9 @@
       "source_polygon": 970580,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0843453,
         0.0455558,
@@ -3501,6 +3991,9 @@
       "source_polygon": 959248,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0939105,
         0.042271,
@@ -3527,6 +4020,9 @@
       "source_polygon": 950611,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0957061,
         0.0387067,
@@ -3553,6 +4049,9 @@
       "source_polygon": 937947,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0968836,
         0.035,
@@ -3579,6 +4078,9 @@
       "source_polygon": 925939,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0974834,
         0.0312933,
@@ -3605,6 +4107,9 @@
       "source_polygon": 916750,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0974736,
         0.027729,
@@ -3631,6 +4136,9 @@
       "source_polygon": 906335,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0969615,
         0.0244442,
@@ -3657,6 +4165,9 @@
       "source_polygon": 898557,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0956201,
         0.021565,
@@ -3683,6 +4194,9 @@
       "source_polygon": 892159,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0933296,
         0.0192021,
@@ -3709,6 +4223,9 @@
       "source_polygon": 888014,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0920542,
         0.0174463,
@@ -3735,6 +4252,9 @@
       "source_polygon": 885965,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0908486,
         0.0163651,
@@ -3761,6 +4281,9 @@
       "source_polygon": 883914,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0902472,
         0.016,
@@ -3787,6 +4310,9 @@
       "source_polygon": 885978,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0899718,
         0.0163651,
@@ -3813,6 +4339,9 @@
       "source_polygon": 888052,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0898396,
         0.0174463,
@@ -3839,6 +4368,9 @@
       "source_polygon": 892242,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0897613,
         0.0192021,
@@ -3865,6 +4397,9 @@
       "source_polygon": 898666,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0897203,
         0.021565,
@@ -3891,6 +4426,9 @@
       "source_polygon": 906414,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0894496,
         0.0244442,
@@ -3917,6 +4455,9 @@
       "source_polygon": 916802,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0884744,
         0.027729,
@@ -3943,6 +4484,9 @@
       "source_polygon": 926029,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0868922,
         0.0312933,
@@ -3969,6 +4513,9 @@
       "source_polygon": 940432,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0853477,
         0.035,
@@ -3995,6 +4542,9 @@
       "source_polygon": 948101,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0844857,
         0.0387067,
@@ -4021,6 +4571,9 @@
       "source_polygon": 959348,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0830412,
         0.042271,
@@ -4047,6 +4600,9 @@
       "source_polygon": 970680,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0807274,
         0.0455558,
@@ -4073,6 +4629,9 @@
       "source_polygon": 979418,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0786175,
         0.048435,
@@ -4099,6 +4658,9 @@
       "source_polygon": 987257,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0769875,
         0.0507979,
@@ -4125,6 +4687,9 @@
       "source_polygon": 992746,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0760292,
         0.0525537,
@@ -4151,6 +4716,9 @@
       "source_polygon": 997978,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0754263,
         0.0536349,
@@ -4177,6 +4745,9 @@
       "source_polygon": 1008567,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0747706,
         0.057,
@@ -4203,6 +4774,9 @@
       "source_polygon": 1008610,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0737429,
         0.0565773,
@@ -4229,6 +4803,9 @@
       "source_polygon": 1003261,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0737583,
         0.0553253,
@@ -4255,6 +4832,9 @@
       "source_polygon": 995371,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0759636,
         0.0532923,
@@ -4281,6 +4861,9 @@
       "source_polygon": 986971,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0901095,
         0.0505564,
@@ -4307,6 +4890,9 @@
       "source_polygon": 976396,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0930361,
         0.0472225,
@@ -4333,6 +4919,9 @@
       "source_polygon": 964844,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.095,
         0.043419,
@@ -4359,6 +4948,9 @@
       "source_polygon": 948005,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0963801,
         0.039292,
@@ -4385,6 +4977,9 @@
       "source_polygon": 935469,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0973807,
         0.035,
@@ -4411,6 +5006,9 @@
       "source_polygon": 925930,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0980057,
         0.030708,
@@ -4437,6 +5035,9 @@
       "source_polygon": 911636,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0982065,
         0.026581,
@@ -4463,6 +5064,9 @@
       "source_polygon": 900953,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.097847,
         0.0227775,
@@ -4489,6 +5093,9 @@
       "source_polygon": 892111,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0972074,
         0.0194437,
@@ -4515,6 +5122,9 @@
       "source_polygon": 885841,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0961614,
         0.0167077,
@@ -4541,6 +5151,9 @@
       "source_polygon": 881799,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0950084,
         0.0146747,
@@ -4567,6 +5180,9 @@
       "source_polygon": 879785,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0938492,
         0.0134227,
@@ -4593,6 +5209,9 @@
       "source_polygon": 877870,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0923254,
         0.013,
@@ -4619,6 +5238,9 @@
       "source_polygon": 877902,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0899999,
         0.0134227,
@@ -4645,6 +5267,9 @@
       "source_polygon": 881932,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0892702,
         0.0146747,
@@ -4671,6 +5296,9 @@
       "source_polygon": 885996,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0890126,
         0.0167077,
@@ -4697,6 +5325,9 @@
       "source_polygon": 892256,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0888522,
         0.0194437,
@@ -4723,6 +5354,9 @@
       "source_polygon": 901074,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.088542,
         0.0227775,
@@ -4749,6 +5383,9 @@
       "source_polygon": 914322,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0875411,
         0.026581,
@@ -4775,6 +5412,9 @@
       "source_polygon": 923732,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0858917,
         0.030708,
@@ -4801,6 +5441,9 @@
       "source_polygon": 935603,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0843002,
         0.035,
@@ -4827,6 +5470,9 @@
       "source_polygon": 950745,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0831563,
         0.039292,
@@ -4853,6 +5499,9 @@
       "source_polygon": 965015,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0809144,
         0.043419,
@@ -4879,6 +5528,9 @@
       "source_polygon": 976653,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0786085,
         0.0472225,
@@ -4905,6 +5557,9 @@
       "source_polygon": 987214,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0776935,
         0.0505564,
@@ -4931,6 +5586,9 @@
       "source_polygon": 995323,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0772514,
         0.0532923,
@@ -4957,6 +5615,9 @@
       "source_polygon": 1003130,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0764604,
         0.0553253,
@@ -4983,6 +5644,9 @@
       "source_polygon": 1005765,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0755776,
         0.0565773,
@@ -5009,6 +5673,9 @@
       "source_polygon": 1016455,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0732874,
         0.06,
@@ -5035,6 +5702,9 @@
       "source_polygon": 1016509,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0729047,
         0.0595196,
@@ -5061,6 +5731,9 @@
       "source_polygon": 1011434,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0724733,
         0.058097,
@@ -5087,6 +5760,9 @@
       "source_polygon": 1002925,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0864612,
         0.0557867,
@@ -5113,6 +5789,9 @@
       "source_polygon": 995119,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0899156,
         0.0526777,
@@ -5139,6 +5818,9 @@
       "source_polygon": 981727,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0923253,
         0.0488893,
@@ -5165,6 +5847,9 @@
       "source_polygon": 967676,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0941701,
         0.0445671,
@@ -5191,6 +5876,9 @@
       "source_polygon": 950615,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0954284,
         0.0398773,
@@ -5217,6 +5905,9 @@
       "source_polygon": 937949,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0962684,
         0.035,
@@ -5243,6 +5934,9 @@
       "source_polygon": 923619,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0977617,
         0.0301227,
@@ -5269,6 +5963,9 @@
       "source_polygon": 908962,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.1088172,
         0.0254329,
@@ -5295,6 +5992,9 @@
       "source_polygon": 898419,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.112243,
         0.0211107,
@@ -5321,6 +6021,9 @@
       "source_polygon": 885670,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.1134064,
         0.0173223,
@@ -5347,6 +6050,9 @@
       "source_polygon": 881632,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.1133106,
         0.0142133,
@@ -5373,6 +6079,9 @@
       "source_polygon": 875813,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0953854,
         0.011903,
@@ -5399,6 +6108,9 @@
       "source_polygon": 871909,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0940689,
         0.0104804,
@@ -5425,6 +6137,9 @@
       "source_polygon": 869935,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0930431,
         0.01,
@@ -5451,6 +6166,9 @@
       "source_polygon": 871939,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.091878,
         0.0104804,
@@ -5477,6 +6195,9 @@
       "source_polygon": 875927,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0891882,
         0.011903,
@@ -5503,6 +6224,9 @@
       "source_polygon": 879857,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0884888,
         0.0142133,
@@ -5529,6 +6253,9 @@
       "source_polygon": 888083,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0880527,
         0.0173223,
@@ -5555,6 +6282,9 @@
       "source_polygon": 898711,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.087478,
         0.0211107,
@@ -5581,6 +6311,9 @@
       "source_polygon": 911802,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0863595,
         0.0254329,
@@ -5607,6 +6340,9 @@
       "source_polygon": 923738,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.085289,
         0.0301227,
@@ -5633,6 +6369,9 @@
       "source_polygon": 938075,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0839778,
         0.035,
@@ -5659,6 +6398,9 @@
       "source_polygon": 950740,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0826384,
         0.0398773,
@@ -5685,6 +6427,9 @@
       "source_polygon": 967843,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0807228,
         0.0445671,
@@ -5711,6 +6456,9 @@
       "source_polygon": 981958,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.079707,
         0.0488893,
@@ -5737,6 +6485,9 @@
       "source_polygon": 992645,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0786453,
         0.0526777,
@@ -5763,6 +6514,9 @@
       "source_polygon": 1003082,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0770986,
         0.0557867,
@@ -5789,6 +6543,9 @@
       "source_polygon": 1011266,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0753801,
         0.058097,
@@ -5815,6 +6572,9 @@
       "source_polygon": 1013922,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0741046,
         0.0595196,
@@ -5841,6 +6601,9 @@
       "source_polygon": 1027295,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0680044,
         0.063,
@@ -5867,6 +6630,9 @@
       "source_polygon": 1024498,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0689265,
         0.062462,
@@ -5893,6 +6659,9 @@
       "source_polygon": 1019189,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0712941,
         0.0608686,
@@ -5919,6 +6688,9 @@
       "source_polygon": 1011021,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0854004,
         0.0582811,
@@ -5945,6 +6717,9 @@
       "source_polygon": 1000305,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0882253,
         0.054799,
@@ -5971,6 +6746,9 @@
       "source_polygon": 986962,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0905816,
         0.050556,
@@ -5997,6 +6775,9 @@
       "source_polygon": 973526,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0923163,
         0.0457151,
@@ -6023,6 +6804,9 @@
       "source_polygon": 953388,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.09363,
         0.0404625,
@@ -6049,6 +6833,9 @@
       "source_polygon": 937933,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0981361,
         0.035,
@@ -6075,6 +6862,9 @@
       "source_polygon": 921291,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.109229,
         0.0295375,
@@ -6101,6 +6891,9 @@
       "source_polygon": 906210,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.1129107,
         0.0242849,
@@ -6127,6 +6920,9 @@
       "source_polygon": 891960,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.1149307,
         0.019444,
@@ -6153,6 +6949,9 @@
       "source_polygon": 881590,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.1158236,
         0.015201,
@@ -6179,6 +6978,9 @@
       "source_polygon": 875639,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.1157087,
         0.0117189,
@@ -6205,6 +7007,9 @@
       "source_polygon": 867653,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.114459,
         0.0091314,
@@ -6231,6 +7036,9 @@
       "source_polygon": 863874,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.096068,
         0.007538,
@@ -6257,6 +7065,9 @@
       "source_polygon": 863938,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0931215,
         0.007,
@@ -6283,6 +7094,9 @@
       "source_polygon": 865929,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0918761,
         0.007538,
@@ -6309,6 +7123,9 @@
       "source_polygon": 867916,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0904891,
         0.0091314,
@@ -6335,6 +7152,9 @@
       "source_polygon": 873975,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0883762,
         0.0117189,
@@ -6361,6 +7181,9 @@
       "source_polygon": 883954,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0876464,
         0.015201,
@@ -6387,6 +7210,9 @@
       "source_polygon": 894342,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0874901,
         0.019444,
@@ -6413,6 +7239,9 @@
       "source_polygon": 903690,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0873001,
         0.0242849,
@@ -6439,6 +7268,9 @@
       "source_polygon": 921501,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0865313,
         0.0295375,
@@ -6465,6 +7297,9 @@
       "source_polygon": 935575,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0852516,
         0.035,
@@ -6491,6 +7326,9 @@
       "source_polygon": 953467,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0838409,
         0.0404625,
@@ -6517,6 +7355,9 @@
       "source_polygon": 970632,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0821719,
         0.0457151,
@@ -6543,6 +7384,9 @@
       "source_polygon": 987111,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0802114,
         0.050556,
@@ -6569,6 +7413,9 @@
       "source_polygon": 1000442,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0779047,
         0.054799,
@@ -6595,6 +7442,9 @@
       "source_polygon": 1011322,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0740299,
         0.0582811,
@@ -6621,6 +7471,9 @@
       "source_polygon": 1019177,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0708287,
         0.0608686,
@@ -6647,6 +7500,9 @@
       "source_polygon": 1024489,
       "material_index": 0,
       "material": "material_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "component_id": 27,
+      "component_vertex_count": 8754,
+      "component_face_count": 17119,
       "hit_world": [
         0.0689444,
         0.062462,
@@ -6668,6 +7524,7 @@
   ],
   "production_approved": false,
   "limitations": [
+    "component IDs are geometric groups, not verified anatomical labels",
     "material labels and UV-centroid colors are proxies, not semantic surface truth",
     "single frontal ray may select occluding hair or eyelid surface",
     "landmark positions remain provisional",

@@ -6,7 +6,6 @@ component colors. The script writes diagnostic renders and a JSON manifest,
 never a blend file.
 """
 import argparse
-from array import array
 import colorsys
 import hashlib
 import json
@@ -16,6 +15,8 @@ import sys
 
 import bpy
 from mathutils import Vector
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from component_islands import audit_components, find_root
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -45,52 +46,6 @@ def sha256_file(path):
     return digest.hexdigest()
 
 
-def find_root(parent, index):
-    while parent[index] != index:
-        parent[index] = parent[parent[index]]
-        index = parent[index]
-    return index
-
-
-def component_data(mesh):
-    vertex_count = len(mesh.vertices)
-    parent = array("I", range(vertex_count))
-    size = array("I", [1]) * vertex_count
-
-    for edge in mesh.edges:
-        left = find_root(parent, edge.vertices[0])
-        right = find_root(parent, edge.vertices[1])
-        if left != right:
-            if size[left] < size[right]:
-                left, right = right, left
-            parent[right] = left
-            size[left] += size[right]
-
-    counts = {}
-    bounds = {}
-    for index, vertex in enumerate(mesh.vertices):
-        root = find_root(parent, index)
-        counts[root] = counts.get(root, 0) + 1
-        point = vertex.co
-        box = bounds.get(root)
-        if box is None:
-            bounds[root] = [point.x, point.y, point.z, point.x, point.y, point.z]
-        else:
-            if point.x < box[0]: box[0] = point.x
-            if point.y < box[1]: box[1] = point.y
-            if point.z < box[2]: box[2] = point.z
-            if point.x > box[3]: box[3] = point.x
-            if point.y > box[4]: box[4] = point.y
-            if point.z > box[5]: box[5] = point.z
-
-    ordered_roots = sorted(counts, key=lambda root: (-counts[root], root))
-    root_to_id = {root: component_id for component_id, root in enumerate(ordered_roots)}
-    face_counts = [0] * len(ordered_roots)
-    for polygon in mesh.polygons:
-        face_counts[root_to_id[find_root(parent, polygon.vertices[0])]] += 1
-    return parent, root_to_id, ordered_roots, counts, bounds, face_counts
-
-
 def set_if_available(owner, name, value):
     if hasattr(owner, name):
         setattr(owner, name, value)
@@ -109,7 +64,7 @@ def main():
     if source is None or source.type != "MESH":
         raise RuntimeError(f"Missing locked source object: {SOURCE_OBJECT}")
 
-    parent, root_to_id, ordered_roots, counts, bounds, face_counts = component_data(source.data)
+    parent, root_to_id, ordered_roots, counts, bounds, face_counts = audit_components(source.data)
     duplicate = source.copy()
     duplicate.data = source.data.copy()
     duplicate.name = "ICH_CHIBI_COMPONENT_MAP__DIAGNOSTIC_ONLY"
