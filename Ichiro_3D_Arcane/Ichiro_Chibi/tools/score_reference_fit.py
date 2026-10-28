@@ -230,6 +230,77 @@ def score_pair(reference, candidate):
             "iou": iou, "dice": dice}
 
 
+def silhouette_width_profile(reference, candidate, target_bbox, sample_count=49):
+    """Measure silhouette span and center drift at normalized heights."""
+    _x0, y0, _x1, y1 = target_bbox
+    figure_height = y1 - y0
+    samples = []
+    for fraction in np.linspace(0.02, 0.98, sample_count):
+        center_y = int(round(y0 + fraction * (figure_height - 1)))
+        half_band = max(1, round(figure_height * 0.004))
+        row_start = max(y0, center_y - half_band)
+        row_end = min(y1, center_y + half_band + 1)
+
+        def spans(mask):
+            widths, centers = [], []
+            for row in range(row_start, row_end):
+                xs = np.flatnonzero(mask[row])
+                if len(xs):
+                    widths.append(int(xs[-1] - xs[0] + 1))
+                    centers.append(float(xs[0] + xs[-1]) * 0.5)
+            if not widths:
+                return None, None
+            return float(np.median(widths)), float(np.median(centers))
+
+        reference_width, reference_center = spans(reference)
+        source_width, source_center = spans(candidate)
+        if reference_width is None or source_width is None or reference_width == 0:
+            samples.append({"normalized_height_top_to_bottom": float(fraction),
+                            "reference_width_over_figure_height": reference_width / figure_height if reference_width else None,
+                            "source_width_over_figure_height": source_width / figure_height if source_width else None,
+                            "source_over_reference_width_ratio": None,
+                            "center_drift_over_figure_height": (
+                                (source_center - reference_center) / figure_height
+                                if reference_center is not None and source_center is not None else None
+                            )})
+            continue
+        samples.append({
+            "normalized_height_top_to_bottom": float(fraction),
+            "reference_width_over_figure_height": reference_width / figure_height,
+            "source_width_over_figure_height": source_width / figure_height,
+            "source_over_reference_width_ratio": source_width / reference_width,
+            "center_drift_over_figure_height": (source_center - reference_center) / figure_height,
+        })
+    valid = [sample for sample in samples
+             if sample["source_width_over_figure_height"] is not None
+             and sample["reference_width_over_figure_height"] is not None]
+    errors = [abs(sample["source_width_over_figure_height"]
+                  - sample["reference_width_over_figure_height"])
+              for sample in valid]
+    if errors:
+        worst_index = max(range(len(errors)), key=errors.__getitem__)
+        worst_sample = valid[worst_index]
+        summary = {
+            "mean_absolute_width_error_over_figure_height": float(np.mean(errors)),
+            "max_absolute_width_error_over_figure_height": float(errors[worst_index]),
+            "max_error_at_normalized_height": worst_sample["normalized_height_top_to_bottom"],
+            "source_over_reference_width_ratio_at_max_error": worst_sample["source_over_reference_width_ratio"],
+        }
+    else:
+        summary = {
+            "mean_absolute_width_error_over_figure_height": None,
+            "max_absolute_width_error_over_figure_height": None,
+            "max_error_at_normalized_height": None,
+            "source_over_reference_width_ratio_at_max_error": None,
+        }
+    return {
+        "normalization": "width / reference figure height; candidate is first centered and height-normalized",
+        "sample_count": sample_count,
+        "summary": summary,
+        "values": samples,
+    }
+
+
 def write_overlay(path, reference, candidate):
     out = np.zeros((*reference.shape, 3), dtype=np.uint8)
     out[reference] = (255, 64, 64)
@@ -290,7 +361,7 @@ def compare_view(view, reference_image, reference_mask, reference_bbox,
     Image.fromarray(reference_mask.astype(np.uint8) * 255, "L").save(mask_path)
     metrics["overlay"] = overlay_path.name
     metrics["reference_mask"] = mask_path.name
-    return metrics, overlay_path
+    return metrics, overlay_path, aligned
 
 
 def write_labeled_sheet(path, entries, columns, cell_size, label_height=24):
@@ -304,6 +375,46 @@ def write_labeled_sheet(path, entries, columns, cell_size, label_height=24):
         x, y = (i % columns) * cell_w, (i // columns) * (cell_h + label_height)
         sheet.paste(image, (x, y))
         draw.text((x + 6, y + cell_h + 6), f"{label}  IoU {score:.3f}",
+                  fill=(240, 240, 240), font=ImageFont.load_default())
+    sheet.save(path)
+
+
+def write_width_profile_sheet(path, profiles):
+    """Draw view-matched reference/source widths over normalized height."""
+    cell_w, cell_h, label_h = 480, 240, 24
+    columns, rows = 2, (len(profiles) + 1) // 2
+    sheet = Image.new("RGB", (cell_w * columns, (cell_h + label_h) * rows), (28, 30, 34))
+    draw = ImageDraw.Draw(sheet)
+    x_max = 0.70
+    for i, (view, profile) in enumerate(profiles.items()):
+        x_cell, y_cell = (i % columns) * cell_w, (i // columns) * (cell_h + label_h)
+        left, top, right, bottom = x_cell + 42, y_cell + 18, x_cell + 465, y_cell + 215
+        draw.rectangle((left, top, right, bottom), outline=(115, 120, 128), width=1)
+        for f in (0.0, 0.25, 0.5, 0.75, 1.0):
+            y = round(top + f * (bottom - top))
+            draw.line((left, y, right, y), fill=(54, 58, 64), width=1)
+            draw.text((x_cell + 4, y - 4), f"{f:.2f}", fill=(165, 170, 178), font=ImageFont.load_default())
+        for f in (0.0, 0.35, 0.70):
+            x = round(left + f / x_max * (right - left))
+            draw.line((x, top, x, bottom), fill=(48, 52, 58), width=1)
+            draw.text((x - 8, bottom + 4), f"{f:.2f}", fill=(165, 170, 178), font=ImageFont.load_default())
+        for key, color in (("reference_width_over_figure_height", (255, 96, 96)),
+                           ("source_width_over_figure_height", (32, 192, 255))):
+            points = []
+            for sample in profile["values"]:
+                width = sample[key]
+                if width is None:
+                    if len(points) > 1:
+                        draw.line(points, fill=color, width=2)
+                    points = []
+                    continue
+                x = round(left + min(width, x_max) / x_max * (right - left))
+                y = round(top + sample["normalized_height_top_to_bottom"] * (bottom - top))
+                points.append((x, y))
+            if len(points) > 1:
+                draw.line(points, fill=color, width=2)
+        draw.text((x_cell + 8, y_cell + cell_h + 5),
+                  f"{view.upper()}  rojo referencia / cian fuente",
                   fill=(240, 240, 240), font=ImageFont.load_default())
     sheet.save(path)
 
@@ -323,6 +434,7 @@ def main():
 
     canonical_results = {}
     canonical_overlays = []
+    canonical_profiles = {}
     for view, reference_path in REFERENCES.items():
         candidate_path = args.renders / f"source_{view}.pgm"
         if not candidate_path.is_file():
@@ -331,9 +443,12 @@ def main():
             reference_path, args.threshold, args.segmenter
         )
         overlay_stem = f"ortho_{view}"
-        metrics, overlay_path = compare_view(view, ref_image, ref_mask, ref_bbox,
-                                             segmentation, candidate_path,
-                                             args.output_dir, overlay_stem)
+        metrics, overlay_path, aligned = compare_view(view, ref_image, ref_mask, ref_bbox,
+                                                      segmentation, candidate_path,
+                                                      args.output_dir, overlay_stem)
+        profile = silhouette_width_profile(ref_mask, aligned, ref_bbox)
+        metrics["scanline_width_profile"] = profile
+        canonical_profiles[view] = profile
         metrics.update({"reference": str(reference_path.relative_to(ROOT)),
                         "source_render": str(candidate_path.relative_to(ROOT))})
         canonical_results[view] = metrics
@@ -355,9 +470,9 @@ def main():
             crops[panel_index], args.threshold, args.segmenter
         )
         overlay_stem = f"turnaround_{view}"
-        metrics, overlay_path = compare_view(view, ref_image, ref_mask, ref_bbox,
-                                             segmentation, candidate_path,
-                                             args.output_dir, overlay_stem)
+        metrics, overlay_path, _aligned = compare_view(view, ref_image, ref_mask, ref_bbox,
+                                                       segmentation, candidate_path,
+                                                       args.output_dir, overlay_stem)
         metrics.update({"source_sheet": str(args.turnaround_sheet.resolve().relative_to(ROOT)),
                         "source_panel_index_zero_based": panel_index,
                         "reference_crop": str(crop_path.relative_to(ROOT)),
@@ -366,13 +481,14 @@ def main():
         turnaround_overlays.append((view, overlay_path, metrics["iou"]))
 
     report = {
-        "schema": "ethernium.reference-fit-silhouette-score.v2",
+        "schema": "ethernium.reference-fit-silhouette-score.v3",
         "purpose": "camera-normalized diagnostic across four high-resolution reference plates and eight turnaround panels; not canon approval",
         "border_model_threshold_rgb_residual": args.threshold,
         "projection_mask_threshold": 127,
         "reference_segmenter_requested": args.segmenter,
         "optional_opencv_version": cv2.__version__ if cv2 is not None else None,
         "canonical_four_view_metrics": canonical_results,
+        "canonical_scanline_width_profiles": canonical_profiles,
         "turnaround_eight_view_metrics": turnaround_results,
         "turnaround_crop_method": crop_metadata,
         "interpretation": (
@@ -391,10 +507,13 @@ def main():
     write_labeled_sheet(canonical_sheet_path, canonical_overlays, 2, (384, 472), label_height=24)
     turnaround_sheet_path = args.output_dir / "reference_fit_8view_contact_sheet.png"
     write_labeled_sheet(turnaround_sheet_path, turnaround_overlays, 4, (180, 172), label_height=22)
+    width_profile_path = args.output_dir / "reference_fit_width_profiles.png"
+    write_width_profile_sheet(width_profile_path, canonical_profiles)
     print(json.dumps({
         "report": str(report_path),
         "four_view_contact_sheet": str(canonical_sheet_path),
         "eight_view_contact_sheet": str(turnaround_sheet_path),
+        "width_profile_sheet": str(width_profile_path),
         "four_view_iou": {k: round(v["iou"], 4) for k, v in canonical_results.items()},
         "eight_view_iou": {k: round(v["iou"], 4) for k, v in turnaround_results.items()},
     }, indent=2))

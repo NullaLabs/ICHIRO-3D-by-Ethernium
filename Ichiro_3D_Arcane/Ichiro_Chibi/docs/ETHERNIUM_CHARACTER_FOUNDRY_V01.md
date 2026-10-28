@@ -135,7 +135,7 @@ de proporción; no reemplaza el sculpt de alta densidad ni es topología de rig.
 BVH en CPU en ocho azimuts, sin renderizar ni guardar la escena fuente.
 `tools/score_reference_fit.py` compara las cuatro placas grandes y los ocho
 recortes de `ichiro_chibi_8view_turnaround.png`; genera máscaras, overlays,
-contact sheets y un informe versionado. Usa GrabCut determinista en las cuatro
+perfiles de anchura por altura, contact sheets y un informe versionado. Usa GrabCut determinista en las cuatro
 placas grandes si OpenCV ya está disponible; usa el modelo simple de borde en
 los paneles de baja resolución o como fallback. No se instaló ninguna
 dependencia. `docs/REFERENCE_CATALOG.md` registra las seis imágenes, los

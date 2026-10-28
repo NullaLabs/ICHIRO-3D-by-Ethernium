@@ -1,5 +1,5 @@
 {
-  "schema": "ethernium.reference-fit-silhouette-score.v2",
+  "schema": "ethernium.reference-fit-silhouette-score.v3",
   "purpose": "camera-normalized diagnostic across four high-resolution reference plates and eight turnaround panels; not canon approval",
   "border_model_threshold_rgb_residual": 24,
   "projection_mask_threshold": 127,
@@ -57,6 +57,361 @@
       "alignment": "bbox center + height only; width is never scaled independently",
       "overlay": "overlay_ortho_front.png",
       "reference_mask": "reference_mask_ortho_front.png",
+      "scanline_width_profile": {
+        "normalization": "width / reference figure height; candidate is first centered and height-normalized",
+        "sample_count": 49,
+        "summary": {
+          "mean_absolute_width_error_over_figure_height": 0.011897031539888683,
+          "max_absolute_width_error_over_figure_height": 0.08068181818181819,
+          "max_error_at_normalized_height": 0.7000000000000001,
+          "source_over_reference_width_ratio_at_max_error": 1.221875
+        },
+        "values": [
+          {
+            "normalized_height_top_to_bottom": 0.02,
+            "reference_width_over_figure_height": 0.12954545454545455,
+            "source_width_over_figure_height": 0.16363636363636364,
+            "source_over_reference_width_ratio": 1.263157894736842,
+            "center_drift_over_figure_height": 0.01818181818181818
+          },
+          {
+            "normalized_height_top_to_bottom": 0.04,
+            "reference_width_over_figure_height": 0.2159090909090909,
+            "source_width_over_figure_height": 0.2375,
+            "source_over_reference_width_ratio": 1.1,
+            "center_drift_over_figure_height": 0.007386363636363636
+          },
+          {
+            "normalized_height_top_to_bottom": 0.06,
+            "reference_width_over_figure_height": 0.2409090909090909,
+            "source_width_over_figure_height": 0.2534090909090909,
+            "source_over_reference_width_ratio": 1.0518867924528301,
+            "center_drift_over_figure_height": 0.010795454545454546
+          },
+          {
+            "normalized_height_top_to_bottom": 0.08,
+            "reference_width_over_figure_height": 0.2590909090909091,
+            "source_width_over_figure_height": 0.30568181818181817,
+            "source_over_reference_width_ratio": 1.1798245614035088,
+            "center_drift_over_figure_height": 0.009659090909090909
+          },
+          {
+            "normalized_height_top_to_bottom": 0.1,
+            "reference_width_over_figure_height": 0.3159090909090909,
+            "source_width_over_figure_height": 0.30568181818181817,
+            "source_over_reference_width_ratio": 0.9676258992805755,
+            "center_drift_over_figure_height": -0.0017045454545454545
+          },
+          {
+            "normalized_height_top_to_bottom": 0.12000000000000001,
+            "reference_width_over_figure_height": 0.3090909090909091,
+            "source_width_over_figure_height": 0.32045454545454544,
+            "source_over_reference_width_ratio": 1.036764705882353,
+            "center_drift_over_figure_height": -0.0005681818181818182
+          },
+          {
+            "normalized_height_top_to_bottom": 0.13999999999999999,
+            "reference_width_over_figure_height": 0.3181818181818182,
+            "source_width_over_figure_height": 0.32386363636363635,
+            "source_over_reference_width_ratio": 1.0178571428571428,
+            "center_drift_over_figure_height": 0.007386363636363636
+          },
+          {
+            "normalized_height_top_to_bottom": 0.16,
+            "reference_width_over_figure_height": 0.3386363636363636,
+            "source_width_over_figure_height": 0.35454545454545455,
+            "source_over_reference_width_ratio": 1.0469798657718121,
+            "center_drift_over_figure_height": 0.008522727272727272
+          },
+          {
+            "normalized_height_top_to_bottom": 0.18,
+            "reference_width_over_figure_height": 0.32727272727272727,
+            "source_width_over_figure_height": 0.3215909090909091,
+            "source_over_reference_width_ratio": 0.9826388888888888,
+            "center_drift_over_figure_height": 0.009659090909090909
+          },
+          {
+            "normalized_height_top_to_bottom": 0.19999999999999998,
+            "reference_width_over_figure_height": 0.3409090909090909,
+            "source_width_over_figure_height": 0.33636363636363636,
+            "source_over_reference_width_ratio": 0.9866666666666667,
+            "center_drift_over_figure_height": 0.00909090909090909
+          },
+          {
+            "normalized_height_top_to_bottom": 0.22,
+            "reference_width_over_figure_height": 0.3431818181818182,
+            "source_width_over_figure_height": 0.3386363636363636,
+            "source_over_reference_width_ratio": 0.9867549668874173,
+            "center_drift_over_figure_height": 0.003409090909090909
+          },
+          {
+            "normalized_height_top_to_bottom": 0.24,
+            "reference_width_over_figure_height": 0.3431818181818182,
+            "source_width_over_figure_height": 0.3386363636363636,
+            "source_over_reference_width_ratio": 0.9867549668874173,
+            "center_drift_over_figure_height": 0.003409090909090909
+          },
+          {
+            "normalized_height_top_to_bottom": 0.26,
+            "reference_width_over_figure_height": 0.3159090909090909,
+            "source_width_over_figure_height": 0.30568181818181817,
+            "source_over_reference_width_ratio": 0.9676258992805755,
+            "center_drift_over_figure_height": 0.007386363636363636
+          },
+          {
+            "normalized_height_top_to_bottom": 0.28,
+            "reference_width_over_figure_height": 0.26590909090909093,
+            "source_width_over_figure_height": 0.2897727272727273,
+            "source_over_reference_width_ratio": 1.0897435897435896,
+            "center_drift_over_figure_height": 0.021022727272727273
+          },
+          {
+            "normalized_height_top_to_bottom": 0.30000000000000004,
+            "reference_width_over_figure_height": 0.225,
+            "source_width_over_figure_height": 0.24659090909090908,
+            "source_over_reference_width_ratio": 1.095959595959596,
+            "center_drift_over_figure_height": 0.005681818181818182
+          },
+          {
+            "normalized_height_top_to_bottom": 0.32,
+            "reference_width_over_figure_height": 0.2318181818181818,
+            "source_width_over_figure_height": 0.25227272727272726,
+            "source_over_reference_width_ratio": 1.088235294117647,
+            "center_drift_over_figure_height": 0.017045454545454544
+          },
+          {
+            "normalized_height_top_to_bottom": 0.34,
+            "reference_width_over_figure_height": 0.28863636363636364,
+            "source_width_over_figure_height": 0.29318181818181815,
+            "source_over_reference_width_ratio": 1.015748031496063,
+            "center_drift_over_figure_height": 0.011363636363636364
+          },
+          {
+            "normalized_height_top_to_bottom": 0.36000000000000004,
+            "reference_width_over_figure_height": 0.27954545454545454,
+            "source_width_over_figure_height": 0.30113636363636365,
+            "source_over_reference_width_ratio": 1.0772357723577235,
+            "center_drift_over_figure_height": 0.0005681818181818182
+          },
+          {
+            "normalized_height_top_to_bottom": 0.38,
+            "reference_width_over_figure_height": 0.29772727272727273,
+            "source_width_over_figure_height": 0.2943181818181818,
+            "source_over_reference_width_ratio": 0.9885496183206107,
+            "center_drift_over_figure_height": 0.003409090909090909
+          },
+          {
+            "normalized_height_top_to_bottom": 0.4,
+            "reference_width_over_figure_height": 0.3409090909090909,
+            "source_width_over_figure_height": 0.3409090909090909,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": 0.003977272727272727
+          },
+          {
+            "normalized_height_top_to_bottom": 0.42000000000000004,
+            "reference_width_over_figure_height": 0.35,
+            "source_width_over_figure_height": 0.35113636363636364,
+            "source_over_reference_width_ratio": 1.0032467532467533,
+            "center_drift_over_figure_height": 0.003409090909090909
+          },
+          {
+            "normalized_height_top_to_bottom": 0.44,
+            "reference_width_over_figure_height": 0.37727272727272726,
+            "source_width_over_figure_height": 0.37727272727272726,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": 0.004545454545454545
+          },
+          {
+            "normalized_height_top_to_bottom": 0.46,
+            "reference_width_over_figure_height": 0.4090909090909091,
+            "source_width_over_figure_height": 0.4102272727272727,
+            "source_over_reference_width_ratio": 1.0027777777777778,
+            "center_drift_over_figure_height": 0.005113636363636364
+          },
+          {
+            "normalized_height_top_to_bottom": 0.48000000000000004,
+            "reference_width_over_figure_height": 0.37727272727272726,
+            "source_width_over_figure_height": 0.39431818181818185,
+            "source_over_reference_width_ratio": 1.0451807228915662,
+            "center_drift_over_figure_height": 0.00625
+          },
+          {
+            "normalized_height_top_to_bottom": 0.5,
+            "reference_width_over_figure_height": 0.39545454545454545,
+            "source_width_over_figure_height": 0.3875,
+            "source_over_reference_width_ratio": 0.9798850574712644,
+            "center_drift_over_figure_height": 0.005681818181818182
+          },
+          {
+            "normalized_height_top_to_bottom": 0.52,
+            "reference_width_over_figure_height": 0.4340909090909091,
+            "source_width_over_figure_height": 0.42954545454545456,
+            "source_over_reference_width_ratio": 0.9895287958115183,
+            "center_drift_over_figure_height": 0.006818181818181818
+          },
+          {
+            "normalized_height_top_to_bottom": 0.54,
+            "reference_width_over_figure_height": 0.4431818181818182,
+            "source_width_over_figure_height": 0.44545454545454544,
+            "source_over_reference_width_ratio": 1.005128205128205,
+            "center_drift_over_figure_height": 0.007954545454545454
+          },
+          {
+            "normalized_height_top_to_bottom": 0.56,
+            "reference_width_over_figure_height": 0.4431818181818182,
+            "source_width_over_figure_height": 0.44545454545454544,
+            "source_over_reference_width_ratio": 1.005128205128205,
+            "center_drift_over_figure_height": 0.007954545454545454
+          },
+          {
+            "normalized_height_top_to_bottom": 0.5800000000000001,
+            "reference_width_over_figure_height": 0.4431818181818182,
+            "source_width_over_figure_height": 0.4431818181818182,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": 0.00909090909090909
+          },
+          {
+            "normalized_height_top_to_bottom": 0.6,
+            "reference_width_over_figure_height": 0.45,
+            "source_width_over_figure_height": 0.4465909090909091,
+            "source_over_reference_width_ratio": 0.9924242424242424,
+            "center_drift_over_figure_height": 0.007386363636363636
+          },
+          {
+            "normalized_height_top_to_bottom": 0.62,
+            "reference_width_over_figure_height": 0.4636363636363636,
+            "source_width_over_figure_height": 0.45227272727272727,
+            "source_over_reference_width_ratio": 0.9754901960784313,
+            "center_drift_over_figure_height": 0.006818181818181818
+          },
+          {
+            "normalized_height_top_to_bottom": 0.64,
+            "reference_width_over_figure_height": 0.4727272727272727,
+            "source_width_over_figure_height": 0.4727272727272727,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": 0.006818181818181818
+          },
+          {
+            "normalized_height_top_to_bottom": 0.66,
+            "reference_width_over_figure_height": 0.47045454545454546,
+            "source_width_over_figure_height": 0.4659090909090909,
+            "source_over_reference_width_ratio": 0.9903381642512077,
+            "center_drift_over_figure_height": 0.008522727272727272
+          },
+          {
+            "normalized_height_top_to_bottom": 0.68,
+            "reference_width_over_figure_height": 0.4681818181818182,
+            "source_width_over_figure_height": 0.475,
+            "source_over_reference_width_ratio": 1.0145631067961165,
+            "center_drift_over_figure_height": 0.006818181818181818
+          },
+          {
+            "normalized_height_top_to_bottom": 0.7000000000000001,
+            "reference_width_over_figure_height": 0.36363636363636365,
+            "source_width_over_figure_height": 0.44431818181818183,
+            "source_over_reference_width_ratio": 1.221875,
+            "center_drift_over_figure_height": -0.0005681818181818182
+          },
+          {
+            "normalized_height_top_to_bottom": 0.7200000000000001,
+            "reference_width_over_figure_height": 0.32727272727272727,
+            "source_width_over_figure_height": 0.31363636363636366,
+            "source_over_reference_width_ratio": 0.9583333333333334,
+            "center_drift_over_figure_height": 0.005113636363636364
+          },
+          {
+            "normalized_height_top_to_bottom": 0.74,
+            "reference_width_over_figure_height": 0.3568181818181818,
+            "source_width_over_figure_height": 0.3568181818181818,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": 0.00625
+          },
+          {
+            "normalized_height_top_to_bottom": 0.76,
+            "reference_width_over_figure_height": 0.3522727272727273,
+            "source_width_over_figure_height": 0.36818181818181817,
+            "source_over_reference_width_ratio": 1.0451612903225806,
+            "center_drift_over_figure_height": 0.003409090909090909
+          },
+          {
+            "normalized_height_top_to_bottom": 0.78,
+            "reference_width_over_figure_height": 0.3340909090909091,
+            "source_width_over_figure_height": 0.36477272727272725,
+            "source_over_reference_width_ratio": 1.0918367346938775,
+            "center_drift_over_figure_height": 0.004545454545454545
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8,
+            "reference_width_over_figure_height": 0.31363636363636366,
+            "source_width_over_figure_height": 0.3352272727272727,
+            "source_over_reference_width_ratio": 1.068840579710145,
+            "center_drift_over_figure_height": 0.0005681818181818182
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8200000000000001,
+            "reference_width_over_figure_height": 0.3159090909090909,
+            "source_width_over_figure_height": 0.325,
+            "source_over_reference_width_ratio": 1.0287769784172662,
+            "center_drift_over_figure_height": 0.0
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8400000000000001,
+            "reference_width_over_figure_height": 0.32045454545454544,
+            "source_width_over_figure_height": 0.32727272727272727,
+            "source_over_reference_width_ratio": 1.0212765957446808,
+            "center_drift_over_figure_height": 0.0011363636363636363
+          },
+          {
+            "normalized_height_top_to_bottom": 0.86,
+            "reference_width_over_figure_height": 0.33181818181818185,
+            "source_width_over_figure_height": 0.32272727272727275,
+            "source_over_reference_width_ratio": 0.9726027397260274,
+            "center_drift_over_figure_height": -0.0011363636363636363
+          },
+          {
+            "normalized_height_top_to_bottom": 0.88,
+            "reference_width_over_figure_height": 0.36818181818181817,
+            "source_width_over_figure_height": 0.3659090909090909,
+            "source_over_reference_width_ratio": 0.9938271604938271,
+            "center_drift_over_figure_height": -0.0022727272727272726
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9,
+            "reference_width_over_figure_height": 0.3931818181818182,
+            "source_width_over_figure_height": 0.3886363636363636,
+            "source_over_reference_width_ratio": 0.9884393063583815,
+            "center_drift_over_figure_height": -0.0022727272727272726
+          },
+          {
+            "normalized_height_top_to_bottom": 0.92,
+            "reference_width_over_figure_height": 0.4090909090909091,
+            "source_width_over_figure_height": 0.4022727272727273,
+            "source_over_reference_width_ratio": 0.9833333333333333,
+            "center_drift_over_figure_height": -0.0011363636363636363
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9400000000000001,
+            "reference_width_over_figure_height": 0.45,
+            "source_width_over_figure_height": 0.42954545454545456,
+            "source_over_reference_width_ratio": 0.9545454545454546,
+            "center_drift_over_figure_height": -0.003409090909090909
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9600000000000001,
+            "reference_width_over_figure_height": 0.4727272727272727,
+            "source_width_over_figure_height": 0.46136363636363636,
+            "source_over_reference_width_ratio": 0.9759615384615384,
+            "center_drift_over_figure_height": -0.0011363636363636363
+          },
+          {
+            "normalized_height_top_to_bottom": 0.98,
+            "reference_width_over_figure_height": 0.4863636363636364,
+            "source_width_over_figure_height": 0.4818181818181818,
+            "source_over_reference_width_ratio": 0.9906542056074766,
+            "center_drift_over_figure_height": -0.0011363636363636363
+          }
+        ]
+      },
       "reference": "references\\ichiro_chibi_front.png",
       "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_front.pgm"
     },
@@ -111,6 +466,361 @@
       "alignment": "bbox center + height only; width is never scaled independently",
       "overlay": "overlay_ortho_back.png",
       "reference_mask": "reference_mask_ortho_back.png",
+      "scanline_width_profile": {
+        "normalization": "width / reference figure height; candidate is first centered and height-normalized",
+        "sample_count": 49,
+        "summary": {
+          "mean_absolute_width_error_over_figure_height": 0.023383385244758494,
+          "max_absolute_width_error_over_figure_height": 0.09453302961275628,
+          "max_error_at_normalized_height": 0.7000000000000001,
+          "source_over_reference_width_ratio_at_max_error": 1.2842465753424657
+        },
+        "values": [
+          {
+            "normalized_height_top_to_bottom": 0.02,
+            "reference_width_over_figure_height": 0.22323462414578588,
+            "source_width_over_figure_height": 0.16173120728929385,
+            "source_over_reference_width_ratio": 0.7244897959183674,
+            "center_drift_over_figure_height": -0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.04,
+            "reference_width_over_figure_height": 0.22779043280182232,
+            "source_width_over_figure_height": 0.23804100227790434,
+            "source_over_reference_width_ratio": 1.045,
+            "center_drift_over_figure_height": -0.0017084282460136675
+          },
+          {
+            "normalized_height_top_to_bottom": 0.06,
+            "reference_width_over_figure_height": 0.29157175398633256,
+            "source_width_over_figure_height": 0.2517084282460137,
+            "source_over_reference_width_ratio": 0.86328125,
+            "center_drift_over_figure_height": -0.005125284738041002
+          },
+          {
+            "normalized_height_top_to_bottom": 0.08,
+            "reference_width_over_figure_height": 0.296127562642369,
+            "source_width_over_figure_height": 0.30637813211845105,
+            "source_over_reference_width_ratio": 1.0346153846153847,
+            "center_drift_over_figure_height": -0.008542141230068337
+          },
+          {
+            "normalized_height_top_to_bottom": 0.1,
+            "reference_width_over_figure_height": 0.3097949886104784,
+            "source_width_over_figure_height": 0.3041002277904328,
+            "source_over_reference_width_ratio": 0.9816176470588235,
+            "center_drift_over_figure_height": 0.003986332574031891
+          },
+          {
+            "normalized_height_top_to_bottom": 0.12000000000000001,
+            "reference_width_over_figure_height": 0.3416856492027335,
+            "source_width_over_figure_height": 0.3211845102505695,
+            "source_over_reference_width_ratio": 0.94,
+            "center_drift_over_figure_height": 0.010250569476082005
+          },
+          {
+            "normalized_height_top_to_bottom": 0.13999999999999999,
+            "reference_width_over_figure_height": 0.3234624145785877,
+            "source_width_over_figure_height": 0.3234624145785877,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": -0.022779043280182234
+          },
+          {
+            "normalized_height_top_to_bottom": 0.16,
+            "reference_width_over_figure_height": 0.3120728929384966,
+            "source_width_over_figure_height": 0.3530751708428246,
+            "source_over_reference_width_ratio": 1.1313868613138687,
+            "center_drift_over_figure_height": -0.011958997722095672
+          },
+          {
+            "normalized_height_top_to_bottom": 0.18,
+            "reference_width_over_figure_height": 0.32801822323462415,
+            "source_width_over_figure_height": 0.3211845102505695,
+            "source_over_reference_width_ratio": 0.9791666666666666,
+            "center_drift_over_figure_height": 0.003416856492027335
+          },
+          {
+            "normalized_height_top_to_bottom": 0.19999999999999998,
+            "reference_width_over_figure_height": 0.32801822323462415,
+            "source_width_over_figure_height": 0.3348519362186788,
+            "source_over_reference_width_ratio": 1.0208333333333333,
+            "center_drift_over_figure_height": 0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.22,
+            "reference_width_over_figure_height": 0.32574031890660593,
+            "source_width_over_figure_height": 0.33940774487471526,
+            "source_over_reference_width_ratio": 1.0419580419580419,
+            "center_drift_over_figure_height": -0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.24,
+            "reference_width_over_figure_height": 0.2847380410022779,
+            "source_width_over_figure_height": 0.33826879271070615,
+            "source_over_reference_width_ratio": 1.188,
+            "center_drift_over_figure_height": 0.015375854214123007
+          },
+          {
+            "normalized_height_top_to_bottom": 0.26,
+            "reference_width_over_figure_height": 0.2847380410022779,
+            "source_width_over_figure_height": 0.3041002277904328,
+            "source_over_reference_width_ratio": 1.068,
+            "center_drift_over_figure_height": 0.011958997722095672
+          },
+          {
+            "normalized_height_top_to_bottom": 0.28,
+            "reference_width_over_figure_height": 0.20501138952164008,
+            "source_width_over_figure_height": 0.28929384965831434,
+            "source_over_reference_width_ratio": 1.4111111111111112,
+            "center_drift_over_figure_height": 0.002277904328018223
+          },
+          {
+            "normalized_height_top_to_bottom": 0.30000000000000004,
+            "reference_width_over_figure_height": 0.22095671981776766,
+            "source_width_over_figure_height": 0.24943052391799544,
+            "source_over_reference_width_ratio": 1.1288659793814433,
+            "center_drift_over_figure_height": 0.035876993166287015
+          },
+          {
+            "normalized_height_top_to_bottom": 0.32,
+            "reference_width_over_figure_height": 0.26651480637813213,
+            "source_width_over_figure_height": 0.255125284738041,
+            "source_over_reference_width_ratio": 0.9572649572649573,
+            "center_drift_over_figure_height": 0.03644646924829157
+          },
+          {
+            "normalized_height_top_to_bottom": 0.34,
+            "reference_width_over_figure_height": 0.3097949886104784,
+            "source_width_over_figure_height": 0.296127562642369,
+            "source_over_reference_width_ratio": 0.9558823529411765,
+            "center_drift_over_figure_height": 0.011389521640091117
+          },
+          {
+            "normalized_height_top_to_bottom": 0.36000000000000004,
+            "reference_width_over_figure_height": 0.2938496583143508,
+            "source_width_over_figure_height": 0.2938496583143508,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": -0.003416856492027335
+          },
+          {
+            "normalized_height_top_to_bottom": 0.38,
+            "reference_width_over_figure_height": 0.33940774487471526,
+            "source_width_over_figure_height": 0.2949886104783599,
+            "source_over_reference_width_ratio": 0.8691275167785235,
+            "center_drift_over_figure_height": -0.0017084282460136675
+          },
+          {
+            "normalized_height_top_to_bottom": 0.4,
+            "reference_width_over_figure_height": 0.357630979498861,
+            "source_width_over_figure_height": 0.3416856492027335,
+            "source_over_reference_width_ratio": 0.9554140127388535,
+            "center_drift_over_figure_height": -0.0017084282460136675
+          },
+          {
+            "normalized_height_top_to_bottom": 0.42000000000000004,
+            "reference_width_over_figure_height": 0.38724373576309795,
+            "source_width_over_figure_height": 0.3542141230068337,
+            "source_over_reference_width_ratio": 0.9147058823529411,
+            "center_drift_over_figure_height": -0.0028473804100227792
+          },
+          {
+            "normalized_height_top_to_bottom": 0.44,
+            "reference_width_over_figure_height": 0.4168564920273349,
+            "source_width_over_figure_height": 0.3826879271070615,
+            "source_over_reference_width_ratio": 0.9180327868852459,
+            "center_drift_over_figure_height": -0.0017084282460136675
+          },
+          {
+            "normalized_height_top_to_bottom": 0.46,
+            "reference_width_over_figure_height": 0.4009111617312073,
+            "source_width_over_figure_height": 0.40888382687927105,
+            "source_over_reference_width_ratio": 1.0198863636363635,
+            "center_drift_over_figure_height": -0.0005694760820045558
+          },
+          {
+            "normalized_height_top_to_bottom": 0.48000000000000004,
+            "reference_width_over_figure_height": 0.39635535307517084,
+            "source_width_over_figure_height": 0.3940774487471526,
+            "source_over_reference_width_ratio": 0.9942528735632183,
+            "center_drift_over_figure_height": 0.002277904328018223
+          },
+          {
+            "normalized_height_top_to_bottom": 0.5,
+            "reference_width_over_figure_height": 0.43507972665148065,
+            "source_width_over_figure_height": 0.38724373576309795,
+            "source_over_reference_width_ratio": 0.8900523560209425,
+            "center_drift_over_figure_height": -0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.52,
+            "reference_width_over_figure_height": 0.45558086560364464,
+            "source_width_over_figure_height": 0.4305239179954442,
+            "source_over_reference_width_ratio": 0.945,
+            "center_drift_over_figure_height": -0.002277904328018223
+          },
+          {
+            "normalized_height_top_to_bottom": 0.54,
+            "reference_width_over_figure_height": 0.45558086560364464,
+            "source_width_over_figure_height": 0.44646924829157175,
+            "source_over_reference_width_ratio": 0.98,
+            "center_drift_over_figure_height": 0.0
+          },
+          {
+            "normalized_height_top_to_bottom": 0.56,
+            "reference_width_over_figure_height": 0.44874715261959,
+            "source_width_over_figure_height": 0.44646924829157175,
+            "source_over_reference_width_ratio": 0.9949238578680203,
+            "center_drift_over_figure_height": 0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.5800000000000001,
+            "reference_width_over_figure_height": 0.4533029612756264,
+            "source_width_over_figure_height": 0.4419134396355353,
+            "source_over_reference_width_ratio": 0.9748743718592965,
+            "center_drift_over_figure_height": -0.0005694760820045558
+          },
+          {
+            "normalized_height_top_to_bottom": 0.6,
+            "reference_width_over_figure_height": 0.45785876993166286,
+            "source_width_over_figure_height": 0.44874715261959,
+            "source_over_reference_width_ratio": 0.9800995024875622,
+            "center_drift_over_figure_height": 0.0
+          },
+          {
+            "normalized_height_top_to_bottom": 0.62,
+            "reference_width_over_figure_height": 0.4783599088838269,
+            "source_width_over_figure_height": 0.4533029612756264,
+            "source_over_reference_width_ratio": 0.9476190476190476,
+            "center_drift_over_figure_height": 0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.64,
+            "reference_width_over_figure_height": 0.4760820045558087,
+            "source_width_over_figure_height": 0.4715261958997722,
+            "source_over_reference_width_ratio": 0.9904306220095693,
+            "center_drift_over_figure_height": 0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.66,
+            "reference_width_over_figure_height": 0.4783599088838269,
+            "source_width_over_figure_height": 0.46924829157175396,
+            "source_over_reference_width_ratio": 0.9809523809523809,
+            "center_drift_over_figure_height": 0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.68,
+            "reference_width_over_figure_height": 0.4601366742596811,
+            "source_width_over_figure_height": 0.47380410022779046,
+            "source_over_reference_width_ratio": 1.0297029702970297,
+            "center_drift_over_figure_height": 0.0
+          },
+          {
+            "normalized_height_top_to_bottom": 0.7000000000000001,
+            "reference_width_over_figure_height": 0.3325740318906606,
+            "source_width_over_figure_height": 0.4271070615034169,
+            "source_over_reference_width_ratio": 1.2842465753424657,
+            "center_drift_over_figure_height": -0.0017084282460136675
+          },
+          {
+            "normalized_height_top_to_bottom": 0.7200000000000001,
+            "reference_width_over_figure_height": 0.3553530751708428,
+            "source_width_over_figure_height": 0.3143507972665148,
+            "source_over_reference_width_ratio": 0.8846153846153846,
+            "center_drift_over_figure_height": 0.0017084282460136675
+          },
+          {
+            "normalized_height_top_to_bottom": 0.74,
+            "reference_width_over_figure_height": 0.38724373576309795,
+            "source_width_over_figure_height": 0.3553530751708428,
+            "source_over_reference_width_ratio": 0.9176470588235294,
+            "center_drift_over_figure_height": -0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.76,
+            "reference_width_over_figure_height": 0.39635535307517084,
+            "source_width_over_figure_height": 0.36674259681093396,
+            "source_over_reference_width_ratio": 0.9252873563218391,
+            "center_drift_over_figure_height": -0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.78,
+            "reference_width_over_figure_height": 0.3735763097949886,
+            "source_width_over_figure_height": 0.3621867881548975,
+            "source_over_reference_width_ratio": 0.9695121951219512,
+            "center_drift_over_figure_height": -0.004555808656036446
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8,
+            "reference_width_over_figure_height": 0.3553530751708428,
+            "source_width_over_figure_height": 0.3337129840546697,
+            "source_over_reference_width_ratio": 0.9391025641025641,
+            "center_drift_over_figure_height": -0.003986332574031891
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8200000000000001,
+            "reference_width_over_figure_height": 0.35990888382687924,
+            "source_width_over_figure_height": 0.32801822323462415,
+            "source_over_reference_width_ratio": 0.9113924050632911,
+            "center_drift_over_figure_height": -0.004555808656036446
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8400000000000001,
+            "reference_width_over_figure_height": 0.3621867881548975,
+            "source_width_over_figure_height": 0.32915717539863326,
+            "source_over_reference_width_ratio": 0.9088050314465409,
+            "center_drift_over_figure_height": -0.003986332574031891
+          },
+          {
+            "normalized_height_top_to_bottom": 0.86,
+            "reference_width_over_figure_height": 0.34851936218678814,
+            "source_width_over_figure_height": 0.3234624145785877,
+            "source_over_reference_width_ratio": 0.9281045751633987,
+            "center_drift_over_figure_height": -0.002277904328018223
+          },
+          {
+            "normalized_height_top_to_bottom": 0.88,
+            "reference_width_over_figure_height": 0.3895216400911162,
+            "source_width_over_figure_height": 0.3690205011389522,
+            "source_over_reference_width_ratio": 0.9473684210526315,
+            "center_drift_over_figure_height": -0.003416856492027335
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9,
+            "reference_width_over_figure_height": 0.4123006833712984,
+            "source_width_over_figure_height": 0.3895216400911162,
+            "source_over_reference_width_ratio": 0.9447513812154696,
+            "center_drift_over_figure_height": -0.002277904328018223
+          },
+          {
+            "normalized_height_top_to_bottom": 0.92,
+            "reference_width_over_figure_height": 0.428246013667426,
+            "source_width_over_figure_height": 0.4009111617312073,
+            "source_over_reference_width_ratio": 0.9361702127659575,
+            "center_drift_over_figure_height": 0.0
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9400000000000001,
+            "reference_width_over_figure_height": 0.4533029612756264,
+            "source_width_over_figure_height": 0.4316628701594533,
+            "source_over_reference_width_ratio": 0.9522613065326633,
+            "center_drift_over_figure_height": 0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9600000000000001,
+            "reference_width_over_figure_height": 0.4715261958997722,
+            "source_width_over_figure_height": 0.4601366742596811,
+            "source_over_reference_width_ratio": 0.9758454106280193,
+            "center_drift_over_figure_height": 0.0011389521640091116
+          },
+          {
+            "normalized_height_top_to_bottom": 0.98,
+            "reference_width_over_figure_height": 0.4806378132118451,
+            "source_width_over_figure_height": 0.4806378132118451,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": 0.0011389521640091116
+          }
+        ]
+      },
       "reference": "references\\ichiro_chibi_back.png",
       "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_back.pgm"
     },
@@ -165,6 +875,361 @@
       "alignment": "bbox center + height only; width is never scaled independently",
       "overlay": "overlay_ortho_left.png",
       "reference_mask": "reference_mask_ortho_left.png",
+      "scanline_width_profile": {
+        "normalization": "width / reference figure height; candidate is first centered and height-normalized",
+        "sample_count": 49,
+        "summary": {
+          "mean_absolute_width_error_over_figure_height": 0.020158174628425986,
+          "max_absolute_width_error_over_figure_height": 0.12138084632516702,
+          "max_error_at_normalized_height": 0.38,
+          "source_over_reference_width_ratio_at_max_error": 0.5219298245614035
+        },
+        "values": [
+          {
+            "normalized_height_top_to_bottom": 0.02,
+            "reference_width_over_figure_height": 0.16926503340757237,
+            "source_width_over_figure_height": 0.16369710467706014,
+            "source_over_reference_width_ratio": 0.9671052631578947,
+            "center_drift_over_figure_height": 0.0011135857461024498
+          },
+          {
+            "normalized_height_top_to_bottom": 0.04,
+            "reference_width_over_figure_height": 0.22939866369710468,
+            "source_width_over_figure_height": 0.24498886414253898,
+            "source_over_reference_width_ratio": 1.0679611650485437,
+            "center_drift_over_figure_height": 0.0022271714922048997
+          },
+          {
+            "normalized_height_top_to_bottom": 0.06,
+            "reference_width_over_figure_height": 0.33184855233853006,
+            "source_width_over_figure_height": 0.32962138084632514,
+            "source_over_reference_width_ratio": 0.9932885906040269,
+            "center_drift_over_figure_height": 0.0038975501113585748
+          },
+          {
+            "normalized_height_top_to_bottom": 0.08,
+            "reference_width_over_figure_height": 0.35412026726057905,
+            "source_width_over_figure_height": 0.3507795100222717,
+            "source_over_reference_width_ratio": 0.9905660377358491,
+            "center_drift_over_figure_height": -0.0011135857461024498
+          },
+          {
+            "normalized_height_top_to_bottom": 0.1,
+            "reference_width_over_figure_height": 0.3585746102449889,
+            "source_width_over_figure_height": 0.3674832962138085,
+            "source_over_reference_width_ratio": 1.0248447204968945,
+            "center_drift_over_figure_height": 0.005567928730512249
+          },
+          {
+            "normalized_height_top_to_bottom": 0.12000000000000001,
+            "reference_width_over_figure_height": 0.37193763919821826,
+            "source_width_over_figure_height": 0.38530066815144765,
+            "source_over_reference_width_ratio": 1.035928143712575,
+            "center_drift_over_figure_height": -0.0011135857461024498
+          },
+          {
+            "normalized_height_top_to_bottom": 0.13999999999999999,
+            "reference_width_over_figure_height": 0.40311804008908686,
+            "source_width_over_figure_height": 0.4064587973273942,
+            "source_over_reference_width_ratio": 1.0082872928176796,
+            "center_drift_over_figure_height": 0.0
+          },
+          {
+            "normalized_height_top_to_bottom": 0.16,
+            "reference_width_over_figure_height": 0.40979955456570155,
+            "source_width_over_figure_height": 0.40089086859688194,
+            "source_over_reference_width_ratio": 0.9782608695652174,
+            "center_drift_over_figure_height": 0.004454342984409799
+          },
+          {
+            "normalized_height_top_to_bottom": 0.18,
+            "reference_width_over_figure_height": 0.37639198218262804,
+            "source_width_over_figure_height": 0.3930957683741648,
+            "source_over_reference_width_ratio": 1.044378698224852,
+            "center_drift_over_figure_height": 0.019487750556792874
+          },
+          {
+            "normalized_height_top_to_bottom": 0.19999999999999998,
+            "reference_width_over_figure_height": 0.3830734966592428,
+            "source_width_over_figure_height": 0.3674832962138085,
+            "source_over_reference_width_ratio": 0.9593023255813954,
+            "center_drift_over_figure_height": 0.004454342984409799
+          },
+          {
+            "normalized_height_top_to_bottom": 0.22,
+            "reference_width_over_figure_height": 0.3674832962138085,
+            "source_width_over_figure_height": 0.3685968819599109,
+            "source_over_reference_width_ratio": 1.003030303030303,
+            "center_drift_over_figure_height": 0.016146993318485525
+          },
+          {
+            "normalized_height_top_to_bottom": 0.24,
+            "reference_width_over_figure_height": 0.35634743875278396,
+            "source_width_over_figure_height": 0.35634743875278396,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": 0.015590200445434299
+          },
+          {
+            "normalized_height_top_to_bottom": 0.26,
+            "reference_width_over_figure_height": 0.33407572383073497,
+            "source_width_over_figure_height": 0.3273942093541203,
+            "source_over_reference_width_ratio": 0.98,
+            "center_drift_over_figure_height": 0.012249443207126948
+          },
+          {
+            "normalized_height_top_to_bottom": 0.28,
+            "reference_width_over_figure_height": 0.3028953229398664,
+            "source_width_over_figure_height": 0.3207126948775056,
+            "source_over_reference_width_ratio": 1.0588235294117647,
+            "center_drift_over_figure_height": 0.024498886414253896
+          },
+          {
+            "normalized_height_top_to_bottom": 0.30000000000000004,
+            "reference_width_over_figure_height": 0.2828507795100223,
+            "source_width_over_figure_height": 0.22939866369710468,
+            "source_over_reference_width_ratio": 0.8110236220472441,
+            "center_drift_over_figure_height": 0.0022271714922048997
+          },
+          {
+            "normalized_height_top_to_bottom": 0.32,
+            "reference_width_over_figure_height": 0.2717149220489978,
+            "source_width_over_figure_height": 0.26280623608017817,
+            "source_over_reference_width_ratio": 0.9672131147540983,
+            "center_drift_over_figure_height": 0.011135857461024499
+          },
+          {
+            "normalized_height_top_to_bottom": 0.34,
+            "reference_width_over_figure_height": 0.2650334075723831,
+            "source_width_over_figure_height": 0.25389755011135856,
+            "source_over_reference_width_ratio": 0.957983193277311,
+            "center_drift_over_figure_height": 0.013919821826280624
+          },
+          {
+            "normalized_height_top_to_bottom": 0.36000000000000004,
+            "reference_width_over_figure_height": 0.2561247216035635,
+            "source_width_over_figure_height": 0.2561247216035635,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": 0.017817371937639197
+          },
+          {
+            "normalized_height_top_to_bottom": 0.38,
+            "reference_width_over_figure_height": 0.25389755011135856,
+            "source_width_over_figure_height": 0.13251670378619154,
+            "source_over_reference_width_ratio": 0.5219298245614035,
+            "center_drift_over_figure_height": 0.05902004454342984
+          },
+          {
+            "normalized_height_top_to_bottom": 0.4,
+            "reference_width_over_figure_height": 0.17817371937639198,
+            "source_width_over_figure_height": 0.16592427616926503,
+            "source_over_reference_width_ratio": 0.93125,
+            "center_drift_over_figure_height": 0.006124721603563474
+          },
+          {
+            "normalized_height_top_to_bottom": 0.42000000000000004,
+            "reference_width_over_figure_height": 0.18930957683741648,
+            "source_width_over_figure_height": 0.1870824053452116,
+            "source_over_reference_width_ratio": 0.9882352941176471,
+            "center_drift_over_figure_height": 0.008908685968819599
+          },
+          {
+            "normalized_height_top_to_bottom": 0.44,
+            "reference_width_over_figure_height": 0.19821826280623608,
+            "source_width_over_figure_height": 0.18262806236080179,
+            "source_over_reference_width_ratio": 0.9213483146067416,
+            "center_drift_over_figure_height": 0.004454342984409799
+          },
+          {
+            "normalized_height_top_to_bottom": 0.46,
+            "reference_width_over_figure_height": 0.19376391982182628,
+            "source_width_over_figure_height": 0.17260579064587972,
+            "source_over_reference_width_ratio": 0.8908045977011494,
+            "center_drift_over_figure_height": -0.0016703786191536749
+          },
+          {
+            "normalized_height_top_to_bottom": 0.48000000000000004,
+            "reference_width_over_figure_height": 0.1870824053452116,
+            "source_width_over_figure_height": 0.18040089086859687,
+            "source_over_reference_width_ratio": 0.9642857142857143,
+            "center_drift_over_figure_height": 0.012249443207126948
+          },
+          {
+            "normalized_height_top_to_bottom": 0.5,
+            "reference_width_over_figure_height": 0.1870824053452116,
+            "source_width_over_figure_height": 0.17037861915367483,
+            "source_over_reference_width_ratio": 0.9107142857142857,
+            "center_drift_over_figure_height": 0.009465478841870824
+          },
+          {
+            "normalized_height_top_to_bottom": 0.52,
+            "reference_width_over_figure_height": 0.18262806236080179,
+            "source_width_over_figure_height": 0.15812917594654788,
+            "source_over_reference_width_ratio": 0.8658536585365854,
+            "center_drift_over_figure_height": 0.0033407572383073497
+          },
+          {
+            "normalized_height_top_to_bottom": 0.54,
+            "reference_width_over_figure_height": 0.18485523385300667,
+            "source_width_over_figure_height": 0.16703786191536749,
+            "source_over_reference_width_ratio": 0.9036144578313253,
+            "center_drift_over_figure_height": 0.004454342984409799
+          },
+          {
+            "normalized_height_top_to_bottom": 0.56,
+            "reference_width_over_figure_height": 0.18930957683741648,
+            "source_width_over_figure_height": 0.1870824053452116,
+            "source_over_reference_width_ratio": 0.9882352941176471,
+            "center_drift_over_figure_height": 0.012249443207126948
+          },
+          {
+            "normalized_height_top_to_bottom": 0.5800000000000001,
+            "reference_width_over_figure_height": 0.19376391982182628,
+            "source_width_over_figure_height": 0.17817371937639198,
+            "source_over_reference_width_ratio": 0.9195402298850575,
+            "center_drift_over_figure_height": 0.005567928730512249
+          },
+          {
+            "normalized_height_top_to_bottom": 0.6,
+            "reference_width_over_figure_height": 0.17371937639198218,
+            "source_width_over_figure_height": 0.16258351893095768,
+            "source_over_reference_width_ratio": 0.9358974358974359,
+            "center_drift_over_figure_height": 0.0066815144766146995
+          },
+          {
+            "normalized_height_top_to_bottom": 0.62,
+            "reference_width_over_figure_height": 0.18262806236080179,
+            "source_width_over_figure_height": 0.16703786191536749,
+            "source_over_reference_width_ratio": 0.9146341463414634,
+            "center_drift_over_figure_height": 0.0077951002227171495
+          },
+          {
+            "normalized_height_top_to_bottom": 0.64,
+            "reference_width_over_figure_height": 0.18930957683741648,
+            "source_width_over_figure_height": 0.1714922048997773,
+            "source_over_reference_width_ratio": 0.9058823529411765,
+            "center_drift_over_figure_height": 0.011692650334075724
+          },
+          {
+            "normalized_height_top_to_bottom": 0.66,
+            "reference_width_over_figure_height": 0.19599109131403117,
+            "source_width_over_figure_height": 0.16926503340757237,
+            "source_over_reference_width_ratio": 0.8636363636363636,
+            "center_drift_over_figure_height": 0.0066815144766146995
+          },
+          {
+            "normalized_height_top_to_bottom": 0.68,
+            "reference_width_over_figure_height": 0.20489977728285078,
+            "source_width_over_figure_height": 0.18485523385300667,
+            "source_over_reference_width_ratio": 0.9021739130434783,
+            "center_drift_over_figure_height": 0.0066815144766146995
+          },
+          {
+            "normalized_height_top_to_bottom": 0.7000000000000001,
+            "reference_width_over_figure_height": 0.2071269487750557,
+            "source_width_over_figure_height": 0.18930957683741648,
+            "source_over_reference_width_ratio": 0.9139784946236559,
+            "center_drift_over_figure_height": 0.008908685968819599
+          },
+          {
+            "normalized_height_top_to_bottom": 0.7200000000000001,
+            "reference_width_over_figure_height": 0.2071269487750557,
+            "source_width_over_figure_height": 0.1915367483296214,
+            "source_over_reference_width_ratio": 0.9247311827956989,
+            "center_drift_over_figure_height": 0.0077951002227171495
+          },
+          {
+            "normalized_height_top_to_bottom": 0.74,
+            "reference_width_over_figure_height": 0.22271714922049,
+            "source_width_over_figure_height": 0.19376391982182628,
+            "source_over_reference_width_ratio": 0.87,
+            "center_drift_over_figure_height": 0.0033407572383073497
+          },
+          {
+            "normalized_height_top_to_bottom": 0.76,
+            "reference_width_over_figure_height": 0.2182628062360802,
+            "source_width_over_figure_height": 0.20824053452115812,
+            "source_over_reference_width_ratio": 0.9540816326530612,
+            "center_drift_over_figure_height": 0.0038975501113585748
+          },
+          {
+            "normalized_height_top_to_bottom": 0.78,
+            "reference_width_over_figure_height": 0.19821826280623608,
+            "source_width_over_figure_height": 0.19933184855233854,
+            "source_over_reference_width_ratio": 1.0056179775280898,
+            "center_drift_over_figure_height": 0.006124721603563474
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8,
+            "reference_width_over_figure_height": 0.155902004454343,
+            "source_width_over_figure_height": 0.1714922048997773,
+            "source_over_reference_width_ratio": 1.1,
+            "center_drift_over_figure_height": 0.0022271714922048997
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8200000000000001,
+            "reference_width_over_figure_height": 0.1358574610244989,
+            "source_width_over_figure_height": 0.12694877505567928,
+            "source_over_reference_width_ratio": 0.9344262295081968,
+            "center_drift_over_figure_height": 0.0038975501113585748
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8400000000000001,
+            "reference_width_over_figure_height": 0.12472160356347439,
+            "source_width_over_figure_height": 0.10467706013363029,
+            "source_over_reference_width_ratio": 0.8392857142857143,
+            "center_drift_over_figure_height": 0.013363028953229399
+          },
+          {
+            "normalized_height_top_to_bottom": 0.86,
+            "reference_width_over_figure_height": 0.1291759465478842,
+            "source_width_over_figure_height": 0.0935412026726058,
+            "source_over_reference_width_ratio": 0.7241379310344828,
+            "center_drift_over_figure_height": 0.0200445434298441
+          },
+          {
+            "normalized_height_top_to_bottom": 0.88,
+            "reference_width_over_figure_height": 0.16703786191536749,
+            "source_width_over_figure_height": 0.10244988864142539,
+            "source_over_reference_width_ratio": 0.6133333333333333,
+            "center_drift_over_figure_height": 0.011135857461024499
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9,
+            "reference_width_over_figure_height": 0.20489977728285078,
+            "source_width_over_figure_height": 0.12694877505567928,
+            "source_over_reference_width_ratio": 0.6195652173913043,
+            "center_drift_over_figure_height": 0.035634743875278395
+          },
+          {
+            "normalized_height_top_to_bottom": 0.92,
+            "reference_width_over_figure_height": 0.24498886414253898,
+            "source_width_over_figure_height": 0.15924276169265034,
+            "source_over_reference_width_ratio": 0.65,
+            "center_drift_over_figure_height": 0.037305122494432075
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9400000000000001,
+            "reference_width_over_figure_height": 0.2583518930957684,
+            "source_width_over_figure_height": 0.21158129175946547,
+            "source_over_reference_width_ratio": 0.8189655172413793,
+            "center_drift_over_figure_height": 0.013363028953229399
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9600000000000001,
+            "reference_width_over_figure_height": 0.26280623608017817,
+            "source_width_over_figure_height": 0.24721603563474387,
+            "source_over_reference_width_ratio": 0.940677966101695,
+            "center_drift_over_figure_height": 0.0022271714922048997
+          },
+          {
+            "normalized_height_top_to_bottom": 0.98,
+            "reference_width_over_figure_height": 0.2583518930957684,
+            "source_width_over_figure_height": 0.25501113585746105,
+            "source_over_reference_width_ratio": 0.9870689655172413,
+            "center_drift_over_figure_height": -0.0005567928730512249
+          }
+        ]
+      },
       "reference": "references\\ichiro_chibi_left.png",
       "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_left.pgm"
     },
@@ -219,8 +1284,1785 @@
       "alignment": "bbox center + height only; width is never scaled independently",
       "overlay": "overlay_ortho_right.png",
       "reference_mask": "reference_mask_ortho_right.png",
+      "scanline_width_profile": {
+        "normalization": "width / reference figure height; candidate is first centered and height-normalized",
+        "sample_count": 49,
+        "summary": {
+          "mean_absolute_width_error_over_figure_height": 0.025317031044043457,
+          "max_absolute_width_error_over_figure_height": 0.10467706013363029,
+          "max_error_at_normalized_height": 0.36000000000000004,
+          "source_over_reference_width_ratio_at_max_error": 1.6911764705882353
+        },
+        "values": [
+          {
+            "normalized_height_top_to_bottom": 0.02,
+            "reference_width_over_figure_height": 0.19821826280623608,
+            "source_width_over_figure_height": 0.16481069042316257,
+            "source_over_reference_width_ratio": 0.8314606741573034,
+            "center_drift_over_figure_height": 0.0005567928730512249
+          },
+          {
+            "normalized_height_top_to_bottom": 0.04,
+            "reference_width_over_figure_height": 0.26948775055679286,
+            "source_width_over_figure_height": 0.24498886414253898,
+            "source_over_reference_width_ratio": 0.9090909090909091,
+            "center_drift_over_figure_height": -0.0022271714922048997
+          },
+          {
+            "normalized_height_top_to_bottom": 0.06,
+            "reference_width_over_figure_height": 0.35412026726057905,
+            "source_width_over_figure_height": 0.32962138084632514,
+            "source_over_reference_width_ratio": 0.9308176100628931,
+            "center_drift_over_figure_height": 0.0022271714922048997
+          },
+          {
+            "normalized_height_top_to_bottom": 0.08,
+            "reference_width_over_figure_height": 0.3518930957683742,
+            "source_width_over_figure_height": 0.34966592427616927,
+            "source_over_reference_width_ratio": 0.9936708860759493,
+            "center_drift_over_figure_height": -0.017817371937639197
+          },
+          {
+            "normalized_height_top_to_bottom": 0.1,
+            "reference_width_over_figure_height": 0.38752783964365256,
+            "source_width_over_figure_height": 0.36525612472160357,
+            "source_over_reference_width_ratio": 0.9425287356321839,
+            "center_drift_over_figure_height": -0.01670378619153675
+          },
+          {
+            "normalized_height_top_to_bottom": 0.12000000000000001,
+            "reference_width_over_figure_height": 0.3986636971046771,
+            "source_width_over_figure_height": 0.38530066815144765,
+            "source_over_reference_width_ratio": 0.9664804469273743,
+            "center_drift_over_figure_height": 0.0011135857461024498
+          },
+          {
+            "normalized_height_top_to_bottom": 0.13999999999999999,
+            "reference_width_over_figure_height": 0.3986636971046771,
+            "source_width_over_figure_height": 0.4064587973273942,
+            "source_over_reference_width_ratio": 1.0195530726256983,
+            "center_drift_over_figure_height": 0.011692650334075724
+          },
+          {
+            "normalized_height_top_to_bottom": 0.16,
+            "reference_width_over_figure_height": 0.37193763919821826,
+            "source_width_over_figure_height": 0.40200445434298443,
+            "source_over_reference_width_ratio": 1.0808383233532934,
+            "center_drift_over_figure_height": -0.005011135857461025
+          },
+          {
+            "normalized_height_top_to_bottom": 0.18,
+            "reference_width_over_figure_height": 0.36525612472160357,
+            "source_width_over_figure_height": 0.3930957683741648,
+            "source_over_reference_width_ratio": 1.076219512195122,
+            "center_drift_over_figure_height": -0.011692650334075724
+          },
+          {
+            "normalized_height_top_to_bottom": 0.19999999999999998,
+            "reference_width_over_figure_height": 0.3674832962138085,
+            "source_width_over_figure_height": 0.366369710467706,
+            "source_over_reference_width_ratio": 0.996969696969697,
+            "center_drift_over_figure_height": 0.004454342984409799
+          },
+          {
+            "normalized_height_top_to_bottom": 0.22,
+            "reference_width_over_figure_height": 0.34743875278396436,
+            "source_width_over_figure_height": 0.36971046770601335,
+            "source_over_reference_width_ratio": 1.064102564102564,
+            "center_drift_over_figure_height": -0.0066815144766146995
+          },
+          {
+            "normalized_height_top_to_bottom": 0.24,
+            "reference_width_over_figure_height": 0.31625835189309576,
+            "source_width_over_figure_height": 0.35634743875278396,
+            "source_over_reference_width_ratio": 1.1267605633802817,
+            "center_drift_over_figure_height": -0.012249443207126948
+          },
+          {
+            "normalized_height_top_to_bottom": 0.26,
+            "reference_width_over_figure_height": 0.2962138084632517,
+            "source_width_over_figure_height": 0.32516703786191536,
+            "source_over_reference_width_ratio": 1.0977443609022557,
+            "center_drift_over_figure_height": -0.0022271714922048997
+          },
+          {
+            "normalized_height_top_to_bottom": 0.28,
+            "reference_width_over_figure_height": 0.26280623608017817,
+            "source_width_over_figure_height": 0.3207126948775056,
+            "source_over_reference_width_ratio": 1.2203389830508475,
+            "center_drift_over_figure_height": -0.0077951002227171495
+          },
+          {
+            "normalized_height_top_to_bottom": 0.30000000000000004,
+            "reference_width_over_figure_height": 0.2516703786191537,
+            "source_width_over_figure_height": 0.23162583518930957,
+            "source_over_reference_width_ratio": 0.9203539823008849,
+            "center_drift_over_figure_height": 0.02338530066815145
+          },
+          {
+            "normalized_height_top_to_bottom": 0.32,
+            "reference_width_over_figure_height": 0.24053452115812918,
+            "source_width_over_figure_height": 0.26280623608017817,
+            "source_over_reference_width_ratio": 1.0925925925925926,
+            "center_drift_over_figure_height": 0.004454342984409799
+          },
+          {
+            "normalized_height_top_to_bottom": 0.34,
+            "reference_width_over_figure_height": 0.20489977728285078,
+            "source_width_over_figure_height": 0.25389755011135856,
+            "source_over_reference_width_ratio": 1.2391304347826086,
+            "center_drift_over_figure_height": 0.022828507795100223
+          },
+          {
+            "normalized_height_top_to_bottom": 0.36000000000000004,
+            "reference_width_over_figure_height": 0.1514476614699332,
+            "source_width_over_figure_height": 0.2561247216035635,
+            "source_over_reference_width_ratio": 1.6911764705882353,
+            "center_drift_over_figure_height": 0.04120267260579064
+          },
+          {
+            "normalized_height_top_to_bottom": 0.38,
+            "reference_width_over_figure_height": 0.17817371937639198,
+            "source_width_over_figure_height": 0.13251670378619154,
+            "source_over_reference_width_ratio": 0.74375,
+            "center_drift_over_figure_height": -0.0038975501113585748
+          },
+          {
+            "normalized_height_top_to_bottom": 0.4,
+            "reference_width_over_figure_height": 0.1870824053452116,
+            "source_width_over_figure_height": 0.16592427616926503,
+            "source_over_reference_width_ratio": 0.8869047619047619,
+            "center_drift_over_figure_height": -0.008351893095768375
+          },
+          {
+            "normalized_height_top_to_bottom": 0.42000000000000004,
+            "reference_width_over_figure_height": 0.18485523385300667,
+            "source_width_over_figure_height": 0.1870824053452116,
+            "source_over_reference_width_ratio": 1.0120481927710843,
+            "center_drift_over_figure_height": -0.0033407572383073497
+          },
+          {
+            "normalized_height_top_to_bottom": 0.44,
+            "reference_width_over_figure_height": 0.18930957683741648,
+            "source_width_over_figure_height": 0.18262806236080179,
+            "source_over_reference_width_ratio": 0.9647058823529412,
+            "center_drift_over_figure_height": 0.005567928730512249
+          },
+          {
+            "normalized_height_top_to_bottom": 0.46,
+            "reference_width_over_figure_height": 0.1870824053452116,
+            "source_width_over_figure_height": 0.17260579064587972,
+            "source_over_reference_width_ratio": 0.9226190476190477,
+            "center_drift_over_figure_height": 0.0005567928730512249
+          },
+          {
+            "normalized_height_top_to_bottom": 0.48000000000000004,
+            "reference_width_over_figure_height": 0.1714922048997773,
+            "source_width_over_figure_height": 0.18040089086859687,
+            "source_over_reference_width_ratio": 1.051948051948052,
+            "center_drift_over_figure_height": -0.011135857461024499
+          },
+          {
+            "normalized_height_top_to_bottom": 0.5,
+            "reference_width_over_figure_height": 0.16926503340757237,
+            "source_width_over_figure_height": 0.17037861915367483,
+            "source_over_reference_width_ratio": 1.006578947368421,
+            "center_drift_over_figure_height": -0.0027839643652561247
+          },
+          {
+            "normalized_height_top_to_bottom": 0.52,
+            "reference_width_over_figure_height": 0.17817371937639198,
+            "source_width_over_figure_height": 0.15924276169265034,
+            "source_over_reference_width_ratio": 0.89375,
+            "center_drift_over_figure_height": -0.0005567928730512249
+          },
+          {
+            "normalized_height_top_to_bottom": 0.54,
+            "reference_width_over_figure_height": 0.18485523385300667,
+            "source_width_over_figure_height": 0.16481069042316257,
+            "source_over_reference_width_ratio": 0.891566265060241,
+            "center_drift_over_figure_height": -0.01670378619153675
+          },
+          {
+            "normalized_height_top_to_bottom": 0.56,
+            "reference_width_over_figure_height": 0.1870824053452116,
+            "source_width_over_figure_height": 0.1870824053452116,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": -0.005567928730512249
+          },
+          {
+            "normalized_height_top_to_bottom": 0.5800000000000001,
+            "reference_width_over_figure_height": 0.16703786191536749,
+            "source_width_over_figure_height": 0.17817371937639198,
+            "source_over_reference_width_ratio": 1.0666666666666667,
+            "center_drift_over_figure_height": 0.005567928730512249
+          },
+          {
+            "normalized_height_top_to_bottom": 0.6,
+            "reference_width_over_figure_height": 0.1759465478841871,
+            "source_width_over_figure_height": 0.1603563474387528,
+            "source_over_reference_width_ratio": 0.9113924050632911,
+            "center_drift_over_figure_height": 0.0066815144766146995
+          },
+          {
+            "normalized_height_top_to_bottom": 0.62,
+            "reference_width_over_figure_height": 0.1759465478841871,
+            "source_width_over_figure_height": 0.16481069042316257,
+            "source_over_reference_width_ratio": 0.9367088607594937,
+            "center_drift_over_figure_height": -0.0011135857461024498
+          },
+          {
+            "normalized_height_top_to_bottom": 0.64,
+            "reference_width_over_figure_height": 0.18040089086859687,
+            "source_width_over_figure_height": 0.1714922048997773,
+            "source_over_reference_width_ratio": 0.9506172839506173,
+            "center_drift_over_figure_height": 0.0033407572383073497
+          },
+          {
+            "normalized_height_top_to_bottom": 0.66,
+            "reference_width_over_figure_height": 0.1870824053452116,
+            "source_width_over_figure_height": 0.16926503340757237,
+            "source_over_reference_width_ratio": 0.9047619047619048,
+            "center_drift_over_figure_height": 0.011135857461024499
+          },
+          {
+            "normalized_height_top_to_bottom": 0.68,
+            "reference_width_over_figure_height": 0.19376391982182628,
+            "source_width_over_figure_height": 0.18262806236080179,
+            "source_over_reference_width_ratio": 0.9425287356321839,
+            "center_drift_over_figure_height": 0.0077951002227171495
+          },
+          {
+            "normalized_height_top_to_bottom": 0.7000000000000001,
+            "reference_width_over_figure_height": 0.19376391982182628,
+            "source_width_over_figure_height": 0.18930957683741648,
+            "source_over_reference_width_ratio": 0.9770114942528736,
+            "center_drift_over_figure_height": 0.0022271714922048997
+          },
+          {
+            "normalized_height_top_to_bottom": 0.7200000000000001,
+            "reference_width_over_figure_height": 0.2071269487750557,
+            "source_width_over_figure_height": 0.1915367483296214,
+            "source_over_reference_width_ratio": 0.9247311827956989,
+            "center_drift_over_figure_height": 0.0077951002227171495
+          },
+          {
+            "normalized_height_top_to_bottom": 0.74,
+            "reference_width_over_figure_height": 0.21158129175946547,
+            "source_width_over_figure_height": 0.19265033407572382,
+            "source_over_reference_width_ratio": 0.9105263157894737,
+            "center_drift_over_figure_height": 0.013919821826280624
+          },
+          {
+            "normalized_height_top_to_bottom": 0.76,
+            "reference_width_over_figure_height": 0.19599109131403117,
+            "source_width_over_figure_height": 0.20824053452115812,
+            "source_over_reference_width_ratio": 1.0625,
+            "center_drift_over_figure_height": 0.010579064587973273
+          },
+          {
+            "normalized_height_top_to_bottom": 0.78,
+            "reference_width_over_figure_height": 0.16481069042316257,
+            "source_width_over_figure_height": 0.19933184855233854,
+            "source_over_reference_width_ratio": 1.2094594594594594,
+            "center_drift_over_figure_height": 0.008351893095768375
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8,
+            "reference_width_over_figure_height": 0.12472160356347439,
+            "source_width_over_figure_height": 0.17260579064587972,
+            "source_over_reference_width_ratio": 1.3839285714285714,
+            "center_drift_over_figure_height": 0.017260579064587972
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8200000000000001,
+            "reference_width_over_figure_height": 0.1091314031180401,
+            "source_width_over_figure_height": 0.12583518930957685,
+            "source_over_reference_width_ratio": 1.153061224489796,
+            "center_drift_over_figure_height": 0.011135857461024499
+          },
+          {
+            "normalized_height_top_to_bottom": 0.8400000000000001,
+            "reference_width_over_figure_height": 0.10467706013363029,
+            "source_width_over_figure_height": 0.10467706013363029,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": -0.0011135857461024498
+          },
+          {
+            "normalized_height_top_to_bottom": 0.86,
+            "reference_width_over_figure_height": 0.133630289532294,
+            "source_width_over_figure_height": 0.09465478841870824,
+            "source_over_reference_width_ratio": 0.7083333333333334,
+            "center_drift_over_figure_height": 0.0016703786191536749
+          },
+          {
+            "normalized_height_top_to_bottom": 0.88,
+            "reference_width_over_figure_height": 0.16258351893095768,
+            "source_width_over_figure_height": 0.10244988864142539,
+            "source_over_reference_width_ratio": 0.6301369863013698,
+            "center_drift_over_figure_height": 0.0033407572383073497
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9,
+            "reference_width_over_figure_height": 0.22939866369710468,
+            "source_width_over_figure_height": 0.1291759465478842,
+            "source_over_reference_width_ratio": 0.5631067961165048,
+            "center_drift_over_figure_height": -0.03897550111358575
+          },
+          {
+            "normalized_height_top_to_bottom": 0.92,
+            "reference_width_over_figure_height": 0.24498886414253898,
+            "source_width_over_figure_height": 0.16146993318485522,
+            "source_over_reference_width_ratio": 0.6590909090909091,
+            "center_drift_over_figure_height": -0.027282850779510023
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9400000000000001,
+            "reference_width_over_figure_height": 0.25389755011135856,
+            "source_width_over_figure_height": 0.21380846325167038,
+            "source_over_reference_width_ratio": 0.8421052631578947,
+            "center_drift_over_figure_height": 0.0
+          },
+          {
+            "normalized_height_top_to_bottom": 0.9600000000000001,
+            "reference_width_over_figure_height": 0.267260579064588,
+            "source_width_over_figure_height": 0.24721603563474387,
+            "source_over_reference_width_ratio": 0.925,
+            "center_drift_over_figure_height": -0.0011135857461024498
+          },
+          {
+            "normalized_height_top_to_bottom": 0.98,
+            "reference_width_over_figure_height": 0.25389755011135856,
+            "source_width_over_figure_height": 0.25389755011135856,
+            "source_over_reference_width_ratio": 1.0,
+            "center_drift_over_figure_height": 0.0
+          }
+        ]
+      },
       "reference": "references\\ichiro_chibi_right.png",
       "source_render": "renders\\reference_fit_v02_cpu\\projections\\source_right.pgm"
+    }
+  },
+  "canonical_scanline_width_profiles": {
+    "front": {
+      "normalization": "width / reference figure height; candidate is first centered and height-normalized",
+      "sample_count": 49,
+      "summary": {
+        "mean_absolute_width_error_over_figure_height": 0.011897031539888683,
+        "max_absolute_width_error_over_figure_height": 0.08068181818181819,
+        "max_error_at_normalized_height": 0.7000000000000001,
+        "source_over_reference_width_ratio_at_max_error": 1.221875
+      },
+      "values": [
+        {
+          "normalized_height_top_to_bottom": 0.02,
+          "reference_width_over_figure_height": 0.12954545454545455,
+          "source_width_over_figure_height": 0.16363636363636364,
+          "source_over_reference_width_ratio": 1.263157894736842,
+          "center_drift_over_figure_height": 0.01818181818181818
+        },
+        {
+          "normalized_height_top_to_bottom": 0.04,
+          "reference_width_over_figure_height": 0.2159090909090909,
+          "source_width_over_figure_height": 0.2375,
+          "source_over_reference_width_ratio": 1.1,
+          "center_drift_over_figure_height": 0.007386363636363636
+        },
+        {
+          "normalized_height_top_to_bottom": 0.06,
+          "reference_width_over_figure_height": 0.2409090909090909,
+          "source_width_over_figure_height": 0.2534090909090909,
+          "source_over_reference_width_ratio": 1.0518867924528301,
+          "center_drift_over_figure_height": 0.010795454545454546
+        },
+        {
+          "normalized_height_top_to_bottom": 0.08,
+          "reference_width_over_figure_height": 0.2590909090909091,
+          "source_width_over_figure_height": 0.30568181818181817,
+          "source_over_reference_width_ratio": 1.1798245614035088,
+          "center_drift_over_figure_height": 0.009659090909090909
+        },
+        {
+          "normalized_height_top_to_bottom": 0.1,
+          "reference_width_over_figure_height": 0.3159090909090909,
+          "source_width_over_figure_height": 0.30568181818181817,
+          "source_over_reference_width_ratio": 0.9676258992805755,
+          "center_drift_over_figure_height": -0.0017045454545454545
+        },
+        {
+          "normalized_height_top_to_bottom": 0.12000000000000001,
+          "reference_width_over_figure_height": 0.3090909090909091,
+          "source_width_over_figure_height": 0.32045454545454544,
+          "source_over_reference_width_ratio": 1.036764705882353,
+          "center_drift_over_figure_height": -0.0005681818181818182
+        },
+        {
+          "normalized_height_top_to_bottom": 0.13999999999999999,
+          "reference_width_over_figure_height": 0.3181818181818182,
+          "source_width_over_figure_height": 0.32386363636363635,
+          "source_over_reference_width_ratio": 1.0178571428571428,
+          "center_drift_over_figure_height": 0.007386363636363636
+        },
+        {
+          "normalized_height_top_to_bottom": 0.16,
+          "reference_width_over_figure_height": 0.3386363636363636,
+          "source_width_over_figure_height": 0.35454545454545455,
+          "source_over_reference_width_ratio": 1.0469798657718121,
+          "center_drift_over_figure_height": 0.008522727272727272
+        },
+        {
+          "normalized_height_top_to_bottom": 0.18,
+          "reference_width_over_figure_height": 0.32727272727272727,
+          "source_width_over_figure_height": 0.3215909090909091,
+          "source_over_reference_width_ratio": 0.9826388888888888,
+          "center_drift_over_figure_height": 0.009659090909090909
+        },
+        {
+          "normalized_height_top_to_bottom": 0.19999999999999998,
+          "reference_width_over_figure_height": 0.3409090909090909,
+          "source_width_over_figure_height": 0.33636363636363636,
+          "source_over_reference_width_ratio": 0.9866666666666667,
+          "center_drift_over_figure_height": 0.00909090909090909
+        },
+        {
+          "normalized_height_top_to_bottom": 0.22,
+          "reference_width_over_figure_height": 0.3431818181818182,
+          "source_width_over_figure_height": 0.3386363636363636,
+          "source_over_reference_width_ratio": 0.9867549668874173,
+          "center_drift_over_figure_height": 0.003409090909090909
+        },
+        {
+          "normalized_height_top_to_bottom": 0.24,
+          "reference_width_over_figure_height": 0.3431818181818182,
+          "source_width_over_figure_height": 0.3386363636363636,
+          "source_over_reference_width_ratio": 0.9867549668874173,
+          "center_drift_over_figure_height": 0.003409090909090909
+        },
+        {
+          "normalized_height_top_to_bottom": 0.26,
+          "reference_width_over_figure_height": 0.3159090909090909,
+          "source_width_over_figure_height": 0.30568181818181817,
+          "source_over_reference_width_ratio": 0.9676258992805755,
+          "center_drift_over_figure_height": 0.007386363636363636
+        },
+        {
+          "normalized_height_top_to_bottom": 0.28,
+          "reference_width_over_figure_height": 0.26590909090909093,
+          "source_width_over_figure_height": 0.2897727272727273,
+          "source_over_reference_width_ratio": 1.0897435897435896,
+          "center_drift_over_figure_height": 0.021022727272727273
+        },
+        {
+          "normalized_height_top_to_bottom": 0.30000000000000004,
+          "reference_width_over_figure_height": 0.225,
+          "source_width_over_figure_height": 0.24659090909090908,
+          "source_over_reference_width_ratio": 1.095959595959596,
+          "center_drift_over_figure_height": 0.005681818181818182
+        },
+        {
+          "normalized_height_top_to_bottom": 0.32,
+          "reference_width_over_figure_height": 0.2318181818181818,
+          "source_width_over_figure_height": 0.25227272727272726,
+          "source_over_reference_width_ratio": 1.088235294117647,
+          "center_drift_over_figure_height": 0.017045454545454544
+        },
+        {
+          "normalized_height_top_to_bottom": 0.34,
+          "reference_width_over_figure_height": 0.28863636363636364,
+          "source_width_over_figure_height": 0.29318181818181815,
+          "source_over_reference_width_ratio": 1.015748031496063,
+          "center_drift_over_figure_height": 0.011363636363636364
+        },
+        {
+          "normalized_height_top_to_bottom": 0.36000000000000004,
+          "reference_width_over_figure_height": 0.27954545454545454,
+          "source_width_over_figure_height": 0.30113636363636365,
+          "source_over_reference_width_ratio": 1.0772357723577235,
+          "center_drift_over_figure_height": 0.0005681818181818182
+        },
+        {
+          "normalized_height_top_to_bottom": 0.38,
+          "reference_width_over_figure_height": 0.29772727272727273,
+          "source_width_over_figure_height": 0.2943181818181818,
+          "source_over_reference_width_ratio": 0.9885496183206107,
+          "center_drift_over_figure_height": 0.003409090909090909
+        },
+        {
+          "normalized_height_top_to_bottom": 0.4,
+          "reference_width_over_figure_height": 0.3409090909090909,
+          "source_width_over_figure_height": 0.3409090909090909,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": 0.003977272727272727
+        },
+        {
+          "normalized_height_top_to_bottom": 0.42000000000000004,
+          "reference_width_over_figure_height": 0.35,
+          "source_width_over_figure_height": 0.35113636363636364,
+          "source_over_reference_width_ratio": 1.0032467532467533,
+          "center_drift_over_figure_height": 0.003409090909090909
+        },
+        {
+          "normalized_height_top_to_bottom": 0.44,
+          "reference_width_over_figure_height": 0.37727272727272726,
+          "source_width_over_figure_height": 0.37727272727272726,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": 0.004545454545454545
+        },
+        {
+          "normalized_height_top_to_bottom": 0.46,
+          "reference_width_over_figure_height": 0.4090909090909091,
+          "source_width_over_figure_height": 0.4102272727272727,
+          "source_over_reference_width_ratio": 1.0027777777777778,
+          "center_drift_over_figure_height": 0.005113636363636364
+        },
+        {
+          "normalized_height_top_to_bottom": 0.48000000000000004,
+          "reference_width_over_figure_height": 0.37727272727272726,
+          "source_width_over_figure_height": 0.39431818181818185,
+          "source_over_reference_width_ratio": 1.0451807228915662,
+          "center_drift_over_figure_height": 0.00625
+        },
+        {
+          "normalized_height_top_to_bottom": 0.5,
+          "reference_width_over_figure_height": 0.39545454545454545,
+          "source_width_over_figure_height": 0.3875,
+          "source_over_reference_width_ratio": 0.9798850574712644,
+          "center_drift_over_figure_height": 0.005681818181818182
+        },
+        {
+          "normalized_height_top_to_bottom": 0.52,
+          "reference_width_over_figure_height": 0.4340909090909091,
+          "source_width_over_figure_height": 0.42954545454545456,
+          "source_over_reference_width_ratio": 0.9895287958115183,
+          "center_drift_over_figure_height": 0.006818181818181818
+        },
+        {
+          "normalized_height_top_to_bottom": 0.54,
+          "reference_width_over_figure_height": 0.4431818181818182,
+          "source_width_over_figure_height": 0.44545454545454544,
+          "source_over_reference_width_ratio": 1.005128205128205,
+          "center_drift_over_figure_height": 0.007954545454545454
+        },
+        {
+          "normalized_height_top_to_bottom": 0.56,
+          "reference_width_over_figure_height": 0.4431818181818182,
+          "source_width_over_figure_height": 0.44545454545454544,
+          "source_over_reference_width_ratio": 1.005128205128205,
+          "center_drift_over_figure_height": 0.007954545454545454
+        },
+        {
+          "normalized_height_top_to_bottom": 0.5800000000000001,
+          "reference_width_over_figure_height": 0.4431818181818182,
+          "source_width_over_figure_height": 0.4431818181818182,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": 0.00909090909090909
+        },
+        {
+          "normalized_height_top_to_bottom": 0.6,
+          "reference_width_over_figure_height": 0.45,
+          "source_width_over_figure_height": 0.4465909090909091,
+          "source_over_reference_width_ratio": 0.9924242424242424,
+          "center_drift_over_figure_height": 0.007386363636363636
+        },
+        {
+          "normalized_height_top_to_bottom": 0.62,
+          "reference_width_over_figure_height": 0.4636363636363636,
+          "source_width_over_figure_height": 0.45227272727272727,
+          "source_over_reference_width_ratio": 0.9754901960784313,
+          "center_drift_over_figure_height": 0.006818181818181818
+        },
+        {
+          "normalized_height_top_to_bottom": 0.64,
+          "reference_width_over_figure_height": 0.4727272727272727,
+          "source_width_over_figure_height": 0.4727272727272727,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": 0.006818181818181818
+        },
+        {
+          "normalized_height_top_to_bottom": 0.66,
+          "reference_width_over_figure_height": 0.47045454545454546,
+          "source_width_over_figure_height": 0.4659090909090909,
+          "source_over_reference_width_ratio": 0.9903381642512077,
+          "center_drift_over_figure_height": 0.008522727272727272
+        },
+        {
+          "normalized_height_top_to_bottom": 0.68,
+          "reference_width_over_figure_height": 0.4681818181818182,
+          "source_width_over_figure_height": 0.475,
+          "source_over_reference_width_ratio": 1.0145631067961165,
+          "center_drift_over_figure_height": 0.006818181818181818
+        },
+        {
+          "normalized_height_top_to_bottom": 0.7000000000000001,
+          "reference_width_over_figure_height": 0.36363636363636365,
+          "source_width_over_figure_height": 0.44431818181818183,
+          "source_over_reference_width_ratio": 1.221875,
+          "center_drift_over_figure_height": -0.0005681818181818182
+        },
+        {
+          "normalized_height_top_to_bottom": 0.7200000000000001,
+          "reference_width_over_figure_height": 0.32727272727272727,
+          "source_width_over_figure_height": 0.31363636363636366,
+          "source_over_reference_width_ratio": 0.9583333333333334,
+          "center_drift_over_figure_height": 0.005113636363636364
+        },
+        {
+          "normalized_height_top_to_bottom": 0.74,
+          "reference_width_over_figure_height": 0.3568181818181818,
+          "source_width_over_figure_height": 0.3568181818181818,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": 0.00625
+        },
+        {
+          "normalized_height_top_to_bottom": 0.76,
+          "reference_width_over_figure_height": 0.3522727272727273,
+          "source_width_over_figure_height": 0.36818181818181817,
+          "source_over_reference_width_ratio": 1.0451612903225806,
+          "center_drift_over_figure_height": 0.003409090909090909
+        },
+        {
+          "normalized_height_top_to_bottom": 0.78,
+          "reference_width_over_figure_height": 0.3340909090909091,
+          "source_width_over_figure_height": 0.36477272727272725,
+          "source_over_reference_width_ratio": 1.0918367346938775,
+          "center_drift_over_figure_height": 0.004545454545454545
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8,
+          "reference_width_over_figure_height": 0.31363636363636366,
+          "source_width_over_figure_height": 0.3352272727272727,
+          "source_over_reference_width_ratio": 1.068840579710145,
+          "center_drift_over_figure_height": 0.0005681818181818182
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8200000000000001,
+          "reference_width_over_figure_height": 0.3159090909090909,
+          "source_width_over_figure_height": 0.325,
+          "source_over_reference_width_ratio": 1.0287769784172662,
+          "center_drift_over_figure_height": 0.0
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8400000000000001,
+          "reference_width_over_figure_height": 0.32045454545454544,
+          "source_width_over_figure_height": 0.32727272727272727,
+          "source_over_reference_width_ratio": 1.0212765957446808,
+          "center_drift_over_figure_height": 0.0011363636363636363
+        },
+        {
+          "normalized_height_top_to_bottom": 0.86,
+          "reference_width_over_figure_height": 0.33181818181818185,
+          "source_width_over_figure_height": 0.32272727272727275,
+          "source_over_reference_width_ratio": 0.9726027397260274,
+          "center_drift_over_figure_height": -0.0011363636363636363
+        },
+        {
+          "normalized_height_top_to_bottom": 0.88,
+          "reference_width_over_figure_height": 0.36818181818181817,
+          "source_width_over_figure_height": 0.3659090909090909,
+          "source_over_reference_width_ratio": 0.9938271604938271,
+          "center_drift_over_figure_height": -0.0022727272727272726
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9,
+          "reference_width_over_figure_height": 0.3931818181818182,
+          "source_width_over_figure_height": 0.3886363636363636,
+          "source_over_reference_width_ratio": 0.9884393063583815,
+          "center_drift_over_figure_height": -0.0022727272727272726
+        },
+        {
+          "normalized_height_top_to_bottom": 0.92,
+          "reference_width_over_figure_height": 0.4090909090909091,
+          "source_width_over_figure_height": 0.4022727272727273,
+          "source_over_reference_width_ratio": 0.9833333333333333,
+          "center_drift_over_figure_height": -0.0011363636363636363
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9400000000000001,
+          "reference_width_over_figure_height": 0.45,
+          "source_width_over_figure_height": 0.42954545454545456,
+          "source_over_reference_width_ratio": 0.9545454545454546,
+          "center_drift_over_figure_height": -0.003409090909090909
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9600000000000001,
+          "reference_width_over_figure_height": 0.4727272727272727,
+          "source_width_over_figure_height": 0.46136363636363636,
+          "source_over_reference_width_ratio": 0.9759615384615384,
+          "center_drift_over_figure_height": -0.0011363636363636363
+        },
+        {
+          "normalized_height_top_to_bottom": 0.98,
+          "reference_width_over_figure_height": 0.4863636363636364,
+          "source_width_over_figure_height": 0.4818181818181818,
+          "source_over_reference_width_ratio": 0.9906542056074766,
+          "center_drift_over_figure_height": -0.0011363636363636363
+        }
+      ]
+    },
+    "back": {
+      "normalization": "width / reference figure height; candidate is first centered and height-normalized",
+      "sample_count": 49,
+      "summary": {
+        "mean_absolute_width_error_over_figure_height": 0.023383385244758494,
+        "max_absolute_width_error_over_figure_height": 0.09453302961275628,
+        "max_error_at_normalized_height": 0.7000000000000001,
+        "source_over_reference_width_ratio_at_max_error": 1.2842465753424657
+      },
+      "values": [
+        {
+          "normalized_height_top_to_bottom": 0.02,
+          "reference_width_over_figure_height": 0.22323462414578588,
+          "source_width_over_figure_height": 0.16173120728929385,
+          "source_over_reference_width_ratio": 0.7244897959183674,
+          "center_drift_over_figure_height": -0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.04,
+          "reference_width_over_figure_height": 0.22779043280182232,
+          "source_width_over_figure_height": 0.23804100227790434,
+          "source_over_reference_width_ratio": 1.045,
+          "center_drift_over_figure_height": -0.0017084282460136675
+        },
+        {
+          "normalized_height_top_to_bottom": 0.06,
+          "reference_width_over_figure_height": 0.29157175398633256,
+          "source_width_over_figure_height": 0.2517084282460137,
+          "source_over_reference_width_ratio": 0.86328125,
+          "center_drift_over_figure_height": -0.005125284738041002
+        },
+        {
+          "normalized_height_top_to_bottom": 0.08,
+          "reference_width_over_figure_height": 0.296127562642369,
+          "source_width_over_figure_height": 0.30637813211845105,
+          "source_over_reference_width_ratio": 1.0346153846153847,
+          "center_drift_over_figure_height": -0.008542141230068337
+        },
+        {
+          "normalized_height_top_to_bottom": 0.1,
+          "reference_width_over_figure_height": 0.3097949886104784,
+          "source_width_over_figure_height": 0.3041002277904328,
+          "source_over_reference_width_ratio": 0.9816176470588235,
+          "center_drift_over_figure_height": 0.003986332574031891
+        },
+        {
+          "normalized_height_top_to_bottom": 0.12000000000000001,
+          "reference_width_over_figure_height": 0.3416856492027335,
+          "source_width_over_figure_height": 0.3211845102505695,
+          "source_over_reference_width_ratio": 0.94,
+          "center_drift_over_figure_height": 0.010250569476082005
+        },
+        {
+          "normalized_height_top_to_bottom": 0.13999999999999999,
+          "reference_width_over_figure_height": 0.3234624145785877,
+          "source_width_over_figure_height": 0.3234624145785877,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": -0.022779043280182234
+        },
+        {
+          "normalized_height_top_to_bottom": 0.16,
+          "reference_width_over_figure_height": 0.3120728929384966,
+          "source_width_over_figure_height": 0.3530751708428246,
+          "source_over_reference_width_ratio": 1.1313868613138687,
+          "center_drift_over_figure_height": -0.011958997722095672
+        },
+        {
+          "normalized_height_top_to_bottom": 0.18,
+          "reference_width_over_figure_height": 0.32801822323462415,
+          "source_width_over_figure_height": 0.3211845102505695,
+          "source_over_reference_width_ratio": 0.9791666666666666,
+          "center_drift_over_figure_height": 0.003416856492027335
+        },
+        {
+          "normalized_height_top_to_bottom": 0.19999999999999998,
+          "reference_width_over_figure_height": 0.32801822323462415,
+          "source_width_over_figure_height": 0.3348519362186788,
+          "source_over_reference_width_ratio": 1.0208333333333333,
+          "center_drift_over_figure_height": 0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.22,
+          "reference_width_over_figure_height": 0.32574031890660593,
+          "source_width_over_figure_height": 0.33940774487471526,
+          "source_over_reference_width_ratio": 1.0419580419580419,
+          "center_drift_over_figure_height": -0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.24,
+          "reference_width_over_figure_height": 0.2847380410022779,
+          "source_width_over_figure_height": 0.33826879271070615,
+          "source_over_reference_width_ratio": 1.188,
+          "center_drift_over_figure_height": 0.015375854214123007
+        },
+        {
+          "normalized_height_top_to_bottom": 0.26,
+          "reference_width_over_figure_height": 0.2847380410022779,
+          "source_width_over_figure_height": 0.3041002277904328,
+          "source_over_reference_width_ratio": 1.068,
+          "center_drift_over_figure_height": 0.011958997722095672
+        },
+        {
+          "normalized_height_top_to_bottom": 0.28,
+          "reference_width_over_figure_height": 0.20501138952164008,
+          "source_width_over_figure_height": 0.28929384965831434,
+          "source_over_reference_width_ratio": 1.4111111111111112,
+          "center_drift_over_figure_height": 0.002277904328018223
+        },
+        {
+          "normalized_height_top_to_bottom": 0.30000000000000004,
+          "reference_width_over_figure_height": 0.22095671981776766,
+          "source_width_over_figure_height": 0.24943052391799544,
+          "source_over_reference_width_ratio": 1.1288659793814433,
+          "center_drift_over_figure_height": 0.035876993166287015
+        },
+        {
+          "normalized_height_top_to_bottom": 0.32,
+          "reference_width_over_figure_height": 0.26651480637813213,
+          "source_width_over_figure_height": 0.255125284738041,
+          "source_over_reference_width_ratio": 0.9572649572649573,
+          "center_drift_over_figure_height": 0.03644646924829157
+        },
+        {
+          "normalized_height_top_to_bottom": 0.34,
+          "reference_width_over_figure_height": 0.3097949886104784,
+          "source_width_over_figure_height": 0.296127562642369,
+          "source_over_reference_width_ratio": 0.9558823529411765,
+          "center_drift_over_figure_height": 0.011389521640091117
+        },
+        {
+          "normalized_height_top_to_bottom": 0.36000000000000004,
+          "reference_width_over_figure_height": 0.2938496583143508,
+          "source_width_over_figure_height": 0.2938496583143508,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": -0.003416856492027335
+        },
+        {
+          "normalized_height_top_to_bottom": 0.38,
+          "reference_width_over_figure_height": 0.33940774487471526,
+          "source_width_over_figure_height": 0.2949886104783599,
+          "source_over_reference_width_ratio": 0.8691275167785235,
+          "center_drift_over_figure_height": -0.0017084282460136675
+        },
+        {
+          "normalized_height_top_to_bottom": 0.4,
+          "reference_width_over_figure_height": 0.357630979498861,
+          "source_width_over_figure_height": 0.3416856492027335,
+          "source_over_reference_width_ratio": 0.9554140127388535,
+          "center_drift_over_figure_height": -0.0017084282460136675
+        },
+        {
+          "normalized_height_top_to_bottom": 0.42000000000000004,
+          "reference_width_over_figure_height": 0.38724373576309795,
+          "source_width_over_figure_height": 0.3542141230068337,
+          "source_over_reference_width_ratio": 0.9147058823529411,
+          "center_drift_over_figure_height": -0.0028473804100227792
+        },
+        {
+          "normalized_height_top_to_bottom": 0.44,
+          "reference_width_over_figure_height": 0.4168564920273349,
+          "source_width_over_figure_height": 0.3826879271070615,
+          "source_over_reference_width_ratio": 0.9180327868852459,
+          "center_drift_over_figure_height": -0.0017084282460136675
+        },
+        {
+          "normalized_height_top_to_bottom": 0.46,
+          "reference_width_over_figure_height": 0.4009111617312073,
+          "source_width_over_figure_height": 0.40888382687927105,
+          "source_over_reference_width_ratio": 1.0198863636363635,
+          "center_drift_over_figure_height": -0.0005694760820045558
+        },
+        {
+          "normalized_height_top_to_bottom": 0.48000000000000004,
+          "reference_width_over_figure_height": 0.39635535307517084,
+          "source_width_over_figure_height": 0.3940774487471526,
+          "source_over_reference_width_ratio": 0.9942528735632183,
+          "center_drift_over_figure_height": 0.002277904328018223
+        },
+        {
+          "normalized_height_top_to_bottom": 0.5,
+          "reference_width_over_figure_height": 0.43507972665148065,
+          "source_width_over_figure_height": 0.38724373576309795,
+          "source_over_reference_width_ratio": 0.8900523560209425,
+          "center_drift_over_figure_height": -0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.52,
+          "reference_width_over_figure_height": 0.45558086560364464,
+          "source_width_over_figure_height": 0.4305239179954442,
+          "source_over_reference_width_ratio": 0.945,
+          "center_drift_over_figure_height": -0.002277904328018223
+        },
+        {
+          "normalized_height_top_to_bottom": 0.54,
+          "reference_width_over_figure_height": 0.45558086560364464,
+          "source_width_over_figure_height": 0.44646924829157175,
+          "source_over_reference_width_ratio": 0.98,
+          "center_drift_over_figure_height": 0.0
+        },
+        {
+          "normalized_height_top_to_bottom": 0.56,
+          "reference_width_over_figure_height": 0.44874715261959,
+          "source_width_over_figure_height": 0.44646924829157175,
+          "source_over_reference_width_ratio": 0.9949238578680203,
+          "center_drift_over_figure_height": 0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.5800000000000001,
+          "reference_width_over_figure_height": 0.4533029612756264,
+          "source_width_over_figure_height": 0.4419134396355353,
+          "source_over_reference_width_ratio": 0.9748743718592965,
+          "center_drift_over_figure_height": -0.0005694760820045558
+        },
+        {
+          "normalized_height_top_to_bottom": 0.6,
+          "reference_width_over_figure_height": 0.45785876993166286,
+          "source_width_over_figure_height": 0.44874715261959,
+          "source_over_reference_width_ratio": 0.9800995024875622,
+          "center_drift_over_figure_height": 0.0
+        },
+        {
+          "normalized_height_top_to_bottom": 0.62,
+          "reference_width_over_figure_height": 0.4783599088838269,
+          "source_width_over_figure_height": 0.4533029612756264,
+          "source_over_reference_width_ratio": 0.9476190476190476,
+          "center_drift_over_figure_height": 0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.64,
+          "reference_width_over_figure_height": 0.4760820045558087,
+          "source_width_over_figure_height": 0.4715261958997722,
+          "source_over_reference_width_ratio": 0.9904306220095693,
+          "center_drift_over_figure_height": 0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.66,
+          "reference_width_over_figure_height": 0.4783599088838269,
+          "source_width_over_figure_height": 0.46924829157175396,
+          "source_over_reference_width_ratio": 0.9809523809523809,
+          "center_drift_over_figure_height": 0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.68,
+          "reference_width_over_figure_height": 0.4601366742596811,
+          "source_width_over_figure_height": 0.47380410022779046,
+          "source_over_reference_width_ratio": 1.0297029702970297,
+          "center_drift_over_figure_height": 0.0
+        },
+        {
+          "normalized_height_top_to_bottom": 0.7000000000000001,
+          "reference_width_over_figure_height": 0.3325740318906606,
+          "source_width_over_figure_height": 0.4271070615034169,
+          "source_over_reference_width_ratio": 1.2842465753424657,
+          "center_drift_over_figure_height": -0.0017084282460136675
+        },
+        {
+          "normalized_height_top_to_bottom": 0.7200000000000001,
+          "reference_width_over_figure_height": 0.3553530751708428,
+          "source_width_over_figure_height": 0.3143507972665148,
+          "source_over_reference_width_ratio": 0.8846153846153846,
+          "center_drift_over_figure_height": 0.0017084282460136675
+        },
+        {
+          "normalized_height_top_to_bottom": 0.74,
+          "reference_width_over_figure_height": 0.38724373576309795,
+          "source_width_over_figure_height": 0.3553530751708428,
+          "source_over_reference_width_ratio": 0.9176470588235294,
+          "center_drift_over_figure_height": -0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.76,
+          "reference_width_over_figure_height": 0.39635535307517084,
+          "source_width_over_figure_height": 0.36674259681093396,
+          "source_over_reference_width_ratio": 0.9252873563218391,
+          "center_drift_over_figure_height": -0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.78,
+          "reference_width_over_figure_height": 0.3735763097949886,
+          "source_width_over_figure_height": 0.3621867881548975,
+          "source_over_reference_width_ratio": 0.9695121951219512,
+          "center_drift_over_figure_height": -0.004555808656036446
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8,
+          "reference_width_over_figure_height": 0.3553530751708428,
+          "source_width_over_figure_height": 0.3337129840546697,
+          "source_over_reference_width_ratio": 0.9391025641025641,
+          "center_drift_over_figure_height": -0.003986332574031891
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8200000000000001,
+          "reference_width_over_figure_height": 0.35990888382687924,
+          "source_width_over_figure_height": 0.32801822323462415,
+          "source_over_reference_width_ratio": 0.9113924050632911,
+          "center_drift_over_figure_height": -0.004555808656036446
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8400000000000001,
+          "reference_width_over_figure_height": 0.3621867881548975,
+          "source_width_over_figure_height": 0.32915717539863326,
+          "source_over_reference_width_ratio": 0.9088050314465409,
+          "center_drift_over_figure_height": -0.003986332574031891
+        },
+        {
+          "normalized_height_top_to_bottom": 0.86,
+          "reference_width_over_figure_height": 0.34851936218678814,
+          "source_width_over_figure_height": 0.3234624145785877,
+          "source_over_reference_width_ratio": 0.9281045751633987,
+          "center_drift_over_figure_height": -0.002277904328018223
+        },
+        {
+          "normalized_height_top_to_bottom": 0.88,
+          "reference_width_over_figure_height": 0.3895216400911162,
+          "source_width_over_figure_height": 0.3690205011389522,
+          "source_over_reference_width_ratio": 0.9473684210526315,
+          "center_drift_over_figure_height": -0.003416856492027335
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9,
+          "reference_width_over_figure_height": 0.4123006833712984,
+          "source_width_over_figure_height": 0.3895216400911162,
+          "source_over_reference_width_ratio": 0.9447513812154696,
+          "center_drift_over_figure_height": -0.002277904328018223
+        },
+        {
+          "normalized_height_top_to_bottom": 0.92,
+          "reference_width_over_figure_height": 0.428246013667426,
+          "source_width_over_figure_height": 0.4009111617312073,
+          "source_over_reference_width_ratio": 0.9361702127659575,
+          "center_drift_over_figure_height": 0.0
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9400000000000001,
+          "reference_width_over_figure_height": 0.4533029612756264,
+          "source_width_over_figure_height": 0.4316628701594533,
+          "source_over_reference_width_ratio": 0.9522613065326633,
+          "center_drift_over_figure_height": 0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9600000000000001,
+          "reference_width_over_figure_height": 0.4715261958997722,
+          "source_width_over_figure_height": 0.4601366742596811,
+          "source_over_reference_width_ratio": 0.9758454106280193,
+          "center_drift_over_figure_height": 0.0011389521640091116
+        },
+        {
+          "normalized_height_top_to_bottom": 0.98,
+          "reference_width_over_figure_height": 0.4806378132118451,
+          "source_width_over_figure_height": 0.4806378132118451,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": 0.0011389521640091116
+        }
+      ]
+    },
+    "left": {
+      "normalization": "width / reference figure height; candidate is first centered and height-normalized",
+      "sample_count": 49,
+      "summary": {
+        "mean_absolute_width_error_over_figure_height": 0.020158174628425986,
+        "max_absolute_width_error_over_figure_height": 0.12138084632516702,
+        "max_error_at_normalized_height": 0.38,
+        "source_over_reference_width_ratio_at_max_error": 0.5219298245614035
+      },
+      "values": [
+        {
+          "normalized_height_top_to_bottom": 0.02,
+          "reference_width_over_figure_height": 0.16926503340757237,
+          "source_width_over_figure_height": 0.16369710467706014,
+          "source_over_reference_width_ratio": 0.9671052631578947,
+          "center_drift_over_figure_height": 0.0011135857461024498
+        },
+        {
+          "normalized_height_top_to_bottom": 0.04,
+          "reference_width_over_figure_height": 0.22939866369710468,
+          "source_width_over_figure_height": 0.24498886414253898,
+          "source_over_reference_width_ratio": 1.0679611650485437,
+          "center_drift_over_figure_height": 0.0022271714922048997
+        },
+        {
+          "normalized_height_top_to_bottom": 0.06,
+          "reference_width_over_figure_height": 0.33184855233853006,
+          "source_width_over_figure_height": 0.32962138084632514,
+          "source_over_reference_width_ratio": 0.9932885906040269,
+          "center_drift_over_figure_height": 0.0038975501113585748
+        },
+        {
+          "normalized_height_top_to_bottom": 0.08,
+          "reference_width_over_figure_height": 0.35412026726057905,
+          "source_width_over_figure_height": 0.3507795100222717,
+          "source_over_reference_width_ratio": 0.9905660377358491,
+          "center_drift_over_figure_height": -0.0011135857461024498
+        },
+        {
+          "normalized_height_top_to_bottom": 0.1,
+          "reference_width_over_figure_height": 0.3585746102449889,
+          "source_width_over_figure_height": 0.3674832962138085,
+          "source_over_reference_width_ratio": 1.0248447204968945,
+          "center_drift_over_figure_height": 0.005567928730512249
+        },
+        {
+          "normalized_height_top_to_bottom": 0.12000000000000001,
+          "reference_width_over_figure_height": 0.37193763919821826,
+          "source_width_over_figure_height": 0.38530066815144765,
+          "source_over_reference_width_ratio": 1.035928143712575,
+          "center_drift_over_figure_height": -0.0011135857461024498
+        },
+        {
+          "normalized_height_top_to_bottom": 0.13999999999999999,
+          "reference_width_over_figure_height": 0.40311804008908686,
+          "source_width_over_figure_height": 0.4064587973273942,
+          "source_over_reference_width_ratio": 1.0082872928176796,
+          "center_drift_over_figure_height": 0.0
+        },
+        {
+          "normalized_height_top_to_bottom": 0.16,
+          "reference_width_over_figure_height": 0.40979955456570155,
+          "source_width_over_figure_height": 0.40089086859688194,
+          "source_over_reference_width_ratio": 0.9782608695652174,
+          "center_drift_over_figure_height": 0.004454342984409799
+        },
+        {
+          "normalized_height_top_to_bottom": 0.18,
+          "reference_width_over_figure_height": 0.37639198218262804,
+          "source_width_over_figure_height": 0.3930957683741648,
+          "source_over_reference_width_ratio": 1.044378698224852,
+          "center_drift_over_figure_height": 0.019487750556792874
+        },
+        {
+          "normalized_height_top_to_bottom": 0.19999999999999998,
+          "reference_width_over_figure_height": 0.3830734966592428,
+          "source_width_over_figure_height": 0.3674832962138085,
+          "source_over_reference_width_ratio": 0.9593023255813954,
+          "center_drift_over_figure_height": 0.004454342984409799
+        },
+        {
+          "normalized_height_top_to_bottom": 0.22,
+          "reference_width_over_figure_height": 0.3674832962138085,
+          "source_width_over_figure_height": 0.3685968819599109,
+          "source_over_reference_width_ratio": 1.003030303030303,
+          "center_drift_over_figure_height": 0.016146993318485525
+        },
+        {
+          "normalized_height_top_to_bottom": 0.24,
+          "reference_width_over_figure_height": 0.35634743875278396,
+          "source_width_over_figure_height": 0.35634743875278396,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": 0.015590200445434299
+        },
+        {
+          "normalized_height_top_to_bottom": 0.26,
+          "reference_width_over_figure_height": 0.33407572383073497,
+          "source_width_over_figure_height": 0.3273942093541203,
+          "source_over_reference_width_ratio": 0.98,
+          "center_drift_over_figure_height": 0.012249443207126948
+        },
+        {
+          "normalized_height_top_to_bottom": 0.28,
+          "reference_width_over_figure_height": 0.3028953229398664,
+          "source_width_over_figure_height": 0.3207126948775056,
+          "source_over_reference_width_ratio": 1.0588235294117647,
+          "center_drift_over_figure_height": 0.024498886414253896
+        },
+        {
+          "normalized_height_top_to_bottom": 0.30000000000000004,
+          "reference_width_over_figure_height": 0.2828507795100223,
+          "source_width_over_figure_height": 0.22939866369710468,
+          "source_over_reference_width_ratio": 0.8110236220472441,
+          "center_drift_over_figure_height": 0.0022271714922048997
+        },
+        {
+          "normalized_height_top_to_bottom": 0.32,
+          "reference_width_over_figure_height": 0.2717149220489978,
+          "source_width_over_figure_height": 0.26280623608017817,
+          "source_over_reference_width_ratio": 0.9672131147540983,
+          "center_drift_over_figure_height": 0.011135857461024499
+        },
+        {
+          "normalized_height_top_to_bottom": 0.34,
+          "reference_width_over_figure_height": 0.2650334075723831,
+          "source_width_over_figure_height": 0.25389755011135856,
+          "source_over_reference_width_ratio": 0.957983193277311,
+          "center_drift_over_figure_height": 0.013919821826280624
+        },
+        {
+          "normalized_height_top_to_bottom": 0.36000000000000004,
+          "reference_width_over_figure_height": 0.2561247216035635,
+          "source_width_over_figure_height": 0.2561247216035635,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": 0.017817371937639197
+        },
+        {
+          "normalized_height_top_to_bottom": 0.38,
+          "reference_width_over_figure_height": 0.25389755011135856,
+          "source_width_over_figure_height": 0.13251670378619154,
+          "source_over_reference_width_ratio": 0.5219298245614035,
+          "center_drift_over_figure_height": 0.05902004454342984
+        },
+        {
+          "normalized_height_top_to_bottom": 0.4,
+          "reference_width_over_figure_height": 0.17817371937639198,
+          "source_width_over_figure_height": 0.16592427616926503,
+          "source_over_reference_width_ratio": 0.93125,
+          "center_drift_over_figure_height": 0.006124721603563474
+        },
+        {
+          "normalized_height_top_to_bottom": 0.42000000000000004,
+          "reference_width_over_figure_height": 0.18930957683741648,
+          "source_width_over_figure_height": 0.1870824053452116,
+          "source_over_reference_width_ratio": 0.9882352941176471,
+          "center_drift_over_figure_height": 0.008908685968819599
+        },
+        {
+          "normalized_height_top_to_bottom": 0.44,
+          "reference_width_over_figure_height": 0.19821826280623608,
+          "source_width_over_figure_height": 0.18262806236080179,
+          "source_over_reference_width_ratio": 0.9213483146067416,
+          "center_drift_over_figure_height": 0.004454342984409799
+        },
+        {
+          "normalized_height_top_to_bottom": 0.46,
+          "reference_width_over_figure_height": 0.19376391982182628,
+          "source_width_over_figure_height": 0.17260579064587972,
+          "source_over_reference_width_ratio": 0.8908045977011494,
+          "center_drift_over_figure_height": -0.0016703786191536749
+        },
+        {
+          "normalized_height_top_to_bottom": 0.48000000000000004,
+          "reference_width_over_figure_height": 0.1870824053452116,
+          "source_width_over_figure_height": 0.18040089086859687,
+          "source_over_reference_width_ratio": 0.9642857142857143,
+          "center_drift_over_figure_height": 0.012249443207126948
+        },
+        {
+          "normalized_height_top_to_bottom": 0.5,
+          "reference_width_over_figure_height": 0.1870824053452116,
+          "source_width_over_figure_height": 0.17037861915367483,
+          "source_over_reference_width_ratio": 0.9107142857142857,
+          "center_drift_over_figure_height": 0.009465478841870824
+        },
+        {
+          "normalized_height_top_to_bottom": 0.52,
+          "reference_width_over_figure_height": 0.18262806236080179,
+          "source_width_over_figure_height": 0.15812917594654788,
+          "source_over_reference_width_ratio": 0.8658536585365854,
+          "center_drift_over_figure_height": 0.0033407572383073497
+        },
+        {
+          "normalized_height_top_to_bottom": 0.54,
+          "reference_width_over_figure_height": 0.18485523385300667,
+          "source_width_over_figure_height": 0.16703786191536749,
+          "source_over_reference_width_ratio": 0.9036144578313253,
+          "center_drift_over_figure_height": 0.004454342984409799
+        },
+        {
+          "normalized_height_top_to_bottom": 0.56,
+          "reference_width_over_figure_height": 0.18930957683741648,
+          "source_width_over_figure_height": 0.1870824053452116,
+          "source_over_reference_width_ratio": 0.9882352941176471,
+          "center_drift_over_figure_height": 0.012249443207126948
+        },
+        {
+          "normalized_height_top_to_bottom": 0.5800000000000001,
+          "reference_width_over_figure_height": 0.19376391982182628,
+          "source_width_over_figure_height": 0.17817371937639198,
+          "source_over_reference_width_ratio": 0.9195402298850575,
+          "center_drift_over_figure_height": 0.005567928730512249
+        },
+        {
+          "normalized_height_top_to_bottom": 0.6,
+          "reference_width_over_figure_height": 0.17371937639198218,
+          "source_width_over_figure_height": 0.16258351893095768,
+          "source_over_reference_width_ratio": 0.9358974358974359,
+          "center_drift_over_figure_height": 0.0066815144766146995
+        },
+        {
+          "normalized_height_top_to_bottom": 0.62,
+          "reference_width_over_figure_height": 0.18262806236080179,
+          "source_width_over_figure_height": 0.16703786191536749,
+          "source_over_reference_width_ratio": 0.9146341463414634,
+          "center_drift_over_figure_height": 0.0077951002227171495
+        },
+        {
+          "normalized_height_top_to_bottom": 0.64,
+          "reference_width_over_figure_height": 0.18930957683741648,
+          "source_width_over_figure_height": 0.1714922048997773,
+          "source_over_reference_width_ratio": 0.9058823529411765,
+          "center_drift_over_figure_height": 0.011692650334075724
+        },
+        {
+          "normalized_height_top_to_bottom": 0.66,
+          "reference_width_over_figure_height": 0.19599109131403117,
+          "source_width_over_figure_height": 0.16926503340757237,
+          "source_over_reference_width_ratio": 0.8636363636363636,
+          "center_drift_over_figure_height": 0.0066815144766146995
+        },
+        {
+          "normalized_height_top_to_bottom": 0.68,
+          "reference_width_over_figure_height": 0.20489977728285078,
+          "source_width_over_figure_height": 0.18485523385300667,
+          "source_over_reference_width_ratio": 0.9021739130434783,
+          "center_drift_over_figure_height": 0.0066815144766146995
+        },
+        {
+          "normalized_height_top_to_bottom": 0.7000000000000001,
+          "reference_width_over_figure_height": 0.2071269487750557,
+          "source_width_over_figure_height": 0.18930957683741648,
+          "source_over_reference_width_ratio": 0.9139784946236559,
+          "center_drift_over_figure_height": 0.008908685968819599
+        },
+        {
+          "normalized_height_top_to_bottom": 0.7200000000000001,
+          "reference_width_over_figure_height": 0.2071269487750557,
+          "source_width_over_figure_height": 0.1915367483296214,
+          "source_over_reference_width_ratio": 0.9247311827956989,
+          "center_drift_over_figure_height": 0.0077951002227171495
+        },
+        {
+          "normalized_height_top_to_bottom": 0.74,
+          "reference_width_over_figure_height": 0.22271714922049,
+          "source_width_over_figure_height": 0.19376391982182628,
+          "source_over_reference_width_ratio": 0.87,
+          "center_drift_over_figure_height": 0.0033407572383073497
+        },
+        {
+          "normalized_height_top_to_bottom": 0.76,
+          "reference_width_over_figure_height": 0.2182628062360802,
+          "source_width_over_figure_height": 0.20824053452115812,
+          "source_over_reference_width_ratio": 0.9540816326530612,
+          "center_drift_over_figure_height": 0.0038975501113585748
+        },
+        {
+          "normalized_height_top_to_bottom": 0.78,
+          "reference_width_over_figure_height": 0.19821826280623608,
+          "source_width_over_figure_height": 0.19933184855233854,
+          "source_over_reference_width_ratio": 1.0056179775280898,
+          "center_drift_over_figure_height": 0.006124721603563474
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8,
+          "reference_width_over_figure_height": 0.155902004454343,
+          "source_width_over_figure_height": 0.1714922048997773,
+          "source_over_reference_width_ratio": 1.1,
+          "center_drift_over_figure_height": 0.0022271714922048997
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8200000000000001,
+          "reference_width_over_figure_height": 0.1358574610244989,
+          "source_width_over_figure_height": 0.12694877505567928,
+          "source_over_reference_width_ratio": 0.9344262295081968,
+          "center_drift_over_figure_height": 0.0038975501113585748
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8400000000000001,
+          "reference_width_over_figure_height": 0.12472160356347439,
+          "source_width_over_figure_height": 0.10467706013363029,
+          "source_over_reference_width_ratio": 0.8392857142857143,
+          "center_drift_over_figure_height": 0.013363028953229399
+        },
+        {
+          "normalized_height_top_to_bottom": 0.86,
+          "reference_width_over_figure_height": 0.1291759465478842,
+          "source_width_over_figure_height": 0.0935412026726058,
+          "source_over_reference_width_ratio": 0.7241379310344828,
+          "center_drift_over_figure_height": 0.0200445434298441
+        },
+        {
+          "normalized_height_top_to_bottom": 0.88,
+          "reference_width_over_figure_height": 0.16703786191536749,
+          "source_width_over_figure_height": 0.10244988864142539,
+          "source_over_reference_width_ratio": 0.6133333333333333,
+          "center_drift_over_figure_height": 0.011135857461024499
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9,
+          "reference_width_over_figure_height": 0.20489977728285078,
+          "source_width_over_figure_height": 0.12694877505567928,
+          "source_over_reference_width_ratio": 0.6195652173913043,
+          "center_drift_over_figure_height": 0.035634743875278395
+        },
+        {
+          "normalized_height_top_to_bottom": 0.92,
+          "reference_width_over_figure_height": 0.24498886414253898,
+          "source_width_over_figure_height": 0.15924276169265034,
+          "source_over_reference_width_ratio": 0.65,
+          "center_drift_over_figure_height": 0.037305122494432075
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9400000000000001,
+          "reference_width_over_figure_height": 0.2583518930957684,
+          "source_width_over_figure_height": 0.21158129175946547,
+          "source_over_reference_width_ratio": 0.8189655172413793,
+          "center_drift_over_figure_height": 0.013363028953229399
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9600000000000001,
+          "reference_width_over_figure_height": 0.26280623608017817,
+          "source_width_over_figure_height": 0.24721603563474387,
+          "source_over_reference_width_ratio": 0.940677966101695,
+          "center_drift_over_figure_height": 0.0022271714922048997
+        },
+        {
+          "normalized_height_top_to_bottom": 0.98,
+          "reference_width_over_figure_height": 0.2583518930957684,
+          "source_width_over_figure_height": 0.25501113585746105,
+          "source_over_reference_width_ratio": 0.9870689655172413,
+          "center_drift_over_figure_height": -0.0005567928730512249
+        }
+      ]
+    },
+    "right": {
+      "normalization": "width / reference figure height; candidate is first centered and height-normalized",
+      "sample_count": 49,
+      "summary": {
+        "mean_absolute_width_error_over_figure_height": 0.025317031044043457,
+        "max_absolute_width_error_over_figure_height": 0.10467706013363029,
+        "max_error_at_normalized_height": 0.36000000000000004,
+        "source_over_reference_width_ratio_at_max_error": 1.6911764705882353
+      },
+      "values": [
+        {
+          "normalized_height_top_to_bottom": 0.02,
+          "reference_width_over_figure_height": 0.19821826280623608,
+          "source_width_over_figure_height": 0.16481069042316257,
+          "source_over_reference_width_ratio": 0.8314606741573034,
+          "center_drift_over_figure_height": 0.0005567928730512249
+        },
+        {
+          "normalized_height_top_to_bottom": 0.04,
+          "reference_width_over_figure_height": 0.26948775055679286,
+          "source_width_over_figure_height": 0.24498886414253898,
+          "source_over_reference_width_ratio": 0.9090909090909091,
+          "center_drift_over_figure_height": -0.0022271714922048997
+        },
+        {
+          "normalized_height_top_to_bottom": 0.06,
+          "reference_width_over_figure_height": 0.35412026726057905,
+          "source_width_over_figure_height": 0.32962138084632514,
+          "source_over_reference_width_ratio": 0.9308176100628931,
+          "center_drift_over_figure_height": 0.0022271714922048997
+        },
+        {
+          "normalized_height_top_to_bottom": 0.08,
+          "reference_width_over_figure_height": 0.3518930957683742,
+          "source_width_over_figure_height": 0.34966592427616927,
+          "source_over_reference_width_ratio": 0.9936708860759493,
+          "center_drift_over_figure_height": -0.017817371937639197
+        },
+        {
+          "normalized_height_top_to_bottom": 0.1,
+          "reference_width_over_figure_height": 0.38752783964365256,
+          "source_width_over_figure_height": 0.36525612472160357,
+          "source_over_reference_width_ratio": 0.9425287356321839,
+          "center_drift_over_figure_height": -0.01670378619153675
+        },
+        {
+          "normalized_height_top_to_bottom": 0.12000000000000001,
+          "reference_width_over_figure_height": 0.3986636971046771,
+          "source_width_over_figure_height": 0.38530066815144765,
+          "source_over_reference_width_ratio": 0.9664804469273743,
+          "center_drift_over_figure_height": 0.0011135857461024498
+        },
+        {
+          "normalized_height_top_to_bottom": 0.13999999999999999,
+          "reference_width_over_figure_height": 0.3986636971046771,
+          "source_width_over_figure_height": 0.4064587973273942,
+          "source_over_reference_width_ratio": 1.0195530726256983,
+          "center_drift_over_figure_height": 0.011692650334075724
+        },
+        {
+          "normalized_height_top_to_bottom": 0.16,
+          "reference_width_over_figure_height": 0.37193763919821826,
+          "source_width_over_figure_height": 0.40200445434298443,
+          "source_over_reference_width_ratio": 1.0808383233532934,
+          "center_drift_over_figure_height": -0.005011135857461025
+        },
+        {
+          "normalized_height_top_to_bottom": 0.18,
+          "reference_width_over_figure_height": 0.36525612472160357,
+          "source_width_over_figure_height": 0.3930957683741648,
+          "source_over_reference_width_ratio": 1.076219512195122,
+          "center_drift_over_figure_height": -0.011692650334075724
+        },
+        {
+          "normalized_height_top_to_bottom": 0.19999999999999998,
+          "reference_width_over_figure_height": 0.3674832962138085,
+          "source_width_over_figure_height": 0.366369710467706,
+          "source_over_reference_width_ratio": 0.996969696969697,
+          "center_drift_over_figure_height": 0.004454342984409799
+        },
+        {
+          "normalized_height_top_to_bottom": 0.22,
+          "reference_width_over_figure_height": 0.34743875278396436,
+          "source_width_over_figure_height": 0.36971046770601335,
+          "source_over_reference_width_ratio": 1.064102564102564,
+          "center_drift_over_figure_height": -0.0066815144766146995
+        },
+        {
+          "normalized_height_top_to_bottom": 0.24,
+          "reference_width_over_figure_height": 0.31625835189309576,
+          "source_width_over_figure_height": 0.35634743875278396,
+          "source_over_reference_width_ratio": 1.1267605633802817,
+          "center_drift_over_figure_height": -0.012249443207126948
+        },
+        {
+          "normalized_height_top_to_bottom": 0.26,
+          "reference_width_over_figure_height": 0.2962138084632517,
+          "source_width_over_figure_height": 0.32516703786191536,
+          "source_over_reference_width_ratio": 1.0977443609022557,
+          "center_drift_over_figure_height": -0.0022271714922048997
+        },
+        {
+          "normalized_height_top_to_bottom": 0.28,
+          "reference_width_over_figure_height": 0.26280623608017817,
+          "source_width_over_figure_height": 0.3207126948775056,
+          "source_over_reference_width_ratio": 1.2203389830508475,
+          "center_drift_over_figure_height": -0.0077951002227171495
+        },
+        {
+          "normalized_height_top_to_bottom": 0.30000000000000004,
+          "reference_width_over_figure_height": 0.2516703786191537,
+          "source_width_over_figure_height": 0.23162583518930957,
+          "source_over_reference_width_ratio": 0.9203539823008849,
+          "center_drift_over_figure_height": 0.02338530066815145
+        },
+        {
+          "normalized_height_top_to_bottom": 0.32,
+          "reference_width_over_figure_height": 0.24053452115812918,
+          "source_width_over_figure_height": 0.26280623608017817,
+          "source_over_reference_width_ratio": 1.0925925925925926,
+          "center_drift_over_figure_height": 0.004454342984409799
+        },
+        {
+          "normalized_height_top_to_bottom": 0.34,
+          "reference_width_over_figure_height": 0.20489977728285078,
+          "source_width_over_figure_height": 0.25389755011135856,
+          "source_over_reference_width_ratio": 1.2391304347826086,
+          "center_drift_over_figure_height": 0.022828507795100223
+        },
+        {
+          "normalized_height_top_to_bottom": 0.36000000000000004,
+          "reference_width_over_figure_height": 0.1514476614699332,
+          "source_width_over_figure_height": 0.2561247216035635,
+          "source_over_reference_width_ratio": 1.6911764705882353,
+          "center_drift_over_figure_height": 0.04120267260579064
+        },
+        {
+          "normalized_height_top_to_bottom": 0.38,
+          "reference_width_over_figure_height": 0.17817371937639198,
+          "source_width_over_figure_height": 0.13251670378619154,
+          "source_over_reference_width_ratio": 0.74375,
+          "center_drift_over_figure_height": -0.0038975501113585748
+        },
+        {
+          "normalized_height_top_to_bottom": 0.4,
+          "reference_width_over_figure_height": 0.1870824053452116,
+          "source_width_over_figure_height": 0.16592427616926503,
+          "source_over_reference_width_ratio": 0.8869047619047619,
+          "center_drift_over_figure_height": -0.008351893095768375
+        },
+        {
+          "normalized_height_top_to_bottom": 0.42000000000000004,
+          "reference_width_over_figure_height": 0.18485523385300667,
+          "source_width_over_figure_height": 0.1870824053452116,
+          "source_over_reference_width_ratio": 1.0120481927710843,
+          "center_drift_over_figure_height": -0.0033407572383073497
+        },
+        {
+          "normalized_height_top_to_bottom": 0.44,
+          "reference_width_over_figure_height": 0.18930957683741648,
+          "source_width_over_figure_height": 0.18262806236080179,
+          "source_over_reference_width_ratio": 0.9647058823529412,
+          "center_drift_over_figure_height": 0.005567928730512249
+        },
+        {
+          "normalized_height_top_to_bottom": 0.46,
+          "reference_width_over_figure_height": 0.1870824053452116,
+          "source_width_over_figure_height": 0.17260579064587972,
+          "source_over_reference_width_ratio": 0.9226190476190477,
+          "center_drift_over_figure_height": 0.0005567928730512249
+        },
+        {
+          "normalized_height_top_to_bottom": 0.48000000000000004,
+          "reference_width_over_figure_height": 0.1714922048997773,
+          "source_width_over_figure_height": 0.18040089086859687,
+          "source_over_reference_width_ratio": 1.051948051948052,
+          "center_drift_over_figure_height": -0.011135857461024499
+        },
+        {
+          "normalized_height_top_to_bottom": 0.5,
+          "reference_width_over_figure_height": 0.16926503340757237,
+          "source_width_over_figure_height": 0.17037861915367483,
+          "source_over_reference_width_ratio": 1.006578947368421,
+          "center_drift_over_figure_height": -0.0027839643652561247
+        },
+        {
+          "normalized_height_top_to_bottom": 0.52,
+          "reference_width_over_figure_height": 0.17817371937639198,
+          "source_width_over_figure_height": 0.15924276169265034,
+          "source_over_reference_width_ratio": 0.89375,
+          "center_drift_over_figure_height": -0.0005567928730512249
+        },
+        {
+          "normalized_height_top_to_bottom": 0.54,
+          "reference_width_over_figure_height": 0.18485523385300667,
+          "source_width_over_figure_height": 0.16481069042316257,
+          "source_over_reference_width_ratio": 0.891566265060241,
+          "center_drift_over_figure_height": -0.01670378619153675
+        },
+        {
+          "normalized_height_top_to_bottom": 0.56,
+          "reference_width_over_figure_height": 0.1870824053452116,
+          "source_width_over_figure_height": 0.1870824053452116,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": -0.005567928730512249
+        },
+        {
+          "normalized_height_top_to_bottom": 0.5800000000000001,
+          "reference_width_over_figure_height": 0.16703786191536749,
+          "source_width_over_figure_height": 0.17817371937639198,
+          "source_over_reference_width_ratio": 1.0666666666666667,
+          "center_drift_over_figure_height": 0.005567928730512249
+        },
+        {
+          "normalized_height_top_to_bottom": 0.6,
+          "reference_width_over_figure_height": 0.1759465478841871,
+          "source_width_over_figure_height": 0.1603563474387528,
+          "source_over_reference_width_ratio": 0.9113924050632911,
+          "center_drift_over_figure_height": 0.0066815144766146995
+        },
+        {
+          "normalized_height_top_to_bottom": 0.62,
+          "reference_width_over_figure_height": 0.1759465478841871,
+          "source_width_over_figure_height": 0.16481069042316257,
+          "source_over_reference_width_ratio": 0.9367088607594937,
+          "center_drift_over_figure_height": -0.0011135857461024498
+        },
+        {
+          "normalized_height_top_to_bottom": 0.64,
+          "reference_width_over_figure_height": 0.18040089086859687,
+          "source_width_over_figure_height": 0.1714922048997773,
+          "source_over_reference_width_ratio": 0.9506172839506173,
+          "center_drift_over_figure_height": 0.0033407572383073497
+        },
+        {
+          "normalized_height_top_to_bottom": 0.66,
+          "reference_width_over_figure_height": 0.1870824053452116,
+          "source_width_over_figure_height": 0.16926503340757237,
+          "source_over_reference_width_ratio": 0.9047619047619048,
+          "center_drift_over_figure_height": 0.011135857461024499
+        },
+        {
+          "normalized_height_top_to_bottom": 0.68,
+          "reference_width_over_figure_height": 0.19376391982182628,
+          "source_width_over_figure_height": 0.18262806236080179,
+          "source_over_reference_width_ratio": 0.9425287356321839,
+          "center_drift_over_figure_height": 0.0077951002227171495
+        },
+        {
+          "normalized_height_top_to_bottom": 0.7000000000000001,
+          "reference_width_over_figure_height": 0.19376391982182628,
+          "source_width_over_figure_height": 0.18930957683741648,
+          "source_over_reference_width_ratio": 0.9770114942528736,
+          "center_drift_over_figure_height": 0.0022271714922048997
+        },
+        {
+          "normalized_height_top_to_bottom": 0.7200000000000001,
+          "reference_width_over_figure_height": 0.2071269487750557,
+          "source_width_over_figure_height": 0.1915367483296214,
+          "source_over_reference_width_ratio": 0.9247311827956989,
+          "center_drift_over_figure_height": 0.0077951002227171495
+        },
+        {
+          "normalized_height_top_to_bottom": 0.74,
+          "reference_width_over_figure_height": 0.21158129175946547,
+          "source_width_over_figure_height": 0.19265033407572382,
+          "source_over_reference_width_ratio": 0.9105263157894737,
+          "center_drift_over_figure_height": 0.013919821826280624
+        },
+        {
+          "normalized_height_top_to_bottom": 0.76,
+          "reference_width_over_figure_height": 0.19599109131403117,
+          "source_width_over_figure_height": 0.20824053452115812,
+          "source_over_reference_width_ratio": 1.0625,
+          "center_drift_over_figure_height": 0.010579064587973273
+        },
+        {
+          "normalized_height_top_to_bottom": 0.78,
+          "reference_width_over_figure_height": 0.16481069042316257,
+          "source_width_over_figure_height": 0.19933184855233854,
+          "source_over_reference_width_ratio": 1.2094594594594594,
+          "center_drift_over_figure_height": 0.008351893095768375
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8,
+          "reference_width_over_figure_height": 0.12472160356347439,
+          "source_width_over_figure_height": 0.17260579064587972,
+          "source_over_reference_width_ratio": 1.3839285714285714,
+          "center_drift_over_figure_height": 0.017260579064587972
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8200000000000001,
+          "reference_width_over_figure_height": 0.1091314031180401,
+          "source_width_over_figure_height": 0.12583518930957685,
+          "source_over_reference_width_ratio": 1.153061224489796,
+          "center_drift_over_figure_height": 0.011135857461024499
+        },
+        {
+          "normalized_height_top_to_bottom": 0.8400000000000001,
+          "reference_width_over_figure_height": 0.10467706013363029,
+          "source_width_over_figure_height": 0.10467706013363029,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": -0.0011135857461024498
+        },
+        {
+          "normalized_height_top_to_bottom": 0.86,
+          "reference_width_over_figure_height": 0.133630289532294,
+          "source_width_over_figure_height": 0.09465478841870824,
+          "source_over_reference_width_ratio": 0.7083333333333334,
+          "center_drift_over_figure_height": 0.0016703786191536749
+        },
+        {
+          "normalized_height_top_to_bottom": 0.88,
+          "reference_width_over_figure_height": 0.16258351893095768,
+          "source_width_over_figure_height": 0.10244988864142539,
+          "source_over_reference_width_ratio": 0.6301369863013698,
+          "center_drift_over_figure_height": 0.0033407572383073497
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9,
+          "reference_width_over_figure_height": 0.22939866369710468,
+          "source_width_over_figure_height": 0.1291759465478842,
+          "source_over_reference_width_ratio": 0.5631067961165048,
+          "center_drift_over_figure_height": -0.03897550111358575
+        },
+        {
+          "normalized_height_top_to_bottom": 0.92,
+          "reference_width_over_figure_height": 0.24498886414253898,
+          "source_width_over_figure_height": 0.16146993318485522,
+          "source_over_reference_width_ratio": 0.6590909090909091,
+          "center_drift_over_figure_height": -0.027282850779510023
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9400000000000001,
+          "reference_width_over_figure_height": 0.25389755011135856,
+          "source_width_over_figure_height": 0.21380846325167038,
+          "source_over_reference_width_ratio": 0.8421052631578947,
+          "center_drift_over_figure_height": 0.0
+        },
+        {
+          "normalized_height_top_to_bottom": 0.9600000000000001,
+          "reference_width_over_figure_height": 0.267260579064588,
+          "source_width_over_figure_height": 0.24721603563474387,
+          "source_over_reference_width_ratio": 0.925,
+          "center_drift_over_figure_height": -0.0011135857461024498
+        },
+        {
+          "normalized_height_top_to_bottom": 0.98,
+          "reference_width_over_figure_height": 0.25389755011135856,
+          "source_width_over_figure_height": 0.25389755011135856,
+          "source_over_reference_width_ratio": 1.0,
+          "center_drift_over_figure_height": 0.0
+        }
+      ]
     }
   },
   "turnaround_eight_view_metrics": {
