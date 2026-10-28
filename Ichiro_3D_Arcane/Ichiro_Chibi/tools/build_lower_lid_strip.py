@@ -13,6 +13,8 @@ from mathutils.bvhtree import BVHTree
 ROOT=Path(__file__).resolve().parents[1]
 outer_mode='--outer' in sys.argv
 upper_mode='--upper' in sys.argv
+smooth_mode='--smooth' in sys.argv
+upper_mode=upper_mode or smooth_mode
 outer_mode=outer_mode or upper_mode
 bpy.ops.wm.open_mainfile(filepath=str(ROOT/'Ichiro_Chibi_Eyelid_Landmark_Review.blend'))
 data=json.loads((ROOT/'docs'/'EYELID_LANDMARK_REVIEW.json').read_text())
@@ -27,6 +29,23 @@ if upper_mode: anchor_order=[7,6,5,4,3,2]
 for a,b in zip(anchor_order,anchor_order[1:]):
     path.extend(anchors[a].lerp(anchors[b],i/4) for i in range(4))
 path.append(anchors[anchor_order[-1]])
+original_path=[p.copy() for p in path]
+if smooth_mode:
+    # Corner cutting is an explicit shape proposal; endpoints remain fixed.
+    curve=[anchors[i].copy() for i in anchor_order]
+    for iteration in range(3):
+        refined=[curve[0]]
+        for a,b in zip(curve,curve[1:]):
+            refined.extend((a.lerp(b,.25),a.lerp(b,.75)))
+        refined.append(curve[-1]); curve=refined
+    cumulative=[0.]
+    for a,b in zip(curve,curve[1:]): cumulative.append(cumulative[-1]+(b-a).length)
+    path=[]
+    for i in range(len(original_path)):
+        distance=cumulative[-1]*i/(len(original_path)-1)
+        segment=next((j for j in range(len(curve)-1) if cumulative[j+1]>=distance),len(curve)-2)
+        length=cumulative[segment+1]-cumulative[segment]
+        path.append(curve[segment].lerp(curve[segment+1],(distance-cumulative[segment])/length))
 verts=[]; distances=[]
 for offset in [0,.003,.006]:
     for i,p in enumerate(path):
@@ -60,6 +79,7 @@ wire=obj.modifiers.new('ReviewWire','WIREFRAME'); wire.thickness=.00035
 wire.show_viewport=False
 output=ROOT/('Ichiro_Chibi_Outer_Lid_Strip_Review.blend' if outer_mode else 'Ichiro_Chibi_Lower_Lid_Strip_Review.blend')
 if upper_mode: output=ROOT/'Ichiro_Chibi_Upper_Lid_Strip_Review.blend'
+if smooth_mode: output=ROOT/'Ichiro_Chibi_Smooth_Lid_Strip_Review.blend'
 bpy.ops.wm.save_as_mainfile(filepath=str(output))
 report=dict(vertices=len(verts),quads=len(faces),max_projection_distance=max(distances),
     projection_limit=.004,source_landmarks=anchor_order,production_approved=False,
@@ -67,5 +87,13 @@ report=dict(vertices=len(verts),quads=len(faces),max_projection_distance=max(dis
 report['minimum_face_area']=min(p.area for p in mesh.polygons)
 report['upper_width_factor']=.5 if upper_mode else 1
 report_name='UPPER_LID_STRIP_REVIEW.json' if upper_mode else ('OUTER_LID_STRIP_REVIEW.json' if outer_mode else 'LOWER_LID_STRIP_REVIEW.json')
+if smooth_mode: report_name='SMOOTH_LID_STRIP_REVIEW.json'
+report['guide_method']='three_corner_cutting_passes_equal_arc_spacing' if smooth_mode else 'linear_per_anchor'
+def max_turn(points):
+    from math import degrees
+    return max(degrees((b-a).angle(c-b)) for a,b,c in zip(points,points[1:],points[2:]) if (b-a).length>1e-9 and (c-b).length>1e-9)
+report['guide_max_turn_degrees']=max_turn(path)
+report['projected_inner_max_turn_degrees']=max_turn(verts[:n])
+report['original_guide_max_turn_degrees']=max_turn(original_path)
 (ROOT/'docs'/report_name).write_text(json.dumps(report,indent=2)+'\n')
 print('STRIP',report)

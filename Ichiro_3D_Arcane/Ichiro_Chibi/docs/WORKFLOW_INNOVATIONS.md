@@ -132,5 +132,23 @@ muy próximas: la prueba numérica NO aprueba el diseño. Conservar como candida
 corregir recorrido y distribución antes de espesor o rig. El arco interior sigue
 incompleto. Este bloque no acredita fidelidad a todas las referencias canónicas.
 
+## WF-003d — suavizado y remuestreo por longitud de arco
+
+Modo -- --smooth en generador y renderizador. Tres pasadas de corner cutting
+con extremos fijos, seguidas de muestreo uniforme por longitud de arco, conservan
+21 columnas y 40 quads. Es una propuesta de forma; no conserva exactamente los
+landmarks interiores ni acredita fidelidad canónica.
+
+La guía reduce su giro máximo de 77.08 a 37.03 grados. Tras proyectar sobre la
+máscara, el giro vuelve a 67.59 grados; la banda anterior medía 79.20 grados
+en su fila interior. Esto demuestra una mejora parcial, no una solución: los
+huecos/discontinuidades de la máscara afectan al resultado y deben revisarse.
+Distancia máxima 0.00385785 bajo límite 0.004, área mínima 8.867e-7.
+
+Se guardan escena derivada local Ichiro_Chibi_Smooth_Lid_Strip_Review.blend,
+SMOOTH_LID_STRIP_REVIEW.json y tres renders. Frontal inspeccionado: contorno
+algo más suave, esquina superior aún demasiado marcada. Pendiente superficie
+de apoyo revisada y anatomía completa. No añadir rig basándose en estas métricas.
+
 Cada bloque debe producir una mejora verificable; no añadir capas de servicios
 antes de tener un caso geométrico útil. La reconstrucción artística sigue pendiente.
