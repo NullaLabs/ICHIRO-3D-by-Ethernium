@@ -1,4 +1,8 @@
 # MEGA ULTRA PLAN MAESTRO // ALTA INGENIERÍA 3D: ICHIRO 2390
+> Revisión 2026-10-28: para Chibi rige
+> [el plan operativo revisado](Ichiro_Chibi/docs/PRODUCTION_PLAN_2026-10-28.md).
+> Este documento histórico expresa aspiraciones, no certificaciones.
+> Fidelidad 100%, deformación perfecta y umbrales sin calibración no están demostrados.
 ## Ethernium Sovereign 3D Pipeline & Discrete Geometry Core
 **Character:** Ichiro (Keeper #2390 — Arcane / Cyberpunk Aesthetic)  
 **Classification:** Studio Production Asset (Unreal Engine 5 Nanite/LOD + Facial Rig Ready)  

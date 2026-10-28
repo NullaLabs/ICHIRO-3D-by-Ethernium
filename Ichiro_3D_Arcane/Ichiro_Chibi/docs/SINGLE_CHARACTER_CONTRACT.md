@@ -1,5 +1,14 @@
 # Ichiro Chibi — contrato de malla única
 
+> CORRECCIÓN TÉCNICA 2026-10-28: los requisitos siguientes de superficie continua
+> y fusión universal quedan retirados. Un personaje puede conservar ojos,
+> dientes, lengua, pelo y prendas como superficies independientes compartiendo
+> rig. Si se requiere un único objeto de exportación, puede contener islas
+> desconectadas. La piel continua sí necesita uniones topológicas apropiadas.
+> Join no suelda ni corrige intersecciones. Se preserva el maestro modular y
+> se verifican clipping, normales, espesores y deformación antes de exportar.
+> El texto inferior se conserva como historial, no como exigencia vigente.
+
 ## Resultado exigido
 
 El asset final será `ICH_CHIBI_FINAL_SINGLE_MESH`: una sola malla de personaje,

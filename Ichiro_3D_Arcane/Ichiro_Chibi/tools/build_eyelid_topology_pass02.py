@@ -40,7 +40,8 @@ for name, center_y, center_z in [('A', -0.065, 0.255), ('B', 0.035, 0.274)]:
     for ring in range(3):
         for i in range(32):
             j = (i+1)%32
-            faces.append((ring*32+i, ring*32+j, (ring+1)*32+j, (ring+1)*32+i))
+            # Front is +X; winding must face outward.
+            faces.append(((ring+1)*32+i, (ring+1)*32+j, ring*32+j, ring*32+i))
     mesh = bpy.data.meshes.new(f'Eyelid_{name}_QuadMesh')
     mesh.from_pydata(verts, [], faces)
     mesh.update()
