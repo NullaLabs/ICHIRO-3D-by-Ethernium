@@ -1,0 +1,123 @@
+{
+  "source": "E:\\WORKSPACE\\Ichiro_Chibi\\source_candidates\\Ichiro_Chibi_HighDetail_Candidate_READONLY.blend",
+  "objects": [
+    {
+      "name": "Light",
+      "type": "LIGHT"
+    },
+    {
+      "name": "Camera",
+      "type": "CAMERA"
+    },
+    {
+      "name": "node_b82ac233-f1f5-4231-8c7d-95e837a89463",
+      "type": "MESH",
+      "vertices": 773535,
+      "edges": 2269034,
+      "faces": 1495680,
+      "triangles": 1495680,
+      "materials": [
+        "material_b82ac233-f1f5-4231-8c7d-95e837a89463"
+      ],
+      "bounds_world": [
+        [
+          -0.21155,
+          -0.24262,
+          -0.5
+        ],
+        [
+          -0.21155,
+          -0.24262,
+          0.5
+        ],
+        [
+          -0.21155,
+          0.24262,
+          0.5
+        ],
+        [
+          -0.21155,
+          0.24262,
+          -0.5
+        ],
+        [
+          0.21155,
+          -0.24262,
+          -0.5
+        ],
+        [
+          0.21155,
+          -0.24262,
+          0.5
+        ],
+        [
+          0.21155,
+          0.24262,
+          0.5
+        ],
+        [
+          0.21155,
+          0.24262,
+          -0.5
+        ]
+      ],
+      "boundary_edges": 51028,
+      "non_manifold_edges": 0,
+      "loose_vertices": 0
+    },
+    {
+      "name": "Plane",
+      "type": "MESH",
+      "vertices": 4,
+      "edges": 4,
+      "faces": 1,
+      "triangles": 2,
+      "materials": [],
+      "bounds_world": [
+        [
+          -1.0,
+          -1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          -1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          1.0,
+          0.0
+        ],
+        [
+          -1.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          -1.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0
+        ],
+        [
+          1.0,
+          1.0,
+          0.0
+        ]
+      ],
+      "boundary_edges": 4,
+      "non_manifold_edges": 0,
+      "loose_vertices": 0
+    }
+  ]
+}
