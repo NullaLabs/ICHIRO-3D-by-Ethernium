@@ -5,6 +5,7 @@
   "status_vocabulary": ["not_started", "planned", "implemented", "candidate_only", "partial", "artist_gated", "not_verified", "running", "pass", "review", "blocked", "failed"],
   "stages": [
     {"id": "reference_intake", "status": "implemented", "engine": "python_stdlib", "requires_gpu": false, "writes_source_scene": false},
+    {"id": "declared_subview_crops", "status": "implemented", "engine": "python_pillow", "requires_gpu": false, "writes_source_scene": false},
     {"id": "image_analysis", "status": "planned", "engine": "adapter", "requires_gpu": "optional", "writes_source_scene": false},
     {"id": "view_planning", "status": "planned", "engine": "snn_or_deterministic", "requires_gpu": false, "writes_source_scene": false},
     {"id": "shape_candidate", "status": "candidate_only", "engine": "pluggable_worker", "requires_gpu": "model_dependent", "writes_source_scene": false},

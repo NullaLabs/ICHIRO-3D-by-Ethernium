@@ -1,0 +1,301 @@
+{
+  "schema": "ichiro-3d-suite.extracted-subviews.v0.1",
+  "character_id": "ichiro-chibi",
+  "character_spec": "character_spec.json",
+  "character_spec_sha256": "cdfcd1aa6f524f71cd7dc7f3958cdf8bcd50f08645eb3e8cb5ad3bb975553d8f",
+  "crop_algorithm": "normalized_xyxy_rounded_to_nearest_pixel",
+  "source_images_modified": false,
+  "canonical_approval": false,
+  "subview_count": 8,
+  "resolution_warnings": 8,
+  "subviews": [
+    {
+      "reference_id": "reference_05",
+      "parent_path": "references/05_9e78a34fe937_ichiro_chibi_8view_turnaround.png",
+      "parent_sha256": "9e78a34fe9371ea0ac771c6656fe46c1da5262a58e934c0ac7d6687e01e548be",
+      "subview_id": "turnaround_panel_01",
+      "view_label": "front",
+      "authority": "approved_secondary",
+      "origin": "unknown",
+      "projection": "unknown",
+      "crop_normalized_xyxy": [
+        0.005555556,
+        0.008333333,
+        0.244444444,
+        0.35
+      ],
+      "crop_pixel_xyxy": [
+        2,
+        2,
+        88,
+        84
+      ],
+      "source_size_px": [
+        360,
+        240
+      ],
+      "short_side_px": 82,
+      "resolution_class": "view_cue_only",
+      "quality_warning": "Panel crop is below 128 px on its short side; use only for coarse view continuity, not facial/retopo detail.",
+      "output_file": "turnaround_panel_01__front.png",
+      "output_size_px": [
+        86,
+        82
+      ],
+      "output_sha256": "cc199da1e81665fb7207e4584031485066cdd1d4639250f15ec5986d84a893d0",
+      "status": "review"
+    },
+    {
+      "reference_id": "reference_05",
+      "parent_path": "references/05_9e78a34fe937_ichiro_chibi_8view_turnaround.png",
+      "parent_sha256": "9e78a34fe9371ea0ac771c6656fe46c1da5262a58e934c0ac7d6687e01e548be",
+      "subview_id": "turnaround_panel_02",
+      "view_label": "front_left",
+      "authority": "approved_secondary",
+      "origin": "unknown",
+      "projection": "unknown",
+      "crop_normalized_xyxy": [
+        0.255555556,
+        0.008333333,
+        0.494444444,
+        0.35
+      ],
+      "crop_pixel_xyxy": [
+        92,
+        2,
+        178,
+        84
+      ],
+      "source_size_px": [
+        360,
+        240
+      ],
+      "short_side_px": 82,
+      "resolution_class": "view_cue_only",
+      "quality_warning": "Panel crop is below 128 px on its short side; use only for coarse view continuity, not facial/retopo detail.",
+      "output_file": "turnaround_panel_02__front_left.png",
+      "output_size_px": [
+        86,
+        82
+      ],
+      "output_sha256": "ea4bf3bfc0cb5448915d90ebaeab8c8a759915b3bc1c3ae4ea907d032605712a",
+      "status": "review"
+    },
+    {
+      "reference_id": "reference_05",
+      "parent_path": "references/05_9e78a34fe937_ichiro_chibi_8view_turnaround.png",
+      "parent_sha256": "9e78a34fe9371ea0ac771c6656fe46c1da5262a58e934c0ac7d6687e01e548be",
+      "subview_id": "turnaround_panel_03",
+      "view_label": "left",
+      "authority": "approved_secondary",
+      "origin": "unknown",
+      "projection": "unknown",
+      "crop_normalized_xyxy": [
+        0.505555556,
+        0.008333333,
+        0.744444444,
+        0.35
+      ],
+      "crop_pixel_xyxy": [
+        182,
+        2,
+        268,
+        84
+      ],
+      "source_size_px": [
+        360,
+        240
+      ],
+      "short_side_px": 82,
+      "resolution_class": "view_cue_only",
+      "quality_warning": "Panel crop is below 128 px on its short side; use only for coarse view continuity, not facial/retopo detail.",
+      "output_file": "turnaround_panel_03__left.png",
+      "output_size_px": [
+        86,
+        82
+      ],
+      "output_sha256": "f962d0e0eb5153037a94d408835237fc7c492fc597b5c746a5f22b108fb76cb4",
+      "status": "review"
+    },
+    {
+      "reference_id": "reference_05",
+      "parent_path": "references/05_9e78a34fe937_ichiro_chibi_8view_turnaround.png",
+      "parent_sha256": "9e78a34fe9371ea0ac771c6656fe46c1da5262a58e934c0ac7d6687e01e548be",
+      "subview_id": "turnaround_panel_04",
+      "view_label": "left_back",
+      "authority": "approved_secondary",
+      "origin": "unknown",
+      "projection": "unknown",
+      "crop_normalized_xyxy": [
+        0.755555556,
+        0.008333333,
+        0.994444444,
+        0.35
+      ],
+      "crop_pixel_xyxy": [
+        272,
+        2,
+        358,
+        84
+      ],
+      "source_size_px": [
+        360,
+        240
+      ],
+      "short_side_px": 82,
+      "resolution_class": "view_cue_only",
+      "quality_warning": "Panel crop is below 128 px on its short side; use only for coarse view continuity, not facial/retopo detail.",
+      "output_file": "turnaround_panel_04__left_back.png",
+      "output_size_px": [
+        86,
+        82
+      ],
+      "output_sha256": "161214510ccc5c1cf3fa3087dcd7e1385b81163573361104d54b37e553d866c1",
+      "status": "review"
+    },
+    {
+      "reference_id": "reference_05",
+      "parent_path": "references/05_9e78a34fe937_ichiro_chibi_8view_turnaround.png",
+      "parent_sha256": "9e78a34fe9371ea0ac771c6656fe46c1da5262a58e934c0ac7d6687e01e548be",
+      "subview_id": "turnaround_panel_05",
+      "view_label": "back",
+      "authority": "approved_secondary",
+      "origin": "unknown",
+      "projection": "unknown",
+      "crop_normalized_xyxy": [
+        0.005555556,
+        0.508333333,
+        0.244444444,
+        0.85
+      ],
+      "crop_pixel_xyxy": [
+        2,
+        122,
+        88,
+        204
+      ],
+      "source_size_px": [
+        360,
+        240
+      ],
+      "short_side_px": 82,
+      "resolution_class": "view_cue_only",
+      "quality_warning": "Panel crop is below 128 px on its short side; use only for coarse view continuity, not facial/retopo detail.",
+      "output_file": "turnaround_panel_05__back.png",
+      "output_size_px": [
+        86,
+        82
+      ],
+      "output_sha256": "e6955fc82b8b4b4cf93024b2195bbde984573baf197903ac6737dc990e7b7682",
+      "status": "review"
+    },
+    {
+      "reference_id": "reference_05",
+      "parent_path": "references/05_9e78a34fe937_ichiro_chibi_8view_turnaround.png",
+      "parent_sha256": "9e78a34fe9371ea0ac771c6656fe46c1da5262a58e934c0ac7d6687e01e548be",
+      "subview_id": "turnaround_panel_06",
+      "view_label": "back_right",
+      "authority": "approved_secondary",
+      "origin": "unknown",
+      "projection": "unknown",
+      "crop_normalized_xyxy": [
+        0.255555556,
+        0.508333333,
+        0.494444444,
+        0.85
+      ],
+      "crop_pixel_xyxy": [
+        92,
+        122,
+        178,
+        204
+      ],
+      "source_size_px": [
+        360,
+        240
+      ],
+      "short_side_px": 82,
+      "resolution_class": "view_cue_only",
+      "quality_warning": "Panel crop is below 128 px on its short side; use only for coarse view continuity, not facial/retopo detail.",
+      "output_file": "turnaround_panel_06__back_right.png",
+      "output_size_px": [
+        86,
+        82
+      ],
+      "output_sha256": "69bfcc3cee1d64582f4a28763dced4572f624764475557fce2cbd592394cbc0c",
+      "status": "review"
+    },
+    {
+      "reference_id": "reference_05",
+      "parent_path": "references/05_9e78a34fe937_ichiro_chibi_8view_turnaround.png",
+      "parent_sha256": "9e78a34fe9371ea0ac771c6656fe46c1da5262a58e934c0ac7d6687e01e548be",
+      "subview_id": "turnaround_panel_07",
+      "view_label": "right",
+      "authority": "approved_secondary",
+      "origin": "unknown",
+      "projection": "unknown",
+      "crop_normalized_xyxy": [
+        0.505555556,
+        0.508333333,
+        0.744444444,
+        0.85
+      ],
+      "crop_pixel_xyxy": [
+        182,
+        122,
+        268,
+        204
+      ],
+      "source_size_px": [
+        360,
+        240
+      ],
+      "short_side_px": 82,
+      "resolution_class": "view_cue_only",
+      "quality_warning": "Panel crop is below 128 px on its short side; use only for coarse view continuity, not facial/retopo detail.",
+      "output_file": "turnaround_panel_07__right.png",
+      "output_size_px": [
+        86,
+        82
+      ],
+      "output_sha256": "c94e18c70e43fcda71e1884a6f3c1d55e43e850e137f56a010074801ad4bb26d",
+      "status": "review"
+    },
+    {
+      "reference_id": "reference_05",
+      "parent_path": "references/05_9e78a34fe937_ichiro_chibi_8view_turnaround.png",
+      "parent_sha256": "9e78a34fe9371ea0ac771c6656fe46c1da5262a58e934c0ac7d6687e01e548be",
+      "subview_id": "turnaround_panel_08",
+      "view_label": "front_right",
+      "authority": "approved_secondary",
+      "origin": "unknown",
+      "projection": "unknown",
+      "crop_normalized_xyxy": [
+        0.755555556,
+        0.508333333,
+        0.994444444,
+        0.85
+      ],
+      "crop_pixel_xyxy": [
+        272,
+        122,
+        358,
+        204
+      ],
+      "source_size_px": [
+        360,
+        240
+      ],
+      "short_side_px": 82,
+      "resolution_class": "view_cue_only",
+      "quality_warning": "Panel crop is below 128 px on its short side; use only for coarse view continuity, not facial/retopo detail.",
+      "output_file": "turnaround_panel_08__front_right.png",
+      "output_size_px": [
+        86,
+        82
+      ],
+      "output_sha256": "b8cf74fd5520f054459621bd490157e6bc8db226dc1c4fd52fb915c114df0352",
+      "status": "review"
+    }
+  ]
+}

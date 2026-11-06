@@ -31,7 +31,9 @@ The humanoid avatar standard covers pose, facial expression, gaze, humanoid bone
 
 Each image has its own record: `view_id`, file path and SHA-256, `view_label`, optional azimuth/elevation, projection (`orthographic`, `perspective`, or `unknown`), region, source authority, mask/landmark references, confidence and `observed|inferred|synthetic` provenance.
 
-The eight directions (front, front-left 45°, left, back-left 135°, back, back-right 225°, right, front-right 315°) are canonical evaluation anchors when available. Extra photographs, details, top/bottom views and authored poses are supported as additional evidence. They are not forced into those eight bins.
+The eight direction labels (front, front-left, left, left-back, back, back-right, right, front-right) are canonical evaluation anchors when available. Their exact azimuths are measured per reference; the labels alone do not prove calibrated 45-degree camera spacing. Extra photographs, details, top/bottom views and authored poses are supported as additional evidence. They are not forced into those eight bins.
+
+The current Chibi turnaround contact sheet is 360×240 px. Its fixed 4×2 segmentation yields panels of only 86×82 px after gutters/captions are removed. Those eight crops are useful as coarse continuity constraints; the system flags them as too small for face, retopology or texture detail. The four individual plates carry the main silhouette evidence.
 
 An image model may accept only a subset of views. That is a worker limit, not a suite limit. Keep the full evidence package for camera fitting, silhouette checks and geometry refinement. Do not average inconsistent views blindly: flag camera, perspective, pose, outfit and identity conflicts for resolution.
 

@@ -28,7 +28,7 @@ The pipeline accepts eight canonical directions and additional reference images.
 
 - [Suite architecture and staged plan](Ichiro_3D_Arcane/docs/SUITE_ARCHITECTURE_V0_1.md)
 - [Migration map from the current prototypes](Ichiro_3D_Arcane/docs/SUITE_MIGRATION_MAP_V0_1.md)
-- [Character spec schema](Ichiro_3D_Arcane/suite/character_spec.schema.json), [reference intake](Ichiro_3D_Arcane/suite/init_character_project.py), and [package verifier](Ichiro_3D_Arcane/suite/validate_character_project.py)
+- [Character spec schema](Ichiro_3D_Arcane/suite/character_spec.schema.json), [reference intake](Ichiro_3D_Arcane/suite/init_character_project.py), [package verifier](Ichiro_3D_Arcane/suite/validate_character_project.py), and [multi-view crop extraction](Ichiro_3D_Arcane/suite/extract_spec_subviews.py)
 - [Ichiro Chibi reference package](Ichiro_3D_Arcane/characters/ichiro_chibi/character_spec.json)
 - [Current Ichiro Chibi production status](Ichiro_3D_Arcane/Ichiro_Chibi/PROJECT_STATUS.md)
 - [Existing project assets and experiments](Ichiro_3D_Arcane/README.md)

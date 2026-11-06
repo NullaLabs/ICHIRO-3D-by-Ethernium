@@ -28,4 +28,14 @@ python Ichiro_3D_Arcane/suite/validate_character_project.py `
 
 `review` is a valid package whose unknown camera, view, provenance or authority fields need human review. `failed` means a structural or hash error blocks the next worker.
 
+Extract declared panel crops for a multiview worker:
+
+```powershell
+python Ichiro_3D_Arcane/suite/extract_spec_subviews.py `
+  Ichiro_3D_Arcane/characters/ichiro_chibi/character_spec.json `
+  --out Ichiro_3D_Arcane/characters/ichiro_chibi/derived/turnaround_v02
+```
+
+Each crop is linked to its parent image hash, normalized and pixel crop rectangle, label, dimensions, resolution class, and output hash in `subview_manifest.json`. Crops stay derived review assets and do not become primary canon by extraction. Crops under 128 px on the short side are flagged for coarse view continuity only, never face, retopology or texture detail.
+
 For Ichiro Chibi, the first package is [here](../characters/ichiro_chibi/character_spec.json). `character_spec.schema.json` is the data contract; `stage_registry.json` records which pipeline stages are implemented, partial, candidate-only, or still unverified.
