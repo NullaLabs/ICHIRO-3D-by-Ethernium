@@ -1,0 +1,102 @@
+{
+  "views": [
+    {
+      "angle": 0,
+      "resolution": [
+        512,
+        512
+      ],
+      "silhouette_iou": 1.0,
+      "silhouette_different_pixels": 0,
+      "foreground_rgb_mean_absolute_difference_0_255": 0.052536345243309766,
+      "foreground_rgb_max_absolute_difference_0_255": 26.0,
+      "foreground_pixels_any_channel_difference_over_10_fraction": 0.0004693073024216257
+    },
+    {
+      "angle": 45,
+      "resolution": [
+        512,
+        512
+      ],
+      "silhouette_iou": 1.0,
+      "silhouette_different_pixels": 0,
+      "foreground_rgb_mean_absolute_difference_0_255": 0.042761058984738656,
+      "foreground_rgb_max_absolute_difference_0_255": 22.0,
+      "foreground_pixels_any_channel_difference_over_10_fraction": 0.0002667336115731007
+    },
+    {
+      "angle": 90,
+      "resolution": [
+        512,
+        512
+      ],
+      "silhouette_iou": 1.0,
+      "silhouette_different_pixels": 0,
+      "foreground_rgb_mean_absolute_difference_0_255": 0.043849115375937935,
+      "foreground_rgb_max_absolute_difference_0_255": 22.0,
+      "foreground_pixels_any_channel_difference_over_10_fraction": 0.00039300451955197487
+    },
+    {
+      "angle": 135,
+      "resolution": [
+        512,
+        512
+      ],
+      "silhouette_iou": 1.0,
+      "silhouette_different_pixels": 0,
+      "foreground_rgb_mean_absolute_difference_0_255": 0.044000182573371675,
+      "foreground_rgb_max_absolute_difference_0_255": 23.0,
+      "foreground_pixels_any_channel_difference_over_10_fraction": 0.00032520881829385185
+    },
+    {
+      "angle": 180,
+      "resolution": [
+        512,
+        512
+      ],
+      "silhouette_iou": 1.0,
+      "silhouette_different_pixels": 0,
+      "foreground_rgb_mean_absolute_difference_0_255": 0.05594923376142579,
+      "foreground_rgb_max_absolute_difference_0_255": 28.0,
+      "foreground_pixels_any_channel_difference_over_10_fraction": 0.00045364243590345236
+    },
+    {
+      "angle": 225,
+      "resolution": [
+        512,
+        512
+      ],
+      "silhouette_iou": 1.0,
+      "silhouette_different_pixels": 0,
+      "foreground_rgb_mean_absolute_difference_0_255": 0.04737769827446427,
+      "foreground_rgb_max_absolute_difference_0_255": 16.0,
+      "foreground_pixels_any_channel_difference_over_10_fraction": 0.0002667545387500196
+    },
+    {
+      "angle": 270,
+      "resolution": [
+        512,
+        512
+      ],
+      "silhouette_iou": 1.0,
+      "silhouette_different_pixels": 0,
+      "foreground_rgb_mean_absolute_difference_0_255": 0.06211803736685874,
+      "foreground_rgb_max_absolute_difference_0_255": 24.0,
+      "foreground_pixels_any_channel_difference_over_10_fraction": 0.0006766195215645189
+    },
+    {
+      "angle": 315,
+      "resolution": [
+        512,
+        512
+      ],
+      "silhouette_iou": 1.0,
+      "silhouette_different_pixels": 0,
+      "foreground_rgb_mean_absolute_difference_0_255": 0.07494407158836688,
+      "foreground_rgb_max_absolute_difference_0_255": 28.0,
+      "foreground_pixels_any_channel_difference_over_10_fraction": 0.0010957403095466374
+    }
+  ],
+  "alpha_threshold": 127,
+  "limitation": "Raster agreement at 512px is not zero geometric error, full Hausdorff distance, or self-intersection certification."
+}

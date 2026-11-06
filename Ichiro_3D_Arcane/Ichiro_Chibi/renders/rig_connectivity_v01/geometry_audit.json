@@ -1,0 +1,48 @@
+{
+  "weld": {
+    "operation": "merge by distance",
+    "tolerance": 1e-06,
+    "before": {
+      "vertices": 773535,
+      "edges": 2269034,
+      "faces": 1495680,
+      "boundary_edges": 51028,
+      "wire_edges": 0,
+      "overfull_edges": 0,
+      "orientation_conflicts": 0,
+      "loose_vertices": 0
+    },
+    "after": {
+      "vertices": 747752,
+      "edges": 2243274,
+      "faces": 1495516,
+      "boundary_edges": 164,
+      "wire_edges": 0,
+      "overfull_edges": 164,
+      "orientation_conflicts": 1,
+      "loose_vertices": 0
+    },
+    "status": "connectivity candidate only; not retopologized or rig ready"
+  },
+  "repair": {
+    "removed_faces": 1199,
+    "patches": 82,
+    "max_patch_extent": 0.0070531368255615234,
+    "new_triangles": 541,
+    "max_patch_centroid_distance_to_source": 0.00044496997725218534,
+    "vertices": 747423,
+    "edges": 2242287,
+    "faces": 1494858,
+    "nonmanifold_edges": 0,
+    "nonmanifold_vertices": 0,
+    "tiny_faces": 0,
+    "signed_volume": 0.03974281073848721,
+    "self_intersections": "not tested",
+    "uv_policy": "source triangle at patch centroid; local extrapolation; inspect texture"
+  },
+  "source_workspace_sha256": "d906a5b55041a8047a3b38d8e346cf41f9fa6cd7f08ccc3f121c2b8c41fb5b86",
+  "source_geometry_sha256": "e08c086e2d8fad1be6f593647444455b4c3df034b97f4c3e262e7dd53f9a5024",
+  "blender": "5.2.0 LTS",
+  "self_intersections": "not tested",
+  "rig_ready": false
+}

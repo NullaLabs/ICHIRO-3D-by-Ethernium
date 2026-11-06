@@ -2,6 +2,9 @@
 
 Fecha: 2026-11-05. Estado: candidata para revisión artística, no canon aprobado.
 
+Actualización del usuario: prefiere el aspecto original. Las correcciones de
+forma quedan fuera de producción. Continuar con `RIG_CONNECTIVITY_V01.md`.
+
 ## Entrega
 
 - Escena: `exports/form_review_v01/Ichiro_Chibi_Form_Review_v01.blend` (Git LFS).
