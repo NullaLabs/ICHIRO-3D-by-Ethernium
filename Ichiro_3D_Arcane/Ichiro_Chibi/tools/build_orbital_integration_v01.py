@@ -188,7 +188,7 @@ for i in range(25):
                 cost[dest] = new_cost
                 previous[dest] = ((i,j),triangle)
 cursor = (24,len(high))
-(OUT/'transition_diagnostic.json').write_text(json.dumps({'low':[list(v.co) for v in low],'high':[list(v.co) for v in high], 'orientation':orientation,'reachable_states':len(previous)},indent=2),encoding='utf-8')
+(OUT/'transition_diagnostic.json').write_text(json.dumps({'low':[list(v.co) for v in low],'high':[list(v.co) for v in high], 'orientation':orientation,'reachable_states':len(previous)},indent=2),encoding='utf-8',newline='\n')
 if cursor not in previous:
     rejection = {'status':'REJECTED_NO_ASSET_EXPORTED',
                  'reason':'No non-inverted projected transition exists for the selected cut and start correspondence',
@@ -196,7 +196,7 @@ if cursor not in previous:
                  'boundary_vertices':len(high),'reachable_dynamic_program_states':len(previous),
                  'source_unchanged':hashlib.sha256(source_path.read_bytes()).hexdigest()==source_hash,
                  'next_action':'Retopologize a continuous orbital region; do not weld the current outer ring blindly into the dense source.'}
-    (OUT/'integration_audit.json').write_text(json.dumps(rejection,indent=2)+'\n',encoding='utf-8')
+    (OUT/'integration_audit.json').write_text(json.dumps(rejection,indent=2)+'\n',encoding='utf-8',newline='\n')
     raise RuntimeError(rejection['reason'])
 while cursor!=(0,0):
     cursor,triangle = previous[cursor]
@@ -256,5 +256,5 @@ scene.render.filepath = str(OUT/'integrated_face.png')
 bpy.ops.render.render(write_still=True)
 bpy.ops.wm.save_as_mainfile(filepath=str(OUT/'Ichiro_Orbital_Integration_v01.blend'),compress=True)
 assert hashlib.sha256(source_path.read_bytes()).hexdigest()==source_hash
-(OUT/'integration_audit.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+(OUT/'integration_audit.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
 print('INTEGRATION_AUDIT',json.dumps(report))

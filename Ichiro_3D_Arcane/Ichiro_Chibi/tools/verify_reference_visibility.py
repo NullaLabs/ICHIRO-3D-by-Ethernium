@@ -78,5 +78,5 @@ report={'status':'PASS_RELOAD_VISIBILITY_ONLY','source_file_sha256':source_sha,
         'local_collection_hidden_after_reload':persisted,
         'source_file_unchanged':True,'geometry_uvs_unchanged':True,
         'limitation':'Reference visibility fix only; no game rig or print readiness claim.'}
-(OUT/'visibility_audit.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+(OUT/'visibility_audit.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8',newline='\n')
 print('VISIBILITY_RELOAD_PASS',json.dumps(report))
