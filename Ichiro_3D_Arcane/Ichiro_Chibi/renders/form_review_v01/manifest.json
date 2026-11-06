@@ -1,0 +1,70 @@
+{
+  "status": "review hypothesis; not canon-approved or rig-ready",
+  "source_workspace_sha256": "d906a5b55041a8047a3b38d8e346cf41f9fa6cd7f08ccc3f121c2b8c41fb5b86",
+  "source_geometry_blend_sha256": "e08c086e2d8fad1be6f593647444455b4c3df034b97f4c3e262e7dd53f9a5024",
+  "reference_sha256": {
+    "ichiro_chibi_8view_turnaround.png": "9e78a34fe9371ea0ac771c6656fe46c1da5262a58e934c0ac7d6687e01e548be",
+    "ichiro_chibi_back.png": "04a38f80e9fe25840304a94ae452c465450ed4e91e509814e392d447dd82aab1",
+    "ichiro_chibi_front.png": "213792383b67f6bcad13781103bca05e8fa362031aeabcbd4be16aecb9b9ebe4",
+    "ichiro_chibi_kimi_pipeline_board.png": "5e7494bd15a5290d845ee4fb78e0a7455bbad60acd9feeacf3b1950a6e21f136",
+    "ichiro_chibi_left.png": "3fa944ea39039d6034edba3767ff75e8494843cdc6ad719ff5206436b228a681",
+    "ichiro_chibi_right.png": "bade5c0f3ce7ec289e27d453daa9bfd353bf4cdc9334f4f0fcc1ce49d0377513"
+  },
+  "render_sha256": {
+    "after_face_front.png": "95527d035fd67ba11e1b07160918dde6d9d831848d4ae62c8f08edcdb6a5be39",
+    "after_face_left.png": "fbb964a99e094aa140924af9e734f09002f70f50edf1666db2a6b12efd368a6a",
+    "after_face_right.png": "353187238d608813fedc800969e3e9875a9feaf976acccfc25618e2664ad3569",
+    "after_full_000.png": "09e0fb25028e17c8cc0756728a4f7961debc5ab616330d8e661615716e07ff66",
+    "after_full_045.png": "0d7638cdbbd68aeb8e7c09781915fcd1e8507aa023dca4d079fbe9a366a17f7f",
+    "after_full_090.png": "76636139463faa2212b3b5dc2773f01aa11c092f679f3ff69a2d6d2d07c80a2f",
+    "after_full_135.png": "93722ee0bac9a79a7266d5e95336b51c74ab4d5f09782c18562332387ebe6507",
+    "after_full_180.png": "8aab82ba2c8f32376d30e493a466dc5565ffe5652f9c3a104f7ab01fd8ae7ded",
+    "after_full_225.png": "b4f9be808c44168eb51be70010553958ad6e9d992e1070d2d65386cf02df7912",
+    "after_full_270.png": "e5ef08e8ca13dc56f45c691083a84f5536d3fabf61ab76c44c28fe68a2fd4756",
+    "after_full_315.png": "215415cb3951cffe6c0c2264c3a90cd07b2fb6f925881a06a360c57e1046bbd2",
+    "after_texture_front.png": "3d89d63e8d38569507275d2f278472f9405b1fe4330145c2414148203a067ff8",
+    "all_six_reference_images.png": "770c445948e45656339323966e3ef2cb3b5a0ff5a79577a761b623ade9353f44",
+    "before_face_front.png": "ec65865d7f2a5279401efb911e0cd4debd92e1394fe3f5a61afb5e73dbb450f9",
+    "before_face_left.png": "51cebd9af1ed765c9a4ffe17954aee905a4bd89f861ff143054044b8ab4f6fb5",
+    "before_face_right.png": "e5fcfdd136b983ddd9aef5fd0a54687b996fa8096e27f577cf2f0a3623b79882",
+    "before_full_000.png": "ec8c2b05705caea51116ea20473565e630b563af406a24be2229b63fe9506bb0",
+    "before_full_045.png": "dbedc69b89babc2794276611b493b46058d0e15d1c241c062742f96b6a588ab4",
+    "before_full_090.png": "fcd075e74694da7da7def5d60c860248e0c326f8a087eddee0410e25b867c55e",
+    "before_full_135.png": "6904bc344c5e81da182f0b5ebeabb56d2ec30112278aefe4279f06c7d0a46a92",
+    "before_full_180.png": "2b33efda197e465ba09b4efdd869781aa1a0338b462d37be82e02521409a05dc",
+    "before_full_225.png": "81cd1339cba45a3a0fa2d489d7272e83c273f97f6762fb4e1d42c6ea7cf3fe38",
+    "before_full_270.png": "afee99c37534b16938bb1d1338425c5d935713ba5949a4242dd86102ae8a0bf0",
+    "before_full_315.png": "c880dfbd4348b7ae2bb4f18fec307aeca1ed4483e511f047f1cde77e65b9f7b8",
+    "before_hands_front.png": "5f415a5c7717b1caa68e2b9ded58b74dd945f1a8401918c7d0fa5d1296efb08a",
+    "before_texture_front.png": "12dfb472887c5f1fec7f99dd676a5127802f0fdf6cd7d047f7ca3f4475f8138d",
+    "candidate_eight_views.png": "98f42f24598aa0bd68c6d8256c4bb907b35d3c93d6824d7d9ab31db3a0b1c7cc",
+    "nose_before_after.png": "f43862b782827d0747e1fd9541ae13d969ade7b7770e209bd269173d55a3b171"
+  },
+  "correction": {
+    "center_yz": [
+      -0.015,
+      0.226
+    ],
+    "radii_yz": [
+      0.034,
+      0.038
+    ],
+    "max_depth_reduction": 0.007,
+    "lateral_contraction": 0.08,
+    "x_smoothstep_gate": [
+      0.09,
+      0.11
+    ]
+  },
+  "live_validation": {
+    "basis_equals_source": true,
+    "vertices_changed_over_1e_9": 4001,
+    "affected_triangles": 7803,
+    "normal_reversals": 0,
+    "triangles_cross_norm_under_1e_12": 0,
+    "maximum_displacement": 0.006997311422677403,
+    "self_intersections": "not tested"
+  },
+  "validation_provenance": "Measured in live Blender MCP; fixed recorded values, not recomputed by this packaging script.",
+  "camera_note": "Fixed orthographic review cameras; reference cameras remain uncalibrated. No fidelity score claimed."
+}

@@ -1,3 +1,4 @@
 /Ichiro_3D_Arcane/Ichiro_2390_Arcane_Scene.blend filter=lfs diff=lfs merge=lfs -text
 /Ichiro_3D_Arcane/models/Ichiro_2390_Arcane_GameReady.glb filter=lfs diff=lfs merge=lfs -text
 /Ichiro_3D_Arcane/Ichiro_Chibi/Ichiro_Chibi_HighDetail_Working.blend filter=lfs diff=lfs merge=lfs -text
+Ichiro_3D_Arcane/Ichiro_Chibi/exports/form_review_v01/Ichiro_Chibi_Form_Review_v01.blend filter=lfs diff=lfs merge=lfs -text
