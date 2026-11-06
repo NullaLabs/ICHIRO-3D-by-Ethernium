@@ -1,0 +1,182 @@
+{
+  "lid_vertices": 120,
+  "game_triangles": 192,
+  "editable_quads": 96,
+  "outer_ring_max_displacement": 0.0,
+  "canthi_max_displacement": 0.0,
+  "cap_samples_per_pose": 427,
+  "poses": [
+    {
+      "blink": 0.0,
+      "minimum_face_area": 1.0072994882648345e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.01989934899873913
+    },
+    {
+      "blink": 0.05,
+      "minimum_face_area": 1.0005270496549201e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.01890437631488632
+    },
+    {
+      "blink": 0.1,
+      "minimum_face_area": 9.98430436993658e-07,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.017909429010794304
+    },
+    {
+      "blink": 0.15,
+      "minimum_face_area": 1.0011038966695196e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.01691445671956288
+    },
+    {
+      "blink": 0.2,
+      "minimum_face_area": 1.008528101920092e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.015919484007129912
+    },
+    {
+      "blink": 0.25,
+      "minimum_face_area": 1.0206200613538385e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.014924511764289264
+    },
+    {
+      "blink": 0.3,
+      "minimum_face_area": 1.03728143585613e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.013929539046988102
+    },
+    {
+      "blink": 0.35,
+      "minimum_face_area": 1.0583179346213e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.012934591762279051
+    },
+    {
+      "blink": 0.4,
+      "minimum_face_area": 1.0835116199814365e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.011939619442095555
+    },
+    {
+      "blink": 0.45,
+      "minimum_face_area": 1.1126041954412358e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.010944646836389326
+    },
+    {
+      "blink": 0.5,
+      "minimum_face_area": 1.1453494153101929e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.009949674499369565
+    },
+    {
+      "blink": 0.55,
+      "minimum_face_area": 1.1814872777904384e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.008954702114334287
+    },
+    {
+      "blink": 0.6,
+      "minimum_face_area": 1.2207337931613438e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.007959729663277558
+    },
+    {
+      "blink": 0.65,
+      "minimum_face_area": 1.2628560170924175e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.0069647572484895426
+    },
+    {
+      "blink": 0.7,
+      "minimum_face_area": 1.3076017921775929e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.0059697847357550815
+    },
+    {
+      "blink": 0.75,
+      "minimum_face_area": 1.3547468142860453e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.004974837249684783
+    },
+    {
+      "blink": 0.8,
+      "minimum_face_area": 1.4040764426681562e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.003979864831638779
+    },
+    {
+      "blink": 0.85,
+      "minimum_face_area": 1.4554191238858039e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.0029848923678775408
+    },
+    {
+      "blink": 0.9,
+      "minimum_face_area": 1.5085959148564143e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.001989944870339387
+    },
+    {
+      "blink": 0.95,
+      "minimum_face_area": 1.5634476540071773e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.0009949724351696935
+    },
+    {
+      "blink": 1.0,
+      "minimum_face_area": 1.5687010090914555e-06,
+      "inverted_projected_triangles": 0,
+      "sampled_cap_penetrations": 0,
+      "max_sampled_penetration": 0,
+      "maximum_lid_pair_gap": 0.0
+    }
+  ],
+  "status": "isolated pilot; not integrated; no production eye globe, iris or textures",
+  "self_intersections": "not exhaustively tested",
+  "input_scene_sha256": "1f579e71680049fa6247f4374923cd68d90751e9e40341032d8b87d1f3ed62ff",
+  "side_convention": "R means screen-right from +X camera; anatomical rig names not assigned."
+}

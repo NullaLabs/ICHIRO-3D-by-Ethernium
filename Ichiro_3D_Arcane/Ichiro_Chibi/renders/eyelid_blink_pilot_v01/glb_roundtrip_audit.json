@@ -1,0 +1,10 @@
+{
+  "exported_vertices": 120,
+  "reference_vertices": 120,
+  "unique_correspondences": 120,
+  "maximum_neutral_error": 0.0,
+  "maximum_blink_error": 0.0,
+  "morph_target": "Blink_R",
+  "has_animation_actions": false,
+  "validation_scope": "Blender GLB re-import, not Unreal/Unity runtime validation"
+}

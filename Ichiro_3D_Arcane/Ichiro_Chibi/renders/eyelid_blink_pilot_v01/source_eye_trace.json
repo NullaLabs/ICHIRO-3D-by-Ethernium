@@ -1,0 +1,64 @@
+{
+  "camera": {
+    "target": [
+      0,
+      0.035,
+      0.268
+    ],
+    "ortho_scale": 0.1,
+    "resolution": 1024
+  },
+  "x_pixels": [
+    235,
+    270,
+    320,
+    370,
+    420,
+    470,
+    520,
+    570,
+    620,
+    670,
+    720,
+    760,
+    790
+  ],
+  "upper_pixels": [
+    590,
+    528,
+    476,
+    446,
+    430,
+    413,
+    400,
+    388,
+    374,
+    361,
+    349,
+    340,
+    333
+  ],
+  "lower_pixels": [
+    590,
+    588,
+    585,
+    581,
+    579,
+    576,
+    570,
+    560,
+    549,
+    530,
+    487,
+    425,
+    333
+  ],
+  "ring_offsets_pixels": [
+    0,
+    12,
+    30,
+    60,
+    100
+  ],
+  "trace": "manual current-source aperture; not an automatically verified eyelid edge"
+}

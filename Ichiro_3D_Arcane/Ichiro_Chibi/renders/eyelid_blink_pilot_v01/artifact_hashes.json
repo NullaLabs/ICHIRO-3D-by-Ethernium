@@ -1,0 +1,13 @@
+{
+  "renders/eyelid_blink_pilot_v01/blink_static_poses.png": "7282e5ba89765d01d837f1bb42216745f3ff95e8b8d9a4880b63385b369f1447",
+  "renders/eyelid_blink_pilot_v01/deformation_audit.json": "3d6f3618a366dd7fd8acabd6f45f794695e44cb7dd3fbd9873bfb08292b5e604",
+  "renders/eyelid_blink_pilot_v01/final_closed.png": "a915447bc62a7884525246c158237647295c66eea08647460927827f225175f8",
+  "renders/eyelid_blink_pilot_v01/final_half.png": "ae27a8a80d566ffb5aa0f98a6a687561a2a05bd12a2aba5829c7e1d562910c54",
+  "renders/eyelid_blink_pilot_v01/final_open.png": "07259cc0c0c1b6eea7d0a2f582080474cd38df99ca87e4e71d4122717e11a976",
+  "renders/eyelid_blink_pilot_v01/glb_roundtrip_audit.json": "856da64fe10b30ff9a6df2fe66e5f684cc8e1e110f2ceba1e1485e958a85662d",
+  "renders/eyelid_blink_pilot_v01/source_eye_clay.png": "e7420b30d91a02bb138cc592cb7689ca0e7fd8b88ec4f23359b38cf38c7d5da9",
+  "renders/eyelid_blink_pilot_v01/source_eye_texture.png": "e45ccb7b48438c4ccf481dbc82a3335a184de9e27252d1f161d84094ad21ed0d",
+  "renders/eyelid_blink_pilot_v01/source_eye_trace.json": "4893fb917b16cc6d3e7108d35026614a892f415697b8afd20822b8ef7e0272e1",
+  "exports/eyelid_blink_pilot_v01/Ichiro_Eye_R_Blink_Pilot.blend": "a506dbcbd803003d0857f3e3af98648937bf29f3a39d4b8a75f0dce43aeca7d3",
+  "exports/eyelid_blink_pilot_v01/Ichiro_Eye_R_Blink_Pilot.glb": "036ff01e3fae9c3cd9e889d596d457c8541c27e2c38638d6f6e6e5d8ffc7a1b0"
+}
