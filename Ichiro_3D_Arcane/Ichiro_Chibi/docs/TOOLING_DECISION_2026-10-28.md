@@ -44,3 +44,31 @@ criterio artístico y pruebas; el número de scripts no mide progreso del person
 Una skill futura útil reuniría guardado, selección de target, ajuste de cámaras,
 validación visual y controles de deformación. No sustituye dichas operaciones.
 No se instaló ni activó ninguna herramienta en esta evaluación.
+
+## Verificación en Blender 5.2 — 2026-11-05
+
+Se comprobó la instalación real en las preferencias de la sesión de Blender
+5.2.0 LTS abierta durante la revisión:
+
+- **PolyQuilt Retopology Tool [Fork]**: instalado y activado; Blender ofrece
+  actualización de 1.45.5 a 1.45.8. Es la opción gratuita disponible para la
+  retopología manual guiada en este equipo.
+- **QRemeshify**: aparece en la lista de extensiones instaladas. No se verificó
+  su activación ni se ejecutó una reconstrucción con él.
+- **RetopoFlow**: no aparece instalado. Su documentación oficial reserva el
+  paquete de GitHub para uso educativo y dirige el uso de producción a la compra
+  en Superhive. No se instala al no haber licencia para este proyecto.
+- **MCP for Blender**: aparece activado en preferencias, aunque el servidor no
+  respondió al intento de conexión de esta sesión. No se usó para editar la
+  escena.
+
+La escena que se mostró tras iniciar Blender era el archivo vacío de inicio con
+el cubo por defecto; no se guardó ni se modificó. La retopología de Ichiro debe
+trabajarse en una copia/revisión del archivo del personaje y validarse en forma,
+flujo de deformación y las vistas de referencia. Tener el addon activo no valida
+por sí solo ninguna malla.
+
+Fuentes de licencia y compatibilidad:
+- RetopoFlow: https://docs.retopoflow.com/v4/installation.html
+- PolyQuilt Fork (GPL-3.0-or-later, compatible desde Blender 4.5):
+  https://extensions.blender.org/add-ons/polyquilt-fork/
