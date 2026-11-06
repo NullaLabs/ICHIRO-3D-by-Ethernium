@@ -24,6 +24,7 @@ if output_blend.exists():
     raise RuntimeError('Choose a fresh output directory.')
 input_blend=ROOT/'exports'/'rig_connectivity_v01'/'Ichiro_Chibi_Rig_Connectivity_v01.blend'
 bpy.ops.wm.open_mainfile(filepath=str(input_blend))
+bpy.data.collections['00_HIGHDETAIL_TARGET__READ_ONLY'].hide_render=True
 scene=bpy.context.scene
 for name,loc in [('FRONT',(2,.035,.268)),('OBLIQUE',(2,1.035,.268))]:
     data=bpy.data.cameras.new('EYE_REVIEW_'+name)

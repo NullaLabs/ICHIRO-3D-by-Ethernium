@@ -1,0 +1,11 @@
+{
+  "status": "PASS_RELOAD_VISIBILITY_ONLY",
+  "source_file_sha256": "1f579e71680049fa6247f4374923cd68d90751e9e40341032d8b87d1f3ed62ff",
+  "mesh_topology_material_indices_uv_sha256_before": "013745625641322773a24f71d43215c4d2df5ec28d683f8192a44457640da971",
+  "mesh_topology_material_indices_uv_sha256_after_reload": "013745625641322773a24f71d43215c4d2df5ec28d683f8192a44457640da971",
+  "linked_reference_hide_render_before_fix": false,
+  "local_collection_hidden_after_reload": true,
+  "source_file_unchanged": true,
+  "geometry_uvs_unchanged": true,
+  "limitation": "Reference visibility fix only; no game rig or print readiness claim."
+}

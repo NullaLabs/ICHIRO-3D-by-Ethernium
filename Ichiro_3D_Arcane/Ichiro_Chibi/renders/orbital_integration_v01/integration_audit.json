@@ -1,0 +1,10 @@
+{
+  "status": "REJECTED_NO_ASSET_EXPORTED",
+  "reason": "No non-inverted projected transition exists for the selected cut and start correspondence",
+  "source_sha256": "1f579e71680049fa6247f4374923cd68d90751e9e40341032d8b87d1f3ed62ff",
+  "removed_faces": 6978,
+  "boundary_vertices": 216,
+  "reachable_dynamic_program_states": 28,
+  "source_unchanged": true,
+  "next_action": "Retopologize a continuous orbital region; do not weld the current outer ring blindly into the dense source."
+}

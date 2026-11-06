@@ -194,6 +194,9 @@ scene.camera=bpy.data.objects['REVIEW_FULL_045']
 
 
 candidate['user_direction']='Original appearance preserved. Game deformation topology is next; print derivative separate.'
+# A linked object's hide_render flag can revert when the library is reloaded.
+# Persist reference exclusion on its local collection, after comparison renders.
+bpy.data.collections['00_HIGHDETAIL_TARGET__READ_ONLY'].hide_render=True
 bpy.ops.wm.save_as_mainfile(filepath=str(result_path),compress=True)
 def sha(path):
     with path.open('rb') as stream:
