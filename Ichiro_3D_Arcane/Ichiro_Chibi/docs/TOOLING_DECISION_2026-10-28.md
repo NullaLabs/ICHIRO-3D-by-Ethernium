@@ -43,16 +43,32 @@ criterio artístico y pruebas; el número de scripts no mide progreso del person
 
 Una skill futura útil reuniría guardado, selección de target, ajuste de cámaras,
 validación visual y controles de deformación. No sustituye dichas operaciones.
-No se instaló ni activó ninguna herramienta en esta evaluación.
+En esa evaluación inicial no se instaló ni activó ninguna herramienta.
 
 ## Verificación en Blender 5.2 — 2026-11-05
 
-Se comprobó la instalación real en las preferencias de la sesión de Blender
-5.2.0 LTS abierta durante la revisión:
+Se comprobó Blender 5.2.0 LTS y se instaló Remi 2.0 desde el release oficial
+para Windows x64, con la opción de habilitar al instalar. El instalador de
+extensiones devolvió `FINISHED`, el módulo apareció en las preferencias y el
+addon registró su panel durante la carga de validación.
+
+- **Remi 2.0**: instalado y habilitado en las preferencias de `user_default`.
+  Archivo conservado en `E:\WORKSPACE\blender-addons\remi-2.0.0-windows-x64.zip`;
+  SHA-256 verificado: `34b65ab78d245e1fa53139950cc8d81a89663886e5260dd32f9df72914e0b6cb`.
+  Release GPL-3.0-or-later, mínimo Blender 5.1, paquete Windows x64. Integra
+  reparación, remallado, retopología interactiva basada en Instant Meshes, UV y
+  baking en un flujo reversible. La instancia de Blender ya abierta precedía a
+  la instalación; requiere reiniciarse para cargar el panel en esa sesión.
+- Uso previsto en Ichiro: Remi sirve para repair/remesh, una candidata de quads,
+  UV y baking por fases. No certifica loops de expresión, anatomía, manos ni
+  topología lista para rig; una salida automática se conserva como derivado y
+  pasa por comparación multi-vista y revisión manual.
 
 - **PolyQuilt Retopology Tool [Fork]**: instalado y activado; Blender ofrece
-  actualización de 1.45.5 a 1.45.8. Es la opción gratuita disponible para la
-  retopología manual guiada en este equipo.
+  actualización de 1.45.5 a 1.45.8. En un arranque de validación de Blender
+  5.2.0, esa copia lanzó `ModuleNotFoundError: No module named 'bgl'`; aunque la
+  casilla aparece marcada, no se considera operativa hasta probar una versión
+  corregida.
 - **QRemeshify**: aparece en la lista de extensiones instaladas. No se verificó
   su activación ni se ejecutó una reconstrucción con él.
 - **RetopoFlow**: no aparece instalado. Su documentación oficial reserva el
@@ -72,3 +88,5 @@ Fuentes de licencia y compatibilidad:
 - RetopoFlow: https://docs.retopoflow.com/v4/installation.html
 - PolyQuilt Fork (GPL-3.0-or-later, compatible desde Blender 4.5):
   https://extensions.blender.org/add-ons/polyquilt-fork/
+- Remi 2.0 (release oficial, paquetes locales Windows/macOS, Blender 5.1/5.2):
+  https://github.com/shaderko/remi-blender-addon/releases/tag/v2.0.0
