@@ -57,8 +57,10 @@ addon registró su panel durante la carga de validación.
   SHA-256 verificado: `34b65ab78d245e1fa53139950cc8d81a89663886e5260dd32f9df72914e0b6cb`.
   Release GPL-3.0-or-later, mínimo Blender 5.1, paquete Windows x64. Integra
   reparación, remallado, retopología interactiva basada en Instant Meshes, UV y
-  baking en un flujo reversible. La instancia de Blender ya abierta precedía a
-  la instalación; requiere reiniciarse para cargar el panel en esa sesión.
+  baking en un flujo reversible. Se guardaron las preferencias y un proceso
+  nuevo de Blender 5.2.0 volvió a cargar Remi (`Remi: Registered`). La instancia
+  interactiva que ya estaba abierta precedía a la instalación; requiere
+  reiniciarse para cargar el panel en esa sesión.
 - Uso previsto en Ichiro: Remi sirve para repair/remesh, una candidata de quads,
   UV y baking por fases. No certifica loops de expresión, anatomía, manos ni
   topología lista para rig; una salida automática se conserva como derivado y
