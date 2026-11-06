@@ -1,0 +1,26 @@
+{
+  "suite_version": "0.1.0",
+  "pipeline_id": "image_to_vrm",
+  "target_format": "VRM 1.0",
+  "status_vocabulary": ["not_started", "planned", "implemented", "candidate_only", "partial", "artist_gated", "not_verified", "running", "pass", "review", "blocked", "failed"],
+  "stages": [
+    {"id": "reference_intake", "status": "implemented", "engine": "python_stdlib", "requires_gpu": false, "writes_source_scene": false},
+    {"id": "image_analysis", "status": "planned", "engine": "adapter", "requires_gpu": "optional", "writes_source_scene": false},
+    {"id": "view_planning", "status": "planned", "engine": "snn_or_deterministic", "requires_gpu": false, "writes_source_scene": false},
+    {"id": "shape_candidate", "status": "candidate_only", "engine": "pluggable_worker", "requires_gpu": "model_dependent", "writes_source_scene": false},
+    {"id": "multiview_fit", "status": "partial", "evidence": "Existing tools compare projected source silhouettes; they do not fuse N reference views into geometry.", "engine": "blender_python_cpu", "requires_gpu": false, "writes_source_scene": false},
+    {"id": "sculpt_retopology", "status": "artist_gated", "engine": "blender", "requires_gpu": "optional", "writes_source_scene": false},
+    {"id": "surface_lookdev", "status": "planned", "engine": "blender", "requires_gpu": "optional", "writes_source_scene": false},
+    {"id": "humanoid_face_rig", "status": "partial", "evidence": "Existing rig experiments have no signed-off VRM conformance report.", "engine": "blender", "requires_gpu": false, "writes_source_scene": false},
+    {"id": "vrm_export", "status": "not_verified", "engine": "vrm_export_adapter", "requires_gpu": false, "writes_source_scene": false},
+    {"id": "vrm_roundtrip_validation", "status": "not_started", "engine": "independent_vrm_validator", "requires_gpu": false, "writes_source_scene": false}
+  ],
+  "release_gate": {
+    "requires_vrm_extension": true,
+    "requires_independent_parse": true,
+    "requires_roundtrip_preview": true,
+    "requires_reference_evidence": true,
+    "requires_artist_approval": true,
+    "forbid_glb_renamed_to_vrm": true
+  }
+}

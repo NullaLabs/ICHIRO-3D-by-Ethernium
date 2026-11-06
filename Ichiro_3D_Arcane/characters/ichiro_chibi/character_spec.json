@@ -1,0 +1,273 @@
+{
+  "schema_version": "0.1.0",
+  "character": {
+    "id": "ichiro-chibi",
+    "display_name": "Ichiro Chibi",
+    "profile": "stylized_chibi",
+    "canon_status": "reference_case",
+    "description": "",
+    "author": "",
+    "license": ""
+  },
+  "references": [
+    {
+      "id": "reference_01",
+      "path": "references/01_213792383b67_ichiro_chibi_front.png",
+      "sha256": "213792383b67f6bcad13781103bca05e8fa362031aeabcbd4be16aecb9b9ebe4",
+      "view_label": "front",
+      "azimuth_deg": null,
+      "elevation_deg": null,
+      "projection": "unknown",
+      "region": "whole_character",
+      "authority": "primary_canon",
+      "origin": "authored_art",
+      "confidence": null,
+      "mask_path": null,
+      "landmarks_path": null,
+      "notes": "Source image copied byte-for-byte; camera and landmarks remain uncalibrated until reviewed."
+    },
+    {
+      "id": "reference_02",
+      "path": "references/02_04a38f80e9fe_ichiro_chibi_back.png",
+      "sha256": "04a38f80e9fe25840304a94ae452c465450ed4e91e509814e392d447dd82aab1",
+      "view_label": "back",
+      "azimuth_deg": null,
+      "elevation_deg": null,
+      "projection": "unknown",
+      "region": "whole_character",
+      "authority": "primary_canon",
+      "origin": "authored_art",
+      "confidence": null,
+      "mask_path": null,
+      "landmarks_path": null,
+      "notes": "Source image copied byte-for-byte; camera and landmarks remain uncalibrated until reviewed."
+    },
+    {
+      "id": "reference_03",
+      "path": "references/03_3fa944ea3903_ichiro_chibi_left.png",
+      "sha256": "3fa944ea39039d6034edba3767ff75e8494843cdc6ad719ff5206436b228a681",
+      "view_label": "left",
+      "azimuth_deg": null,
+      "elevation_deg": null,
+      "projection": "unknown",
+      "region": "whole_character",
+      "authority": "primary_canon",
+      "origin": "authored_art",
+      "confidence": null,
+      "mask_path": null,
+      "landmarks_path": null,
+      "notes": "Source image copied byte-for-byte; camera and landmarks remain uncalibrated until reviewed."
+    },
+    {
+      "id": "reference_04",
+      "path": "references/04_bade5c0f3ce7_ichiro_chibi_right.png",
+      "sha256": "bade5c0f3ce7ec289e27d453daa9bfd353bf4cdc9334f4f0fcc1ce49d0377513",
+      "view_label": "right",
+      "azimuth_deg": null,
+      "elevation_deg": null,
+      "projection": "unknown",
+      "region": "whole_character",
+      "authority": "primary_canon",
+      "origin": "authored_art",
+      "confidence": null,
+      "mask_path": null,
+      "landmarks_path": null,
+      "notes": "Source image copied byte-for-byte; camera and landmarks remain uncalibrated until reviewed."
+    },
+    {
+      "id": "reference_05",
+      "path": "references/05_9e78a34fe937_ichiro_chibi_8view_turnaround.png",
+      "sha256": "9e78a34fe9371ea0ac771c6656fe46c1da5262a58e934c0ac7d6687e01e548be",
+      "view_label": "custom",
+      "azimuth_deg": null,
+      "elevation_deg": null,
+      "projection": "unknown",
+      "region": "whole_character",
+      "authority": "approved_secondary",
+      "origin": "unknown",
+      "confidence": null,
+      "mask_path": null,
+      "landmarks_path": null,
+      "notes": "Source image copied byte-for-byte; camera and landmarks remain uncalibrated until reviewed.",
+      "subviews": [
+        {
+          "id": "turnaround_panel_01",
+          "view_label": "front",
+          "azimuth_deg": null,
+          "elevation_deg": null,
+          "crop_normalized_xyxy": [
+            0.005555556,
+            0.008333333,
+            0.244444444,
+            0.35
+          ],
+          "projection": "unknown",
+          "region": "whole_character",
+          "authority": "approved_secondary",
+          "origin": "unknown",
+          "confidence": null,
+          "notes": "Order and crop match fixed 4x2 segmentation; source panel is low resolution and camera uncalibrated."
+        },
+        {
+          "id": "turnaround_panel_02",
+          "view_label": "front_left",
+          "azimuth_deg": null,
+          "elevation_deg": null,
+          "crop_normalized_xyxy": [
+            0.255555556,
+            0.008333333,
+            0.494444444,
+            0.35
+          ],
+          "projection": "unknown",
+          "region": "whole_character",
+          "authority": "approved_secondary",
+          "origin": "unknown",
+          "confidence": null,
+          "notes": "Order and crop match fixed 4x2 segmentation; source panel is low resolution and camera uncalibrated."
+        },
+        {
+          "id": "turnaround_panel_03",
+          "view_label": "left",
+          "azimuth_deg": null,
+          "elevation_deg": null,
+          "crop_normalized_xyxy": [
+            0.505555556,
+            0.008333333,
+            0.744444444,
+            0.35
+          ],
+          "projection": "unknown",
+          "region": "whole_character",
+          "authority": "approved_secondary",
+          "origin": "unknown",
+          "confidence": null,
+          "notes": "Order and crop match fixed 4x2 segmentation; source panel is low resolution and camera uncalibrated."
+        },
+        {
+          "id": "turnaround_panel_04",
+          "view_label": "left_back",
+          "azimuth_deg": null,
+          "elevation_deg": null,
+          "crop_normalized_xyxy": [
+            0.755555556,
+            0.008333333,
+            0.994444444,
+            0.35
+          ],
+          "projection": "unknown",
+          "region": "whole_character",
+          "authority": "approved_secondary",
+          "origin": "unknown",
+          "confidence": null,
+          "notes": "Order and crop match fixed 4x2 segmentation; source panel is low resolution and camera uncalibrated."
+        },
+        {
+          "id": "turnaround_panel_05",
+          "view_label": "back",
+          "azimuth_deg": null,
+          "elevation_deg": null,
+          "crop_normalized_xyxy": [
+            0.005555556,
+            0.508333333,
+            0.244444444,
+            0.85
+          ],
+          "projection": "unknown",
+          "region": "whole_character",
+          "authority": "approved_secondary",
+          "origin": "unknown",
+          "confidence": null,
+          "notes": "Order and crop match fixed 4x2 segmentation; source panel is low resolution and camera uncalibrated."
+        },
+        {
+          "id": "turnaround_panel_06",
+          "view_label": "back_right",
+          "azimuth_deg": null,
+          "elevation_deg": null,
+          "crop_normalized_xyxy": [
+            0.255555556,
+            0.508333333,
+            0.494444444,
+            0.85
+          ],
+          "projection": "unknown",
+          "region": "whole_character",
+          "authority": "approved_secondary",
+          "origin": "unknown",
+          "confidence": null,
+          "notes": "Order and crop match fixed 4x2 segmentation; source panel is low resolution and camera uncalibrated."
+        },
+        {
+          "id": "turnaround_panel_07",
+          "view_label": "right",
+          "azimuth_deg": null,
+          "elevation_deg": null,
+          "crop_normalized_xyxy": [
+            0.505555556,
+            0.508333333,
+            0.744444444,
+            0.85
+          ],
+          "projection": "unknown",
+          "region": "whole_character",
+          "authority": "approved_secondary",
+          "origin": "unknown",
+          "confidence": null,
+          "notes": "Order and crop match fixed 4x2 segmentation; source panel is low resolution and camera uncalibrated."
+        },
+        {
+          "id": "turnaround_panel_08",
+          "view_label": "front_right",
+          "azimuth_deg": null,
+          "elevation_deg": null,
+          "crop_normalized_xyxy": [
+            0.755555556,
+            0.508333333,
+            0.994444444,
+            0.85
+          ],
+          "projection": "unknown",
+          "region": "whole_character",
+          "authority": "approved_secondary",
+          "origin": "unknown",
+          "confidence": null,
+          "notes": "Order and crop match fixed 4x2 segmentation; source panel is low resolution and camera uncalibrated."
+        }
+      ]
+    },
+    {
+      "id": "reference_06",
+      "path": "references/06_5e7494bd15a5_ichiro_chibi_kimi_pipeline_board.png",
+      "sha256": "5e7494bd15a5290d845ee4fb78e0a7455bbad60acd9feeacf3b1950a6e21f136",
+      "view_label": "custom",
+      "azimuth_deg": null,
+      "elevation_deg": null,
+      "projection": "unknown",
+      "region": "unknown",
+      "authority": "exploration",
+      "origin": "unknown",
+      "confidence": null,
+      "mask_path": null,
+      "landmarks_path": null,
+      "notes": "Source image copied byte-for-byte; camera and landmarks remain uncalibrated until reviewed."
+    }
+  ],
+  "build": {
+    "units": "meters",
+    "forward_axis": "unknown",
+    "vrm_target": "1.0",
+    "memory_policy": "sequential",
+    "vram_budget_gb": 8.0,
+    "ram_budget_gb": null,
+    "output_dir": "output",
+    "random_seed": null,
+    "blender_version": null
+  },
+  "provenance": {
+    "suite_version": "0.1.0",
+    "created_utc": "2026-11-06T01:58:13+00:00",
+    "created_by": "init_character_project.py",
+    "source_repositories": []
+  }
+}

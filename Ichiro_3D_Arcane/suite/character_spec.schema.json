@@ -1,0 +1,108 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Ichiro 3D Suite Character Spec",
+  "description": "Portable, provenance-aware inputs and delivery contract for an image-to-VRM character build.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "character", "references", "build"],
+  "properties": {
+    "schema_version": { "const": "0.1.0" },
+    "character": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "display_name", "profile", "canon_status"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{1,63}$" },
+        "display_name": { "type": "string", "minLength": 1 },
+        "profile": { "enum": ["stylized_chibi", "stylized_humanoid", "stylized_creature", "custom"] },
+        "canon_status": { "enum": ["reference_case", "canonical", "exploration", "unreviewed"] },
+        "description": { "type": "string" },
+        "author": { "type": "string" },
+        "license": { "type": "string" }
+      }
+    },
+    "references": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "$ref": "#/$defs/reference" }
+    },
+    "build": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["units", "vrm_target", "memory_policy", "output_dir"],
+      "properties": {
+        "units": { "const": "meters" },
+        "forward_axis": { "enum": ["+Z", "-Z", "unknown"] },
+        "vrm_target": { "enum": ["1.0", "0.x", "both"] },
+        "memory_policy": { "enum": ["sequential", "adaptive", "unbounded"] },
+        "vram_budget_gb": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "ram_budget_gb": { "type": ["number", "null"], "exclusiveMinimum": 0 },
+        "output_dir": { "type": "string", "minLength": 1 },
+        "random_seed": { "type": ["integer", "null"] },
+        "blender_version": { "type": ["string", "null"] }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "suite_version": { "type": "string" },
+        "created_utc": { "type": "string", "format": "date-time" },
+        "created_by": { "type": "string" },
+        "source_repositories": { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  },
+  "$defs": {
+    "reference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "path", "sha256", "view_label", "projection", "region", "authority", "origin"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{1,63}$" },
+        "path": { "type": "string", "minLength": 1 },
+        "sha256": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+        "view_label": {
+          "enum": ["front", "front_left", "left", "left_back", "back", "back_right", "right", "front_right", "top", "bottom", "detail", "custom", "unknown"]
+        },
+        "azimuth_deg": { "type": ["number", "null"], "minimum": 0, "exclusiveMaximum": 360 },
+        "elevation_deg": { "type": ["number", "null"], "minimum": -90, "maximum": 90 },
+        "projection": { "enum": ["orthographic", "perspective", "unknown"] },
+        "region": { "enum": ["whole_character", "head", "face", "hair", "hands", "clothing", "accessory", "other", "unknown"] },
+        "authority": { "enum": ["primary_canon", "approved_secondary", "exploration", "unknown"] },
+        "origin": { "enum": ["authored_art", "photograph", "scan", "ai_generated", "render", "unknown"] },
+        "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "mask_path": { "type": ["string", "null"] },
+        "landmarks_path": { "type": ["string", "null"] },
+        "subviews": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/subview" }
+        },
+        "notes": { "type": "string" }
+      }
+    },
+    "subview": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["id", "view_label", "crop_normalized_xyxy"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_-]{1,63}$" },
+        "view_label": { "enum": ["front", "front_left", "left", "left_back", "back", "back_right", "right", "front_right", "top", "bottom", "detail", "custom", "unknown"] },
+        "azimuth_deg": { "type": ["number", "null"], "minimum": 0, "exclusiveMaximum": 360 },
+        "elevation_deg": { "type": ["number", "null"], "minimum": -90, "maximum": 90 },
+        "crop_normalized_xyxy": {
+          "type": "array",
+          "minItems": 4,
+          "maxItems": 4,
+          "items": { "type": "number", "minimum": 0, "maximum": 1 }
+        },
+        "projection": { "enum": ["orthographic", "perspective", "unknown"] },
+        "region": { "enum": ["whole_character", "head", "face", "hair", "hands", "clothing", "accessory", "other", "unknown"] },
+        "authority": { "enum": ["primary_canon", "approved_secondary", "exploration", "unknown"] },
+        "origin": { "enum": ["authored_art", "photograph", "scan", "ai_generated", "render", "unknown"] },
+        "confidence": { "type": ["number", "null"], "minimum": 0, "maximum": 1 },
+        "notes": { "type": "string" }
+      }
+    }
+  }
+}

@@ -1,4 +1,8 @@
-# ETHERNIUM SOVEREIGN // ICHIRO (KPR-2390) MODULAR TRUE 360 PIPELINE
+# Legacy ICHIRO scene pipeline — superseded by ICHIRO 3D Suite
+
+> **Status notice:** This is an archive of earlier scene and character experiments, not a certification that the character is AAA-ready or a valid VRM. The current product target, real stage status, image provenance, and VRM release gates live in the repository-root README and `docs/SUITE_ARCHITECTURE_V0_1.md`. Several historical claims below still require re-audit.
+
+## Historical project description
 
 Pipeline de producción 3D de alta fidelidad para **Ichiro (KPR-2390 // Bladewalker)** y el satélite de reconocimiento **Lumen Recon Drone** en Blender 5.2 LTS, siguiendo los estándares de Fortiche (*Arcane*) y Unreal Engine 5 MetaHuman.
 

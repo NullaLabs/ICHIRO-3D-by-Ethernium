@@ -1,114 +1,43 @@
-# ICHIRO 3D // BY ETHERNIUM
-### Studio-Grade 3D Production Pipeline, Discrete Differential Geometry & ARKit 52 Retopology
-**Asset:** Ichiro (Keeper #2390 — Arcane Cyberpunk Variant)  
-**Standard:** Unreal Engine 5 Nanite/LOD + Film-Ready Facial Rigging  
-**Ecosystem:** [Ethernium Sovereign Engine](https://github.com/NullaLabs)  
+# ICHIRO 3D Suite
 
----
+**Local-first image-to-VRM character production, with Ichiro as the reference case.**
 
-## Overview
+This repository is becoming a reusable character-production suite: it should turn a documented image set into an artist-reviewable, deformable 3D character and a standards-compliant `.vrm`. Ichiro Chibi is the first end-to-end case; canonical Ichiro is a separate profile and must not inherit Chibi proportions.
 
-**ICHIRO 3D** is the authoritative high-fidelity 3D production repository for **Ichiro (Keeper #2390)**, meticulously engineered to combine the expressive painterly aesthetic of *Fortiche / Arcane* with game-ready performance and anatomical deformation integrity.
+## Current status
 
-This repository houses the full 3D asset suite, procedural Python build scripts for Blender 5.2, 4K PBR texture atlases, multi-LOD packages for Unreal Engine 5, and canonical reference sheets.
+The repository contains Blender scenes and scripts, a character-foundry prototype, image/reference comparison tools, and VRM-oriented experiments. These are useful source material, but the pipeline is **not yet a verified image-to-VRM product**:
 
----
+- The existing foundry export stage creates `.glb`; it does not certify a `.vrm` file.
+- The current “VRM production” scripts also export GLB and need an actual VRM extension/export-and-reimport gate.
+- Eight-view comparison exists, while N-view geometric fusion is still a planned capability.
+- Generated or voxel-derived meshes remain candidates until silhouette, surface, facial topology, and deformation review passes.
+- No new model, add-on, skill, or Python dependency has been installed for this suite work.
 
-## Mathematical Architecture & Manifold Geometry Core
+## Product contract
 
-The 3D model conforms to 2-manifold geometric invariants embedded in $\mathbb{R}^3$:
+For each character, the suite will preserve source images and their hashes, separate observed evidence from inferred surfaces, make each build reproducible, checkpoint expensive stages, and report measurable failures instead of declaring success because a script finished. The art direction and human approval remain explicit gates.
 
-- **Euler Characteristic Invariant:**
-  $$\chi(\mathcal{M}) = V - E + F = 2(1 - g) - b$$
-  Every closed submesh maintains genus $g=0$ with zero non-manifold edges and zero degenerate pinch vertices.
-- **Laplace-Beltrami Conformal Smoothing:**
-  Discrete differential cotangent-weighted operators applied to eliminate marching-cubes high-frequency artifacts while locking volumetric silhouette boundaries:
-  $$(\Delta_{\mathcal{M}} f)_i = \frac{1}{2 A_i} \sum_{j \in \mathcal{N}(i)} (\cot \alpha_{ij} + \cot \beta_{ij}) (f_j - f_i)$$
-- **Canonical ARKit 52 / FACS Facial Loop Architecture:**
-  Concentric quad rings for the *Orbicularis Oculi* (eyelids/blink), *Orbicularis Oris* (lips/speech), nasolabial smile flow, sharp anime V-line jaw contour, and cylindrical cervical rings.
+Target flow:
 
----
+`reference images → evidence package → multi-view reconstruction candidates → sculpt + retopology → materials → humanoid rig + face controls → VRM 1.0 export → schema/import/preview validation`
 
-## Key Design Specifications
+The pipeline accepts eight canonical directions and additional reference images. Models may consume a subset of views; the suite retains all views as geometric constraints and evaluation evidence. AI-generated turns are hypotheses, clearly distinguished from authored reference art.
 
-1. **Clean Tactical Bolero (No Scabbard / No X-Harness):**
-   The back of the cropped bolero jacket and compression undersuit is kept completely clean and uncluttered, strictly omitting dorsal scabbards and chest harness straps.
-2. **Inseam UV Unwrapping (Zero White Bleed):**
-   The inner thighs and crotch feature an anatomical inseam unwrap with hand-inversion and dark charcoal tactical fabric inpainting (`#141518`), eliminating 100% of 2D cutout background bleed.
-3. **Lateral 360 Texture Projection:**
-   Eliminates orthogonal planar stretch on flanks and ribs through smooth cosine-weighted triplanar and cylindrical projection.
-4. **Unified 4K PBR Texture Atlas:**
-   $4096 \times 4096$ Master maps:
-   - `ichiro_master_diffuse_4k.png`: Albedo with hand-painted Arcane chiaroscuro.
-   - `ichiro_master_normal_4k.png`: High-frequency tangent space normals.
-   - `ichiro_master_roughness_4k.png`: Micro-roughness specular control.
-   - `ichiro_master_emission_4k.png`: Glowing magma forehead fracture and cybernetic eyes.
+## Start here
 
----
+- [Suite architecture and staged plan](Ichiro_3D_Arcane/docs/SUITE_ARCHITECTURE_V0_1.md)
+- [Migration map from the current prototypes](Ichiro_3D_Arcane/docs/SUITE_MIGRATION_MAP_V0_1.md)
+- [Character spec schema](Ichiro_3D_Arcane/suite/character_spec.schema.json), [reference intake](Ichiro_3D_Arcane/suite/init_character_project.py), and [package verifier](Ichiro_3D_Arcane/suite/validate_character_project.py)
+- [Ichiro Chibi reference package](Ichiro_3D_Arcane/characters/ichiro_chibi/character_spec.json)
+- [Current Ichiro Chibi production status](Ichiro_3D_Arcane/Ichiro_Chibi/PROJECT_STATUS.md)
+- [Existing project assets and experiments](Ichiro_3D_Arcane/README.md)
+- [Archived pre-suite README and claims](Ichiro_3D_Arcane/docs/LEGACY_ROOT_README_2026.md)
 
-## Repository Layout
+## Hardware approach
 
-```
-Ichiro/
-├── Ichiro_3D_Arcane/
-│   ├── blend/
-│   │   ├── Ichiro_2390_Arcane_Scene.blend         # Master production scene
-│   │   ├── Ichiro_2390_Arcane_4K_Atlas.blend      # 4K Texture baking rig
-│   │   └── Ichiro_2390_UE5_LOD_Package.blend      # Hierarchical LOD triad
-│   ├── models/
-│   │   ├── Ichiro_2390_LOD0.glb                   # Hero Cinematic (97k quads)
-│   │   ├── Ichiro_2390_LOD1.glb                   # Gameplay Medium (34k tris)
-│   │   ├── Ichiro_2390_LOD2.glb                   # Mobile / Crowd (9k tris)
-│   │   └── Ichiro_2390_UE5_LODGroup.glb           # Complete nested LOD group
-│   ├── textures/
-│   │   ├── ichiro_master_diffuse_4k.png           # 4K Diffuse / BaseColor
-│   │   ├── ichiro_master_normal_4k.png            # 4K Tangent Normal
-│   │   ├── ichiro_master_roughness_4k.png         # 4K Roughness
-│   │   └── ichiro_master_emission_4k.png          # 4K Magma / Eye Emission
-│   ├── scripts/
-│   │   ├── assemble_4k_atlas.py                   # Automated atlas assembler
-│   │   ├── bake_unified_4k_atlas.py               # Deterministic CPU baker
-│   │   ├── build_modular_true360_scene.py         # Full scene constructor
-│   │   ├── build_tactical_clothing_layers.py      # Non-destructive layer generator
-│   │   ├── generate_ue5_lods.py                   # Decimation & LOD exporter
-│   │   └── composite_inspection_huds.py           # Verification HUD renderer
-│   ├── renders/                                   # 4-View turnarounds & HUDs
-│   ├── references/                                # Canonical 2D turnarounds
-│   └── viewer/                                    # Interactive Three.js WebGL viewer
-├── .gitignore
-└── README.md
-```
+The design targets a local-first workflow that can operate on an 8 GB GPU by staging model inference, unloading each worker between stages, and storing checkpoints on disk. This is a design target, not a current performance guarantee. A stage that cannot fit must offer CPU/offload, a smaller model, or a clearly reported external option; it must not silently run out of memory or pretend to have completed.
 
----
+## Scope
 
-## Automated Headless Build Pipeline (Blender 5.2)
-
-To rebuild or bake the entire character asset headlessly from command line:
-
-```powershell
-# 1. Assemble Modular True360 Scene
-& "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b -P "Ichiro_3D_Arcane\scripts\build_modular_true360_scene.py"
-
-# 2. Bake Unified 4K PBR Atlas
-& "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b -P "Ichiro_3D_Arcane\scripts\bake_unified_4k_atlas.py"
-
-# 3. Generate Unreal Engine 5 LOD Group
-& "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b -P "Ichiro_3D_Arcane\scripts\generate_ue5_lods.py"
-
-# 4. Composite Inspection Telemetry HUDs
-& "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe" -b -P "Ichiro_3D_Arcane\scripts\composite_inspection_huds.py"
-```
-
----
-
-## Interactive WebGL Experience
-
-Explore the online interactive portal:  
-[ICHIRO — Legacy of Rebirth](https://steveblackbeard.github.io/ICHIRO-LegacyOfRebirth-by-Ethernium/)
-
----
-
-## License & Attribution
-
-Creative design, meshes, textures, and sovereign pipeline code are protected under the Ethernium Sovereign Protocol.  
-Copyright © 2026 NullaLabs / Ethernium. All rights reserved.
+The suite builds a finished, usable VRM avatar. Motion generation and VRMA authoring are later optional modules; they are not the definition of a finished character.
